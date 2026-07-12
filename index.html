@@ -133,7 +133,7 @@
     </div>
 
     <!-- Stats Bar -->
-    <div class="hero-anim-5" style="margin-top:var(--sp-20);display:grid;grid-template-columns:repeat(5,1fr);gap:var(--sp-4);border-top:1px solid var(--clr-border);padding-top:var(--sp-8)">
+    <div class="hero-anim-5 hero-stats-bar">
       <div style="text-align:center">
         <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
           <span data-count="20" data-suffix="+">20+</span>
@@ -281,40 +281,28 @@
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- MEDICAL HIGHLIGHT STRIP -->
 <!-- ═══════════════════════════════════════════════════════ -->
-<section style="padding:0;position:relative;overflow:hidden">
-  <div style="display:grid;grid-template-columns:1fr 1fr;min-height:500px">
+<section class="medical-strip-section">
+  <div class="medical-strip-grid">
     <!-- Image side -->
-    <div style="position:relative;overflow:hidden;min-height:400px">
-      <img data-src="images/cleanroom.png" src="images/cleanroom.png"
+    <div class="medical-strip-img-wrap" data-reveal="right">
+      <img src="images/cleanroom.png"
            alt="ISO 13485 cleanroom facility"
-           style="width:100%;min-height:300px;height:100%;object-fit:cover" data-parallax="0.15">
-      <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,var(--clr-bg))"></div>
+           class="medical-strip-img img-zoom-hover">
+      <div class="medical-strip-overlay"></div>
     </div>
     <!-- Content side -->
-    <div style="background:var(--clr-surface);display:flex;align-items:center;padding:var(--sp-16)">
+    <div class="medical-strip-content">
       <div data-reveal="left">
         <div class="section-label section-label--gold">ISO 13485 Certified</div>
         <h2 style="margin-bottom:var(--sp-5)">Cleanroom Medical<br>Manufacturing</h2>
         <p style="margin-bottom:var(--sp-8)">Our dedicated ISO 13485-compliant cleanroom facility supports medical devices, IVD products, bioprocess components, cell &amp; gene therapy products, and pharmaceutical packaging.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4);margin-bottom:var(--sp-8)">
-          <div style="display:flex;align-items:center;gap:var(--sp-2);font-size:var(--fs-sm);color:var(--clr-text-muted)">
-            <span style="color:var(--clr-gold)">✓</span> Cleanroom Moulding
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-2);font-size:var(--fs-sm);color:var(--clr-text-muted)">
-            <span style="color:var(--clr-gold)">✓</span> Leak Testing
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-2);font-size:var(--fs-sm);color:var(--clr-text-muted)">
-            <span style="color:var(--clr-gold)">✓</span> Sterile Assembly
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-2);font-size:var(--clr-text-muted)">
-            <span style="color:var(--clr-gold)">✓</span> Quality Verification
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-2);font-size:var(--fs-sm);color:var(--clr-text-muted)">
-            <span style="color:var(--clr-gold)">✓</span> Medical Packaging
-          </div>
-          <div style="display:flex;align-items:center;gap:var(--sp-2);font-size:var(--fs-sm);color:var(--clr-text-muted)">
-            <span style="color:var(--clr-gold)">✓</span> ISO Documentation
-          </div>
+        <div class="medical-strip-checklist">
+          <div class="medical-check-item"><span class="check-icon">✓</span> Cleanroom Moulding</div>
+          <div class="medical-check-item"><span class="check-icon">✓</span> Leak Testing</div>
+          <div class="medical-check-item"><span class="check-icon">✓</span> Sterile Assembly</div>
+          <div class="medical-check-item"><span class="check-icon">✓</span> Quality Verification</div>
+          <div class="medical-check-item"><span class="check-icon">✓</span> Medical Packaging</div>
+          <div class="medical-check-item"><span class="check-icon">✓</span> ISO Documentation</div>
         </div>
         <a href="medical.html" class="btn btn--gold btn--lg">Explore Medical Division →</a>
       </div>

@@ -294,6 +294,25 @@ function initCursorGlow() {
   animate();
 }
 
+// ── Image Scroll Animations ───────────────────────────────
+function initImageAnimations() {
+  const animatedImgs = document.querySelectorAll(
+    '.img-fade-in, .img-slide-left, .img-slide-right, .img-scale-in'
+  );
+  if (!animatedImgs.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  animatedImgs.forEach(img => observer.observe(img));
+}
+
 // ── Init All ──────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
@@ -307,4 +326,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initImageParallax();
   initCursorGlow();
+  initImageAnimations();
 });
+
