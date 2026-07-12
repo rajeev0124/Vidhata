@@ -1264,3 +1264,109 @@
     bottom: var(--sp-4);
   }
 }
+
+/* ── Mobile Image Fixes ──────────────────────────────── */
+@media (max-width: 768px) {
+  /* Ensure all images are responsive and visible */
+  img {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: unset !important;
+    display: block;
+  }
+
+  /* Fix inline fixed-height images so they still show on mobile */
+  img[style*="height:500px"],
+  img[style*="height:450px"],
+  img[style*="height:380px"],
+  img[style*="height:300px"] {
+    height: 250px !important;
+    min-height: 200px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* Fix image wrapper containers that may have no height */
+  [style*="height:100%"] > img,
+  .img-wrap img,
+  figure img {
+    min-height: 220px;
+    height: auto !important;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* Prevent horizontal overflow on the whole page */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Fix sections that might overflow */
+  section, .section {
+    overflow-x: hidden;
+  }
+
+  /* Fix any containers using 100% height that collapse on mobile */
+  .relative { position: relative; }
+  div[style*="height:100%"] {
+    min-height: 250px;
+  }
+
+  /* Fix the nav overflow and padding */
+  .navbar {
+    padding: 0 var(--sp-4);
+  }
+
+  /* Make text sections readable on mobile */
+  .section-header {
+    margin-bottom: var(--sp-8);
+  }
+  .section-header .section-tag { font-size: var(--fs-xs); }
+
+  /* Tabs on mobile */
+  .tab-btns {
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+  }
+  .tab-btn {
+    flex: 1 1 calc(50% - var(--sp-2));
+    font-size: var(--fs-sm);
+    padding: var(--sp-2) var(--sp-3);
+  }
+
+  /* Stats row on mobile */
+  .stats-strip {
+    flex-wrap: wrap;
+    gap: var(--sp-6);
+  }
+  .stat-item {
+    flex: 1 1 calc(50% - var(--sp-6));
+    text-align: center;
+  }
+
+  /* Process/timeline steps */
+  .process-steps { flex-direction: column; }
+  .process-step { flex: none; width: 100%; }
+}
+
+@media (max-width: 480px) {
+  img[style*="height:500px"],
+  img[style*="height:450px"],
+  img[style*="height:380px"],
+  img[style*="height:300px"] {
+    height: 200px !important;
+  }
+
+  .tab-btn {
+    flex: 1 1 100%;
+  }
+
+  .stat-item {
+    flex: 1 1 100%;
+  }
+
+  /* Shrink large hero text further on very small screens */
+  .hero__content { text-align: center; }
+  .hero__badge { justify-content: center; }
+}
