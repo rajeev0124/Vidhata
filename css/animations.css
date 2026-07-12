@@ -1,0 +1,573 @@
+/* =========================================================
+   VIDHATA PLASTICS — ANIMATIONS
+   animations.css
+   ========================================================= */
+
+/* ── Keyframes ────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.92) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.4); opacity: 0.7; }
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(10px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(37, 99, 235,0.6), 0 0 80px rgba(37, 99, 235,0.2); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-8px) rotate(1deg); }
+  66%       { transform: translateY(4px) rotate(-1deg); }
+}
+
+@keyframes draw-line {
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes particles-float {
+  0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0.6; }
+  25%  { transform: translateY(-20px) translateX(10px) scale(1.1); }
+  50%  { transform: translateY(-10px) translateX(-5px) scale(0.9); opacity: 0.3; }
+  75%  { transform: translateY(-30px) translateX(15px) scale(1.05); }
+  100% { transform: translateY(-60px) translateX(0) scale(0.8); opacity: 0; }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes border-flow {
+  0%   { border-color: rgba(37, 99, 235,0.2); }
+  50%  { border-color: rgba(37, 99, 235,0.5); }
+  100% { border-color: rgba(37, 99, 235,0.2); }
+}
+
+@keyframes reveal-bar {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+@keyframes stagger-in {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Scroll Reveal Classes ────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-out),
+              transform 0.7s var(--ease-out);
+}
+
+[data-reveal="up"] {
+  transform: translateY(50px);
+}
+
+[data-reveal="down"] {
+  transform: translateY(-30px);
+}
+
+[data-reveal="left"] {
+  transform: translateX(50px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(-50px);
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.88);
+}
+
+[data-reveal="fade"] {
+  transform: none;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays for children */
+[data-stagger] > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s var(--ease-out),
+              transform 0.6s var(--ease-out);
+}
+
+[data-stagger].revealed > *:nth-child(1)  { transition-delay: 0ms; }
+[data-stagger].revealed > *:nth-child(2)  { transition-delay: 80ms; }
+[data-stagger].revealed > *:nth-child(3)  { transition-delay: 160ms; }
+[data-stagger].revealed > *:nth-child(4)  { transition-delay: 240ms; }
+[data-stagger].revealed > *:nth-child(5)  { transition-delay: 320ms; }
+[data-stagger].revealed > *:nth-child(6)  { transition-delay: 400ms; }
+[data-stagger].revealed > *:nth-child(7)  { transition-delay: 480ms; }
+[data-stagger].revealed > *:nth-child(8)  { transition-delay: 560ms; }
+
+[data-stagger].revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hero Entrance Animations ─────────────────────────── */
+.hero-anim-1 { animation: fadeDown 0.8s var(--ease-out) 0.2s both; }
+.hero-anim-2 { animation: fadeUp  0.9s var(--ease-out) 0.4s both; }
+.hero-anim-3 { animation: fadeUp  0.9s var(--ease-out) 0.6s both; }
+.hero-anim-4 { animation: fadeUp  0.9s var(--ease-out) 0.8s both; }
+.hero-anim-5 { animation: fadeUp  0.9s var(--ease-out) 1.0s both; }
+
+/* ── Floating Decorative Elements ─────────────────────── */
+.float-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-element--slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.float-element--delay-1 { animation-delay: -2s; }
+.float-element--delay-2 { animation-delay: -4s; }
+.float-element--delay-3 { animation-delay: -6s; }
+
+/* ── Glow Effects ─────────────────────────────────────── */
+.glow-blue {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.glow-border {
+  animation: border-flow 3s ease-in-out infinite;
+}
+
+/* ── Gradient Animated Text ───────────────────────────── */
+.gradient-animated {
+  background: linear-gradient(270deg, #00E5FF, #7A22FF, #00E5FF);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* ── Progress Bar ─────────────────────────────────────── */
+.progress-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--radius-full);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s var(--ease-out);
+}
+
+.progress-bar__fill.animated {
+  transform: scaleX(1);
+}
+
+/* ── Skeleton Loader ──────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.03) 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+  border-radius: var(--radius-md);
+}
+
+/* ── Particle Canvas ──────────────────────────────────── */
+#particles-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Animated Background Grid ─────────────────────────── */
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--clr-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--clr-border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.bg-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(14, 165, 233, 0.08), transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.bg-grid--fade {
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* ── Animated Orbs ────────────────────────────────────── */
+.orb {
+  position: absolute;
+  border-radius: var(--radius-full);
+  filter: blur(80px);
+  pointer-events: none;
+  animation: float-slow 10s ease-in-out infinite;
+}
+
+.orb--blue {
+  background: rgba(30, 111, 255, 0.12);
+}
+
+.orb--gold {
+  background: rgba(245, 166, 35, 0.08);
+}
+
+.orb--1 {
+  width: 400px;
+  height: 400px;
+  top: -100px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.orb--2 {
+  width: 300px;
+  height: 300px;
+  bottom: -80px;
+  left: -80px;
+  animation-delay: -4s;
+}
+
+.orb--3 {
+  width: 200px;
+  height: 200px;
+  top: 40%;
+  left: 30%;
+  animation-delay: -7s;
+}
+
+/* ── Typed Text Cursor ────────────────────────────────── */
+.typed-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: var(--clr-primary);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+/* ── Number Counter ───────────────────────────────────── */
+.counter {
+  display: inline-block;
+  animation: count-up 0.5s var(--ease-out) both;
+}
+
+/* ── Timeline ─────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: var(--sp-12);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--clr-primary), transparent);
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: var(--sp-10);
+}
+
+.timeline__dot {
+  position: absolute;
+  left: calc(-1 * var(--sp-12) + 12px);
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  background: var(--clr-primary);
+  border: 3px solid var(--clr-bg);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235,0.2);
+}
+
+.timeline__year {
+  font-family: var(--font-heading);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semi);
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-1);
+  letter-spacing: 0.05em;
+}
+
+.timeline__title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semi);
+  font-size: var(--fs-lg);
+  color: var(--clr-white);
+  margin-bottom: var(--sp-2);
+}
+
+.timeline__desc {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Loading Screen ───────────────────────────────────── */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--clr-bg);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-6);
+  transition: opacity 0.5s var(--ease-smooth), visibility 0.5s;
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-logo {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-3xl);
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 3px;
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.loading-bar__fill {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: var(--radius-full);
+  animation: loading-progress 1.5s var(--ease-out) forwards;
+}
+
+@keyframes loading-progress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* ── Page Transition ──────────────────────────────────── */
+.page-enter {
+  animation: fadeIn 0.4s var(--ease-out) both;
+}
+
+/* ── Hover Line Effect ────────────────────────────────── */
+.hover-line {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-line::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--clr-primary);
+  transition: width var(--t-normal) var(--ease-smooth);
+}
+
+.hover-line:hover::after {
+  width: 100%;
+}
+
+/* ── Animated SVG Icons ───────────────────────────────── */
+.icon-spin {
+  animation: spin 2s linear infinite;
+}
+
+.icon-pulse {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+
+/* ── Border Beam Conic Gradient Sweep ─────────────────── */
+.border-beam-container {
+  position: relative;
+  z-index: 1;
+}
+
+.border-beam-container::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: conic-gradient(from 0deg, transparent, var(--clr-primary), var(--clr-gold), transparent 30%);
+  border-radius: inherit;
+  z-index: -1;
+  padding: 1.5px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: border-beam-sweep 4s linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes border-beam-sweep {
+  0% {
+    background: conic-gradient(from 0deg, transparent, var(--clr-primary), var(--clr-gold), transparent 30%);
+  }
+  100% {
+    background: conic-gradient(from 360deg, transparent, var(--clr-primary), var(--clr-gold), transparent 30%);
+  }
+}
+
+/* ── Interactive Grid Background ────────────────────────── */
+.interactive-grid {
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center;
+}
+
+.interactive-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(500px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(14, 165, 233, 0.08), transparent 45%);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* ── Reduced Motion Support ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal], [data-stagger] > * {
+    opacity: 1;
+    transform: none;
+  }
+}

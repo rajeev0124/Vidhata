@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Vidhata Plastics India Pvt. Ltd. Corporate office at Maheshwaram and manufacturing facility at Cherlapally. Request a quote or schedule a consultation.">
+  <title>Contact Us — Vidhata Plastics</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<div id="loading-screen" class="loading-screen"><div class="loading-logo">VIDHATA</div><div class="loading-bar"><div class="loading-bar__fill"></div></div></div>
+<div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:var(--grad-primary);z-index:1001;width:0%"></div>
+<nav id="navbar" class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo"><div class="navbar__logo-icon">V</div><div class="navbar__logo-text"><span class="navbar__logo-name">VIDHATA</span><span class="navbar__logo-tagline">Plastics India</span></div></a>
+    <div class="navbar__nav">
+      <a href="index.html"         class="navbar__link">Home</a>
+      <div class="navbar__dropdown">
+        <a href="services.html"    class="navbar__link">Services ▾</a>
+        <div class="navbar__dropdown-menu">
+          <a href="services.html#design"       class="navbar__dropdown-item">Product Design</a>
+          <a href="services.html#tooling"      class="navbar__dropdown-item">Tool &amp; Mould Manufacturing</a>
+          <a href="services.html#manufacturing"class="navbar__dropdown-item">Manufacturing</a>
+          <a href="services.html#assembly"     class="navbar__dropdown-item">Assembly</a>
+          <a href="services.html#regulatory"   class="navbar__dropdown-item">Regulatory Support</a>
+          <a href="medical.html"               class="navbar__dropdown-item">Medical &amp; Pharma</a>
+        </div>
+      </div>
+      <a href="industries.html"    class="navbar__link">Industries</a>
+      <a href="infrastructure.html"class="navbar__link">Infrastructure</a>
+      <a href="quality.html"       class="navbar__link">Quality</a>
+      <div class="navbar__dropdown">
+        <a href="about.html"       class="navbar__link">Company ▾</a>
+        <div class="navbar__dropdown-menu">
+          <a href="about.html"        class="navbar__dropdown-item">About Us</a>
+          <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
+          <a href="careers.html"      class="navbar__dropdown-item">Careers</a>
+          <a href="blog.html"         class="navbar__dropdown-item">Blog &amp; Insights</a>
+          <a href="clients.html"      class="navbar__dropdown-item">Clients</a>
+        </div>
+      </div>
+      <a href="contact.html"       class="navbar__link navbar__cta active">Request Quote</a>
+    </div>
+    <button id="hamburger" class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mobile-menu" class="navbar__mobile">
+  <a href="index.html"          class="navbar__mobile-link">Home</a>
+  <a href="about.html"          class="navbar__mobile-link">About Us</a>
+  <a href="services.html"       class="navbar__mobile-link">Services</a>
+  <a href="medical.html"        class="navbar__mobile-link">Medical &amp; Pharma</a>
+  <a href="industries.html"     class="navbar__mobile-link">Industries</a>
+  <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
+  <a href="quality.html"        class="navbar__mobile-link">Quality &amp; Certifications</a>
+  <a href="case-studies.html"   class="navbar__mobile-link">Case Studies</a>
+  <a href="clients.html"        class="navbar__mobile-link">Clients</a>
+  <a href="careers.html"        class="navbar__mobile-link">Careers</a>
+  <a href="contact.html"        class="navbar__mobile-link">Contact Us</a>
+  <div style="margin-top:var(--sp-6)">
+    <a href="contact.html" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Request a Quote</a>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="orb orb--blue orb--1"></div><div class="orb orb--gold orb--2"></div>
+  <div class="bg-grid bg-grid--fade"></div>
+  <div class="container">
+    <div class="page-hero__breadcrumb"><a href="index.html">Home</a><span>›</span><span>Contact</span></div>
+    <div class="section-label hero-anim-1">Get in Touch</div>
+    <h1 class="hero-anim-2" style="max-width:700px">Start Your Manufacturing<br><span class="gradient-text">Partnership</span></h1>
+    <p class="hero-anim-3" style="font-size:var(--fs-md);max-width:580px;color:var(--clr-text-muted);margin-top:var(--sp-5)">Connect with our design, tooling, and medical cleanroom production leads.</p>
+  </div>
+</section>
+
+<!-- Contact Form / Info Grid -->
+<section class="section" id="consultation">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:var(--sp-12)">
+      <!-- Form Side -->
+      <div data-reveal="right" style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-8)">
+        <h3 style="margin-bottom:var(--sp-2)">Request a Quote / Consultation</h3>
+        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--sp-6)">Provide project details below to receive a response within 24 hours.</p>
+
+        <form id="quote-form" class="flex flex-col gap-4">
+          <div class="form-group">
+            <label for="q-name" class="form-label form-label--required">Your Name</label>
+            <input type="text" id="q-name" name="name" class="form-input" placeholder="Enter full name" data-validate="required" required>
+            <div id="q-name-error" class="form-error" style="display:none"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="q-company" class="form-label">Company Name</label>
+            <input type="text" id="q-company" name="company" class="form-input" placeholder="Your enterprise name">
+          </div>
+
+          <div class="form-group">
+            <label for="q-email" class="form-label form-label--required">Email Address</label>
+            <input type="email" id="q-email" name="email" class="form-input" placeholder="corporate@company.com" data-validate="required,email" required>
+            <div id="q-email-error" class="form-error" style="display:none"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="q-phone" class="form-label form-label--required">Phone / Mobile</label>
+            <input type="tel" id="q-phone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" data-validate="required,phone" required>
+            <div id="q-phone-error" class="form-error" style="display:none"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="q-product" class="form-label form-label--required">Product Category</label>
+            <select id="q-product" name="product_type" class="form-select">
+              <option value="Medical Device">Medical Device / Sterile disposable</option>
+              <option value="Pharma Packaging">Pharmaceutical Caps / Closures</option>
+              <option value="Electronics Housing">Electronics Housing / Meter safety box</option>
+              <option value="LED Lighting">LED Diffuser / Light profile</option>
+              <option value="Mould Development">In-House Mould Tool room build</option>
+              <option value="Other">Other plastic product</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="q-msg" class="form-label form-label--required">Project Details / Message</label>
+            <textarea id="q-msg" name="message" class="form-textarea" placeholder="Please outline volume criteria, material specs, cleanroom compliance if applicable..." data-validate="required" required></textarea>
+            <div id="q-msg-error" class="form-error" style="display:none"></div>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg" style="margin-top:var(--sp-2)">Send Request</button>
+        </form>
+
+        <div id="form-success" style="display:none;flex-direction:column;align-items:stretch;text-align:center;gap:var(--sp-4);padding:var(--sp-6)">
+          <div style="font-size:3rem;color:var(--clr-primary);margin-bottom:var(--sp-2)">✓</div>
+          <h4>Request Prepared!</h4>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:var(--sp-4)">We have opened your default mail client to dispatch your request to <strong>vikrant@vidhata.co.in</strong>.</p>
+          
+          <div style="border-top:1px solid var(--clr-border);padding-top:var(--sp-4)">
+            <button type="button" id="toggle-fallback" class="btn btn--outline btn--sm" style="width:100%;justify-content:center;margin-bottom:var(--sp-4)">Mail App didn't open?</button>
+            <div id="fallback-actions" style="display:none;flex-direction:column;gap:var(--sp-3);text-align:left">
+              <p style="font-size:var(--fs-xs);color:var(--clr-text-dim)">You can copy the message body below and send it manually to <strong>vikrant@vidhata.co.in</strong>, or send it directly via WhatsApp:</p>
+              <textarea id="fallback-text" class="form-textarea" style="font-size:var(--fs-xs);height:120px" readonly></textarea>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)">
+                <button type="button" id="btn-copy-fallback" class="btn btn--outline-primary btn--sm" style="justify-content:center">📋 Copy Text</button>
+                <a id="btn-wa-fallback" class="btn btn--primary btn--sm" style="justify-content:center;background:#25D366;border-color:#25D366;color:white" target="_blank" rel="noopener">💬 WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Side -->
+      <div data-reveal="left" class="flex flex-col gap-8">
+        <!-- Corporate Office -->
+        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:var(--sp-6)">
+          <div class="section-label" style="margin-bottom:var(--sp-3)">Corporate Office</div>
+          <h4 style="margin-bottom:var(--sp-2)">Unit 2 – E-City</h4>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Maheshwaram, Rangareddy District, Telangana, 501359.</p>
+        </div>
+
+        <!-- Manufacturing Unit -->
+        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:var(--sp-6)">
+          <div class="section-label" style="margin-bottom:var(--sp-3)">Manufacturing Unit</div>
+          <h4 style="margin-bottom:var(--sp-2)">Phase-II, IDA Cherlapally</h4>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Hyderabad, Telangana, 500051.</p>
+        </div>
+
+        <!-- Direct Contact Info -->
+        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-lg);padding:var(--sp-6)">
+          <div class="section-label" style="margin-bottom:var(--sp-3)">Direct Lines</div>
+          <h4 style="margin-bottom:var(--sp-1)">Vikrant Kandimalla</h4>
+          <p style="font-size:var(--fs-xs);color:var(--clr-text-dim);margin-bottom:var(--sp-3)">Director</p>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:2px">📞 Direct: +91 98851 00808</p>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:2px">✉️ Email: vikrant@vidhata.co.in</p>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">✉️ General: info@vidhata.co.in</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Maps Placeholder Section -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header--center" data-reveal="up">
+      <div class="section-label">Find Us</div>
+      <h2>Our Facility Locations</h2>
+    </div>
+    <div class="grid-2" data-stagger>
+      <div style="background:var(--clr-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-4);height:300px;display:flex;align-items:center;justify-content:center;color:var(--clr-text-dim)">
+        <span>🗺️ E-City, Maheshwaram Facility Location Map</span>
+      </div>
+      <div style="background:var(--clr-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-4);height:300px;display:flex;align-items:center;justify-content:center;color:var(--clr-text-dim)">
+        <span>🗺️ Cherlapally Industrial Unit Location Map</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer__grid"><div><a href="index.html" class="navbar__logo" style="margin-bottom:var(--sp-4);display:inline-flex"><div class="navbar__logo-icon">V</div><div class="navbar__logo-text"><span class="navbar__logo-name">VIDHATA</span><span class="navbar__logo-tagline">Plastics India Pvt. Ltd.</span></div></a><p class="footer__brand-desc">End-to-end plastics manufacturing for medical, pharma, electronics, and industrial sectors.</p><div class="footer__certbadges"><span class="footer__certbadge">ISO 9001:2015</span><span class="footer__certbadge">ISO 13485</span></div></div><div><div class="footer__col-title">Services</div><div class="footer__links"><a href="services.html#design" class="footer__link">Product Design</a><a href="services.html#tooling" class="footer__link">Tool &amp; Mould Mfg.</a><a href="services.html#manufacturing" class="footer__link">Manufacturing</a><a href="services.html#assembly" class="footer__link">Assembly</a><a href="services.html#regulatory" class="footer__link">Regulatory</a></div></div><div><div class="footer__col-title">Company</div><div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a href="clients.html" class="footer__link">Clients</a><a href="quality.html" class="footer__link">Quality</a><a href="contact.html" class="footer__link">Contact</a></div></div><div><div class="footer__col-title">Contact</div><div class="footer__contact-item"><span class="footer__contact-icon">📞</span><a href="tel:+919885100808" style="color:var(--clr-text-muted)">+91 98851 00808</a></div><div class="footer__contact-item"><span class="footer__contact-icon">✉️</span><a href="mailto:vikrant@vidhata.co.in" style="color:var(--clr-text-muted)">vikrant@vidhata.co.in</a></div></div></div><div class="footer__bottom"><p class="footer__copy">© 2024 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p><div class="footer__social"><a href="#" class="footer__social-link">in</a><a href="#" class="footer__social-link">𝕏</a></div><div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy Policy</a></div></div></div></footer>
+<a href="https://wa.me/919885100808" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<button id="back-to-top" aria-label="Back to top" style="position:fixed;bottom:calc(var(--sp-8) + 70px);right:var(--sp-8);width:44px;height:44px;background:var(--grad-primary);border-radius:var(--radius-full);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:white;box-shadow:var(--shadow-blue);opacity:0;transition:opacity 0.3s;z-index:900">↑</button>
+<script src="js/main.js"></script><script src="js/animations.js"></script><script src="js/form.js"></script>
+</body>
+</html>
