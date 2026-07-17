@@ -242,10 +242,14 @@
     return n.includes('who are you') || (n.includes('you') && n.includes('bot')) || n.includes('assistant') || n === 'what are you';
   }
 
-  /* ─── Current Page ───────────────────────────────────────── */
   function currentPage() {
-    var file = (window.location.pathname.split('/').pop() || 'index.html');
-    return file.split('?')[0].split('#')[0];
+    var path = window.location.pathname.replace(/\/$/, '');
+    var file = path.split('/').pop() || 'index.html';
+    var clean = file.split('?')[0].split('#')[0];
+    if (clean && !clean.includes('.')) {
+      clean += '.html';
+    }
+    return clean;
   }
 
   function pageChips() {

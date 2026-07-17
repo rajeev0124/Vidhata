@@ -14,19 +14,19 @@
   --clr-card:        #FFFFFF;
   --clr-card-hover:  #F1F5F9;
   --clr-border:      #E2E8F0;
-  --clr-border-gold: rgba(14, 165, 233, 0.3);
+  --clr-border-gold: rgba(212, 33, 61, 0.25);
 
-  --clr-primary:     #0EA5E9;
-  --clr-primary-dark:#0284C7;
-  --clr-primary-glow:rgba(14, 165, 233, 0.15);
+  --clr-primary:     #1A2644;
+  --clr-primary-dark:#111A30;
+  --clr-primary-glow:rgba(26, 38, 68, 0.15);
 
-  --clr-teal:        #0EA5E9;
-  --clr-teal-dark:   #0284C7;
-  --clr-teal-glow:   rgba(14, 165, 233, 0.15);
+  --clr-teal:        #2563EB;
+  --clr-teal-dark:   #1D4ED8;
+  --clr-teal-glow:   rgba(37, 99, 235, 0.15);
 
-  --clr-gold:        #0EA5E9;
-  --clr-gold-dark:   #0284C7;
-  --clr-gold-glow:   rgba(14, 165, 233, 0.15);
+  --clr-gold:        #D4213D;
+  --clr-gold-dark:   #B01A30;
+  --clr-gold-glow:   rgba(212, 33, 61, 0.15);
 
   --clr-text:        #0F172A;
   --clr-text-muted:  #475569;
@@ -37,12 +37,12 @@
   --clr-error:       #EF4444;
 
   /* Gradients */
-  --grad-primary:    linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
-  --grad-teal:       linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
-  --grad-gold:       linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
-  --grad-hero:       linear-gradient(160deg, rgba(255,255,255,0.96) 0%, rgba(248,250,252,0.85) 50%, rgba(255,255,255,0.96) 100%);
-  --grad-surface:    linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
-  --grad-card:       linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
+  --grad-primary:    linear-gradient(135deg, #2563EB 0%, #1A2644 100%);
+  --grad-teal:       linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+  --grad-gold:       linear-gradient(135deg, #EF4444 0%, #D4213D 100%);
+  --grad-hero:       linear-gradient(160deg, rgba(255,255,255,0.95) 0%, rgba(244,247,253,0.85) 50%, rgba(255,255,255,0.95) 100%);
+  --grad-surface:    linear-gradient(180deg, rgba(244,247,253,0.8) 0%, rgba(255,255,255,0.8) 100%);
+  --grad-card:       linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(244,247,253,0.9) 100%);
 
   /* Typography */
   --font-heading:    'Outfit', sans-serif;
@@ -211,10 +211,16 @@ strong { color: var(--clr-text); font-weight: var(--fw-semi); }
 .section {
   padding: var(--section-py) 0;
   position: relative;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background var(--t-normal) var(--ease-smooth);
 }
 
 .section--alt {
-  background: var(--clr-surface);
+  background: rgba(248, 250, 252, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* ── Flexbox & Grid Helpers ───────────────────────────── */

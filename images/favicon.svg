@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <!-- Dark navy background (same as the company's brand color) -->
+  <rect x="0" y="0" width="80" height="80" rx="6" ry="6" fill="#1a2644"/>
+  
+  <!-- White border rectangle (the outer white-bordered square from the logo) -->
+  <rect x="3" y="3" width="74" height="74" rx="4" ry="4" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  
+  <!-- V monogram - left arm of V -->
+  <polygon points="10,12 23,12 40,54 27,54" fill="#ffffff"/>
+  
+  <!-- V monogram - right arm of V -->
+  <polygon points="40,54 53,54 70,12 57,12 41,51" fill="#ffffff"/>
+  
+  <!-- Red filled circle (the signature red dot in the Vidhata logo) -->
+  <circle cx="23" cy="63" r="9" fill="#d4213d"/>
+  <circle cx="23" cy="63" r="6.5" fill="#e8304f"/>
+</svg>

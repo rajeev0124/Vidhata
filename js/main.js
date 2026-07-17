@@ -127,12 +127,30 @@ function initNavbar() {
     }
   });
 
-  // Active link highlighting
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  $$('.navbar__link, .navbar__mobile-link').forEach(link => {
+  // Active link highlighting (extension-agnostic & parent dropdown highlighting)
+  const path = window.location.pathname.replace(/\/$/, ''); // remove trailing slash
+  const page = path.split('/').pop() || 'index.html';
+  const cleanPage = page.replace('.html', '').toLowerCase();
+
+  $$('.navbar__link, .navbar__mobile-link, .navbar__dropdown-item').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    if (!href) return;
+    const cleanHref = href.split('#')[0].split('/').pop().replace('.html', '').toLowerCase();
+    
+    const isHome = (cleanPage === 'index' || cleanPage === '') && (cleanHref === 'index' || cleanHref === '');
+    const isMatch = cleanHref === cleanPage;
+    
+    if (isMatch || isHome) {
       link.classList.add('active');
+      
+      // Also highlight parent dropdown trigger if it's inside a dropdown
+      const dropdown = link.closest('.navbar__dropdown');
+      if (dropdown) {
+        const parentLink = dropdown.querySelector('.navbar__link');
+        if (parentLink) {
+          parentLink.classList.add('active');
+        }
+      }
     }
   });
 }

@@ -44,9 +44,20 @@
   flex-shrink: 0;
 }
 
+/* Official Vidhata Logo Image */
+.navbar__logo-img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+/* Keep old icon class for graceful fallback */
 .navbar__logo-icon {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   background: var(--grad-primary);
   border-radius: var(--radius-md);
   display: flex;
@@ -63,23 +74,23 @@
 .navbar__logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .navbar__logo-name {
   font-family: var(--font-heading);
-  font-weight: var(--fw-black);
-  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
   color: var(--clr-text);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .navbar__logo-tagline {
-  font-size: var(--fs-xs);
+  font-size: 0.65rem;
   color: var(--clr-text-muted);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 /* Nav Links */
@@ -239,16 +250,40 @@
 .navbar__mobile-link {
   display: block;
   font-family: var(--font-heading);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
   font-weight: var(--fw-semi);
   color: var(--clr-text-muted);
-  padding: var(--sp-4) 0;
+  padding: var(--sp-4) var(--sp-6);
   border-bottom: 1px solid var(--clr-border);
-  transition: color var(--t-fast);
+  transition: color var(--t-fast), border-left-color var(--t-fast), background var(--t-fast);
+  border-left: 4px solid transparent;
 }
 
-.navbar__mobile-link:hover {
-  color: var(--clr-primary);
+.navbar__mobile-link:hover,
+.navbar__mobile-link.active {
+  color: var(--clr-gold);
+  border-left-color: var(--clr-gold);
+  background: rgba(212, 33, 61, 0.04);
+}
+
+/* Logo responsiveness rules */
+.navbar__logo-name {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .navbar__logo-tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar__logo-corp {
+    display: none;
+  }
+  .navbar__logo-name {
+    font-size: var(--fs-sm);
+  }
 }
 
 /* ── FOOTER ───────────────────────────────────────────── */
@@ -678,7 +713,7 @@
   font-family: var(--font-heading);
   font-weight: var(--fw-semi);
   font-size: var(--fs-xl);
-  color: var(--clr-white);
+  color: var(--clr-text);
 }
 
 .service-card__desc {
@@ -913,6 +948,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.15; /* Translucent factory image overlay */
 }
 
 .hero__bg::after {
@@ -996,6 +1032,206 @@
   height: 40px;
   background: linear-gradient(to bottom, var(--clr-primary), transparent);
 }
+
+/* ── VIDEO HERO LAYOUT ────────────────────────────────── */
+.hero--video {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  background: linear-gradient(160deg, #f8faff 0%, #eef4ff 40%, #f0f8ff 70%, #fffbf0 100%);
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.hero__video-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--sp-12);
+  padding-top: calc(var(--nav-h) + var(--sp-12));
+  padding-bottom: var(--sp-8);
+  position: relative;
+  z-index: 1;
+}
+
+/* LEFT CONTENT */
+.hero__video-content {
+  max-width: 580px;
+}
+
+.hero__hl-light {
+  color: var(--clr-text-muted);
+  font-weight: var(--fw-medium);
+}
+
+.hero__trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  margin-top: var(--sp-8);
+}
+
+.hero__trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-1) var(--sp-3);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semi);
+  color: var(--clr-primary-dark);
+  letter-spacing: 0.04em;
+}
+
+.hero__trust-item svg {
+  color: var(--clr-primary);
+  flex-shrink: 0;
+}
+
+/* RIGHT VIDEO SHOWCASE */
+.hero__video-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-6);
+  position: relative;
+}
+
+.hero__video-glow-ring {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, rgba(14,165,233,0.04) 50%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  pointer-events: none;
+  animation: pulse-ring 4s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { transform: translate(-50%, -60%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -60%) scale(1.08); opacity: 0.7; }
+}
+
+.hero__video-frame {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow:
+    0 0 0 2px rgba(14,165,233,0.2),
+    0 0 0 8px rgba(14,165,233,0.08),
+    0 0 0 20px rgba(14,165,233,0.04),
+    0 32px 80px rgba(14,165,233,0.18),
+    0 8px 32px rgba(0,0,0,0.08);
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.hero__logo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 50%;
+}
+
+.hero__video-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f8ff, #e8f4ff);
+}
+
+/* Show fallback if video fails */
+.hero__logo-video:not([src]) + .hero__video-fallback,
+.hero__logo-video[src=""] + .hero__video-fallback {
+  display: flex;
+}
+
+/* Company label below video */
+.hero__video-label {
+  text-align: center;
+}
+
+.hero__video-label-name {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-xl);
+  color: var(--clr-text);
+  letter-spacing: 0.06em;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__video-label-sub {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semi);
+  font-size: var(--fs-md);
+  color: var(--clr-text-muted);
+  letter-spacing: 0.08em;
+}
+
+.hero__video-label-tag {
+  font-size: var(--fs-xs);
+  color: var(--clr-text-dim);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-top: var(--sp-2);
+}
+
+/* STATS STRIP */
+.hero__stats-strip {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--clr-border);
+  padding: var(--sp-6) 0;
+}
+
+/* Responsive video hero */
+@media (max-width: 900px) {
+  .hero__video-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--sp-8);
+  }
+  .hero__video-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__subhead { max-width: 100%; }
+  .hero__video-showcase { order: -1; }
+  .hero__video-frame { width: 260px; height: 260px; }
+  .hero__video-glow-ring { width: 300px; height: 300px; }
+}
+
+@media (max-width: 600px) {
+  .hero__video-frame { width: 200px; height: 200px; }
+  .hero__video-glow-ring { width: 240px; height: 240px; }
+  .hero__trust-badges { justify-content: center; }
+}
+
 
 /* ── CLIENT LOGO STRIP ────────────────────────────────── */
 .clients-strip {
@@ -1305,6 +1541,20 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
     height: auto !important;
     min-height: unset !important;
     display: block;
+  }
+
+  /* Specific overrides to prevent header/loader logo stretching */
+  .navbar__logo-img,
+  .navbar__logo-icon {
+    width: 52px !important;
+    height: 52px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .loading-screen img {
+    width: 72px !important;
+    height: 72px !important;
+    flex-shrink: 0 !important;
   }
 
   /* Fix inline fixed-height images so they still show on mobile */
@@ -2295,5 +2545,27 @@ img[data-reveal].revealed,
   .product-detail__image-frame {
     height: 350px;
   }
+}
+
+/* ── DNA BACKGROUND CONTAINER ─────────────────────────── */
+.dna-bg-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+  background: radial-gradient(circle at 75% 25%, rgba(224, 242, 254, 0.4) 0%, rgba(255, 255, 255, 1) 75%);
+  overflow: hidden;
+  transition: background 0.5s ease;
+}
+
+#dna-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 

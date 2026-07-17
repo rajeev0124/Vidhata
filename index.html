@@ -1,14 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vidhata Plastics India Pvt. Ltd. — Precision plastics manufacturing from design to delivery. 20+ years, ISO 9001:2015 & ISO 13485 certified, 400+ moulds, medical cleanroom manufacturing in Hyderabad.">
+  <meta name="description" content="Vidhata Plastics India Pvt. Ltd. &mdash; Precision plastics manufacturing from design to delivery. 20+ years, ISO 9001:2015 & ISO 13485 certified, 400+ moulds, medical cleanroom manufacturing in Hyderabad.">
   <meta name="keywords" content="plastics manufacturing India, injection moulding, medical plastics, ISO 13485, cleanroom manufacturing, Hyderabad, tool mould manufacturing">
-  <meta property="og:title" content="Vidhata Plastics — Precision Plastics, From Design to Delivery">
+  <meta property="og:title" content="Vidhata Plastics &mdash; Precision Plastics, From Design to Delivery">
   <meta property="og:description" content="End-to-end plastics manufacturing partner for medical, pharma, electronics, and industrial sectors.">
   <meta property="og:type" content="website">
-  <title>Vidhata Plastics — Precision Plastics, From Design to Delivery</title>
+  <title>Vidhata Plastics &mdash; Precision Plastics, From Design to Delivery</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
@@ -19,12 +19,15 @@
 </head>
 <body>
 
+
 <!-- Loading Screen -->
 <div id="loading-screen" class="loading-screen">
+  <img src="images/vidhata-logo.svg" alt="Vidhata" style="width:72px;height:72px;margin-bottom:12px;filter:drop-shadow(0 0 16px rgba(14,165,233,0.4));" />
   <div class="loading-logo">VIDHATA</div>
-  <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);letter-spacing:0.2em;text-transform:uppercase;margin-top:-8px">Plastics</div>
+  <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);letter-spacing:0.2em;text-transform:uppercase;margin-top:-8px">Plastics India</div>
   <div class="loading-bar"><div class="loading-bar__fill"></div></div>
 </div>
+
 
 <!-- Reading Progress -->
 <div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:var(--grad-primary);z-index:1001;transition:width 0.1s linear;width:0%"></div>
@@ -33,17 +36,17 @@
 <nav id="navbar" class="navbar">
   <div class="navbar__inner">
     <a href="index.html" class="navbar__logo">
-      <div class="navbar__logo-icon">V</div>
+      <img src="images/vidhata-logo.svg" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
       <div class="navbar__logo-text">
-        <span class="navbar__logo-name">VIDHATA</span>
-        <span class="navbar__logo-tagline">Plastics India</span>
+        <span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span>
+        <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
       </div>
     </a>
 
     <div class="navbar__nav">
       <a href="index.html"         class="navbar__link">Home</a>
       <div class="navbar__dropdown">
-        <a href="services.html"    class="navbar__link">Services ▾</a>
+        <a href="services.html"    class="navbar__link">Services &#9662;</a>
         <div class="navbar__dropdown-menu">
           <a href="services.html#design"       class="navbar__dropdown-item">Product Design</a>
           <a href="services.html#tooling"      class="navbar__dropdown-item">Tool &amp; Mould Manufacturing</a>
@@ -57,7 +60,7 @@
       <a href="infrastructure.html"class="navbar__link">Infrastructure</a>
       <a href="quality.html"       class="navbar__link">Quality</a>
       <div class="navbar__dropdown">
-        <a href="about.html"       class="navbar__link">Company ▾</a>
+        <a href="about.html"       class="navbar__link">Company &#9662;</a>
         <div class="navbar__dropdown-menu">
           <a href="about.html"        class="navbar__dropdown-item">About Us</a>
           <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
@@ -93,75 +96,133 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- HERO SECTION -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<section class="hero" id="home">
-  <canvas id="particles-canvas"></canvas>
-  <div class="bg-grid bg-grid--fade"></div>
-  <div class="orb orb--blue orb--1"></div>
-  <div class="orb orb--gold orb--2"></div>
-  <div class="orb orb--blue orb--3"></div>
+<!-- ======================================================= -->
+<!-- HERO SECTION — Logo Animation Video Hero               -->
+<!-- ======================================================= -->
+<section class="hero hero--video" id="home">
 
-  <div class="hero__bg" style="background-image: url('images/hero-bg.png')"></div>
+  <!-- Ambient orbs -->
+  <div class="orb orb--blue orb--1" style="opacity:0.35"></div>
+  <div class="orb orb--gold orb--2" style="opacity:0.25"></div>
 
-  <div class="container hero__content">
-    <div class="hero__eyebrow hero-anim-1">
-      <span class="hero__eyebrow-dot"></span>
-      ISO 9001:2015 &amp; ISO 13485 Certified
+  <div class="container hero__video-layout">
+
+    <!-- LEFT: Content -->
+    <div class="hero__video-content">
+
+      <!-- Badge -->
+      <div class="hero__eyebrow hero-anim-1">
+        <span class="hero__eyebrow-dot"></span>
+        ISO 9001:2015 &amp; ISO 13485 Certified
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero__headline hero-anim-2">
+        Precision<br>
+        <span class="gradient-animated">Plastics,</span><br>
+        <span class="hero__hl-light">From Design<br>to Delivery</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="hero__subhead hero-anim-3">
+        A single-roof partner for tooling, mould manufacturing,
+        high-volume production, assembly &amp; cleanroom
+        medical manufacturing &mdash; since 2003.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero__actions hero-anim-4">
+        <a href="contact.html" class="btn btn--primary btn--xl" data-magnetic="0.2" data-ripple>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Request a Quote
+        </a>
+        <a href="contact.html#consultation" class="btn btn--outline btn--xl" data-magnetic="0.2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Schedule Consultation
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="hero__trust-badges hero-anim-5">
+        <div class="hero__trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          ISO 9001:2015
+        </div>
+        <div class="hero__trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          ISO 13485
+        </div>
+        <div class="hero__trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          CE Marked
+        </div>
+        <div class="hero__trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          20+ Years
+        </div>
+      </div>
     </div>
 
-    <h1 class="hero__headline hero-anim-2">
-      Precision Plastics,<br>
-      <span class="gradient-animated">From Design</span><br>
-      to Delivery
-    </h1>
-
-    <p class="hero__subhead hero-anim-3">
-      A single-roof partner for tooling, mould manufacturing, high-volume production,
-      assembly, and cleanroom medical manufacturing.
-    </p>
-
-    <div class="hero__actions hero-anim-4">
-      <a href="contact.html" class="btn btn--primary btn--xl" data-magnetic="0.2" data-ripple>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-        Request a Quote
-      </a>
-      <a href="contact.html#consultation" class="btn btn--outline btn--xl" data-magnetic="0.2">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        Schedule Consultation
-      </a>
+    <!-- RIGHT: Logo Animation Video -->
+    <div class="hero__video-showcase hero-anim-2">
+      <div class="hero__video-glow-ring"></div>
+      <div class="hero__video-frame">
+        <video
+          id="logo-video"
+          class="hero__logo-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
+        >
+          <source src="images/logo-animation.mov" type="video/quicktime">
+          <source src="images/logo-animation.mov" type="video/mp4">
+        </video>
+        <div class="hero__video-fallback">
+          <img src="images/vidhata-logo.svg" alt="Vidhata Plastics" style="width:120px;height:120px;">
+        </div>
+      </div>
+      <div class="hero__video-label">
+        <div class="hero__video-label-name">VIDHATA PLASTICS</div>
+        <div class="hero__video-label-sub">INDIA PVT. LTD.</div>
+        <div class="hero__video-label-tag">DESIGN &middot; TOOLING &middot; PRODUCTION &middot; ASSEMBLY</div>
+      </div>
     </div>
+  </div>
 
-    <!-- Stats Bar -->
-    <div class="hero-anim-5 hero-stats-bar">
-      <div style="text-align:center">
-        <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-          <span data-count="20" data-suffix="+">20+</span>
+  <!-- Stats Bar -->
+  <div class="hero__stats-strip hero-anim-5">
+    <div class="container">
+      <div class="hero-stats-bar">
+        <div style="text-align:center">
+          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+            <span data-count="20" data-suffix="+">20+</span>
+          </div>
+          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Years Experience</div>
         </div>
-        <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Years Experience</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-          <span data-count="400" data-suffix="+">400+</span>
+        <div style="text-align:center">
+          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+            <span data-count="400" data-suffix="+">400+</span>
+          </div>
+          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Moulds Built</div>
         </div>
-        <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Moulds Built</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-          <span data-count="200" data-suffix="M+">200M+</span>
+        <div style="text-align:center">
+          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+            <span data-count="200" data-suffix="M+">200M+</span>
+          </div>
+          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Components Made</div>
         </div>
-        <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Components Made</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-          <span data-count="5000" data-suffix="MT">5,000MT</span>
+        <div style="text-align:center">
+          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+            <span data-count="5000" data-suffix="MT">5,000MT</span>
+          </div>
+          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Raw Material/Year</div>
         </div>
-        <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Raw Material/Year</div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">2</div>
-        <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">ISO Certifications</div>
+        <div style="text-align:center">
+          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">2</div>
+          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">ISO Certifications</div>
+        </div>
       </div>
     </div>
   </div>
@@ -172,16 +233,17 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════ -->
+
+<!-- ======================================================= -->
 <!-- SERVICES OVERVIEW -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <section class="section" id="services">
   <div class="bg-grid" style="opacity:0.4"></div>
   <div class="container">
     <div class="section-header--center" data-reveal="up">
       <div class="section-label">What We Do</div>
       <h2>End-to-End Manufacturing<br>Under One Roof</h2>
-      <p>From concept design to final delivery — we are your single manufacturing partner.</p>
+      <p>From concept design to final delivery &mdash; we are your single manufacturing partner.</p>
     </div>
 
     <div class="grid-3" data-stagger>
@@ -198,7 +260,7 @@
           <li class="service-card__list-item">Design for Manufacturability</li>
           <li class="service-card__list-item">Mold Flow Analysis</li>
         </ul>
-        <a href="services.html#design" class="service-card__link">Learn More →</a>
+        <a href="services.html#design" class="service-card__link">Learn More &rarr;</a>
       </div>
       <!-- Tooling -->
       <div class="service-card" data-3d="8">
@@ -213,7 +275,7 @@
           <li class="service-card__list-item">Polyurethane &amp; Press Tools</li>
           <li class="service-card__list-item">Hard &amp; Prototype Tooling</li>
         </ul>
-        <a href="services.html#tooling" class="service-card__link">Learn More →</a>
+        <a href="services.html#tooling" class="service-card__link">Learn More &rarr;</a>
       </div>
       <!-- Manufacturing -->
       <div class="service-card" data-3d="8">
@@ -228,7 +290,7 @@
           <li class="service-card__list-item">Polycarbonate Extrusion</li>
           <li class="service-card__list-item">Polyurethane Processing</li>
         </ul>
-        <a href="services.html#manufacturing" class="service-card__link">Learn More →</a>
+        <a href="services.html#manufacturing" class="service-card__link">Learn More &rarr;</a>
       </div>
       <!-- Assembly -->
       <div class="service-card" data-3d="8">
@@ -243,7 +305,7 @@
           <li class="service-card__list-item">Component &amp; Sub-Assembly</li>
           <li class="service-card__list-item">Packaging &amp; Logistics</li>
         </ul>
-        <a href="services.html#assembly" class="service-card__link">Learn More →</a>
+        <a href="services.html#assembly" class="service-card__link">Learn More &rarr;</a>
       </div>
       <!-- Medical -->
       <div class="service-card card--gold" data-3d="8">
@@ -258,7 +320,7 @@
           <li class="service-card__list-item">Medical Device Manufacturing</li>
           <li class="service-card__list-item">ISO 13485 Documentation</li>
         </ul>
-        <a href="medical.html" class="service-card__link" style="color:var(--clr-gold)">Learn More →</a>
+        <a href="medical.html" class="service-card__link" style="color:var(--clr-gold)">Learn More &rarr;</a>
       </div>
       <!-- Regulatory -->
       <div class="service-card" data-3d="8">
@@ -273,15 +335,15 @@
           <li class="service-card__list-item">Design History Files</li>
           <li class="service-card__list-item">CE &amp; QMSR Compliance</li>
         </ul>
-        <a href="services.html#regulatory" class="service-card__link">Learn More →</a>
+        <a href="services.html#regulatory" class="service-card__link">Learn More &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <!-- MEDICAL HIGHLIGHT STRIP -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <section class="medical-strip-section">
   <div class="medical-strip-grid">
     <!-- Image side -->
@@ -298,22 +360,22 @@
         <h2 style="margin-bottom:var(--sp-5)">Cleanroom Medical<br>Manufacturing</h2>
         <p style="margin-bottom:var(--sp-8)">Our dedicated ISO 13485-compliant cleanroom facility supports medical devices, IVD products, bioprocess components, cell &amp; gene therapy products, and pharmaceutical packaging.</p>
         <div class="medical-strip-checklist">
-          <div class="medical-check-item"><span class="check-icon">✓</span> Cleanroom Moulding</div>
-          <div class="medical-check-item"><span class="check-icon">✓</span> Leak Testing</div>
-          <div class="medical-check-item"><span class="check-icon">✓</span> Sterile Assembly</div>
-          <div class="medical-check-item"><span class="check-icon">✓</span> Quality Verification</div>
-          <div class="medical-check-item"><span class="check-icon">✓</span> Medical Packaging</div>
-          <div class="medical-check-item"><span class="check-icon">✓</span> ISO Documentation</div>
+          <div class="medical-check-item"><span class="check-icon">&#10003;</span> Cleanroom Moulding</div>
+          <div class="medical-check-item"><span class="check-icon">&#10003;</span> Leak Testing</div>
+          <div class="medical-check-item"><span class="check-icon">&#10003;</span> Sterile Assembly</div>
+          <div class="medical-check-item"><span class="check-icon">&#10003;</span> Quality Verification</div>
+          <div class="medical-check-item"><span class="check-icon">&#10003;</span> Medical Packaging</div>
+          <div class="medical-check-item"><span class="check-icon">&#10003;</span> ISO Documentation</div>
         </div>
-        <a href="medical.html" class="btn btn--gold btn--lg">Explore Medical Division →</a>
+        <a href="medical.html" class="btn btn--gold btn--lg">Explore Medical Division &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <!-- INDUSTRIES -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <section class="section section--alt" id="industries">
   <div class="container">
     <div class="section-header--center" data-reveal="up">
@@ -323,22 +385,22 @@
 
     <div class="grid-4" data-stagger>
       <div class="card" style="text-align:center;cursor:pointer" onclick="location.href='industries.html#medical'">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">🏥</div>
+        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">&#127973;</div>
         <h4 style="margin-bottom:var(--sp-2)">Medical &amp; Healthcare</h4>
         <p style="font-size:var(--fs-sm)">Dialysis components, catheters, medical disposables, IVD products</p>
       </div>
       <div class="card" style="text-align:center;cursor:pointer" onclick="location.href='industries.html#pharma'">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">💊</div>
+        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">&#128138;</div>
         <h4 style="margin-bottom:var(--sp-2)">Pharmaceutical</h4>
         <p style="font-size:var(--fs-sm)">Child resistant closures, droppers, blood tubes, ophthalmic nozzles</p>
       </div>
       <div class="card" style="text-align:center;cursor:pointer" onclick="location.href='industries.html#electronics'">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">⚡</div>
+        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">&#9889;</div>
         <h4 style="margin-bottom:var(--sp-2)">Electronics</h4>
         <p style="font-size:var(--fs-sm)">Mobile charger housings, energy meters, POS devices, consumer electronics</p>
       </div>
       <div class="card" style="text-align:center;cursor:pointer" onclick="location.href='industries.html#lighting'">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">💡</div>
+        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">&#128161;</div>
         <h4 style="margin-bottom:var(--sp-2)">LED Lighting</h4>
         <p style="font-size:var(--fs-sm)">Diffusers, batten housings, street light covers, downlight components</p>
       </div>
@@ -346,17 +408,17 @@
 
     <div class="grid-3" style="margin-top:var(--sp-6)" data-stagger>
       <div class="card" style="text-align:center;cursor:pointer" onclick="location.href='industries.html#industrial'">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">🔩</div>
+        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">&#128297;</div>
         <h4 style="margin-bottom:var(--sp-2)">Industrial</h4>
         <p style="font-size:var(--fs-sm)">Battery containers, polyurethane components, engineering plastics</p>
       </div>
       <div class="card" style="text-align:center;cursor:pointer" onclick="location.href='industries.html#consumer'">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">👟</div>
+        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">&#128095;</div>
         <h4 style="margin-bottom:var(--sp-2)">Consumer Goods</h4>
         <p style="font-size:var(--fs-sm)">Footwear soles, packaging, lifestyle products for global brands</p>
       </div>
       <div class="card" style="text-align:center;background:var(--grad-card);border-color:rgba(14, 165, 233,0.2)" onclick="location.href='industries.html'">
-        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">🌐</div>
+        <div style="font-size:2.5rem;margin-bottom:var(--sp-3)">&#127760;</div>
         <h4 style="margin-bottom:var(--sp-2)">View All Industries</h4>
         <p style="font-size:var(--fs-sm)">See our complete portfolio across all manufacturing sectors</p>
       </div>
@@ -364,9 +426,9 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <!-- STATS / SUCCESS STORIES -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <section class="section" id="results">
   <div class="container">
     <div class="section-header--center" data-reveal="up">
@@ -400,7 +462,7 @@
     <div style="margin-top:var(--sp-12)" data-reveal="up">
       <div class="testimonial">
         <div class="testimonial__text">
-          "We used to source all of our moulds from China. Vidhata matched them on price and beat them on quality. The delivery timelines and engineering support are exceptional — we haven't looked back since."
+          "We used to source all of our moulds from China. Vidhata matched them on price and beat them on quality. The delivery timelines and engineering support are exceptional &mdash; we haven't looked back since."
         </div>
         <div class="testimonial__author">
           <div class="testimonial__avatar">R</div>
@@ -409,21 +471,21 @@
             <div class="testimonial__role">Leading Lighting Manufacturer, Hyderabad</div>
           </div>
           <div style="margin-left:auto;display:flex;gap:4px">
-            <span style="color:var(--clr-gold)">★★★★★</span>
+            <span style="color:var(--clr-gold)">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
           </div>
         </div>
       </div>
     </div>
 
     <div style="text-align:center;margin-top:var(--sp-10)" data-reveal="up">
-      <a href="case-studies.html" class="btn btn--outline btn--lg">View All Case Studies →</a>
+      <a href="case-studies.html" class="btn btn--outline btn--lg">View All Case Studies &rarr;</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <!-- CLIENT LOGOS STRIP -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <section class="section section--alt" id="clients">
   <div class="container">
     <div class="section-header--center" style="margin-bottom:var(--sp-10)" data-reveal="up">
@@ -467,9 +529,9 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <!-- CTA SECTION -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ======================================================= -->
 <section class="section" style="background:var(--grad-surface)">
   <div class="container">
     <div class="border-beam-container" style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-2xl);padding:var(--sp-20);text-align:center;position:relative;overflow:hidden" data-reveal="scale">
@@ -498,10 +560,10 @@
     <div class="footer__grid">
       <div>
         <a href="index.html" class="navbar__logo" style="margin-bottom:var(--sp-4);display:inline-flex">
-          <div class="navbar__logo-icon">V</div>
+          <img src="images/vidhata-logo.svg" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
           <div class="navbar__logo-text">
-            <span class="navbar__logo-name">VIDHATA</span>
-            <span class="navbar__logo-tagline">Plastics India Pvt. Ltd.</span>
+            <span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span>
+            <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
           </div>
         </a>
         <p class="footer__brand-desc">Fully integrated plastics manufacturer delivering world-class solutions for medical, pharmaceutical, electronics, and industrial sectors since 2003.</p>
@@ -535,22 +597,22 @@
       <div>
         <div class="footer__col-title">Contact</div>
         <div class="footer__contact-item">
-          <span class="footer__contact-icon">📍</span>
-          <span>Unit 2 – E-City, Maheshwaram, Rangareddy, Telangana 501359</span>
+          <span class="footer__contact-icon">&#128205;</span>
+          <span>Unit 2 &mdash; E-City, Maheshwaram, Rangareddy, Telangana 501359</span>
         </div>
         <div class="footer__contact-item">
-          <span class="footer__contact-icon">📞</span>
+          <span class="footer__contact-icon">&#128234;</span>
           <a href="tel:+919885100808" style="color:var(--clr-text-muted);transition:color 0.2s">+91 98851 00808</a>
         </div>
         <div class="footer__contact-item">
-          <span class="footer__contact-icon">✉️</span>
+          <span class="footer__contact-icon">&#128205;</span>
           <a href="mailto:vikrant@vidhata.co.in" style="color:var(--clr-text-muted);transition:color 0.2s">vikrant@vidhata.co.in</a>
         </div>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <p class="footer__copy">© 2024 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p>
+      <p class="footer__copy">&copy; 2024 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p>
       <div class="footer__social">
         <a href="#" class="footer__social-link" aria-label="LinkedIn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -580,7 +642,7 @@
 
 <!-- Cookie Banner -->
 <div id="cookie-banner" class="cookie-banner">
-  <div class="cookie-banner__title">🍪 We use cookies</div>
+  <div class="cookie-banner__title">&#127850; We use cookies</div>
   <div class="cookie-banner__text">We use cookies to enhance your browsing experience and analyze site traffic. By clicking "Accept", you consent to our use of cookies.</div>
   <div class="cookie-banner__actions">
     <button id="cookie-accept" class="btn btn--primary btn--sm">Accept</button>
@@ -592,5 +654,6 @@
 <script src="js/animations.js"></script>
 <script src="js/form.js"></script>
   <script src="js/chatbot.js"></script>
+  <script src="js/dna-helix.js"></script>
 </body>
 </html>
