@@ -178,7 +178,8 @@ function initCard3D() {
       // Inner glow follow
       const glow = card.querySelector('.card-glow');
       if (glow) {
-        glow.style.background = `radial-gradient(circle at ${(x * 50 + 50)}% ${(y * 50 + 50)}%, rgba(37, 99, 235,0.15) 0%, transparent 60%)`;
+        const glowColor = card.dataset.glowColor || 'rgba(37, 99, 235, 0.15)';
+        glow.style.background = `radial-gradient(circle at ${(x * 50 + 50)}% ${(y * 50 + 50)}%, ${glowColor} 0%, transparent 60%)`;
       }
     });
 

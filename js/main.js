@@ -415,6 +415,112 @@ function initCookieBanner() {
   });
 }
 
+// ── Lead Verification Modal ──────────────────────────────
+function initLeadModal() {
+  console.log('[Lead Modal] initLeadModal called');
+  const modal = $('#lead-modal');
+  if (!modal) {
+    console.warn('[Lead Modal] modal element #lead-modal not found in DOM');
+    return;
+  }
+
+  const closeBtn = $('#lead-modal-close');
+  const continueBtn = $('#lead-modal-continue');
+  const formState = $('#lead-form-state');
+  const resultsState = $('#lead-results-state');
+  const form = $('#lead-form');
+  const mobileInput = $('#lead-mobile');
+  const emailInput = $('#lead-email');
+  const mobileError = $('#lead-mobile-error');
+  const emailError = $('#lead-email-error');
+  
+  const whatsappBtn = $('#lead-whatsapp-btn');
+  const emailDirBtn = $('#lead-email-dir-btn');
+  const emailInfoBtn = $('#lead-email-info-btn');
+
+  // Check if already submitted or dismissed in session (bypass if URL has ?preview, ?force-lead, or if running on localhost)
+  const urlParams = new URLSearchParams(window.location.search);
+  const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const forceLead = urlParams.has('force-lead') || urlParams.has('preview') || isLocalhost;
+  console.log('[Lead Modal] forceLead status:', forceLead);
+
+  const isSubmitted = localStorage.getItem('vidhata_lead_submitted');
+  const isDismissed = sessionStorage.getItem('vidhata_lead_dismissed');
+  console.log('[Lead Modal] isSubmitted:', isSubmitted, 'isDismissed:', isDismissed);
+
+  if ((isSubmitted || isDismissed) && !forceLead) {
+    console.log('[Lead Modal] Modal suppressed due to stored flags (isSubmitted/isDismissed)');
+    return;
+  }
+
+  console.log('[Lead Modal] Registering open timer (1.8s delay)...');
+  // Open modal after a delay (e.g. 1.8s) so page has loaded and loading screen is hidden
+  setTimeout(() => {
+    console.log('[Lead Modal] Adding .open class to element');
+    modal.classList.add('open');
+  }, 1800);
+
+  // Close functionality
+  const closeModal = () => {
+    modal.classList.remove('open');
+    sessionStorage.setItem('vidhata_lead_dismissed', 'true');
+  };
+
+  closeBtn?.addEventListener('click', closeModal);
+  continueBtn?.addEventListener('click', closeModal);
+  modal.querySelector('.lead-modal__backdrop')?.addEventListener('click', closeModal);
+
+  // Form submission handler
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const mobileVal = mobileInput ? mobileInput.value.trim() : '';
+    const emailVal = emailInput ? emailInput.value.trim() : '';
+    
+    const phoneRegex = /^\+?[\d\s\-()]{7,18}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    let isMobileValid = phoneRegex.test(mobileVal);
+    let isEmailValid = emailRegex.test(emailVal);
+    
+    if (mobileError) mobileError.style.display = isMobileValid ? 'none' : 'block';
+    if (emailError) emailError.style.display = isEmailValid ? 'none' : 'block';
+    
+    if (!isMobileValid) {
+      mobileInput?.focus();
+      return;
+    }
+    
+    if (!isEmailValid) {
+      emailInput?.focus();
+      return;
+    }
+
+    // Save lead details
+    localStorage.setItem('vidhata_lead_submitted', 'true');
+    localStorage.setItem('vidhata_lead_mobile', mobileVal);
+    localStorage.setItem('vidhata_lead_email', emailVal);
+
+    // Update WhatsApp & Email links dynamically with details
+    const encodedMobile = encodeURIComponent(mobileVal);
+    const encodedEmail = encodeURIComponent(emailVal);
+    
+    if (whatsappBtn) {
+      whatsappBtn.href = `https://wa.me/919885100808?text=Hello%20Vidhata%20Plastics%2C%20I%20have%20submitted%20my%20contact%20details%20(Mobile%3A%20${encodedMobile}%2C%20Email%3A%20${encodedEmail})%20on%20your%20website.%20Please%20provide%20the%20catalog%20and%20business%20data.`;
+    }
+    if (emailDirBtn) {
+      emailDirBtn.href = `mailto:vikrant@vidhata.co.in?subject=Data%20Access%20Request%20-%20Vidhata%20Plastics&body=Hello%20Vikrant%2C%0A%0AI%20am%20interested%20in%20viewing%20Vidhata%20Plastics%27%20manufacturing%20data%20and%20specifications.%0A%0AMobile%3A%20${encodedMobile}%0AEmail%3A%20${encodedEmail}%0A%0ABest%20regards%2C`;
+    }
+    if (emailInfoBtn) {
+      emailInfoBtn.href = `mailto:info@vidhata.co.in?subject=Data%20Access%20Request%20-%20Vidhata%20Plastics&body=Hello%20Vidhata%20Team%2C%0A%0AI%20am%20interested%20in%20viewing%20Vidhata%20Plastics%27%20manufacturing%20data%20and%20specifications.%0A%0AMobile%3A%20${encodedMobile}%0AEmail%3A%20${encodedEmail}%0A%0ABest%20regards%2C`;
+    }
+
+    // Switch states
+    formState?.classList.remove('active');
+    resultsState?.classList.add('active');
+  });
+}
+
 // ── Parallax for Hero ──────────────────────────────────────
 function initParallax() {
   const heroBg = $('.hero__bg');
@@ -525,17 +631,26 @@ function initInteractiveGrid() {
 
 // ── Init Everything ────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  initLoadingScreen();
-  initNavbar();
-  initCounters();
-  initParticles();
-  initTypedText();
-  initSmoothScroll();
-  initCookieBanner();
-  initParallax();
-  initBackToTop();
-  initVideos();
-  initTilt();
-  initLazyImages();
-  initInteractiveGrid();
+  const initSafe = (name, fn) => {
+    try {
+      fn();
+    } catch (err) {
+      console.error(`[Init Error] Failed to initialize ${name}:`, err);
+    }
+  };
+
+  initSafe('LoadingScreen', initLoadingScreen);
+  initSafe('Navbar', initNavbar);
+  initSafe('Counters', initCounters);
+  initSafe('Particles', initParticles);
+  initSafe('TypedText', initTypedText);
+  initSafe('SmoothScroll', initSmoothScroll);
+  initSafe('CookieBanner', initCookieBanner);
+  initSafe('LeadModal', initLeadModal);
+  initSafe('Parallax', initParallax);
+  initSafe('BackToTop', initBackToTop);
+  initSafe('Videos', initVideos);
+  initSafe('Tilt', initTilt);
+  initSafe('LazyImages', initLazyImages);
+  initSafe('InteractiveGrid', initInteractiveGrid);
 });
