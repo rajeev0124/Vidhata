@@ -14,19 +14,19 @@
   --clr-card:        #FFFFFF;
   --clr-card-hover:  #F1F5F9;
   --clr-border:      #E2E8F0;
-  --clr-border-gold: rgba(212, 33, 61, 0.25);
+  --clr-border-gold: rgba(223, 42, 41, 0.25);
 
-  --clr-primary:     #1A2644;
-  --clr-primary-dark:#111A30;
-  --clr-primary-glow:rgba(26, 38, 68, 0.15);
+  --clr-primary:     #2C3288;
+  --clr-primary-dark:#1E2260;
+  --clr-primary-glow:rgba(44, 50, 136, 0.15);
 
-  --clr-teal:        #2563EB;
-  --clr-teal-dark:   #1D4ED8;
-  --clr-teal-glow:   rgba(37, 99, 235, 0.15);
+  --clr-teal:        #3B82F6;
+  --clr-teal-dark:   #2563EB;
+  --clr-teal-glow:   rgba(59, 130, 246, 0.15);
 
-  --clr-gold:        #D4213D;
-  --clr-gold-dark:   #B01A30;
-  --clr-gold-glow:   rgba(212, 33, 61, 0.15);
+  --clr-gold:        #DF2A29;
+  --clr-gold-dark:   #B51F1E;
+  --clr-gold-glow:   rgba(223, 42, 41, 0.15);
 
   --clr-text:        #0F172A;
   --clr-text-muted:  #475569;
@@ -37,9 +37,9 @@
   --clr-error:       #EF4444;
 
   /* Gradients */
-  --grad-primary:    linear-gradient(135deg, #2563EB 0%, #1A2644 100%);
-  --grad-teal:       linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
-  --grad-gold:       linear-gradient(135deg, #EF4444 0%, #D4213D 100%);
+  --grad-primary:    linear-gradient(135deg, #3B82F6 0%, #2C3288 100%);
+  --grad-teal:       linear-gradient(135deg, #60A5FA 0%, #2563EB 100%);
+  --grad-gold:       linear-gradient(135deg, #EF4444 0%, #DF2A29 100%);
   --grad-hero:       linear-gradient(160deg, rgba(255,255,255,0.95) 0%, rgba(244,247,253,0.85) 50%, rgba(255,255,255,0.95) 100%);
   --grad-surface:    linear-gradient(180deg, rgba(244,247,253,0.8) 0%, rgba(255,255,255,0.8) 100%);
   --grad-card:       linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(244,247,253,0.9) 100%);
