@@ -154,7 +154,7 @@ function initQuoteForm() {
       await new Promise(r => setTimeout(r, 800));
 
       // Open mailto link
-      window.location.href = `mailto:vikrant@vidhata.co.in?cc=info@vidhata.co.in&subject=${subjectEnc}&body=${bodyEnc}`;
+      window.location.href = `mailto:arvind.kandi7@gmail.com?cc=vikrant@vidhata.co.in,info@vidhata.co.in&subject=${subjectEnc}&body=${bodyEnc}`;
 
       // Populate fallback details
       const fallbackText = document.getElementById('fallback-text');
@@ -162,7 +162,7 @@ function initQuoteForm() {
 
       const btnWaFallback = document.getElementById('btn-wa-fallback');
       if (btnWaFallback) {
-        btnWaFallback.href = `https://wa.me/919885100808?text=${encodeURIComponent('Hello Vidhata, here is my quote request:\n\n' + rawBody)}`;
+        btnWaFallback.href = `https://wa.me/918008801778?text=${encodeURIComponent('Hello Vidhata, here is my quote request:\n\n' + rawBody)}`;
       }
 
       // Toggle fallback action container

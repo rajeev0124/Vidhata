@@ -77,14 +77,14 @@
     {
       type: 'phone', alwaysTrigger: true,
       patterns: ['phone','call','number','mobile','telephone','dial','helpline','contact number'],
-      answer: "📞 Reach our Director directly:\n\nVikrant Kandimalla\n+91 98851 00808\n\nYou can also use the WhatsApp or Call buttons below.",
+      answer: "📞 Direct Contact Lines:\n\nArvind Kandi: +91 80088 01778\nVikrant Kandimalla: +91 98851 00808\n\nYou can also use the WhatsApp button on the screen.",
       cardIds: ['contact'],
       chips: [{ label:'📬 Contact Page', query:'contact' }]
     },
     {
       type: 'email', alwaysTrigger: true,
       patterns: ['email','mail','email id','email address','send message','write to'],
-      answer: "📧 Reach us by email:\n\n→ vikrant@vidhata.co.in  (Director)\n→ info@vidhata.co.in  (General Enquiries)\n\nWe typically respond within one business day.",
+      answer: "📧 Email Us Directly:\n\n→ arvind.kandi7@gmail.com  (Arvind Kandi)\n→ vikrant@vidhata.co.in  (Director)\n→ info@vidhata.co.in  (General Enquiries)\n\nWe respond within one business day.",
       cardIds: ['contact'],
       chips: [{ label:'📬 Contact Page', query:'contact' }]
     },

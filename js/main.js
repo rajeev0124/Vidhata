@@ -501,10 +501,10 @@ function initLeadModal() {
     const encodedEmail = encodeURIComponent(emailVal);
     
     if (whatsappBtn) {
-      whatsappBtn.href = `https://wa.me/919885100808?text=Hello%20Vidhata%20Plastics%2C%20I%20have%20submitted%20my%20contact%20details%20(Mobile%3A%20${encodedMobile}%2C%20Email%3A%20${encodedEmail})%20on%20your%20website.%20Please%20provide%20the%20catalog%20and%20business%20data.`;
+      whatsappBtn.href = `https://wa.me/918008801778?text=Hello%20Vidhata%20Plastics%2C%20I%20have%20submitted%20my%20contact%20details%20(Mobile%3A%20${encodedMobile}%2C%20Email%3A%20${encodedEmail})%20on%20your%20website.%20Please%20provide%20the%20catalog%20and%20business%20data.`;
     }
     if (emailDirBtn) {
-      emailDirBtn.href = `mailto:vikrant@vidhata.co.in?subject=Data%20Access%20Request%20-%20Vidhata%20Plastics&body=Hello%20Vikrant%2C%0A%0AI%20am%20interested%20in%20viewing%20Vidhata%20Plastics%27%20manufacturing%20data%20and%20specifications.%0A%0AMobile%3A%20${encodedMobile}%0AEmail%3A%20${encodedEmail}%0A%0ABest%20regards%2C`;
+      emailDirBtn.href = `mailto:arvind.kandi7@gmail.com?cc=vikrant@vidhata.co.in&subject=Data%20Access%20Request%20-%20Vidhata%20Plastics&body=Hello%20Arvind%2C%0A%0AI%20am%20interested%20in%20viewing%20Vidhata%20Plastics%27%20manufacturing%20data%20and%20specifications.%0A%0AMobile%3A%20${encodedMobile}%0AEmail%3A%20${encodedEmail}%0A%0ABest%20regards%2C`;
     }
     if (emailInfoBtn) {
       emailInfoBtn.href = `mailto:info@vidhata.co.in?subject=Data%20Access%20Request%20-%20Vidhata%20Plastics&body=Hello%20Vidhata%20Team%2C%0A%0AI%20am%20interested%20in%20viewing%20Vidhata%20Plastics%27%20manufacturing%20data%20and%20specifications.%0A%0AMobile%3A%20${encodedMobile}%0AEmail%3A%20${encodedEmail}%0A%0ABest%20regards%2C`;
