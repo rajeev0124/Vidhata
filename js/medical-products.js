@@ -641,6 +641,34 @@ const MEDICAL_PRODUCTS = [
     }
   },
   {
+    id: "hemodialysis-catheter-kit-long-term",
+    title: "Hemodialysis Catheter Kit (Long Term)",
+    category: "Nephrology",
+    image: "images/Nephrology/hemodialysis catheter kit long term.jpg",
+    images: [
+      "images/Nephrology/hemodialysis catheter kit long term.jpg",
+      "images/Catheter/hemodialysis catheter kit long term.jpg"
+    ],
+    description: "An indwelling, cuffed catheter designed for long-term hemodialysis and apheresis. Features a thermosensitive biocompatible polyurethane shaft, Dacron tissue ingrowth cuff for infection barrier, and high-flow dual-lumen design.",
+    features: [
+      "Thermosensitive radiopaque polyurethane softens at body temperature to minimize vascular irritation.",
+      "Dacron cuff promotes tissue ingrowth, anchoring catheter and forming a barrier against microbial entry.",
+      "Dual-lumen geometry optimizes high-volume blood flow up to 400 mL/min with low recirculation.",
+      "Soft atraumatic tip design minimizes vessel wall contact and vascular erosion.",
+      "Complete Seldinger insertion kit includes tunneling stylet, 18G needle, Nitinol J-wire, dilators, and heparin caps."
+    ],
+    specs: {
+      "Lumen Configuration": "Dual Lumen D-shape / Round lumens",
+      "Catheter Sizes": "14.5 Fr / 15 Fr",
+      "Catheter Lengths": "19 cm, 23 cm, 28 cm, 33 cm, 36 cm, 40 cm, 45 cm",
+      "Cuff Feature": "Dacron tissue-ingrowth antimicrobial barrier cuff",
+      "Flow Rate": "Up to 400 mL/min at <250 mmHg arterial pressure",
+      "Kit Accessories": "Tunneling stylet, 18G needle, Nitinol J-wire, vessel dilators, scalpel, injection caps",
+      "Sterilization": "Ethylene Oxide (EO) Sterile",
+      "Compliance": "ISO 13485, CE Certified"
+    }
+  },
+  {
     id: "peritoneal-dialysis-set",
     title: "Peritoneal Dialysis Transfusion Set",
     category: "Nephrology",
