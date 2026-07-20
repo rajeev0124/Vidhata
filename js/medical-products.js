@@ -61,33 +61,6 @@ const MEDICAL_PRODUCTS = [
 
   // ── Infusion ──
   {
-    id: "transfer-spike",
-    title: "Transfer Spike",
-    category: "Infusion",
-    image: "images/Infusion/transfer-spike.jpg",
-    images: [
-      "images/Infusion/transfer-spike.jpg",
-      "images/Infusion/transfer-spike-technical.jpg"
-    ],
-    description: "The Transfer Spike is a medical device designed for the efficient transfer of fluids between containers, specifically tailored for use with rubber-stoppered vials and bag sets. This device streamlines the process of diluting powdered medications, enhancing safety and efficiency in pharmaceutical practices.",
-    features: [
-      "Fits securely into vial and port rubber stoppers, ensuring sterility.",
-      "Large diameter for fast fluid transfer, even with non-evacuated vials.",
-      "Secure handling reduces spills and contamination.",
-      "Prevents air contamination and maintains medication integrity.",
-      "Reduces vial piercing, lowering contamination risks.",
-      "PVC-free, latex-free, and DEHP-free, safe for sensitive patients."
-    ],
-    specs: {
-      "Reference Code": "90314",
-      "Size": "Standard (Grip Flange)",
-      "Material": "Medical Grade Polymer (DEHP-Free, PVC-Free, Latex-Free)",
-      "Sterilization": "Ethylene Oxide (EO) Sterile",
-      "Packaging": "Individual Sterile Peel Pouch",
-      "Compliance": "EN ISO 13485:2016, CE Certified"
-    }
-  },
-  {
     id: "filter-infusion-set",
     title: "0.2 Micron Filter (Non-DEHP) Infusion Set",
     category: "Infusion",
