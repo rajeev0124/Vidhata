@@ -99,35 +99,61 @@
 <!-- ======================================================= -->
 <!-- HERO SECTION — Logo Animation Video Hero               -->
 <!-- ======================================================= -->
-<section class="hero hero--video" id="home">
+<section class="hero hero--bg-slider" id="home">
 
-  <!-- Ambient orbs -->
-  <div class="orb orb--blue orb--1" style="opacity:0.35"></div>
-  <div class="orb orb--gold orb--2" style="opacity:0.25"></div>
+  <!-- FULL SCREEN BACKGROUND IMAGE SLIDER -->
+  <div class="hero__bg-slider">
+    <div class="hero-slider hero-slider--bg" id="hero-slider">
+      <div class="hero-slider__track" id="hero-slider-track">
+        <div class="hero-slider__slide active">
+          <div class="hero-slider__bg-img" style="background-image: url('images/Infusion/Auto Stop IV infusion set.jpg')"></div>
+        </div>
+        <div class="hero-slider__slide">
+          <div class="hero-slider__bg-img" style="background-image: url('images/cardiology/central venous catheter and set.jpg')"></div>
+        </div>
+        <div class="hero-slider__slide">
+          <div class="hero-slider__bg-img" style="background-image: url('images/Catheter/hemodialysis catheter kit long term.jpg')"></div>
+        </div>
+        <div class="hero-slider__slide">
+          <div class="hero-slider__bg-img" style="background-image: url('images/Infusion Including Chemo/chemotherapy extension line with flow regulator.jpg')"></div>
+        </div>
+        <div class="hero-slider__slide">
+          <div class="hero-slider__bg-img" style="background-image: url('images/Nephrology/arteriovenous fistula needle sets.jpg')"></div>
+        </div>
+        <div class="hero-slider__slide">
+          <div class="hero-slider__bg-img" style="background-image: url('images/Infusion/0.2 MICRON FILTER (NON-DEHP) Infusion Set.jpg')"></div>
+        </div>
+        <div class="hero-slider__slide">
+          <div class="hero-slider__bg-img" style="background-image: url('images/Catheter/epidural catheter kit.jpg')"></div>
+        </div>
+        <div class="hero-slider__slide">
+          <div class="hero-slider__bg-img" style="background-image: url('images/Nephrology/haemodialysis catheter and set.jpg')"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Semi-transparent overlay to ensure text is crystal clear -->
+    <div class="hero__bg-overlay"></div>
+  </div>
 
-  <div class="container hero__video-layout">
+  <!-- FOREGROUND CONTENT OVERLAYED ON TOP -->
+  <div class="container hero__full-layout" style="position:relative;z-index:2">
 
-    <!-- LEFT: Content -->
-    <div class="hero__video-content">
-
+    <div class="hero__full-content">
       <!-- Badge -->
-      <div class="hero__eyebrow hero-anim-1">
-        <span class="hero__eyebrow-dot"></span>
+      <div class="hero__eyebrow hero-anim-1" style="background:rgba(14,165,233,0.08);border-color:rgba(14,165,233,0.25);color:#0284c7">
+        <span class="hero__eyebrow-dot" style="background:#0284c7"></span>
         ISO 9001:2015 &amp; ISO 13485 Certified
       </div>
 
       <!-- Headline -->
-      <h1 class="hero__headline hero-anim-2">
-        Precision<br>
-        <span class="gradient-animated">Plastics,</span><br>
-        <span class="hero__hl-light">From Design<br>to Delivery</span>
+      <h1 class="hero__headline hero-anim-2" style="color:#0f172a">
+        Precision <span class="gradient-animated">Plastics,</span><br>
+        <span class="hero__hl-light" style="color:#475569">From Design to Delivery</span>
       </h1>
 
       <!-- Subheadline -->
-      <p class="hero__subhead hero-anim-3">
-        A single-roof partner for tooling, mould manufacturing,
-        high-volume production, assembly &amp; cleanroom
-        medical manufacturing &mdash; since 2003.
+      <p class="hero__subhead hero-anim-3" style="color:#475569;max-width:700px;margin:0 auto var(--sp-8)">
+        A single-roof partner for tooling, mould manufacturing, high-volume production, assembly &amp; cleanroom medical manufacturing &mdash; since 2003.
       </p>
 
       <!-- CTA Buttons -->
@@ -136,95 +162,70 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
           Request a Quote
         </a>
-        <a href="contact.html#consultation" class="btn btn--outline btn--xl" data-magnetic="0.2">
+        <a href="contact.html#consultation" class="btn btn--outline btn--xl" style="background:#ffffff;color:#0f172a;border-color:#cbd5e1;box-shadow:0 2px 8px rgba(15,23,42,0.06)" data-magnetic="0.2">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
           Schedule Consultation
         </a>
       </div>
 
       <!-- Trust Badges -->
-      <div class="hero__trust-badges hero-anim-5">
-        <div class="hero__trust-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div class="hero__trust-badges hero-anim-5" style="margin-top:var(--sp-6);gap:10px;justify-content:center">
+        <div class="hero__trust-item" style="background:#ffffff;color:#334155;border-color:#e2e8f0;box-shadow:0 2px 6px rgba(15,23,42,0.04);padding:6px 14px;border-radius:20px;font-size:0.85rem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           ISO 9001:2015
         </div>
-        <div class="hero__trust-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="hero__trust-item" style="background:#ffffff;color:#334155;border-color:#e2e8f0;box-shadow:0 2px 6px rgba(15,23,42,0.04);padding:6px 14px;border-radius:20px;font-size:0.85rem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           ISO 13485
         </div>
-        <div class="hero__trust-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="hero__trust-item" style="background:#ffffff;color:#334155;border-color:#e2e8f0;box-shadow:0 2px 6px rgba(15,23,42,0.04);padding:6px 14px;border-radius:20px;font-size:0.85rem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           CE Marked
         </div>
-        <div class="hero__trust-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="hero__trust-item" style="background:#ffffff;color:#334155;border-color:#e2e8f0;box-shadow:0 2px 6px rgba(15,23,42,0.04);padding:6px 14px;border-radius:20px;font-size:0.85rem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           20+ Years
         </div>
       </div>
+
+      <!-- Distinct Key Statistics Bar (Typography Matched to Main Headline) -->
+      <div class="hero__stats-strip hero-anim-5" style="margin-top:var(--sp-8);width:100%">
+        <div class="hero-stats-bar">
+          <div style="text-align:center">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.8rem,3vw,2.8rem);color:#0284c7;letter-spacing:-0.02em">
+              <span data-count="20" data-suffix="+">20+</span>
+            </div>
+            <div style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;font-weight:600">Years Experience</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.8rem,3vw,2.8rem);color:#0284c7;letter-spacing:-0.02em">
+              <span data-count="400" data-suffix="+">400+</span>
+            </div>
+            <div style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;font-weight:600">Moulds Built</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.8rem,3vw,2.8rem);color:#0284c7;letter-spacing:-0.02em">
+              <span data-count="200" data-suffix="M+">200M+</span>
+            </div>
+            <div style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;font-weight:600">Components Made</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.8rem,3vw,2.8rem);color:#d97706;letter-spacing:-0.02em">
+              <span data-count="5000" data-suffix="MT">5,000MT</span>
+            </div>
+            <div style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;font-weight:600">Raw Material/Year</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.8rem,3vw,2.8rem);color:#d97706;letter-spacing:-0.02em">2</div>
+            <div style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;font-weight:600">ISO Certifications</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Dots Indicator -->
+      <div class="hero-slider__dots" id="hero-slider-dots"></div>
     </div>
 
-    <!-- RIGHT: Logo Animation Video -->
-    <div class="hero__video-showcase hero-anim-2">
-      <div class="hero__video-glow-ring"></div>
-      <div class="hero__video-frame">
-        <video
-          id="logo-video"
-          class="hero__logo-video"
-          autoplay
-          loop
-          muted
-          playsinline
-          preload="auto"
-        >
-          <source src="images/logo-animation.mov" type="video/quicktime">
-          <source src="images/logo-animation.mov" type="video/mp4">
-        </video>
-        <div class="hero__video-fallback">
-          <img src="images/logo.png" alt="Vidhata Plastics" style="width:120px;height:120px;">
-        </div>
-      </div>
-      <div class="hero__video-label">
-        <div class="hero__video-label-name">VIDHATA PLASTICS</div>
-        <div class="hero__video-label-sub">INDIA PVT. LTD.</div>
-        <div class="hero__video-label-tag">DESIGN &middot; TOOLING &middot; PRODUCTION &middot; ASSEMBLY</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Stats Bar -->
-  <div class="hero__stats-strip hero-anim-5">
-    <div class="container">
-      <div class="hero-stats-bar">
-        <div style="text-align:center">
-          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-            <span data-count="20" data-suffix="+">20+</span>
-          </div>
-          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Years Experience</div>
-        </div>
-        <div style="text-align:center">
-          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-            <span data-count="400" data-suffix="+">400+</span>
-          </div>
-          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Moulds Built</div>
-        </div>
-        <div style="text-align:center">
-          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-            <span data-count="200" data-suffix="M+">200M+</span>
-          </div>
-          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Components Made</div>
-        </div>
-        <div style="text-align:center">
-          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
-            <span data-count="5000" data-suffix="MT">5,000MT</span>
-          </div>
-          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">Raw Material/Year</div>
-        </div>
-        <div style="text-align:center">
-          <div style="font-family:var(--font-heading);font-weight:var(--fw-black);font-size:clamp(1.5rem,2.5vw,2.5rem);background:var(--grad-gold);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">2</div>
-          <div style="font-size:var(--fs-xs);color:var(--clr-text-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px">ISO Certifications</div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="hero__scroll">
@@ -686,7 +687,7 @@
     </div>
 
     <div class="footer__bottom">
-      <p class="footer__copy">&copy; 2024 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p>
+      <p class="footer__copy">&copy; 2026 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p>
       <div class="footer__social">
         <a href="#" class="footer__social-link" aria-label="LinkedIn">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -724,101 +725,7 @@
   </div>
 </div>
 
-<!-- Lead Verification Modal --><div id="lead-modal" class="lead-modal">
-  <div class="lead-modal__backdrop"></div>
-  <div class="lead-modal__content">
-    <button id="lead-modal-close" class="lead-modal__close" aria-label="Close Modal">&times;</button>
-    
-    <!-- Decorative background elements inside the modal -->
-    <div class="lead-modal__orb lead-modal__orb--1"></div>
-    <div class="lead-modal__orb lead-modal__orb--2"></div>
-    
-    <!-- State 1: Form -->
-    <div id="lead-form-state" class="lead-modal__state active">
-      <div class="lead-modal__brand">
-        <img src="images/logo.png" alt="Vidhata Logo" class="lead-modal__logo">
-        <div class="lead-modal__brand-name">VIDHATA PLASTICS</div>
-        <div class="lead-modal__brand-tag">Precision Plastics &middot; Design to Delivery</div>
-      </div>
-      
-      <h3 class="lead-modal__title">Welcome to Vidhata</h3>
-      <p class="lead-modal__desc">
-        Unlock direct access to our manufacturing infrastructure details, materials catalog, and direct connect links with our leadership.
-      </p>
-      
-      <form id="lead-form" class="lead-modal__form">
-        <div class="lead-modal__field">
-          <input type="tel" id="lead-mobile" class="lead-modal__input" placeholder="Mobile Number" required>
-          <label for="lead-mobile" class="lead-modal__label">Mobile Number</label>
-        </div>
-        <div id="lead-mobile-error" class="lead-modal__error-msg">Please enter a valid mobile number.</div>
-        
-        <div class="lead-modal__field">
-          <input type="email" id="lead-email" class="lead-modal__input" placeholder="Email Address" required>
-          <label for="lead-email" class="lead-modal__label">Email Address</label>
-        </div>
-        <div id="lead-email-error" class="lead-modal__error-msg">Please enter a valid email address.</div>
 
-        <button type="submit" class="btn btn--primary btn--lg lead-modal__btn" data-ripple>
-          Verify &amp; Unlock Access
-        </button>
-      </form>
-    </div>
-    
-    <!-- State 2: Results -->
-    <div id="lead-results-state" class="lead-modal__state">
-      <div class="lead-modal__success-icon">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      </div>
-      <h3 class="lead-modal__title">Welcome Aboard!</h3>
-      <p class="lead-modal__desc">
-        Your contact has been registered. Connect directly with our team to view engineering details or start a consultation:
-      </p>
-      
-      <div class="lead-modal__actions-list">
-        <!-- WhatsApp -->
-        <a id="lead-whatsapp-btn" href="https://wa.me/919885100808" target="_blank" rel="noopener" class="lead-modal__action-card lead-modal__action-card--whatsapp">
-          <div class="lead-modal__action-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <div class="lead-modal__action-content">
-            <h4>WhatsApp Direct</h4>
-            <p>Chat with Vikrant Kandimalla (Director)</p>
-          </div>
-          <span class="lead-modal__action-arrow">&rarr;</span>
-        </a>
-        
-        <!-- Email 1: Vikrant -->
-        <a id="lead-email-dir-btn" href="mailto:vikrant@vidhata.co.in" class="lead-modal__action-card lead-modal__action-card--email">
-          <div class="lead-modal__action-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="lead-modal__action-content">
-            <h4>vikrant@vidhata.co.in</h4>
-            <p>Direct Business Inquiries</p>
-          </div>
-          <span class="lead-modal__action-arrow">&rarr;</span>
-        </a>
-
-        <!-- Email 2: Info -->
-        <a id="lead-email-info-btn" href="mailto:info@vidhata.co.in" class="lead-modal__action-card lead-modal__action-card--email">
-          <div class="lead-modal__action-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="lead-modal__action-content">
-            <h4>info@vidhata.co.in</h4>
-            <p>General Corporate Desk</p>
-          </div>
-          <span class="lead-modal__action-arrow">&rarr;</span>
-        </a>
-      </div>
-      
-      <button id="lead-modal-continue" class="btn btn--outline btn--lg lead-modal__btn-continue" style="width:100%">
-        Explore Corporate Site &rarr;
-      </button>
-    </div>
-  </div>
-</div>
 
 
 <script src="js/main.js"></script>
