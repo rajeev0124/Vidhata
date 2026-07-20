@@ -58,6 +58,29 @@ const MEDICAL_PRODUCTS = [
       "Material": "Medical-grade Nylon / Polyurethane"
     }
   },
+  {
+    id: "arterial-catheter-kit",
+    title: "Arterial Catheter Kit",
+    category: "Catheter",
+    image: "images/Catheter/arterial_catheter_kit.png",
+    description: "A precision Seldinger arterial catheterization kit designed for continuous arterial blood pressure monitoring and frequent blood gas sampling in critical care and surgical operating suites.",
+    features: [
+      "Thermosensitive radiopaque polyurethane catheter softens inside the artery to minimize mechanical vasospasm and intimal trauma.",
+      "Integrated blood flashback chamber on the introducer needle provides rapid tactile and visual confirmation of arterial entry.",
+      "Super-elastic Nitinol guidewire with flexible J-tip and ergonomic thumb-advancer facilitates smooth, kink-free vessel cannulation.",
+      "Soft pliable suture wings enable comfortable, secure skin fixation to minimize catheter displacement risks.",
+      "Kink-resistant extension line with a high-pressure rated 3-way stopcock guarantees accurate pressure wave transmission."
+    ],
+    specs: {
+      "Catheter Size": "20G (3 Fr) / 22G (2 Fr) options",
+      "Catheter Length": "8 cm, 12 cm, 16 cm arterial lines",
+      "Material": "Thermosensitive Radiopaque Polyurethane (Carbothane®)",
+      "Guidewire": "0.018 in / 0.021 in Nitinol J-tip guidewire with advancer",
+      "Introducer Needle": "20G / 22G transparent hub needle with flashback window",
+      "Sterilization": "Ethylene Oxide (EO) Sterile",
+      "Compliance": "ISO 13485, CE Certified"
+    }
+  },
 
   // ── Infusion ──
   {
