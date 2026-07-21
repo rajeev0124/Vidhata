@@ -1434,6 +1434,265 @@ a.card--interactive:active {
   padding-bottom: var(--sp-20);
 }
 
+/* ── Split-Screen Hero Layout ── */
+.hero--split {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--nav-h) + var(--sp-6));
+  padding-bottom: var(--sp-12);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.hero__split-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(217, 119, 6, 0.06) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.hero__split-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--sp-4);
+}
+
+.hero__split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero__split-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero__split-right {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Frameless Automatic Product Showcase ── */
+.hero-showcase-card {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Showcase Viewport & Track */
+.hero-showcase-card__viewport {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slider__slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.hero-showcase-img {
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hero-slider__slide:hover .hero-showcase-img {
+  transform: scale(1.03);
+}
+
+/* Floating Title Overlay Badge */
+.hero-showcase-card__badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.hero-showcase-badge__icon {
+  font-size: 0.9rem;
+}
+
+.hero-showcase-badge__title {
+  letter-spacing: 0.01em;
+}
+
+/* Arrow Navigation Buttons */
+.hero-showcase-card__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+}
+
+.hero-showcase-card__arrow:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.hero-showcase-card__arrow--prev { left: 14px; }
+.hero-showcase-card__arrow--next { right: 14px; }
+
+/* Card Footer (Dots) */
+.hero-showcase-card__footer {
+  padding: 10px 16px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-showcase-card__footer .hero-slider__dots {
+  margin-top: 0;
+}
+
+/* Stats Bar Full Width Long Bar Variant */
+.hero-stats-bar--full {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  width: 100%;
+  padding: 20px 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05), 0 0 0 1px rgba(14, 165, 233, 0.08);
+}
+
+.hero-stats-bar--full > div {
+  position: relative;
+  padding: 0 12px;
+}
+
+.hero-stats-bar--full > div:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  background: #e2e8f0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 991px) {
+  .hero--split {
+    min-height: auto;
+    padding-top: calc(var(--nav-h) + var(--sp-6));
+    padding-bottom: var(--sp-8);
+  }
+  .hero__split-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero__split-left {
+    align-items: center;
+    text-align: center;
+  }
+  .hero__split-left .hero__headline,
+  .hero__split-left .hero__subhead {
+    text-align: center !important;
+  }
+  .hero__split-left .hero__actions,
+  .hero__split-left .hero__trust-badges {
+    justify-content: center !important;
+  }
+  .hero-showcase-card__viewport {
+    height: 320px;
+  }
+  .hero-showcase-img {
+    max-height: 320px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__split-left .hero__actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero__split-left .hero__actions .btn {
+    width: 100%;
+    flex: none;
+  }
+  .hero-showcase-card__viewport {
+    height: 250px;
+  }
+  .hero-showcase-img {
+    max-height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  }
+}
+
 .hero__full-content {
   max-width: 820px;
   margin: 0 auto;

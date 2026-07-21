@@ -639,7 +639,7 @@ function initHeroSlider() {
 
   let currentIndex = 0;
   let timer = null;
-  const autoInterval = 3500; // 3.5 seconds auto slide
+  const autoInterval = 3000; // 3 seconds smooth auto slide one by one
 
   // Create dot indicators
   if (dotsContainer) {
@@ -648,7 +648,7 @@ function initHeroSlider() {
       const dot = document.createElement('button');
       dot.className = `hero-slider__dot${idx === 0 ? ' active' : ''}`;
       dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
-      dot.addEventListener('click', () => goToSlide(idx));
+      dot.addEventListener('click', () => { goToSlide(idx); startAutoPlay(); });
       dotsContainer.appendChild(dot);
     });
   }
@@ -685,33 +685,7 @@ function initHeroSlider() {
     if (timer) clearInterval(timer);
   }
 
-  // Event Listeners
-  if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
-  if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
-
-  slider.addEventListener('mouseenter', stopAutoPlay);
-  slider.addEventListener('mouseleave', startAutoPlay);
-
-  // Touch Swipe Support
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  slider.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    stopAutoPlay();
-  }, { passive: true });
-
-  slider.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    if (touchStartX - touchEndX > 40) {
-      nextSlide();
-    } else if (touchEndX - touchStartX > 40) {
-      prevSlide();
-    }
-    startAutoPlay();
-  }, { passive: true });
-
-  // Initial Play
+  // Continuous Auto Play (Unblocked by mouse hover)
   startAutoPlay();
 }
 
