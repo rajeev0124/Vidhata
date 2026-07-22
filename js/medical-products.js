@@ -279,7 +279,7 @@ const MEDICAL_PRODUCTS = [
     id: "elastomeric-pump",
     title: "Elastomeric Infusion Pump",
     category: "Infusion",
-    image: "images/Infusion/elastomeric infusion pump.jpg",
+    image: "images/Infusion/elastomeric_infusion_pump.png",
     description: "A continuous-infusion portable device utilizing elastomeric balloon pressure to deliver liquid medications at preset flow rates. Commonly used for ambulatory chemotherapy, home antibiotics, and patient-controlled analgesia (PCA).",
     features: [
       "Elastomeric silicone balloon provides constant, uniform pressure for continuous drug delivery.",
@@ -321,7 +321,7 @@ const MEDICAL_PRODUCTS = [
     id: "ext-line-flowregulator",
     title: "Extension Line with Flow Regulator",
     category: "Infusion",
-    image: "images/Infusion/extension line with flow regulator.jpg",
+    image: "images/Infusion/extension_line_flow_regulator.png",
     description: "A specialized short extension line featuring an inline dial-rate regulator. Essential for standardizing infusion rates when electronic infusion pumps are unavailable or during patient transport.",
     features: [
       "Dial flow regulator permits flow rate control between 5 and 250 ml/hr.",
@@ -342,7 +342,7 @@ const MEDICAL_PRODUCTS = [
     id: "extension-line-standard",
     title: "Extension Line (Standard)",
     category: "Infusion",
-    image: "images/Infusion/extension line.jpg",
+    image: "images/Infusion/extension_line_standard.png",
     description: "High-quality, flexible extension line designed to minimize catheter movement and patient distress. Ensures a secure connection with no flow reduction or kinking.",
     features: [
       "Highly flexible, kink-resistant tubing extends patient mobility.",
@@ -403,7 +403,7 @@ const MEDICAL_PRODUCTS = [
     id: "pvc-free-extline",
     title: "PVC-Free Extension Line",
     category: "Infusion",
-    image: "images/Infusion/pvc free extension line.jpg",
+    image: "images/Infusion/pvc_free_extline.png",
     description: "A dedicated co-extruded PVC-free extension line. Essential for infusing highly lipophilic medications or photosensitive compounds, avoiding drug absorption and plasticizer elution.",
     features: [
       "Co-extruded polyethylene (PE) inner lumen prevents drug absorption.",
