@@ -39,7 +39,7 @@ const MEDICAL_PRODUCTS = [
     id: "epidural-catheter-kit",
     title: "Epidural Catheter Kit",
     category: "Catheter",
-    image: "images/Catheter/epidural catheter kit.jpg",
+    image: "images/Catheter/epidural_catheter_kit.png",
     description: "Designed for continuous epidural infusion to manage regional anesthesia and post-operative pain relief. Features highly flexible, radiopaque catheters for precise placement under fluoroscopic control.",
     features: [
       "Premium Tuohy needle has a polished inner bevel edge to eliminate catheter shearing risk during insertion.",
