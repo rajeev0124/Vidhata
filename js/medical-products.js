@@ -645,7 +645,7 @@ const MEDICAL_PRODUCTS = [
     id: "peritoneal-dialysis-set",
     title: "Peritoneal Dialysis Transfusion Set",
     category: "Nephrology",
-    image: "images/Nephrology/peritonial dialysis transfusion set.jpg",
+    image: "images/Nephrology/peritoneal_dialysis_set.png",
     description: "A sterile gravity-feed peritoneal dialysis transfer set. Incorporates a Y-connector and color-coded clamps to manage dialysis solution instillation and abdominal drainage safely.",
     features: [
       "Robust Y-connector adapter manages fluid bags easily.",
