@@ -39,7 +39,7 @@ const MEDICAL_PRODUCTS = [
     id: "epidural-catheter-kit",
     title: "Epidural Catheter Kit",
     category: "Catheter",
-    image: "images/Catheter/epidural_catheter_kit.png",
+    image: "images/Catheter/epidural_catheter_kit.jpg",
     description: "Designed for continuous epidural infusion to manage regional anesthesia and post-operative pain relief. Features highly flexible, radiopaque catheters for precise placement under fluoroscopic control.",
     features: [
       "Premium Tuohy needle has a polished inner bevel edge to eliminate catheter shearing risk during insertion.",
@@ -109,7 +109,7 @@ const MEDICAL_PRODUCTS = [
     id: "three-way-stopcock",
     title: "3-Way Stopcock",
     category: "Infusion",
-    image: "images/Infusion/three_way_stopcock.png",
+    image: "images/Infusion/three_way_stopcock.jpg",
     description: "A crystal-clear, pressure-resistant three-way stopcock for simultaneous administration of multiple fluids or drug regimens. Fully rotatable handle allows 360-degree direction control without flow restriction.",
     features: [
       "Pressure-resistant polycarbonate body remains transparent and crack-free under lipid exposure.",
@@ -130,7 +130,7 @@ const MEDICAL_PRODUCTS = [
     id: "autostop-infusion-set",
     title: "Auto-Stop IV Infusion Set",
     category: "Infusion",
-    image: "images/Infusion/autostop_infusion_set.png",
+    image: "images/Infusion/autostop_infusion_set.jpg",
     description: "Enforces passive patient safety via an integrated auto-stop filter membrane in the drip chamber. Automatically stops flow when the fluid container runs dry, preventing line dry-out and air entry into the bloodstream.",
     features: [
       "Innovative auto-stop membrane prevents the line from running dry once the bag is empty.",
@@ -215,7 +215,7 @@ const MEDICAL_PRODUCTS = [
     id: "infusion-set-nonvented",
     title: "Infusion Set (Non-Vented)",
     category: "Infusion",
-    image: "images/Infusion/Infussion Set Non - Vented.jpeg",
+    image: "images/Infusion/Infusion set non vented.jpg",
     description: "Standard non-vented infusion set optimized for closed, collapsible plastic IV bags. Drip chamber features an integrated fluid filter and smooth transparent walls for precise drop monitoring.",
     features: [
       "Designed specifically for closed, collapsible plastic IV bags.",
@@ -279,7 +279,7 @@ const MEDICAL_PRODUCTS = [
     id: "elastomeric-pump",
     title: "Elastomeric Infusion Pump",
     category: "Infusion",
-    image: "images/Infusion/elastomeric_infusion_pump.png",
+    image: "images/Infusion/elastomeric_infusion_pump.jpg",
     description: "A continuous-infusion portable device utilizing elastomeric balloon pressure to deliver liquid medications at preset flow rates. Commonly used for ambulatory chemotherapy, home antibiotics, and patient-controlled analgesia (PCA).",
     features: [
       "Elastomeric silicone balloon provides constant, uniform pressure for continuous drug delivery.",
@@ -321,7 +321,7 @@ const MEDICAL_PRODUCTS = [
     id: "ext-line-flowregulator",
     title: "Extension Line with Flow Regulator",
     category: "Infusion",
-    image: "images/Infusion/extension_line_flow_regulator.png",
+    image: "images/Infusion/extension_line_flow_regulator.jpg",
     description: "A specialized short extension line featuring an inline dial-rate regulator. Essential for standardizing infusion rates when electronic infusion pumps are unavailable or during patient transport.",
     features: [
       "Dial flow regulator permits flow rate control between 5 and 250 ml/hr.",
@@ -342,7 +342,7 @@ const MEDICAL_PRODUCTS = [
     id: "extension-line-standard",
     title: "Extension Line (Standard)",
     category: "Infusion",
-    image: "images/Infusion/extension_line_standard.png",
+    image: "images/Infusion/extension_line_standard.jpg",
     description: "High-quality, flexible extension line designed to minimize catheter movement and patient distress. Ensures a secure connection with no flow reduction or kinking.",
     features: [
       "Highly flexible, kink-resistant tubing extends patient mobility.",
@@ -418,6 +418,33 @@ const MEDICAL_PRODUCTS = [
       "Inner Diameter": "1.2 mm",
       "Length": "150 cm",
       "Connectors": "Luer Lock male-female"
+    }
+  },
+  {
+    id: "transfer-spike",
+    title: "Transfer Spike",
+    category: "Infusion",
+    image: "images/Infusion/transfer-spike.jpg",
+    images: [
+      "images/Infusion/transfer-spike.jpg",
+      "images/Infusion/transfer-spike-technical.jpg"
+    ],
+    description: "A high-performance sterile fluid transfer spike designed for rapid, needle-free reconstitution and transfer of medications or sterile fluids between bags and bottles in clinical pharmacies and compounding suites.",
+    features: [
+      "Dual-channel spike design ensures rapid fluid transfer and pressure balancing without manual venting.",
+      "Large, ergonomic grip collar minimizes slippage and reduces contamination risks during insertion.",
+      "Sharp, low-force piercing spike tip easily penetrates rubber bottle stoppers and port membranes.",
+      "Manufactured using medical-grade, high-rigidity biocompatible polymers.",
+      "Individually packaged, sterile, pyrogen-free, and single-use."
+    ],
+    specs: {
+      "Spike Material": "Medical Grade Polycarbonate / ABS",
+      "Channel Type": "Dual channel (fluid path & air venting path)",
+      "Venting Filter": "Integrated hydrophobic air venting membrane",
+      "Connection": "Universal fluid port spike fitting",
+      "Sterilization": "Ethylene Oxide (EO) Sterile",
+      "Latex Free": "Yes",
+      "DEHP Free": "Yes"
     }
   },
 
@@ -554,7 +581,7 @@ const MEDICAL_PRODUCTS = [
     id: "dialysis-tubing-tp",
     title: "Haemodialysis Blood Tubing (TP)",
     category: "Nephrology",
-    image: "images/Nephrology/haemodialysis_blood_tubing_tp.png",
+    image: "images/Nephrology/haemodialysis_blood_tubing_tp.jpg",
     description: "Premium haemodialysis bloodline set featuring integrated transducer protectors (TP). Includes hydrophobic membranes to prevent blood from entering and contaminating machine sensors.",
     features: [
       "Inline transducer protectors with 0.2 µm hydrophobic PTFE filters.",
@@ -596,7 +623,7 @@ const MEDICAL_PRODUCTS = [
     id: "dialysis-catheter-set",
     title: "Haemodialysis Catheter and Set",
     category: "Nephrology",
-    image: "images/Nephrology/haemodialysis_catheter_set.png",
+    image: "images/Nephrology/haemodialysis_catheter_set.jpg",
     description: "Acute hemodialysis catheter kit featuring a thermosensitive dual-lumen polyurethane shaft. The soft blue tip decreases friction and reduces venous vessel wall erosion.",
     features: [
       "Thermosensitive polyurethane catheter softens at body temperature.",
