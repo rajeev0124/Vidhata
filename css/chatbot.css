@@ -100,17 +100,17 @@
 /* ── Chat Panel ───────────────────────────────────────────── */
 .vp-chat-panel {
   position: fixed;
-  bottom: 100px;
-  right: 28px;
-  z-index: 9997;
-  width: 400px;
-  height: 600px;
-  max-height: calc(100vh - 120px);
+  bottom: 85px;
+  right: 20px;
+  z-index: 9999;
+  width: 370px;
+  height: 520px;
+  max-height: calc(85vh - 40px);
   background: #fff;
-  border-radius: 20px;
+  border-radius: 18px;
   box-shadow:
-    0 30px 70px rgba(0, 0, 0, 0.18),
-    0  8px 24px rgba(0, 0, 0, 0.1),
+    0 20px 60px rgba(0, 0, 0, 0.22),
+    0  8px 24px rgba(0, 0, 0, 0.12),
     0  0   0  1px rgba(226, 232, 240, 0.9);
   display: none !important;
   flex-direction: column;
@@ -138,20 +138,20 @@
 
 @media (max-width: 576px) {
   .vp-chat-panel {
-    right: 14px;
-    left: 14px;
-    bottom: 90px;
+    right: 12px;
+    left: 12px;
+    bottom: 80px;
     width: auto;
-    height: 540px;
-    max-height: calc(100vh - 110px);
+    height: 480px;
+    max-height: calc(82vh - 20px);
     border-radius: 16px;
   }
 
   .vp-chat-toggle {
-    bottom: 18px;
-    right: 18px;
-    width: 54px;
-    height: 54px;
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
   }
 }
 
