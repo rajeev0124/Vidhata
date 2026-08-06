@@ -79,7 +79,7 @@
 <!-- Service 1: Product Design -->
 <section class="section" id="design">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center">
+    <div class="service-section-grid">
       <div data-reveal="right">
         <div class="section-label">01</div>
         <h2 style="margin-bottom:var(--sp-5)">Product Design &amp; Engineering</h2>
@@ -102,12 +102,12 @@
             <div><strong style="color:var(--clr-text);display:block;margin-bottom:4px">Product Optimization</strong><p style="font-size:var(--fs-sm)">Weight reduction, material substitution, and cost engineering studies</p></div>
           </div>
         </div>
-        <div style="margin-top:var(--sp-8)"><a href="contact.html" class="btn btn--primary btn--lg">Start a Design Project</a></div>
+        <div class="service-cta-wrap"><a href="contact.html" class="btn btn--primary btn--lg">Start a Design Project</a></div>
       </div>
       <div data-reveal="left">
-        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-2xl);padding:var(--sp-10)">
-          <div style="font-size:5rem;text-align:center;margin-bottom:var(--sp-6)">&#10003;</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4)">
+        <div class="service-stat-box">
+          <div class="service-check-icon">&#10003;</div>
+          <div class="service-stats-grid">
             <div class="stat-card" style="padding:var(--sp-5)"><div class="stat-card__number" style="font-size:var(--fs-2xl)">500+</div><div class="stat-card__label">Products Designed</div></div>
             <div class="stat-card" style="padding:var(--sp-5)"><div class="stat-card__number" style="font-size:var(--fs-2xl)">4 Wks</div><div class="stat-card__label">Avg. Concept to CAD</div></div>
             <div class="stat-card" style="padding:var(--sp-5)"><div class="stat-card__number" style="font-size:var(--fs-2xl)">100%</div><div class="stat-card__label">DFM Reviewed</div></div>
@@ -122,10 +122,10 @@
 <!-- Service 2: Tooling -->
 <section class="section section--alt" id="tooling">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center">
-      <div data-reveal="right">
-        <div style="position:relative;border-radius:var(--radius-2xl);overflow:hidden">
-          <img src="images/toolroom.png" alt="CNC toolroom" style="width:100%;height:450px;object-fit:cover">
+    <div class="service-section-grid">
+      <div data-reveal="right" class="service-tooling-img-col">
+        <div class="service-toolroom-wrap">
+          <img src="images/toolroom.png" alt="CNC toolroom" class="service-toolroom-img">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--clr-surface) 0%,transparent 50%)"></div>
           <div style="position:absolute;bottom:var(--sp-6);left:var(--sp-6)">
             <div style="display:flex;gap:var(--sp-2);flex-wrap:wrap">
@@ -161,37 +161,37 @@
       <p>120T to 250T injection moulding machines running 24/7 for high-volume, consistent quality production.</p>
     </div>
     <div class="grid-3" data-stagger>
-      <div class="card" style="text-align:center;padding:var(--sp-8)">
+      <div class="card service-mfg-card">
         <div style="font-size:3rem;margin-bottom:var(--sp-4)">&#10003;</div>
         <h4 style="margin-bottom:var(--sp-3)">Injection Moulding</h4>
         <p style="font-size:var(--fs-sm)">Haitian machines 120T&ndash;250T capacity. Multi-cavity, family, and hot runner moulds. All engineering thermoplastics.</p>
         <div style="margin-top:var(--sp-4);padding-top:var(--sp-4);border-top:1px solid var(--clr-border)"><span class="badge badge--primary">120T&ndash;250T</span></div>
       </div>
-      <div class="card" style="text-align:center;padding:var(--sp-8)">
+      <div class="card service-mfg-card">
         <div style="font-size:3rem;margin-bottom:var(--sp-4)">&#10003;</div>
         <h4 style="margin-bottom:var(--sp-3)">Injection Blow Moulding</h4>
         <p style="font-size:var(--fs-sm)">60T injection blow moulding line for bottles, containers, and pharmaceutical packaging.</p>
         <div style="margin-top:var(--sp-4);padding-top:var(--sp-4);border-top:1px solid var(--clr-border)"><span class="badge badge--primary">60T Line</span></div>
       </div>
-      <div class="card" style="text-align:center;padding:var(--sp-8)">
+      <div class="card service-mfg-card">
         <div style="font-size:3rem;margin-bottom:var(--sp-4)">&#10003;</div>
         <h4 style="margin-bottom:var(--sp-3)">Polycarbonate Extrusion</h4>
         <p style="font-size:var(--fs-sm)">High-clarity PC extrusion for lighting diffusers, tubes, profiles, and optical-grade sheets.</p>
         <div style="margin-top:var(--sp-4);padding-top:var(--sp-4);border-top:1px solid var(--clr-border)"><span class="badge badge--primary">PC / PMMA</span></div>
       </div>
-      <div class="card" style="text-align:center;padding:var(--sp-8)">
+      <div class="card service-mfg-card">
         <div style="font-size:3rem;margin-bottom:var(--sp-4)">&#10003;</div>
         <h4 style="margin-bottom:var(--sp-3)">Polyurethane Processing</h4>
         <p style="font-size:var(--fs-sm)">BASF Elastogran and Desma systems for footwear soles, gaskets, and industrial PU components.</p>
         <div style="margin-top:var(--sp-4);padding-top:var(--sp-4);border-top:1px solid var(--clr-border)"><span class="badge badge--gold">BASF Elastogran</span></div>
       </div>
-      <div class="card" style="text-align:center;padding:var(--sp-8)">
+      <div class="card service-mfg-card">
         <div style="font-size:3rem;margin-bottom:var(--sp-4)">&#10003;</div>
         <h4 style="margin-bottom:var(--sp-3)">Materials We Process</h4>
         <p style="font-size:var(--fs-sm)">PP, PE, PVC, ABS, PC, Nylon, POM, PEEK, TPE, TPU, PBT, and specialty engineering plastics.</p>
         <div style="margin-top:var(--sp-4);padding-top:var(--sp-4);border-top:1px solid var(--clr-border)"><span class="badge badge--success">15+ Polymers</span></div>
       </div>
-      <div class="card" style="text-align:center;padding:var(--sp-8)">
+      <div class="card service-mfg-card">
         <div style="font-size:3rem;margin-bottom:var(--sp-4)">&#10003;</div>
         <h4 style="margin-bottom:var(--sp-3)">Capacity &amp; Lead Times</h4>
         <p style="font-size:var(--fs-sm)">5,000 MT annual raw material processing. 24/7 production runs. Competitive lead times vs. imports.</p>
@@ -206,9 +206,9 @@
   <div class="container">
     <div class="section-header--center" data-reveal="up"><div class="section-label">04</div><h2>Assembly &amp; Logistics</h2><p>End-to-end assembly services from component joining to final packaging and dispatch.</p></div>
     <div class="grid-3" data-stagger>
-      <div class="card"><h4 style="margin-bottom:var(--sp-3)">Component Assembly</h4><p style="font-size:var(--fs-sm)">Manual and semi-automated assembly of multi-part plastic components with 100% inspection.</p></div>
-      <div class="card card--gold"><h4 style="margin-bottom:var(--sp-3)">Medical Disposable Assembly</h4><p style="font-size:var(--fs-sm)">Cleanroom assembly of syringes, IV sets, catheters, and pharmaceutical packaging under ISO 13485.</p></div>
-      <div class="card"><h4 style="margin-bottom:var(--sp-3)">Packaging &amp; Logistics</h4><p style="font-size:var(--fs-sm)">Custom packaging design, blister packing, sterilization co-ordination, and delivery logistics.</p></div>
+      <div class="card service-mfg-card"><h4 style="margin-bottom:var(--sp-3)">Component Assembly</h4><p style="font-size:var(--fs-sm)">Manual and semi-automated assembly of multi-part plastic components with 100% inspection.</p></div>
+      <div class="card card--gold service-mfg-card"><h4 style="margin-bottom:var(--sp-3)">Medical Disposable Assembly</h4><p style="font-size:var(--fs-sm)">Cleanroom assembly of syringes, IV sets, catheters, and pharmaceutical packaging under ISO 13485.</p></div>
+      <div class="card service-mfg-card"><h4 style="margin-bottom:var(--sp-3)">Packaging &amp; Logistics</h4><p style="font-size:var(--fs-sm)">Custom packaging design, blister packing, sterilization co-ordination, and delivery logistics.</p></div>
     </div>
   </div>
 </section>
@@ -216,7 +216,7 @@
 <!-- Service 5: Regulatory -->
 <section class="section" id="regulatory">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center">
+    <div class="service-section-grid">
       <div data-reveal="right">
         <div class="section-label">05</div>
         <h2 style="margin-bottom:var(--sp-5)">Regulatory &amp; Compliance Support</h2>
@@ -227,12 +227,12 @@
           <div style="padding:var(--sp-5);background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-lg)"><strong style="color:var(--clr-text);display:block;margin-bottom:4px">CE Marking &amp; QMSR</strong><p style="font-size:var(--clr-text-muted);font-size:var(--fs-sm)">European regulatory pathway support and Quality Management System Review</p></div>
           <div style="padding:var(--sp-5);background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-lg)"><strong style="color:var(--clr-text);display:block;margin-bottom:4px">Technical Documentation</strong><p style="font-size:var(--fs-sm)">Technical files, risk management (ISO 14971), and biocompatibility (ISO 10993)</p></div>
         </div>
-        <div style="margin-top:var(--sp-8)"><a href="medical.html" class="btn btn--gold btn--lg">Medical Services &#9662;</a></div>
+        <div class="service-cta-wrap"><a href="medical.html" class="btn btn--gold btn--lg">Medical Services &#9662;</a></div>
       </div>
       <div data-reveal="left">
-        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-2xl);padding:var(--sp-10)">
+        <div class="service-cert-box">
           <h3 style="margin-bottom:var(--sp-6);text-align:center">Our Certifications</h3>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4)">
+          <div class="service-cert-grid">
             <div class="cert-card" style="padding:var(--sp-5)"><div class="cert-card__icon" style="width:50px;height:50px;margin:0 auto var(--sp-3)"><span style="font-size:1.5rem">&#10003;</span></div><div class="cert-card__name" style="font-size:var(--fs-base)">ISO 9001:2015</div><div class="cert-card__desc" style="font-size:var(--fs-xs)">Quality Management</div></div>
             <div class="cert-card" style="padding:var(--sp-5)"><div class="cert-card__icon" style="width:50px;height:50px;margin:0 auto var(--sp-3)"><span style="font-size:1.5rem">&#10003;</span></div><div class="cert-card__name" style="font-size:var(--fs-base)">ISO 13485</div><div class="cert-card__desc" style="font-size:var(--fs-xs)">Medical Devices</div></div>
             <div class="cert-card" style="padding:var(--sp-5)"><div class="cert-card__icon" style="width:50px;height:50px;margin:0 auto var(--sp-3)"><span style="font-size:1.5rem">&#10003;</span></div><div class="cert-card__name" style="font-size:var(--fs-base)">CE Mark</div><div class="cert-card__desc" style="font-size:var(--fs-xs)">EU Compliance</div></div>

@@ -803,8 +803,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('product-name').textContent = product.title;
   document.title = `${product.title} &mdash; Medical Catalog | Vidhata Plastics`;
 
-  // Specs code extraction
-  const refCode = product.specs["Reference Code"] || "VPI-" + product.id.substring(0, 5).toUpperCase();
+  // Product code - use official VP code from database
+  const refCode = product.productCode || product.specs["Reference Code"] || "N/A";
   document.getElementById('product-code').textContent = refCode;
 
   // Short & long descriptions

@@ -2847,6 +2847,15 @@ img[data-reveal].revealed,
   line-height: var(--lh-tight);
 }
 
+.product-card__code {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #0099CC;
+  margin-bottom: var(--sp-2);
+  letter-spacing: 0.4px;
+  font-family: 'Courier New', monospace;
+}
+
 .product-card__desc {
   font-size: var(--fs-sm);
   color: var(--clr-text-muted);
@@ -2955,6 +2964,59 @@ img[data-reveal].revealed,
   }
   .catalog-tab {
     flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+  }
+
+  .product-card {
+    padding: var(--sp-4);
+  }
+
+  .product-card__img-wrap {
+    height: 220px;
+    background: #ffffff;
+  }
+
+  .product-card__img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: var(--sp-2);
+  }
+
+  .product-modal {
+    padding: var(--sp-3);
+  }
+
+  .product-modal__content {
+    max-height: 90vh;
+    border-radius: var(--radius-xl);
+  }
+
+  .product-modal__body {
+    padding: var(--sp-4);
+    gap: var(--sp-4);
+  }
+
+  .product-modal__img-wrap {
+    height: 230px;
+    background: #ffffff;
+  }
+
+  .product-modal__img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: var(--sp-2);
   }
 }
 
@@ -3858,4 +3920,471 @@ img[data-reveal].revealed,
   0% { opacity: 0.85; transform: scale(0.95); }
   100% { opacity: 1; transform: scale(1.05); }
 }
+
+/* ── About Us Page Responsive Styles ── */
+.about-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  align-items: center;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+.about-facility-wrap {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.about-facility-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.about-timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  align-items: start;
+}
+
+.about-values-sticky {
+  position: sticky;
+  top: calc(var(--nav-h) + var(--sp-8));
+}
+
+.about-values-card {
+  background: var(--grad-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--sp-10);
+}
+
+.about-mission-card {
+  padding: var(--sp-10);
+}
+
+.about-leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-leader-card {
+  padding: var(--sp-10);
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .about-overview-grid,
+  .about-timeline-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+
+  .about-values-sticky {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-facility-img {
+    height: 320px;
+  }
+
+  .about-leadership-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .about-values-card,
+  .about-mission-card,
+  .about-leader-card {
+    padding: var(--sp-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+  }
+
+  .about-stats-grid .stat-card {
+    padding: var(--sp-3) !important;
+  }
+
+  .about-facility-img {
+    height: 250px;
+  }
+
+  .about-values-card,
+  .about-mission-card,
+  .about-leader-card {
+    padding: var(--sp-5);
+  }
+}
+
+/* ── Services Page Responsive Styles ── */
+.service-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  align-items: center;
+}
+
+.service-stat-box {
+  background: var(--grad-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--sp-10);
+}
+
+.service-check-icon {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: var(--sp-6);
+  color: var(--clr-primary);
+}
+
+.service-stats-grid,
+.service-cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+.service-toolroom-wrap {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.service-toolroom-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.service-cert-box {
+  background: var(--grad-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--sp-10);
+}
+
+.service-cta-wrap {
+  margin-top: var(--sp-8);
+}
+
+@media (max-width: 991px) {
+  .service-section-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+
+  .service-tooling-img-col {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-toolroom-img {
+    height: 300px;
+  }
+
+  .service-stat-box,
+  .service-cert-box {
+    padding: var(--sp-6);
+  }
+
+  .service-check-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--sp-4);
+  }
+
+  .service-cta-wrap {
+    margin-top: var(--sp-6);
+  }
+
+  .service-cta-wrap .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .service-mfg-card {
+    padding: var(--sp-6) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-toolroom-img {
+    height: 240px;
+  }
+
+  .service-stat-box,
+  .service-cert-box {
+    padding: var(--sp-5);
+  }
+
+  .service-stats-grid,
+  .service-cert-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+  }
+
+  .service-stats-grid .stat-card,
+  .service-cert-grid .cert-card {
+    padding: var(--sp-3) !important;
+  }
+}
+
+/* ── Industries Page Professional Styles & Animations ── */
+.industry-sector-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-12);
+  align-items: center;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: var(--sp-6);
+  border-radius: var(--radius-2xl);
+  border: 1px solid transparent;
+}
+
+.industry-sector-card:hover {
+  background: var(--grad-card);
+  border-color: rgba(14, 165, 233, 0.25);
+  box-shadow: 0 20px 40px -15px rgba(14, 165, 233, 0.15), 0 0 0 1px rgba(14, 165, 233, 0.1);
+  transform: translateY(-4px);
+}
+
+.industry-card-imgwrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 320px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--clr-border);
+  position: relative;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.industry-card-imgwrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.15) 100%);
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.industry-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  filter: brightness(0.96) contrast(1.02);
+}
+
+.industry-sector-card:hover .industry-card-img {
+  transform: scale(1.06);
+  filter: brightness(1.04) contrast(1.05);
+}
+
+.industry-sector-card:hover .industry-card-imgwrap {
+  border-color: var(--clr-primary);
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.25);
+}
+
+@media (max-width: 991px) {
+  .industry-sector-card {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  #sectors .divider {
+    margin: var(--sp-6) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .industry-sector-card {
+    background: var(--grad-card);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--sp-6);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .industry-card-media {
+    order: -1; /* Always showcase product/sector image at top on mobile */
+  }
+
+  .industry-card-imgwrap {
+    height: 200px;
+    border-radius: var(--radius-lg);
+  }
+
+  .industry-card-content h3 {
+    font-size: var(--fs-lg) !important;
+    margin-bottom: var(--sp-3) !important;
+  }
+
+  .industry-card-content p {
+    font-size: var(--fs-sm) !important;
+    line-height: var(--lh-relaxed) !important;
+    margin-bottom: var(--sp-3) !important;
+  }
+
+  .industry-card-btn {
+    margin-top: var(--sp-4) !important;
+  }
+
+  .industry-card-btn .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .industry-sector-card {
+    padding: var(--sp-5);
+  }
+
+  .industry-card-imgwrap {
+    height: 180px;
+  }
+}
+
+/* ── Infrastructure Page Responsive Mobile Styles ── */
+.infra-prod-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--sp-12);
+  align-items: center;
+}
+
+.infra-img-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 350px;
+}
+
+.infra-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .infra-prod-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+}
+
+@media (max-width: 768px) {
+  .infra-img-wrap {
+    height: 230px;
+  }
+
+  .table-container {
+    border-radius: var(--radius-md);
+  }
+
+  .table-container table {
+    font-size: var(--fs-xs);
+  }
+
+  .table-container th,
+  .table-container td {
+    padding: var(--sp-3) var(--sp-4);
+  }
+}
+
+/* ── Quality Page Responsive Mobile Styles ── */
+.quality-lab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .quality-lab-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+}
+
+/* ── Case Studies Page Responsive Mobile Styles ── */
+.case-study-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--sp-8);
+  align-items: center;
+}
+
+.case-study-stat {
+  background: rgba(14, 165, 233, 0.05);
+  border: 1px dashed var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  text-align: center;
+}
+
+.case-study-stat--gold {
+  border-color: var(--clr-border-gold);
+}
+
+@media (max-width: 991px) {
+  .case-study-card {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .case-study-stat {
+    order: -1 !important; /* Showcase highlight stat metric first on mobile */
+    padding: var(--sp-5);
+  }
+}
+
+/* ── Careers Page Responsive Mobile Styles ── */
+.careers-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--sp-12);
+}
+
+@media (max-width: 991px) {
+  .careers-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+}
+
+/* ── Contact Page Responsive Mobile Styles ── */
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--sp-12);
+}
+
+@media (max-width: 991px) {
+  .contact-page-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+}
+
+
 

@@ -90,13 +90,13 @@
 <!-- Company Overview -->
 <section class="section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-16);align-items:center">
+    <div class="about-overview-grid">
       <div data-reveal="right">
         <div class="section-label">Who We Are</div>
         <h2 style="margin-bottom:var(--sp-6)">India's Premier Integrated Plastics Manufacturer</h2>
         <p style="margin-bottom:var(--sp-5)">Vidhata Plastics India Pvt. Ltd. is a fully integrated plastics manufacturing company specializing in product design, tooling, mould manufacturing, injection moulding, extrusion, polyurethane processing, assembly, and cleanroom medical manufacturing.</p>
         <p style="margin-bottom:var(--sp-8)">With over 20 years of industry experience, Vidhata delivers end-to-end manufacturing solutions under one roof, helping customers reduce lead times, improve quality, and simplify supply chain management.</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4)">
+        <div class="about-stats-grid">
           <div class="stat-card" style="padding:var(--sp-5)">
             <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="20" data-suffix="+">20+</span></div>
             <div class="stat-card__label">Years Experience</div>
@@ -116,8 +116,8 @@
         </div>
       </div>
       <div data-reveal="left">
-        <div style="position:relative;border-radius:var(--radius-2xl);overflow:hidden">
-          <img src="images/about-facility.png" alt="Vidhata Plastics facility" style="width:100%;height:500px;object-fit:cover">
+        <div class="about-facility-wrap">
+          <img src="images/about-facility.png" alt="Vidhata Plastics facility" class="about-facility-img">
           <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--clr-bg) 0%,transparent 40%)"></div>
           <div style="position:absolute;bottom:var(--sp-6);left:var(--sp-6);right:var(--sp-6)">
             <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap">
@@ -140,12 +140,12 @@
       <h2>Mission &amp; Vision</h2>
     </div>
     <div class="grid-2" data-stagger>
-      <div class="card card--glass" style="padding:var(--sp-10)">
+      <div class="card card--glass about-mission-card">
         <div style="font-size:3rem;margin-bottom:var(--sp-5)">&#10003;</div>
         <h3 style="margin-bottom:var(--sp-4);color:var(--clr-primary)">Our Mission</h3>
         <p style="font-size:var(--fs-md);line-height:var(--lh-relaxed)">Deliver world-class plastic manufacturing solutions through innovation, quality, and customer-focused execution &mdash; making every product with precision and care.</p>
       </div>
-      <div class="card card--glass card--gold" style="padding:var(--sp-10)">
+      <div class="card card--glass card--gold about-mission-card">
         <div style="font-size:3rem;margin-bottom:var(--sp-5)">&#10003;</div>
         <h3 style="margin-bottom:var(--sp-4);color:var(--clr-gold)">Our Vision</h3>
         <p style="font-size:var(--fs-md);line-height:var(--lh-relaxed)">Become a globally trusted manufacturing partner for medical, pharmaceutical, industrial, and consumer industries &mdash; setting the benchmark for quality Made in India.</p>
@@ -157,7 +157,7 @@
 <!-- Timeline -->
 <section class="section" id="history">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-20);align-items:start">
+    <div class="about-timeline-grid">
       <div data-reveal="right">
         <div class="section-label">Our Journey</div>
         <h2 style="margin-bottom:var(--sp-10)">Two Decades of Growth</h2>
@@ -200,8 +200,8 @@
           </div>
         </div>
       </div>
-      <div data-reveal="left" style="position:sticky;top:calc(var(--nav-h) + var(--sp-8))">
-        <div class="interactive-grid" style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-2xl);padding:var(--sp-10)">
+      <div data-reveal="left" class="about-values-sticky">
+        <div class="interactive-grid about-values-card">
           <div class="section-label section-label--gold">Core Values</div>
           <h3 style="margin-bottom:var(--sp-8)">What Drives Us</h3>
           <div style="display:flex;flex-direction:column;gap:var(--sp-6)">
@@ -236,9 +236,9 @@
       <h2>The Team Behind Vidhata</h2>
       <p>Combined 50+ years of engineering and manufacturing expertise driving the company forward.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-8);max-width:800px;margin:0 auto" data-stagger>
+    <div class="about-leadership-grid" data-stagger>
       <!-- Leader 1 -->
-      <div class="card" style="padding:var(--sp-10);text-align:center" data-tilt="6">
+      <div class="card about-leader-card" data-tilt="6">
         <div style="width:100px;height:100px;background:var(--grad-primary);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-5);font-family:var(--font-heading);font-weight:var(--fw-black);font-size:var(--fs-3xl);color:white;box-shadow:var(--shadow-blue)">K</div>
         <h3 style="margin-bottom:var(--sp-2)">K. S. Rao</h3>
         <div class="badge badge--primary" style="margin-bottom:var(--sp-4)">Managing Director</div>
@@ -249,7 +249,7 @@
         </div>
       </div>
       <!-- Leader 2 -->
-      <div class="card" style="padding:var(--sp-10);text-align:center" data-tilt="6">
+      <div class="card about-leader-card" data-tilt="6">
         <div style="width:100px;height:100px;background:var(--grad-gold);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-5);font-family:var(--font-heading);font-weight:var(--fw-black);font-size:var(--fs-3xl);color:var(--clr-bg);box-shadow:var(--shadow-gold)">V</div>
         <h3 style="margin-bottom:var(--sp-2)">Vikrant Kandimalla</h3>
         <div class="badge badge--gold" style="margin-bottom:var(--sp-4)">Director</div>

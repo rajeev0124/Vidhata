@@ -11,12 +11,9 @@ const MEDICAL_PRODUCTS = [
   {
     id: "spinal-epidural-kit",
     title: "Combined Spinal Epidural Catheter Kit",
+    productCode: "VP402",
     category: "Catheter",
     image: "images/Catheter/combined spinal epidural catheter kit.jpg",
-    images: [
-      "images/Catheter/combined spinal epidural catheter kit.jpg",
-      "images/Catheter/combined-spinal-epidural-catheter-kit-technical.png"
-    ],
     description: "A comprehensive regional anesthesia kit designed for combined spinal-epidural (CSE) blocks. It integrates a Tuohy needle and a pencil-point spinal needle to enable rapid spinal block onset with the capability of continuous epidural medication delivery, streamlining post-operative analgesia.",
     features: [
       "Needle-Through-Needle design enables spinal needle to pass through Tuohy needle for a single-interspace approach.",
@@ -38,6 +35,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "epidural-catheter-kit",
     title: "Epidural Catheter Kit",
+    productCode: "VP401",
     category: "Catheter",
     image: "images/Catheter/epidural_catheter_kit.jpg",
     description: "Designed for continuous epidural infusion to manage regional anesthesia and post-operative pain relief. Features highly flexible, radiopaque catheters for precise placement under fluoroscopic control.",
@@ -61,6 +59,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "arterial-catheter-kit",
     title: "Arterial Catheter Kit",
+    productCode: "VP304",
     category: "Catheter",
     image: "images/Catheter/arterial_catheter_kit.png",
     description: "A precision Seldinger arterial catheterization kit designed for continuous arterial blood pressure monitoring and frequent blood gas sampling in critical care and surgical operating suites.",
@@ -86,6 +85,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "filter-infusion-set",
     title: "0.2 Micron Filter (Non-DEHP) Infusion Set",
+    productCode: "VP101F",
     category: "Infusion",
     image: "images/Infusion/0.2 MICRON FILTER (NON-DEHP) Infusion Set.jpg",
     description: "High-end gravity IV administration set featuring a 0.2-micron polyethersulfone (PES) membrane filter to block bacteria, particulate matter, and air. Completely DEHP-free, making it safe for chemotherapy drugs and lipid emulsions.",
@@ -108,6 +108,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "three-way-stopcock",
     title: "3-Way Stopcock",
+    productCode: "VP101D",
     category: "Infusion",
     image: "images/Infusion/three_way_stopcock.jpg",
     description: "A crystal-clear, pressure-resistant three-way stopcock for simultaneous administration of multiple fluids or drug regimens. Fully rotatable handle allows 360-degree direction control without flow restriction.",
@@ -129,6 +130,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "autostop-infusion-set",
     title: "Auto-Stop IV Infusion Set",
+    productCode: "VP101G",
     category: "Infusion",
     image: "images/Infusion/autostop_infusion_set.jpg",
     description: "Enforces passive patient safety via an integrated auto-stop filter membrane in the drip chamber. Automatically stops flow when the fluid container runs dry, preventing line dry-out and air entry into the bloodstream.",
@@ -150,6 +152,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "extension-line-range",
     title: "Extension Line (Complete Range)",
+    productCode: "VP103A",
     category: "Infusion",
     image: "images/Infusion/Extension Line(Complete range).jpg",
     description: "A comprehensive range of high-pressure and low-pressure extension lines to expand vascular access options. Made of medical-grade tubing with secure luer lock connections for leak-proof performance.",
@@ -171,6 +174,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "infusion-set-vented",
     title: "Infusion Set (Vented)",
+    productCode: "VP101B",
     category: "Infusion",
     image: "images/Infusion/Infusion Set Vented.jpg",
     description: "Standard clinical IV administration set with a sharp piercing spike and integrated air vent. The air vent features a hydrophobic membrane filter to prevent bacterial contamination from incoming room air.",
@@ -193,6 +197,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "infusion-set-threeway",
     title: "Infusion Set with Three-Way Stopcock",
+    productCode: "VP101D",
     category: "Infusion",
     image: "images/Infusion/Infusion Set with Three Way stop Cock.jpg",
     description: "Combines an IV administration line with an integrated 3-way stopcock at the patient end. Streamlines clinical access by allowing immediate secondary drug injections or blood sampling without line interruption.",
@@ -214,6 +219,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "infusion-set-nonvented",
     title: "Infusion Set (Non-Vented)",
+    productCode: "VP101A",
     category: "Infusion",
     image: "images/Infusion/Infusion set non vented.jpg",
     description: "Standard non-vented infusion set optimized for closed, collapsible plastic IV bags. Drip chamber features an integrated fluid filter and smooth transparent walls for precise drop monitoring.",
@@ -236,6 +242,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "micro-infusion-set",
     title: "Micro Infusion Set with Air Vent",
+    productCode: "VP101E",
     category: "Infusion",
     image: "images/Infusion/Micro Infusion Set with Air vent.jpg",
     description: "Micro-drip IV administration set tailored specifically for pediatric, neonatal, and ICU patients requiring highly controlled gravity flow of fluids and medications.",
@@ -257,6 +264,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "premium-infusion-set",
     title: "Premium Based Infusion Set",
+    productCode: "VP101C",
     category: "Infusion",
     image: "images/Infusion/Premium Based Infusion Set.jpg",
     description: "Premium-grade infusion set designed for precise gravity flow regulation. Includes a dedicated dial flow regulator that allows clinicians to dial in flow rates directly in ml/hr without counting drops.",
@@ -278,6 +286,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "elastomeric-pump",
     title: "Elastomeric Infusion Pump",
+    productCode: "VP106",
     category: "Infusion",
     image: "images/Infusion/elastomeric_infusion_pump.jpg",
     description: "A continuous-infusion portable device utilizing elastomeric balloon pressure to deliver liquid medications at preset flow rates. Commonly used for ambulatory chemotherapy, home antibiotics, and patient-controlled analgesia (PCA).",
@@ -299,6 +308,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "ext-line-stopcock",
     title: "Extension Line with 3-Way Stopcock",
+    productCode: "VP103C",
     category: "Infusion",
     image: "images/Infusion/extension line with 3 way stop cock.jpg",
     description: "Pre-assembled extension line combined with a robust 3-way stopcock. Offers extended reach and auxiliary drug injection ports for complex surgical or ICU fluid management configurations.",
@@ -320,6 +330,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "ext-line-flowregulator",
     title: "Extension Line with Flow Regulator",
+    productCode: "VP103B",
     category: "Infusion",
     image: "images/Infusion/extension_line_flow_regulator.jpg",
     description: "A specialized short extension line featuring an inline dial-rate regulator. Essential for standardizing infusion rates when electronic infusion pumps are unavailable or during patient transport.",
@@ -341,6 +352,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "extension-line-standard",
     title: "Extension Line (Standard)",
+    productCode: "VP103A",
     category: "Infusion",
     image: "images/Infusion/extension_line_standard.jpg",
     description: "High-quality, flexible extension line designed to minimize catheter movement and patient distress. Ensures a secure connection with no flow reduction or kinking.",
@@ -361,6 +373,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "measured-volume-set",
     title: "Measured Volume Infusion Set",
+    productCode: "VP105",
     category: "Infusion",
     image: "images/Infusion/measured volume infusion set (complete Range).jpg",
     description: "A burette-style administration set specifically designed for pediatric and neonatal infusions where fluid volume must be precisely metered and restricted to prevent fluid overload.",
@@ -382,6 +395,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "pressure-monitoring-line",
     title: "Pressure Line Monitoring",
+    productCode: "VP102",
     category: "Infusion",
     image: "images/Infusion/pressure line monitering.jpg",
     description: "Extremely thick-walled, low-compliance tubing designed for direct blood pressure monitoring systems. Transmits precise hemodynamic waveforms from arterial/venous catheters to pressure transducers.",
@@ -402,6 +416,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "pvc-free-extline",
     title: "PVC-Free Extension Line",
+    productCode: "VP104",
     category: "Infusion",
     image: "images/Infusion/pvc_free_extline.png",
     description: "A dedicated co-extruded PVC-free extension line. Essential for infusing highly lipophilic medications or photosensitive compounds, avoiding drug absorption and plasticizer elution.",
@@ -420,38 +435,13 @@ const MEDICAL_PRODUCTS = [
       "Connectors": "Luer Lock male-female"
     }
   },
-  {
-    id: "transfer-spike",
-    title: "Transfer Spike",
-    category: "Infusion",
-    image: "images/Infusion/transfer-spike.jpg",
-    images: [
-      "images/Infusion/transfer-spike.jpg",
-      "images/Infusion/transfer-spike-technical.jpg"
-    ],
-    description: "A high-performance sterile fluid transfer spike designed for rapid, needle-free reconstitution and transfer of medications or sterile fluids between bags and bottles in clinical pharmacies and compounding suites.",
-    features: [
-      "Dual-channel spike design ensures rapid fluid transfer and pressure balancing without manual venting.",
-      "Large, ergonomic grip collar minimizes slippage and reduces contamination risks during insertion.",
-      "Sharp, low-force piercing spike tip easily penetrates rubber bottle stoppers and port membranes.",
-      "Manufactured using medical-grade, high-rigidity biocompatible polymers.",
-      "Individually packaged, sterile, pyrogen-free, and single-use."
-    ],
-    specs: {
-      "Spike Material": "Medical Grade Polycarbonate / ABS",
-      "Channel Type": "Dual channel (fluid path & air venting path)",
-      "Venting Filter": "Integrated hydrophobic air venting membrane",
-      "Connection": "Universal fluid port spike fitting",
-      "Sterilization": "Ethylene Oxide (EO) Sterile",
-      "Latex Free": "Yes",
-      "DEHP Free": "Yes"
-    }
-  },
+
 
   // ── Infusion Including Chemo ──
   {
     id: "chemo-infusion-set-range",
     title: "Chemotherapy Infusion Set (Complete Range)",
+    productCode: "VP107A",
     category: "Infusion Including Chemo",
     image: "images/Infusion Including Chemo/chemo theraphy infusion set(complete Range).jpg",
     description: "A complete range of UV-blocking amber-tinted infusion administration sets. Specifically designed for delivering light-sensitive chemotherapy drugs securely, eliminating UV degradation.",
@@ -473,6 +463,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "chemo-infusion-set-std",
     title: "Chemotherapy Infusion Set",
+    productCode: "VP107A",
     category: "Infusion Including Chemo",
     image: "images/Infusion Including Chemo/chemotheraphy infusion set.jpg",
     description: "Oncology-specific IV administration set featuring a co-extruded inner lining that prevents chemotherapy drugs from absorbing into the tube walls, ensuring accurate therapeutic dosing.",
@@ -494,6 +485,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "chemo-extline-set",
     title: "Chemotherapy Extension Line Set",
+    productCode: "VP109",
     category: "Infusion Including Chemo",
     image: "images/Infusion Including Chemo/chemotherapy extension line set.jpg",
     description: "A dedicated amber-shaded extension tubing line designed to extend oncology IV setups while preserving light protection. Features heavy-duty slide clamps to prevent accidental drug spillages.",
@@ -515,6 +507,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "chemo-extline-flowregulator",
     title: "Chemotherapy Extension Line with Flow Regulator",
+    productCode: "VP108",
     category: "Infusion Including Chemo",
     image: "images/Infusion Including Chemo/chemotherapy extension line with flow regulator.jpg",
     description: "Oncology extension line featuring light protection and a built-in dial-flow regulator. Allows gravity-based chemotherapy drug dosing with strict speed limitations.",
@@ -536,6 +529,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "infusion-ivset-flowregulator",
     title: "Infusion Intravenous Set with Flow Regulator",
+    productCode: "VP107B",
     category: "Infusion Including Chemo",
     image: "images/Infusion Including Chemo/infusion intravenous set with flow regulator.jpg",
     description: "High-accuracy gravity infusion set equipped with a built-in dial-flow regulator. Provides constant flow rates during patient transport or ambulatory procedures.",
@@ -559,6 +553,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "fistula-needle-set",
     title: "Arteriovenous Fistula Needle Set",
+    productCode: "VP202",
     category: "Nephrology",
     image: "images/Nephrology/arteriovenous fistula needle sets.jpg",
     description: "High-precision vascular access needle sets designed for hemodialysis. Feature an ultra-thin walled, siliconized needle tip to minimize puncture pain, vessel trauma, and insertion friction.",
@@ -580,6 +575,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "dialysis-tubing-tp",
     title: "Haemodialysis Blood Tubing (TP)",
+    productCode: "VP201",
     category: "Nephrology",
     image: "images/Nephrology/haemodialysis_blood_tubing_tp.jpg",
     description: "Premium haemodialysis bloodline set featuring integrated transducer protectors (TP). Includes hydrophobic membranes to prevent blood from entering and contaminating machine sensors.",
@@ -601,6 +597,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "dialysis-tubing-std",
     title: "Haemodialysis Blood Tubing",
+    productCode: "VP201",
     category: "Nephrology",
     image: "images/Nephrology/haemodialysis blood tubings.jpg",
     description: "Standard arterial-venous bloodline sets for renal hemodialysis therapy. Configured for complete compatibility with major dialysis machine models, featuring kink-free smooth flows.",
@@ -622,6 +619,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "dialysis-catheter-set",
     title: "Haemodialysis Catheter and Set",
+    productCode: "VP206",
     category: "Nephrology",
     image: "images/Nephrology/haemodialysis_catheter_set.jpg",
     description: "Acute hemodialysis catheter kit featuring a thermosensitive dual-lumen polyurethane shaft. The soft blue tip decreases friction and reduces venous vessel wall erosion.",
@@ -643,12 +641,9 @@ const MEDICAL_PRODUCTS = [
   {
     id: "hemodialysis-catheter-kit-long-term",
     title: "Hemodialysis Catheter Kit (Long Term)",
+    productCode: "VP207",
     category: "Nephrology",
     image: "images/Nephrology/hemodialysis catheter kit long term.jpg",
-    images: [
-      "images/Nephrology/hemodialysis catheter kit long term.jpg",
-      "images/Catheter/hemodialysis catheter kit long term.jpg"
-    ],
     description: "An indwelling, cuffed catheter designed for long-term hemodialysis and apheresis. Features a thermosensitive biocompatible polyurethane shaft, Dacron tissue ingrowth cuff for infection barrier, and high-flow dual-lumen design.",
     features: [
       "Thermosensitive radiopaque polyurethane softens at body temperature to minimize vascular irritation.",
@@ -671,6 +666,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "peritoneal-dialysis-set",
     title: "Peritoneal Dialysis Transfusion Set",
+    productCode: "VP205",
     category: "Nephrology",
     image: "images/Nephrology/peritoneal_dialysis_set.png",
     description: "A sterile gravity-feed peritoneal dialysis transfer set. Incorporates a Y-connector and color-coded clamps to manage dialysis solution instillation and abdominal drainage safely.",
@@ -692,6 +688,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "priming-infusion-set",
     title: "Priming Set Intravenous Infusion Set",
+    productCode: "VP204",
     category: "Nephrology",
     image: "images/Nephrology/priming set intravenous infusion set.jpg",
     description: "A high-flow priming administration line set designed for initial flushing and preparation of dialysis cartridges and bloodline segments prior to renal dialysis therapy.",
@@ -713,6 +710,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "transducer-protector",
     title: "Transducer Protector",
+    productCode: "VP203",
     category: "Nephrology",
     image: "images/Nephrology/transducer proctector.jpg",
     description: "A critical safety component consisting of a hydrophobic membrane sealed within a rigid plastic housing. Placed inline to protect dialysis machine transducers from blood contamination.",
@@ -735,6 +733,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "cardioplegia-adapters",
     title: "Cardioplegia Adapters",
+    productCode: "VP301",
     category: "cardiology",
     image: "images/cardiology/cardioplegia adopters.jpg",
     description: "Specialized connection adapters designed for cardioplegia delivery circuits during cardiopulmonary bypass surgery. Ensure leak-proof connection to catheter or perfusion lines.",
@@ -756,6 +755,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "central-venous-catheter",
     title: "Central Venous Catheter and Set",
+    productCode: "VP302",
     category: "cardiology",
     image: "images/cardiology/central venous catheter and set.jpg",
     description: "A complete Seldinger-technique insertion kit with a multi-lumen central venous catheter (CVC). Allows monitoring of central venous pressure, high-volume infusion, and blood sampling.",
@@ -777,6 +777,7 @@ const MEDICAL_PRODUCTS = [
   {
     id: "disposable-bp-transducer",
     title: "Disposable Blood Pressure Transducer and Accessories",
+    productCode: "VP303",
     category: "cardiology",
     image: "images/cardiology/disposable blood pressure transducer and accessories.jpg",
     description: "A high-precision single-channel physiological pressure transducer system designed for continuous invasive blood pressure (IBP) monitoring during critical cardiac care.",
@@ -874,6 +875,7 @@ class ProductShowcase {
             <img src="${p.image}" alt="${p.title}" class="product-card__img" loading="lazy">
           </div>
           <h4 class="product-card__title">${p.title}</h4>
+          ${p.productCode ? `<div class="product-card__code">Code: <strong>${p.productCode}</strong></div>` : ''}
           <p class="product-card__desc">${p.description.substring(0, 100)}...</p>
           <button class="btn btn--outline-primary btn--sm product-card__btn">View Specifications</button>
         `;
@@ -944,6 +946,7 @@ class ProductShowcase {
           <div class="product-modal__details-column">
             <span class="product-modal__category">${product.category}</span>
             <h2 class="product-modal__title">${product.title}</h2>
+            ${product.productCode ? `<div style="font-size:0.8rem; font-weight:700; color:#0099CC; margin-bottom:12px; letter-spacing:0.5px;">&#128204; Product Code: <span style="color:#0A4E9B;">${product.productCode}</span></div>` : ''}
             
             <div class="product-modal__tabs">
               <button class="product-modal__tab-btn active" onclick="switchModalTab(this, 'overview')">Overview</button>

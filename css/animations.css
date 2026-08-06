@@ -75,8 +75,8 @@
 }
 
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235,0.3); }
-  50%       { box-shadow: 0 0 50px rgba(37, 99, 235,0.6), 0 0 80px rgba(37, 99, 235,0.2); }
+  0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(14, 165, 233,0.6), 0 0 80px rgba(14, 165, 233,0.2); }
 }
 
 @keyframes float {
@@ -115,9 +115,24 @@
 }
 
 @keyframes border-flow {
-  0%   { border-color: rgba(37, 99, 235,0.2); }
-  50%  { border-color: rgba(37, 99, 235,0.5); }
-  100% { border-color: rgba(37, 99, 235,0.2); }
+  0%   { border-color: rgba(14, 165, 233,0.2); }
+  50%  { border-color: rgba(14, 165, 233,0.6); }
+  100% { border-color: rgba(14, 165, 233,0.2); }
+}
+
+@keyframes btnGlowPulse {
+  0%, 100% { box-shadow: 0 4px 15px rgba(14, 165, 233, 0.35); }
+  50% { box-shadow: 0 8px 30px rgba(14, 165, 233, 0.65); }
+}
+
+@keyframes imageSheen {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(200%) rotate(45deg); }
+}
+
+@keyframes badgePulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
+  50% { transform: scale(1.03); box-shadow: 0 0 0 6px rgba(14, 165, 233, 0); }
 }
 
 @keyframes reveal-bar {
@@ -143,6 +158,43 @@
 @keyframes stagger-in {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Interactive Card & Button Animation Enhancements ── */
+.btn--primary:hover {
+  animation: btnGlowPulse 2s infinite ease-in-out;
+}
+
+.badge--primary, .badge--gold {
+  animation: badgePulse 3s infinite ease-in-out;
+}
+
+.card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08), transparent);
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.card:hover::before {
+  animation: imageSheen 1s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 22px 45px -15px rgba(14, 165, 233, 0.25), 0 0 0 1px rgba(14, 165, 233, 0.2);
+  border-color: rgba(14, 165, 233, 0.5) !important;
 }
 
 /* ── Scroll Reveal Classes ────────────────────────────── */
@@ -184,23 +236,23 @@
 /* Stagger delays for children */
 [data-stagger] > * {
   opacity: 0;
-  transform: translateY(35px) scale(0.97);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(35px) rotateX(10deg) scale(0.96);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-stagger].revealed > *:nth-child(1)  { transition-delay: 0ms; }
-[data-stagger].revealed > *:nth-child(2)  { transition-delay: 80ms; }
-[data-stagger].revealed > *:nth-child(3)  { transition-delay: 160ms; }
-[data-stagger].revealed > *:nth-child(4)  { transition-delay: 240ms; }
-[data-stagger].revealed > *:nth-child(5)  { transition-delay: 320ms; }
-[data-stagger].revealed > *:nth-child(6)  { transition-delay: 400ms; }
-[data-stagger].revealed > *:nth-child(7)  { transition-delay: 480ms; }
-[data-stagger].revealed > *:nth-child(8)  { transition-delay: 560ms; }
+[data-stagger].revealed > *:nth-child(2)  { transition-delay: 70ms; }
+[data-stagger].revealed > *:nth-child(3)  { transition-delay: 140ms; }
+[data-stagger].revealed > *:nth-child(4)  { transition-delay: 210ms; }
+[data-stagger].revealed > *:nth-child(5)  { transition-delay: 280ms; }
+[data-stagger].revealed > *:nth-child(6)  { transition-delay: 350ms; }
+[data-stagger].revealed > *:nth-child(7)  { transition-delay: 420ms; }
+[data-stagger].revealed > *:nth-child(8)  { transition-delay: 490ms; }
 
 [data-stagger].revealed > * {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0) rotateX(0deg) scale(1);
 }
 
 /* ── Hero Entrance Animations ─────────────────────────── */

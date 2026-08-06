@@ -79,9 +79,9 @@
 <!-- Industries Grid -->
 <section class="section" id="sectors">
   <div class="container flex flex-col gap-12">
-    <!-- Sector 1 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center" id="medical">
-      <div data-reveal="right">
+    <!-- Sector 1: Image Right -->
+    <div class="industry-sector-card" id="medical">
+      <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">High Compliance</span>
         <h3 style="margin-bottom:var(--sp-4)">Medical &amp; Healthcare</h3>
         <p style="margin-bottom:var(--sp-4)">We manufacture safety-critical sterile componentry for clinical applications.</p>
@@ -91,20 +91,25 @@
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Catheter connection components</li>
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Diagnostic in-vitro (IVD) cassette shells</li>
         </ul>
-        <div style="margin-top:var(--sp-6)"><a href="medical.html" class="btn btn--outline btn--sm">View Medical Division &rarr;</a></div>
+        <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="medical.html" class="btn btn--outline btn--sm">View Medical Division &rarr;</a></div>
       </div>
-      <div data-reveal="left">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;height:300px">
-          <img src="images/cleanroom.png" alt="Medical Manufacturing" style="width:100%;min-height:300px;height:100%;object-fit:cover">
+      <div data-reveal="left" class="industry-card-media">
+        <div class="industry-card-imgwrap">
+          <img src="images/cleanroom.png" alt="Medical Manufacturing" class="industry-card-img">
         </div>
       </div>
     </div>
 
     <hr class="divider">
 
-    <!-- Sector 2 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center" id="pharma">
-      <div data-reveal="left" style="order: 2">
+    <!-- Sector 2: Image Left -->
+    <div class="industry-sector-card" id="pharma">
+      <div data-reveal="left" class="industry-card-media">
+        <div class="industry-card-imgwrap">
+          <img src="images/medical-products.png" alt="Pharma packaging items" class="industry-card-img">
+        </div>
+      </div>
+      <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Pharmaceutical Grade</span>
         <h3 style="margin-bottom:var(--sp-4)">Pharmaceutical Packaging</h3>
         <p style="margin-bottom:var(--sp-4)">Child-resistant closures, droppers, and blood collection systems designed for drug safety and accuracy.</p>
@@ -114,18 +119,13 @@
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; High volume blood collection tubes</li>
         </ul>
       </div>
-      <div data-reveal="right" style="order: 1">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;height:300px">
-          <img src="images/medical-products.png" alt="Pharma packaging items" style="width:100%;min-height:300px;height:100%;object-fit:cover">
-        </div>
-      </div>
     </div>
 
     <hr class="divider">
 
-    <!-- Sector 3: Bio-Process & CGT -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center" id="bioprocess-cgt">
-      <div data-reveal="left">
+    <!-- Sector 3: Image Right -->
+    <div class="industry-sector-card" id="bioprocess-cgt">
+      <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">Biotech &amp; Life Sciences</span>
         <h3 style="margin-bottom:var(--sp-4)">Bio-Process &amp; CGT</h3>
         <p style="margin-bottom:var(--sp-4)">Cleanroom-manufactured fluidic components and single-use tubing assemblies for bio-pharma and gene therapy scaling.</p>
@@ -135,20 +135,25 @@
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Cell culture vessels, microcarriers &amp; cryo preservation parts</li>
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Biocompatible Class VI polymer components</li>
         </ul>
-        <div style="margin-top:var(--sp-6)"><a href="bioprocess-cgt.html" class="btn btn--outline btn--sm">View Bio-Process Division &rarr;</a></div>
+        <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="bioprocess-cgt.html" class="btn btn--outline btn--sm">View Bio-Process Division &rarr;</a></div>
       </div>
-      <div data-reveal="right">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;height:300px">
-          <img src="images/bioprocess_cgt.png" alt="Bio-Process &amp; CGT cleanroom components" style="width:100%;min-height:300px;height:100%;object-fit:cover">
+      <div data-reveal="left" class="industry-card-media">
+        <div class="industry-card-imgwrap">
+          <img src="images/bioprocess_cgt.png" alt="Bio-Process &amp; CGT cleanroom components" class="industry-card-img">
         </div>
       </div>
     </div>
 
     <hr class="divider">
 
-    <!-- Sector 4: Electronics & Telecom -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center" id="electronics">
-      <div data-reveal="right">
+    <!-- Sector 4: Image Left -->
+    <div class="industry-sector-card" id="electronics">
+      <div data-reveal="left" class="industry-card-media">
+        <div class="industry-card-imgwrap">
+          <img src="images/led-electronics.png" alt="Electronics housings" class="industry-card-img">
+        </div>
+      </div>
+      <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Flame Retardant</span>
         <h3 style="margin-bottom:var(--sp-4)">Electronics &amp; Telecom</h3>
         <p style="margin-bottom:var(--sp-4)">Providing structural housings and aesthetic panels using polycarbonate, ABS, and flame retardant polymers.</p>
@@ -158,18 +163,13 @@
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Point-of-Sale (POS) device structural parts</li>
         </ul>
       </div>
-      <div data-reveal="left">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;height:300px">
-          <img src="images/led-electronics.png" alt="Electronics housings" style="width:100%;min-height:300px;height:100%;object-fit:cover">
-        </div>
-      </div>
     </div>
 
     <hr class="divider">
 
-    <!-- Sector 5: LED Lighting -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center" id="lighting">
-      <div data-reveal="left" style="order:2">
+    <!-- Sector 5: Image Right -->
+    <div class="industry-sector-card" id="lighting">
+      <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Optical Performance</span>
         <h3 style="margin-bottom:var(--sp-4)">LED Lighting</h3>
         <p style="margin-bottom:var(--sp-4)">Continuous high-transmittance polycarbonate extrusions and injection moulded street light enclosures.</p>
@@ -179,18 +179,23 @@
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Street light covers with high weather ability</li>
         </ul>
       </div>
-      <div data-reveal="right" style="order:1">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;height:300px">
-          <img src="images/hero-bg.png" alt="LED Lighting components" style="width:100%;min-height:300px;height:100%;object-fit:cover">
+      <div data-reveal="left" class="industry-card-media">
+        <div class="industry-card-imgwrap">
+          <img src="images/hero-bg.png" alt="LED Lighting components" class="industry-card-img">
         </div>
       </div>
     </div>
 
     <hr class="divider">
 
-    <!-- Sector 6: Industrial & Footwear -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center" id="industrial">
-      <div data-reveal="right">
+    <!-- Sector 6: Image Left -->
+    <div class="industry-sector-card" id="industrial">
+      <div data-reveal="left" class="industry-card-media">
+        <div class="industry-card-imgwrap">
+          <img src="images/toolroom.png" alt="Industrial machinery" class="industry-card-img">
+        </div>
+      </div>
+      <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Heavy Duty</span>
         <h3 style="margin-bottom:var(--sp-4)">Industrial &amp; Footwear</h3>
         <p style="margin-bottom:var(--sp-4)">Specialized polyurethane processing for footwear soles, alongside heavy structural battery containers.</p>
@@ -200,18 +205,13 @@
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Heavy duty engineering components</li>
         </ul>
       </div>
-      <div data-reveal="left">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;height:300px">
-          <img src="images/toolroom.png" alt="Industrial machinery" style="width:100%;min-height:300px;height:100%;object-fit:cover">
-        </div>
-      </div>
     </div>
 
     <hr class="divider">
 
-    <!-- Sector 7: Consumer & Cosmetics -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center" id="consumer-cosmetics">
-      <div data-reveal="left" style="order:2">
+    <!-- Sector 7: Image Right -->
+    <div class="industry-sector-card" id="consumer-cosmetics">
+      <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Premium Finish</span>
         <h3 style="margin-bottom:var(--sp-4)">Consumer &amp; Cosmetics</h3>
         <p style="margin-bottom:var(--sp-4)">Luxurious packaging, aerosol spray components, double-wall cosmetic jars, and custom lotion pump actuators.</p>
@@ -221,20 +221,25 @@
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Aerosol caps, spray nozzles, and domestic dispensers</li>
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Premium consumer packaging and footwear soles</li>
         </ul>
-        <div style="margin-top:var(--sp-6)"><a href="consumer-cosmetics.html" class="btn btn--outline btn--sm">View Consumer &amp; Cosmetics &rarr;</a></div>
+        <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="consumer-cosmetics.html" class="btn btn--outline btn--sm">View Consumer &amp; Cosmetics &rarr;</a></div>
       </div>
-      <div data-reveal="right" style="order:1">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;height:300px">
-          <img src="images/consumer_cosmetics.png" alt="Cosmetic packaging and caps" style="width:100%;min-height:300px;height:100%;object-fit:cover">
+      <div data-reveal="left" class="industry-card-media">
+        <div class="industry-card-imgwrap">
+          <img src="images/consumer_cosmetics.png" alt="Cosmetic packaging and caps" class="industry-card-img">
         </div>
       </div>
     </div>
 
     <hr class="divider">
 
-    <!-- Sector 8: Defense & Aerospace -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-12);align-items:center" id="defense-aerospace">
-      <div data-reveal="right">
+    <!-- Sector 8: Image Left -->
+    <div class="industry-sector-card" id="defense-aerospace">
+      <div data-reveal="left" class="industry-card-media">
+        <div class="industry-card-imgwrap">
+          <img src="images/defense_aerospace.png" alt="Defense and Aerospace plastic components" class="industry-card-img">
+        </div>
+      </div>
+      <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">Extreme Reliability</span>
         <h3 style="margin-bottom:var(--sp-4)">Defense &amp; Aerospace</h3>
         <p style="margin-bottom:var(--sp-4)">Flame-retardant structural flight bezels, custom military connector housings, and high-performance plastic components.</p>
@@ -244,12 +249,7 @@
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Specialized radomes and aerospace engineering enclosures</li>
           <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Flame-retardant UL 94-V0 compliance engineering materials</li>
         </ul>
-        <div style="margin-top:var(--sp-6)"><a href="defense-aerospace.html" class="btn btn--outline btn--sm">View Defense &amp; Aerospace &rarr;</a></div>
-      </div>
-      <div data-reveal="left">
-        <div style="border-radius:var(--radius-xl);overflow:hidden;height:300px">
-          <img src="images/defense_aerospace.png" alt="Defense and Aerospace plastic components" style="width:100%;min-height:300px;height:100%;object-fit:cover">
-        </div>
+        <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="defense-aerospace.html" class="btn btn--outline btn--sm">View Defense &amp; Aerospace &rarr;</a></div>
       </div>
     </div>
   </div>
