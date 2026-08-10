@@ -19,7 +19,10 @@ function initScrollReveal() {
         setTimeout(() => {
           entry.target.classList.add('revealed');
         }, parseInt(delay));
-        observer.unobserve(entry.target);
+        // We removed observer.unobserve to allow endless replay!
+      } else {
+        // Remove class when out of view so it shuffles again next time
+        entry.target.classList.remove('revealed');
       }
     });
   }, {

@@ -84,29 +84,88 @@
       <h2>Our Registered Standards</h2>
     </div>
 
-    <div class="grid-4" data-stagger>
-      <div class="cert-card">
-        <div class="cert-card__icon">&#10003;</div>
-        <div class="cert-card__name">ISO 9001:2015</div>
-        <div class="cert-card__desc">Quality management system certification across design, tooling, moulding, and assembly processes.</div>
+    <style>
+      .premium-widget {
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-radius: var(--radius-2xl);
+        padding: var(--sp-6);
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+        position: relative;
+        overflow: hidden;
+      }
+      .premium-widget:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 30px 60px rgba(14,165,233,0.15);
+        border-color: #38bdf8;
+      }
+      .premium-widget::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #0284c7, #38bdf8);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .premium-widget:hover::before {
+        opacity: 1;
+      }
+      .premium-widget__icon {
+        width: 60px; height: 60px;
+        margin: 0 auto var(--sp-4);
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        color: #0284c7;
+        font-size: 2rem;
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 10px 20px rgba(2, 132, 199, 0.1);
+        transition: transform 0.5s ease;
+      }
+      .premium-widget:hover .premium-widget__icon {
+        transform: rotateY(180deg) scale(1.1);
+        background: #0284c7;
+        color: #ffffff;
+      }
+      .premium-widget__title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: var(--sp-2);
+      }
+      .premium-widget__desc {
+        font-size: 0.9rem;
+        color: #475569;
+        line-height: 1.5;
+        margin-bottom: var(--sp-5);
+      }
+    </style>
+    
+    <div class="grid-4" data-stagger style="perspective: 1000px;">
+      <div class="premium-widget" data-reveal="scale">
+        <div class="premium-widget__icon">&#10003;</div>
+        <div class="premium-widget__title">ISO 9001:2015</div>
+        <div class="premium-widget__desc">Quality management system certification across design, tooling, moulding, and assembly processes.</div>
         <a href="#" class="btn btn--outline-primary btn--sm" style="width:100%">Download PDF</a>
       </div>
-      <div class="cert-card">
-        <div class="cert-card__icon" style="color:var(--clr-gold);background:rgba(14, 165, 233,0.1)">&#10003;</div>
-        <div class="cert-card__name" style="color:var(--clr-gold)">ISO 13485</div>
-        <div class="cert-card__desc">Medical device quality management standard governing sterile production environment &amp; raw material traceability.</div>
+      <div class="premium-widget" data-reveal="scale">
+        <div class="premium-widget__icon" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); color: #d97706;">&#10003;</div>
+        <div class="premium-widget__title" style="color:#b45309">ISO 13485</div>
+        <div class="premium-widget__desc">Medical device quality management standard governing sterile production environment &amp; raw material traceability.</div>
         <a href="#" class="btn btn--outline-primary btn--sm" style="width:100%">Download PDF</a>
       </div>
-      <div class="cert-card">
-        <div class="cert-card__icon">&#10003;</div>
-        <div class="cert-card__name">CE Compliance</div>
-        <div class="cert-card__desc">Production process conforms to key European health, safety, and environmental protection standards.</div>
+      <div class="premium-widget" data-reveal="scale">
+        <div class="premium-widget__icon">&#10003;</div>
+        <div class="premium-widget__title">CE Compliance</div>
+        <div class="premium-widget__desc">Production process conforms to key European health, safety, and environmental protection standards.</div>
         <a href="#" class="btn btn--outline-primary btn--sm" style="width:100%">Download PDF</a>
       </div>
-      <div class="cert-card">
-        <div class="cert-card__icon">&#10003;</div>
-        <div class="cert-card__name">QMSR Compliance</div>
-        <div class="cert-card__desc">Aligned with US FDA Quality Management System Regulation (QMSR) for international device components export.</div>
+      <div class="premium-widget" data-reveal="scale">
+        <div class="premium-widget__icon">&#10003;</div>
+        <div class="premium-widget__title">QMSR Compliance</div>
+        <div class="premium-widget__desc">Aligned with US FDA Quality Management System Regulation (QMSR) for international device components export.</div>
         <a href="#" class="btn btn--outline-primary btn--sm" style="width:100%">Download PDF</a>
       </div>
     </div>
@@ -122,23 +181,23 @@
         <h2 style="margin-bottom:var(--sp-6)">End-to-End Quality Monitoring Systems</h2>
         <p style="margin-bottom:var(--sp-5)">Our quality checks are integrated at every key stage of production, from raw polymer verification to final packaging leak testing.</p>
 
-        <div style="display:flex;flex-direction:column;gap:var(--sp-4)">
-          <div style="display:flex;gap:var(--sp-3);align-items:flex-start">
-            <span style="color:var(--clr-primary);font-weight:bold">01</span>
+        <div style="display:flex;flex-direction:column;gap:var(--sp-4)" data-stagger>
+          <div style="display:flex;gap:var(--sp-4);align-items:flex-start" data-reveal="left">
+            <div style="font-size: 1.5rem; font-weight: 800; color: #0284c7; background: #f0f9ff; width: 40px; height: 40px; display:flex; align-items:center; justify-content:center; border-radius: 50%; box-shadow: 0 5px 15px rgba(2,132,199,0.15);">1</div>
             <div>
               <strong style="color:var(--clr-text);display:block;margin-bottom:2px">Project Lifecycle Monitoring</strong>
               <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Stage-gate approval during mould fabrication to ensure alignment with engineering models.</p>
             </div>
           </div>
-          <div style="display:flex;gap:var(--sp-3);align-items:flex-start">
-            <span style="color:var(--clr-primary);font-weight:bold">02</span>
+          <div style="display:flex;gap:var(--sp-4);align-items:flex-start" data-reveal="left">
+            <div style="font-size: 1.5rem; font-weight: 800; color: #0284c7; background: #f0f9ff; width: 40px; height: 40px; display:flex; align-items:center; justify-content:center; border-radius: 50%; box-shadow: 0 5px 15px rgba(2,132,199,0.15);">2</div>
             <div>
               <strong style="color:var(--clr-text);display:block;margin-bottom:2px">Material Verification &amp; COA Analysis</strong>
               <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Raw plastics are verified against supplier Certificate of Analysis (COA) records before batch extrusion.</p>
             </div>
           </div>
-          <div style="display:flex;gap:var(--sp-3);align-items:flex-start">
-            <span style="color:var(--clr-primary);font-weight:bold">03</span>
+          <div style="display:flex;gap:var(--sp-4);align-items:flex-start" data-reveal="left">
+            <div style="font-size: 1.5rem; font-weight: 800; color: #0284c7; background: #f0f9ff; width: 40px; height: 40px; display:flex; align-items:center; justify-content:center; border-radius: 50%; box-shadow: 0 5px 15px rgba(2,132,199,0.15);">3</div>
             <div>
               <strong style="color:var(--clr-text);display:block;margin-bottom:2px">Product Stability Testing</strong>
               <p style="font-size:var(--fs-sm);color:var(--clr-text-muted)">Environmental stress cracking and material degradation trials conducted under simulated operational limits.</p>
@@ -146,21 +205,21 @@
           </div>
         </div>
       </div>
-      <div data-reveal="left">
-        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-2xl);padding:var(--sp-8)">
-          <h3 style="margin-bottom:var(--sp-6)">Quality Lab Capabilities</h3>
-          <ul style="display:flex;flex-direction:column;gap:var(--sp-4)">
-            <li style="font-size:var(--fs-sm);color:var(--clr-text-muted);display:flex;align-items:center;gap:var(--sp-2)">
-              <span style="color:var(--clr-primary)">&#128205;</span> Stability Chamber for accelerated aging trials
+      <div data-reveal="scale" data-3d="15" style="perspective:1200px">
+        <div style="background:linear-gradient(135deg, #0f172a 0%, #1e293b 100%);border:1px solid rgba(14, 165, 233, 0.4);border-radius:var(--radius-2xl);padding:var(--sp-8); box-shadow: 0 30px 60px rgba(15,23,42,0.4); animation: product-float 7s ease-in-out infinite; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05) rotate(1deg)';" onmouseout="this.style.transform='scale(1) rotate(0)';">
+          <h3 style="margin-bottom:var(--sp-6); color: #ffffff; text-align: center;">Quality Lab Capabilities</h3>
+          <ul style="display:flex;flex-direction:column;gap:var(--sp-4)" data-stagger>
+            <li style="font-size:var(--fs-sm);color:#94a3b8;display:flex;align-items:center;gap:var(--sp-3)" data-reveal="right">
+              <span style="font-size: 1.2rem; text-shadow: 0 0 10px rgba(14,165,233,0.8);">&#128205;</span> <span style="color:#e2e8f0;">Stability Chamber for accelerated aging trials</span>
             </li>
-            <li style="font-size:var(--fs-sm);color:var(--clr-text-muted);display:flex;align-items:center;gap:var(--sp-2)">
-              <span style="color:var(--clr-primary)">&#128205;</span> Hot Air Ovens for material moisture verification
+            <li style="font-size:var(--fs-sm);color:#94a3b8;display:flex;align-items:center;gap:var(--sp-3)" data-reveal="right">
+              <span style="font-size: 1.2rem; text-shadow: 0 0 10px rgba(14,165,233,0.8);">&#128205;</span> <span style="color:#e2e8f0;">Hot Air Ovens for material moisture verification</span>
             </li>
-            <li style="font-size:var(--fs-sm);color:var(--clr-text-muted);display:flex;align-items:center;gap:var(--sp-2)">
-              <span style="color:var(--clr-primary)">&#128205;</span> Autoclave for sterilization cycle tolerance trials
+            <li style="font-size:var(--fs-sm);color:#94a3b8;display:flex;align-items:center;gap:var(--sp-3)" data-reveal="right">
+              <span style="font-size: 1.2rem; text-shadow: 0 0 10px rgba(14,165,233,0.8);">&#128205;</span> <span style="color:#e2e8f0;">Autoclave for sterilization cycle tolerance trials</span>
             </li>
-            <li style="font-size:var(--fs-sm);color:var(--clr-text-muted);display:flex;align-items:center;gap:var(--sp-2)">
-              <span style="color:var(--clr-primary)">&#128205;</span> Metrology lab with calibrated Trimos &amp; Mitutoyo systems
+            <li style="font-size:var(--fs-sm);color:#94a3b8;display:flex;align-items:center;gap:var(--sp-3)" data-reveal="right">
+              <span style="font-size: 1.2rem; text-shadow: 0 0 10px rgba(14,165,233,0.8);">&#128205;</span> <span style="color:#e2e8f0;">Metrology lab with calibrated Trimos &amp; Mitutoyo systems</span>
             </li>
           </ul>
         </div>

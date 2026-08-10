@@ -574,10 +574,53 @@
   <!-- INDUSTRIES -->
   <!-- ======================================================= -->
   <section class="section section--alt" id="industries">
-    <div class="container">
-      <div class="section-header--center" data-reveal="up">
-        <div class="section-label">Industries</div>
-        <h2>Serving Critical Industries<br>Across the Globe</h2>
+    <style>
+      #industries .grid-3 {
+        transform-style: preserve-3d;
+        perspective: 1500px;
+      }
+      #industries .card--interactive {
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
+        transform-style: preserve-3d;
+        animation: product-float 5s ease-in-out infinite;
+        border: 1px solid rgba(14, 165, 233, 0.3) !important;
+      }
+      #industries .grid-3 > :nth-child(2) { animation-delay: 0.5s; }
+      #industries .grid-3 > :nth-child(3) { animation-delay: 1.0s; }
+      
+      #industries .card--interactive:hover {
+        transform: translateY(-20px) scale(1.05) rotateX(8deg) rotateY(-8deg) !important;
+        box-shadow: -20px 40px 60px rgba(14, 165, 233, 0.25) !important;
+        border-color: #38bdf8 !important;
+        z-index: 50;
+      }
+      #industries .card__icon-wrapper {
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), background 0.4s ease;
+      }
+      #industries .card--interactive:hover .card__icon-wrapper {
+        transform: translateZ(60px) scale(1.2);
+        background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+        color: white;
+        box-shadow: 0 15px 30px rgba(2, 132, 199, 0.4);
+      }
+      #industries .card__title {
+        transition: transform 0.6s ease, color 0.4s ease;
+      }
+      #industries .card--interactive:hover .card__title {
+        transform: translateZ(40px);
+        color: #0284c7;
+      }
+      #industries .card__desc {
+        transition: transform 0.6s ease;
+      }
+      #industries .card--interactive:hover .card__desc {
+        transform: translateZ(20px);
+      }
+    </style>
+    <div class="container" style="perspective: 2000px;">
+      <div class="section-header--center" data-reveal="scale">
+        <div class="section-label" style="animation: infra-dot-pulse 3s infinite;">Industries</div>
+        <h2 style="animation: product-float 6s ease-in-out infinite;">Serving Critical Industries<br><span class="gradient-text">Across the Globe</span></h2>
       </div>
 
       <div class="grid-3" data-stagger>

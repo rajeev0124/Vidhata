@@ -100,8 +100,8 @@
   <div class="bg-grid bg-grid--fade"></div>
   <div class="container">
     <div class="page-hero__breadcrumb"><a href="index.html">Home</a><span>&#8250;</span><span>Infrastructure</span></div>
-    <div class="section-label hero-anim-1">Machinery &amp; Technology</div>
-    <h1 class="hero-anim-2" style="max-width:700px">Advanced Manufacturing<br><span class="gradient-text">Facilities</span></h1>
+    <div class="section-label hero-anim-1" style="animation: infra-dot-pulse 3s infinite;">Machinery &amp; Technology</div>
+    <h1 class="hero-anim-2" style="max-width:700px; display:inline-block; animation: product-float 6s ease-in-out infinite;">Advanced Manufacturing<br><span class="gradient-text">Facilities</span></h1>
     <p class="hero-anim-3" style="font-size:var(--fs-md);max-width:580px;color:var(--clr-text-muted);margin-top:var(--sp-5)">Our high-precision tool room and high-volume production plant capabilities.</p>
   </div>
 </section>
@@ -115,42 +115,100 @@
       <p>We build long-life moulds in-house for structural integrity and high performance.</p>
     </div>
 
-    <div class="table-container" data-reveal="up">
-      <table>
+    <div class="table-container" style="perspective: 1000px;">
+      <style>
+        .premium-table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          border-radius: var(--radius-xl);
+          overflow: hidden;
+          box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+          background: #ffffff;
+          border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .premium-table th {
+          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+          color: #ffffff;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          padding: var(--sp-4) var(--sp-6);
+          text-align: left;
+          font-size: 0.85rem;
+          border-bottom: 2px solid #0284c7;
+        }
+        .premium-table td {
+          padding: var(--sp-4) var(--sp-6);
+          border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+          color: #475569;
+          transition: all 0.3s ease;
+          font-size: 0.95rem;
+        }
+        .premium-table tbody {
+          display: table-row-group;
+        }
+        .premium-table tbody tr {
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          background: #ffffff;
+          cursor: default;
+        }
+        .premium-table tbody tr:last-child td {
+          border-bottom: none;
+        }
+        .premium-table tbody tr:hover {
+          background: linear-gradient(90deg, #f0f9ff 0%, #ffffff 100%);
+          transform: scale(1.02) translateX(8px);
+          box-shadow: -10px 15px 30px -5px rgba(14, 165, 233, 0.15);
+          position: relative;
+          z-index: 2;
+        }
+        .premium-table tbody tr:hover td {
+          color: #0f172a;
+        }
+        .premium-table tbody tr:hover td:first-child strong {
+          color: #0284c7;
+        }
+        @media (max-width: 768px) {
+          .premium-table th, .premium-table td { padding: var(--sp-3) var(--sp-4); font-size: 0.8rem; }
+        }
+      </style>
+      
+      <table class="premium-table">
         <thead>
-          <tr>
+          <tr data-reveal="down">
             <th>Equipment Category</th>
             <th>Make / Model</th>
             <th>Type / Purpose</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody data-stagger>
+          <tr data-reveal="left">
             <td><strong>CNC Machining Center</strong></td>
             <td>DMG Mori</td>
             <td>High speed 3D profile milling</td>
           </tr>
-          <tr>
+          <tr data-reveal="left">
             <td><strong>Precision Machining Center</strong></td>
             <td>Makino</td>
             <td>High accuracy micro-milling &amp; electrode creation</td>
           </tr>
-          <tr>
+          <tr data-reveal="left">
             <td><strong>CNC Vertical Mill</strong></td>
             <td>Haas</td>
             <td>Reliable cavity and core machining</td>
           </tr>
-          <tr>
+          <tr data-reveal="left">
             <td><strong>Wire Cut EDM</strong></td>
             <td>Fanuc</td>
             <td>Micron precision pocket profiling &amp; fine contours</td>
           </tr>
-          <tr>
+          <tr data-reveal="left">
             <td><strong>Spark Erosion EDM</strong></td>
             <td>Charmilles</td>
             <td>Highly detailed cavity erosion</td>
           </tr>
-          <tr>
+          <tr data-reveal="left">
             <td><strong>Precision Grinder</strong></td>
             <td>Surface &amp; Cylindrical Systems</td>
             <td>Final size correction &amp; surface polishing</td>
@@ -165,9 +223,10 @@
 <section class="section section--alt">
   <div class="container">
     <div class="infra-prod-grid">
-      <div data-reveal="right" class="infra-img-col">
-        <div class="infra-img-wrap">
-          <img src="images/toolroom.png" alt="Toolroom injection machine" class="infra-img">
+      <div data-reveal="scale" class="infra-img-col" data-3d="15" data-glow-color="rgba(14, 165, 233, 0.3)" style="perspective:1000px">
+        <div class="infra-img-wrap" style="position:relative; overflow:hidden; border-radius:var(--radius-xl); box-shadow:0 30px 60px -15px rgba(15,23,42,0.3); border: 1px solid rgba(226, 232, 240, 0.5);">
+          <div class="card-glow"></div>
+          <img src="images/toolroom.png" alt="Toolroom injection machine" class="infra-img" style="object-fit:cover; width:100%; height:100%; transition:transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 1s ease;" onmouseover="this.style.transform='scale(1.12)'; this.style.filter='brightness(1.08) contrast(1.05)';" onmouseout="this.style.transform='scale(1)'; this.style.filter='none';">
         </div>
       </div>
       <div data-reveal="left">
@@ -175,23 +234,23 @@
         <h2 style="margin-bottom:var(--sp-4)">High-Volume Moulding &amp; Processing Lines</h2>
         <p style="margin-bottom:var(--sp-5)">Our primary injection moulding capacity runs continuously to ensure consistent delivery metrics.</p>
 
-        <div style="display:flex;flex-direction:column;gap:var(--sp-4)">
-          <div style="display:flex;gap:var(--sp-3);align-items:center">
-            <span style="font-size:1.5rem">&#128205;</span>
+        <div style="display:flex;flex-direction:column;gap:var(--sp-4)" data-stagger>
+          <div style="display:flex;gap:var(--sp-3);align-items:center" data-reveal="left">
+            <span style="font-size:1.5rem; text-shadow: 0 0 10px rgba(14,165,233,0.4);">&#128205;</span>
             <div>
               <strong style="color:var(--clr-text)">Haitian Injection Moulding Machines</strong>
               <span style="display:block;font-size:var(--fs-xs);color:var(--clr-text-muted)">120T to 250T clamping force capacities for precise high-volume runs.</span>
             </div>
           </div>
-          <div style="display:flex;gap:var(--sp-3);align-items:center">
-            <span style="font-size:1.5rem">&#128205;</span>
+          <div style="display:flex;gap:var(--sp-3);align-items:center" data-reveal="left">
+            <span style="font-size:1.5rem; text-shadow: 0 0 10px rgba(14,165,233,0.4);">&#128205;</span>
             <div>
               <strong style="color:var(--clr-text)">60T Injection Blow Moulding Line</strong>
               <span style="display:block;font-size:var(--fs-xs);color:var(--clr-text-muted)">High-clarity blow line for pharmaceutical jars, bottles, and canisters.</span>
             </div>
           </div>
-          <div style="display:flex;gap:var(--sp-3);align-items:center">
-            <span style="font-size:1.5rem">&#128205;</span>
+          <div style="display:flex;gap:var(--sp-3);align-items:center" data-reveal="left">
+            <span style="font-size:1.5rem; text-shadow: 0 0 10px rgba(14,165,233,0.4);">&#128205;</span>
             <div>
               <strong style="color:var(--clr-text)">BASF Elastogran &amp; Desma Systems</strong>
               <span style="display:block;font-size:var(--fs-xs);color:var(--clr-text-muted)">Polyurethane dosing systems for footwear and high-durability industrial gaskets.</span>
@@ -206,22 +265,28 @@
 <!-- Metrology/Quality Equipment -->
 <section class="section">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:var(--sp-12);align-items:center">
+    <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:var(--sp-12);align-items:center;">
       <div data-reveal="right">
         <div class="section-label">Metrology Lab</div>
         <h2 style="margin-bottom:var(--sp-4)">Micron-Level Inspection Systems</h2>
         <p style="margin-bottom:var(--sp-5)">Quality assurance is supported by reliable measuring instruments within our calibrated metrology department.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; <strong>Trimos Instruments</strong> for highly accurate 1D/2D linear vertical dimensions.</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; <strong>Mitutoyo Inspection Systems</strong> (Mitutoyo micrometers, calipers, profile projectors).</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Stability chambers and autoclaves for clinical simulation quality checking.</li>
+        <ul style="display:flex;flex-direction:column;gap:var(--sp-3)" data-stagger>
+          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted); display:flex; gap: 8px;" data-reveal="right">
+            <span style="color:#0284c7;font-weight:bold">&bull;</span> <span><strong>Trimos Instruments</strong> for highly accurate 1D/2D linear vertical dimensions.</span>
+          </li>
+          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted); display:flex; gap: 8px;" data-reveal="right">
+            <span style="color:#0284c7;font-weight:bold">&bull;</span> <span><strong>Mitutoyo Inspection Systems</strong> (Mitutoyo micrometers, calipers, profile projectors).</span>
+          </li>
+          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted); display:flex; gap: 8px;" data-reveal="right">
+            <span style="color:#0284c7;font-weight:bold">&bull;</span> <span>Stability chambers and autoclaves for clinical simulation quality checking.</span>
+          </li>
         </ul>
       </div>
-      <div data-reveal="left">
-        <div style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-xl);padding:var(--sp-8);text-align:center">
-          <div style="font-size:4rem;margin-bottom:var(--sp-3)">&#10003;</div>
-          <h3>Calibration Integrity</h3>
-          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-top:var(--sp-2)">All metrology systems undergo standard annual NABL accredited calibration tracking.</p>
+      <div data-reveal="scale" style="perspective:1000px">
+        <div style="background:linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);border:1px solid rgba(14, 165, 233, 0.2);border-radius:var(--radius-xl);padding:var(--sp-10);text-align:center;box-shadow:0 20px 40px -10px rgba(14,165,233,0.15); animation: product-float 6s ease-in-out infinite; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05) translateY(-5px)'; this.style.boxShadow='0 30px 50px -10px rgba(14,165,233,0.3)';" onmouseout="this.style.transform='scale(1) translateY(0)'; this.style.boxShadow='0 20px 40px -10px rgba(14,165,233,0.15)';">
+          <div style="font-size:4.5rem;margin-bottom:var(--sp-3);color:#0284c7; text-shadow: 0 10px 20px rgba(2,132,199,0.2); animation: infra-dot-pulse 3s infinite;">&#10003;</div>
+          <h3 style="margin-bottom:var(--sp-2); color:#0f172a;">ISO Certified</h3>
+          <p style="color:#475569;font-size:var(--fs-sm)">All processes are mapped and tracked in compliance with global quality management systems.</p>
         </div>
       </div>
     </div>

@@ -347,6 +347,33 @@ strong { color: var(--clr-text); font-weight: var(--fw-semi); }
   transition: opacity var(--t-normal) var(--ease-smooth);
 }
 
+/* ── Premium Global Card Animations ───────────────────── */
+.card, .case-study-card {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 10px 30px rgba(15,23,42,0.05) !important;
+}
+.card:hover, .case-study-card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow: 0 30px 60px rgba(14,165,233,0.15) !important;
+  border-color: #38bdf8 !important;
+  z-index: 10;
+}
+.card::before, .case-study-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.card:hover::before, .case-study-card:hover::before {
+  opacity: 1;
+}
+
 /* ── Responsive Breakpoints ───────────────────────────── */
 @media (max-width: 1200px) {
   .grid-4 { grid-template-columns: repeat(3, 1fr); }
