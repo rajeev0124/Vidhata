@@ -91,39 +91,53 @@
 <section class="section">
   <div class="container">
     <div class="about-overview-grid">
-      <div data-reveal="right">
-        <div class="section-label">Who We Are</div>
-        <h2 style="margin-bottom:var(--sp-6)">India's Premier Integrated Plastics Manufacturer</h2>
-        <p style="margin-bottom:var(--sp-5)">Vidhata Plastics India Pvt. Ltd. is a fully integrated plastics manufacturing company specializing in product design, tooling, mould manufacturing, injection moulding, extrusion, polyurethane processing, assembly, and cleanroom medical manufacturing.</p>
-        <p style="margin-bottom:var(--sp-8)">With over 20 years of industry experience, Vidhata delivers end-to-end manufacturing solutions under one roof, helping customers reduce lead times, improve quality, and simplify supply chain management.</p>
-        <div class="about-stats-grid">
-          <div class="stat-card" style="padding:var(--sp-5)">
+      <div data-stagger style="position: relative;">
+        <!-- Ambient floating background particle -->
+        <div style="position: absolute; top: -20%; left: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, transparent 70%); animation: product-float 8s ease-in-out infinite; z-index: -1; pointer-events: none;"></div>
+
+        <div class="section-label" data-reveal="up" style="animation: infra-dot-pulse 2.5s infinite; border: 1px solid rgba(14, 165, 233, 0.4); box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);">Who We Are</div>
+        <h2 data-reveal="up" style="margin-bottom:var(--sp-6); background: linear-gradient(90deg, #0f172a, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">India's Premier Integrated Plastics Manufacturer</h2>
+        
+        <p data-reveal="up" style="margin-bottom:var(--sp-5)">Vidhata Plastics India Pvt. Ltd. is a fully integrated plastics manufacturing company specializing in product design, tooling, mould manufacturing, injection moulding, extrusion, polyurethane processing, assembly, and cleanroom medical manufacturing.</p>
+        
+        <p data-reveal="up" style="margin-bottom:var(--sp-8)">With over 20 years of industry experience, Vidhata delivers end-to-end manufacturing solutions under one roof, helping customers reduce lead times, improve quality, and simplify supply chain management.</p>
+        
+        <div class="about-stats-grid" data-stagger>
+          <div class="stat-card" data-reveal="scale" style="padding:var(--sp-5); transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(14, 165, 233, 0.15)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='var(--clr-border)';">
             <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="20" data-suffix="+">20+</span></div>
             <div class="stat-card__label">Years Experience</div>
           </div>
-          <div class="stat-card" style="padding:var(--sp-5)">
+          <div class="stat-card" data-reveal="scale" style="padding:var(--sp-5); transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(14, 165, 233, 0.15)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='var(--clr-border)';">
             <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="400" data-suffix="+">400+</span></div>
             <div class="stat-card__label">Moulds Built</div>
           </div>
-          <div class="stat-card" style="padding:var(--sp-5)">
+          <div class="stat-card" data-reveal="scale" style="padding:var(--sp-5); transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(14, 165, 233, 0.15)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='var(--clr-border)';">
             <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="200" data-suffix="M+">200M+</span></div>
             <div class="stat-card__label">Components Made</div>
           </div>
-          <div class="stat-card" style="padding:var(--sp-5)">
+          <div class="stat-card" data-reveal="scale" style="padding:var(--sp-5); transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(14, 165, 233, 0.15)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='var(--clr-border)';">
             <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="5000" data-suffix="MT">5,000MT</span></div>
             <div class="stat-card__label">Raw Material/Year</div>
           </div>
         </div>
       </div>
-      <div data-reveal="left">
-        <div class="about-facility-wrap">
-          <img src="images/about-facility.png" alt="Vidhata Plastics facility" class="about-facility-img">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--clr-bg) 0%,transparent 40%)"></div>
-          <div style="position:absolute;bottom:var(--sp-6);left:var(--sp-6);right:var(--sp-6)">
+      <div data-reveal="scale" data-3d="15" data-glow-color="rgba(14, 165, 233, 0.35)" style="perspective: 1200px; transform-style: preserve-3d;">
+        <style>
+          @keyframes auto-3d-float {
+            0% { transform: translateY(0) rotateX(4deg) rotateY(-4deg); box-shadow: 0 20px 40px rgba(15,23,42,0.15); }
+            50% { transform: translateY(-15px) rotateX(-2deg) rotateY(3deg); box-shadow: 0 45px 80px rgba(14, 165, 233, 0.2); }
+            100% { transform: translateY(0) rotateX(4deg) rotateY(-4deg); box-shadow: 0 20px 40px rgba(15,23,42,0.15); }
+          }
+        </style>
+        <div class="about-facility-wrap" style="position:relative; border-radius: var(--radius-2xl); overflow: hidden; border: 1px solid rgba(226, 232, 240, 0.8); animation: auto-3d-float 7s ease-in-out infinite; transform-style: preserve-3d;">
+          <div class="card-glow"></div>
+          <img src="images/about.jpg" alt="Vidhata Plastics facility" class="about-facility-img" style="object-fit: cover; width: 100%; height: 100%; transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;" onmouseover="this.style.transform='scale(1.15) rotateZ(1deg)'; this.style.filter='brightness(1.05) contrast(1.1) saturate(1.2)';" onmouseout="this.style.transform='scale(1) rotateZ(0deg)'; this.style.filter='none';">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--clr-bg) 0%,transparent 50%); pointer-events: none; transform: translateZ(10px);"></div>
+          <div style="position:absolute;bottom:var(--sp-6);left:var(--sp-6);right:var(--sp-6); z-index: 5; pointer-events: none; transform: translateZ(30px);">
             <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap">
-              <span class="badge badge--primary">ISO 9001:2015</span>
-              <span class="badge badge--gold">ISO 13485</span>
-              <span class="badge badge--success">CE Compliant</span>
+              <span class="badge badge--primary" style="animation: product-float 5s ease-in-out infinite; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">ISO 9001:2015</span>
+              <span class="badge badge--gold" style="animation: product-float 6s ease-in-out infinite 0.5s; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">ISO 13485</span>
+              <span class="badge badge--success" style="animation: product-float 5.5s ease-in-out infinite 1s; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">CE Compliant</span>
             </div>
           </div>
         </div>

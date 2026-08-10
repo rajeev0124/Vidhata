@@ -81,21 +81,40 @@
   <div class="container flex flex-col gap-12">
     <!-- Sector 1: Image Right -->
     <div class="industry-sector-card" id="medical">
-      <div data-reveal="right" class="industry-card-content">
+      <div data-reveal="up" class="industry-card-content">
         <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">High Compliance</span>
         <h3 style="margin-bottom:var(--sp-4)">Medical &amp; Healthcare</h3>
         <p style="margin-bottom:var(--sp-4)">We manufacture safety-critical sterile componentry for clinical applications.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Dialysis components &amp; filtration cartridges</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Intravenous (IV) set connectors &amp; chambers</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Catheter connection components</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Diagnostic in-vitro (IVD) cassette shells</li>
+        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)" data-stagger>
+          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)" data-reveal="right">&bull; Dialysis components &amp; filtration cartridges</li>
+          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)" data-reveal="right">&bull; Intravenous (IV) set connectors &amp; chambers</li>
+          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)" data-reveal="right">&bull; Catheter connection components</li>
+          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)" data-reveal="right">&bull; Diagnostic in-vitro (IVD) cassette shells</li>
         </ul>
-        <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="medical.html" class="btn btn--outline btn--sm">View Medical Division &rarr;</a></div>
+        <div class="industry-card-btn" style="margin-top:var(--sp-6)" data-reveal="up"><a href="medical.html" class="btn btn--outline btn--sm">View Medical Division &rarr;</a></div>
       </div>
-      <div data-reveal="left" class="industry-card-media">
-        <div class="industry-card-imgwrap">
-          <img src="images/cleanroom.png" alt="Medical Manufacturing" class="industry-card-img">
+      <div data-reveal="scale" class="industry-card-media" data-3d="12" data-glow-color="rgba(14, 165, 233, 0.25)">
+        <div class="card-glow"></div>
+        <div class="med-gallery-outer">
+          <div class="industry-card-imgwrap med-gallery">
+            <!-- Slides -->
+            <img src="images/clean-room/class - 7.jpg" alt="ISO Class 7 Cleanroom Medical Manufacturing" class="industry-card-img med-slide med-slide--1 active">
+            <img src="images/clean-room/class8.jpg"    alt="ISO Class 8 Cleanroom Medical Facility"      class="industry-card-img med-slide med-slide--2">
+            <!-- Overlays -->
+            <div class="med-gallery__overlay"></div>
+            <!-- Corner accents -->
+            <div class="med-gallery__corner med-gallery__corner--tl"></div>
+            <div class="med-gallery__corner med-gallery__corner--tr"></div>
+            <div class="med-gallery__corner med-gallery__corner--bl"></div>
+            <div class="med-gallery__corner med-gallery__corner--br"></div>
+
+            <!-- Caption -->
+            <div class="med-gallery__caption">
+              <span class="med-gallery__caption-text" id="med-cap-text">ISO Class 7 Cleanroom</span>
+            </div>
+            <!-- Progress bar -->
+            <div class="med-gallery__progress"><div class="med-gallery__progress-bar" id="med-progress"></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -258,7 +277,86 @@
 <footer class="footer"><div class="container"><div class="footer__grid"><div><a href="index.html" class="navbar__logo" style="margin-bottom:var(--sp-4);display:inline-flex"><img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" /><div class="navbar__logo-text"><span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span><span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span></div></a><p class="footer__brand-desc">End-to-end plastics manufacturing for medical, pharma, electronics, and industrial sectors.</p><div class="footer__certbadges"><span class="footer__certbadge">ISO 9001:2015</span><span class="footer__certbadge">ISO 13485</span></div></div><div><div class="footer__col-title">Services</div><div class="footer__links"><a href="services.html#design" class="footer__link">Product Design</a><a href="services.html#tooling" class="footer__link">Tool &amp; Mould Mfg.</a><a href="services.html#manufacturing" class="footer__link">Manufacturing</a><a href="services.html#assembly" class="footer__link">Assembly</a><a href="services.html#regulatory" class="footer__link">Regulatory</a></div></div><div><div class="footer__col-title">Company</div><div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a href="clients.html" class="footer__link">Clients</a><a href="quality.html" class="footer__link">Quality</a><a href="contact.html" class="footer__link">Contact</a></div></div><div><div class="footer__col-title">Contact</div><div class="footer__contact-item"><span class="footer__contact-icon">&#128222;</span><a href="tel:+919885100808" style="color:var(--clr-text-muted)">+91 98851 00808</a></div><div class="footer__contact-item"><span class="footer__contact-icon">&#9993;</span><a href="mailto:vikrant@vidhata.co.in" style="color:var(--clr-text-muted)">vikrant@vidhata.co.in</a></div></div></div><div class="footer__bottom"><p class="footer__copy">&copy; 2024 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p><div class="footer__social"><a href="#" class="footer__social-link">in</a><a href="#" class="footer__social-link"></a></div><div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy Policy</a></div></div></div></footer>
 <a href="https://wa.me/919885100808" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script>
+(function () {
+  var INTERVAL   = 1000;
+  var slides     = document.querySelectorAll('.med-slide');
+  var dots       = document.querySelectorAll('.med-dot');
+  var capText    = document.getElementById('med-cap-text');
+  var counter    = document.getElementById('med-counter');
+  var progressBar= document.getElementById('med-progress');
+  var captions   = ['ISO Class 7 Cleanroom', 'ISO Class 8 Cleanroom'];
+  var total      = slides.length;
+  var current    = 0;
+  var timer      = null;
+  var rafId      = null;
+  var paused     = false;
+  var startTime  = null;
+
+  if (!total) return;
+
+  function updateUI() {
+    if (capText) capText.textContent = captions[current] || '';
+    if (counter) counter.textContent = (current + 1) + ' / ' + total;
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    current = (idx + total) % total;
+    slides[current].classList.add('active');
+    updateUI();
+    restartTimer();
+  }
+
+  dots.forEach(function (d) {
+    d.addEventListener('click', function () {
+      var idx = parseInt(this.getAttribute('data-idx'), 10);
+      if (idx !== current) goTo(idx);
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') goTo(current + 1);
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+  });
+
+  var gallery = document.querySelector('.med-gallery');
+  if (gallery) {
+    gallery.addEventListener('mouseenter', function () { paused = true; cancelAnimationFrame(rafId); });
+    gallery.addEventListener('mouseleave', function () { paused = false; restartTimer(); });
+  }
+
+  function animateProgress(ts) {
+    if (!startTime) startTime = ts;
+    var pct = Math.min(((ts - startTime) / INTERVAL) * 100, 100);
+    if (progressBar) progressBar.style.width = pct + '%';
+    if (ts - startTime < INTERVAL) rafId = requestAnimationFrame(animateProgress);
+  }
+
+  function restartTimer() {
+    clearTimeout(timer);
+    cancelAnimationFrame(rafId);
+    startTime = null;
+    if (progressBar) { progressBar.style.transition = 'none'; progressBar.style.width = '0%'; }
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        startTime = null;
+        rafId = requestAnimationFrame(animateProgress);
+        timer = setTimeout(function () { if (!paused) goTo(current + 1); }, INTERVAL);
+      });
+    });
+  }
+
+  updateUI();
+  restartTimer();
+})();
+</script>
+
 <script src="js/main.js"></script><script src="js/animations.js"></script>
+
   <script src="js/chatbot.js"></script>
 </body>
 </html>

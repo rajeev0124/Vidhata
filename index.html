@@ -514,9 +514,38 @@
   <!-- ======================================================= -->
   <section class="medical-strip-section">
     <div class="medical-strip-grid">
-      <!-- Image side -->
+      <!-- Image side — Cleanroom Photo Slideshow -->
       <div class="medical-strip-img-wrap" data-reveal="right">
-        <img src="images/cleanroom.png" alt="ISO 13485 cleanroom facility" class="medical-strip-img img-zoom-hover">
+        <!-- Slideshow Track -->
+        <div class="cleanroom-slider" id="cleanroomSlider">
+          <div class="cleanroom-slider__track" id="cleanroomTrack">
+            <div class="cleanroom-slider__slide active">
+              <img src="images/clean-room/class - 7.jpg" alt="ISO Class 7 Cleanroom Medical Assembly" class="medical-strip-img" />
+            </div>
+            <div class="cleanroom-slider__slide">
+              <img src="images/clean-room/class-8.jpg" alt="ISO Class 8 Cleanroom Injection Moulding" class="medical-strip-img" />
+            </div>
+            <div class="cleanroom-slider__slide">
+              <img src="images/clean-room/class-08.jpg" alt="ISO Class 8 Cleanroom Manufacturing Floor" class="medical-strip-img" />
+            </div>
+          </div>
+
+          <!-- Shimmer sweep -->
+          <div class="cleanroom-slider__shimmer"></div>
+
+
+
+
+
+          <!-- Slide counter -->
+          <div class="cleanroom-slider__counter" id="cleanroomCounter">1 / 3</div>
+
+          <!-- Progress Bar -->
+          <div class="cleanroom-slider__progress">
+            <div class="cleanroom-slider__progress-bar" id="cleanroomProgress"></div>
+          </div>
+
+        </div>
         <div class="medical-strip-overlay"></div>
       </div>
       <!-- Content side -->
@@ -936,6 +965,98 @@
   <script src="js/form.js"></script>
   <script src="js/chatbot.js"></script>
   <script src="js/dna-helix.js"></script>
+
+  <!-- Cleanroom Image Slider Script -->
+  <script>
+  (function () {
+    'use strict';
+
+    const INTERVAL = 2000;
+    const slider   = document.getElementById('cleanroomSlider');
+    if (!slider) return;
+
+    const slides     = slider.querySelectorAll('.cleanroom-slider__slide');
+    const dots       = slider.querySelectorAll('.cleanroom-slider__dot');
+    const prevBtn    = document.getElementById('cleanroomPrev');
+    const nextBtn    = document.getElementById('cleanroomNext');
+    const progressBar= document.getElementById('cleanroomProgress');
+    const counter    = document.getElementById('cleanroomCounter');
+    const total      = slides.length;
+
+    let current   = 0;
+    let startTime = null;
+    let rafId     = null;
+    let paused    = false;
+
+    function updateUI() {
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      if (counter) counter.textContent = (current + 1) + ' / ' + total;
+    }
+
+    function goTo(index) {
+      const prev = current;
+      current = (index + total) % total;
+      if (prev === current) return;
+      slides[prev].classList.remove('active');
+      slides[current].classList.add('active');
+      updateUI();
+      resetProgress();
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    // Progress bar animation
+    function resetProgress() {
+      if (rafId) cancelAnimationFrame(rafId);
+      if (progressBar) { progressBar.style.transition = 'none'; progressBar.style.width = '0%'; }
+      startTime = performance.now();
+      requestAnimationFrame(animateProgress);
+    }
+
+    function animateProgress() {
+      if (paused) return;
+      const elapsed = performance.now() - startTime;
+      const pct = Math.min((elapsed / INTERVAL) * 100, 100);
+      if (progressBar) progressBar.style.width = pct + '%';
+      if (pct < 100) {
+        rafId = requestAnimationFrame(animateProgress);
+      } else {
+        next();
+      }
+    }
+
+    function startAuto() { paused = false; startTime = performance.now(); animateProgress(); }
+    function stopAuto()  { paused = true;  if (rafId) cancelAnimationFrame(rafId); }
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { stopAuto(); prev(); setTimeout(startAuto, 300); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { stopAuto(); next(); setTimeout(startAuto, 300); });
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        stopAuto();
+        goTo(parseInt(dot.getAttribute('data-index'), 10));
+        setTimeout(startAuto, 300);
+      });
+    });
+
+    slider.addEventListener('mouseenter', stopAuto);
+    slider.addEventListener('mouseleave', startAuto);
+
+    // Touch swipe
+    var touchStartX = 0;
+    slider.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+    slider.addEventListener('touchend', function (e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { stopAuto(); diff > 0 ? next() : prev(); setTimeout(startAuto, 300); }
+    }, { passive: true });
+
+    updateUI();
+    startAuto();
+  })();
+  </script>
+
+
 </body>
 
 </html>

@@ -996,8 +996,8 @@ document.addEventListener('DOMContentLoaded', () => {
     card.onclick = function() { window.location.href = `product?id=${p.id}`; };
     card.innerHTML = `
       <div>
-        <div style="border-radius:var(--radius-lg); overflow:hidden; height:180px; margin-bottom:var(--sp-4); border: 1px solid var(--clr-med-border); background:#FFF;">
-          <img src="${p.image}" alt="${p.title}" style="width:100%; height:100%; object-fit:contain;">
+        <div style="border-radius:var(--radius-lg); overflow:hidden; height:180px; margin-bottom:var(--sp-4); background:transparent; display:flex; align-items:center; justify-content:center; border: none; position:relative;">
+          <img src="${p.image}" alt="${p.title}" style="display:block; width:100%; height:100%; object-fit:contain; mix-blend-mode:multiply; padding:0; margin:0; background:transparent; transition:transform 0.7s cubic-bezier(0.175,0.885,0.32,1.275), filter 0.5s ease; position:relative; z-index:1;" onmouseover="this.style.transform='scale(1.15) rotate(-2deg)'; this.style.filter='contrast(1.1) brightness(1.05)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.filter='none'">
         </div>
         <h4 style="color:var(--clr-med-primary); font-size:var(--fs-md); margin-bottom:var(--sp-2)">${p.title}</h4>
         <p style="font-size:var(--fs-xs); color:var(--clr-med-text-muted); line-height:var(--lh-relaxed); margin-bottom:var(--sp-4)">

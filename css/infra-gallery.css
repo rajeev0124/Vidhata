@@ -1,0 +1,266 @@
+/* ══════════════════════════════════════════════════════════════════
+   Infrastructure Gallery — cleanroom-moulding.html
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Outer wrapper ── */
+.infra-gallery-wrap {
+  position: relative;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ── Inner gallery: crossfade stage ── */
+.infra-gallery {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 480px;
+  background: #050d1a;
+  /* Left edge fade out over 12% */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 100%);
+}
+
+/* ── Each slide ── */
+.infra-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 1;
+}
+
+.infra-slide--active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* ── Image fill ── */
+.infra-slide__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(1.1) contrast(1.08) saturate(1.2);
+  transform: scale(1.04);
+  transition: transform 8s ease;
+}
+
+.infra-slide--active .infra-slide__img {
+  transform: scale(1.0);
+}
+
+/* ── Shimmer sweep ── */
+.infra-slide__shimmer {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    108deg, transparent 30%,
+    rgba(255,255,255,0.065) 50%, transparent 70%
+  );
+  background-size: 220% 100%;
+  animation: infra-shimmer 3.5s ease-in-out infinite;
+}
+
+@keyframes infra-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Vignette ── */
+.infra-slide__vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background:
+    linear-gradient(to top,    rgba(3,8,25,0.72) 0%, rgba(3,8,25,0.04) 35%, transparent 55%),
+    linear-gradient(to bottom, rgba(3,8,25,0.22) 0%, transparent 22%),
+    linear-gradient(to right,  rgba(3,8,25,0.12) 0%, transparent 25%),
+    linear-gradient(to left,   rgba(3,8,25,0.12) 0%, transparent 25%);
+}
+
+/* ── Caption pill ── */
+.infra-slide__caption {
+  position: absolute;
+  bottom: 60px;
+  left: 20px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(3,10,28,0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56,189,248,0.3);
+  border-radius: 999px;
+  padding: 6px 18px 6px 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+}
+
+.infra-slide--active .infra-slide__caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.infra-slide__caption-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34,197,94,0.25), 0 0 8px #22c55e;
+  animation: infra-dot-pulse 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes infra-dot-pulse {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(34,197,94,0.2),  0 0 6px  #22c55e; transform: scale(1);   }
+  50%       { box-shadow: 0 0 0 4px rgba(34,197,94,0.1),  0 0 14px #22c55e; transform: scale(1.5); }
+}
+
+/* ── Nav arrows ── */
+.infra-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 8;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(5,15,40,0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, border-color 0.3s, transform 0.25s, box-shadow 0.3s;
+  outline: none;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.28);
+}
+
+.infra-arrow:hover {
+  background: rgba(14,165,233,0.4);
+  border-color: rgba(56,189,248,0.75);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 20px rgba(14,165,233,0.6), 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.infra-arrow--prev { left: 16px; }
+.infra-arrow--next { right: 16px; }
+
+/* ── Tab indicators ── */
+.infra-tabs {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+  display: flex;
+  gap: 6px;
+  background: rgba(3,10,28,0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56,189,248,0.2);
+  border-radius: 999px;
+  padding: 5px 8px;
+}
+
+.infra-tab {
+  padding: 4px 14px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+  outline: none;
+  white-space: nowrap;
+}
+
+.infra-tab.active {
+  background: rgba(14,165,233,0.35);
+  color: #7dd3fc;
+  box-shadow: 0 0 12px rgba(14,165,233,0.45);
+}
+
+.infra-tab:hover:not(.active) {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.75);
+}
+
+/* ── Progress bar ── */
+.infra-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.07);
+  z-index: 8;
+  border-radius: 0 0 18px 18px;
+}
+
+.infra-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #0284c7, #0ea5e9, #38bdf8);
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 10px rgba(56,189,248,0.9);
+}
+
+/* ── Cursor glow overlay ── */
+.infra-cursor-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+  border-radius: 18px;
+  transition: background 0.12s ease;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .infra-gallery { height: 380px; }
+}
+
+@media (max-width: 768px) {
+  .infra-gallery { 
+    height: 340px; 
+    -webkit-mask-image: none;
+    mask-image: none;
+    border-radius: 12px;
+  }
+  .infra-gallery-wrap {
+    border-radius: 14px;
+  }
+  .infra-tabs { bottom: 14px; gap: 4px; padding: 4px 6px; }
+  .infra-tab { padding: 3px 10px; font-size: 0.55rem; }
+  .infra-arrow { width: 38px; height: 38px; }
+  .infra-slide__caption { bottom: 54px; font-size: 0.58rem; }
+}
+
+@media (max-width: 480px) {
+  .infra-gallery { height: 220px; }
+  .infra-gallery-wrap { border-radius: 14px; }
+  .infra-arrow { display: none; }
+  .infra-tabs { gap: 3px; }
+  .infra-tab { padding: 3px 8px; }
+}

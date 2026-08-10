@@ -461,28 +461,6 @@ const MEDICAL_PRODUCTS = [
     }
   },
   {
-    id: "chemo-infusion-set-std",
-    title: "Chemotherapy Infusion Set",
-    productCode: "VP107A",
-    category: "Infusion Including Chemo",
-    image: "images/Infusion Including Chemo/chemotheraphy infusion set.jpg",
-    description: "Oncology-specific IV administration set featuring a co-extruded inner lining that prevents chemotherapy drugs from absorbing into the tube walls, ensuring accurate therapeutic dosing.",
-    features: [
-      "Oncology-grade co-extruded tubing prevents oncology drug absorption.",
-      "Amber coloration shields light-sensitive chemotherapy formulations.",
-      "Integrated 0.2/1.2 µm filter provides sterile filtration and blocks contaminants.",
-      "Heavy-duty roller clamp allows rapid shut-off and rate management.",
-      "Luer lock connectors ensure leak-free operation."
-    ],
-    specs: {
-      "Tubing Structure": "Double-layered co-extrusion (PVC-Free inner line)",
-      "Filter Size": "1.2 μm / 0.2 μm inline PES filter options",
-      "Drip Rate": "20 drops/ml",
-      "Clamps": "Secure pinch clamp for instant line shutoff",
-      "Sterility": "EO Sterile"
-    }
-  },
-  {
     id: "chemo-extline-set",
     title: "Chemotherapy Extension Line Set",
     productCode: "VP109",

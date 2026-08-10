@@ -348,6 +348,10 @@ strong { color: var(--clr-text); font-weight: var(--fw-semi); }
 }
 
 /* ── Responsive Breakpoints ───────────────────────────── */
+@media (max-width: 1200px) {
+  .grid-4 { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-5 { grid-template-columns: repeat(3, 1fr); }
@@ -355,14 +359,20 @@ strong { color: var(--clr-text); font-weight: var(--fw-semi); }
 
 @media (max-width: 768px) {
   :root { --section-py: var(--sp-12); }
-  .container { padding: 0 var(--sp-5); }
+  .container { padding: 0 var(--sp-5); max-width: 100% !important; }
   .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
   h1 { font-size: clamp(var(--fs-2xl), 8vw, var(--fs-4xl)); }
   h2 { font-size: clamp(var(--fs-xl), 6vw, var(--fs-2xl)); }
   h3 { font-size: clamp(var(--fs-lg), 5vw, var(--fs-xl)); }
   h4 { font-size: clamp(var(--fs-md), 4vw, var(--fs-lg)); }
+  img { max-width: 100%; height: auto; }
+}
+
+@media (max-width: 576px) {
+  .grid-5 { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
   .container { padding: 0 var(--sp-4); }
+  body { overflow-x: hidden; }
 }
