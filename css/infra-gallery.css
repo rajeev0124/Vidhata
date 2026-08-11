@@ -78,10 +78,10 @@
   z-index: 4;
   pointer-events: none;
   background:
-    linear-gradient(to top,    rgba(3,8,25,0.72) 0%, rgba(3,8,25,0.04) 35%, transparent 55%),
-    linear-gradient(to bottom, rgba(3,8,25,0.22) 0%, transparent 22%),
-    linear-gradient(to right,  rgba(3,8,25,0.12) 0%, transparent 25%),
-    linear-gradient(to left,   rgba(3,8,25,0.12) 0%, transparent 25%);
+    linear-gradient(to top,    rgba(3,8,25,0.55) 0%, rgba(3,8,25,0.02) 28%, transparent 45%),
+    linear-gradient(to bottom, rgba(3,8,25,0.15) 0%, transparent 18%),
+    linear-gradient(to right,  rgba(3,8,25,0.08) 0%, transparent 18%),
+    linear-gradient(to left,   rgba(3,8,25,0.08) 0%, transparent 18%);
 }
 
 /* ── Caption pill ── */
@@ -241,26 +241,52 @@
   .infra-gallery { height: 380px; }
 }
 
+/* Remove the left-edge mask on ALL mobile/tablet sizes */
+@media (max-width: 991px) {
+  .infra-gallery {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
+  /* Lighter vignette on tablet — image takes full width, don't hide too much */
+  .infra-slide__vignette {
+    background:
+      linear-gradient(to bottom, rgba(3,8,25,0.1) 0%, transparent 15%);
+  }
+}
+
 @media (max-width: 768px) {
-  .infra-gallery { 
-    height: 340px; 
-    -webkit-mask-image: none;
-    mask-image: none;
+  .infra-gallery {
+    height: 320px;
     border-radius: 12px;
   }
   .infra-gallery-wrap {
     border-radius: 14px;
   }
+
+  /* Remove vignette on phone to avoid black bottom */
+  .infra-slide__vignette {
+    background: none;
+  }
+
   .infra-tabs { bottom: 14px; gap: 4px; padding: 4px 6px; }
-  .infra-tab { padding: 3px 10px; font-size: 0.55rem; }
+  .infra-tab  { padding: 3px 10px; font-size: 0.55rem; }
   .infra-arrow { width: 38px; height: 38px; }
   .infra-slide__caption { bottom: 54px; font-size: 0.58rem; }
 }
 
 @media (max-width: 480px) {
-  .infra-gallery { height: 220px; }
-  .infra-gallery-wrap { border-radius: 14px; }
+  .infra-gallery {
+    height: 240px;
+    background: #0a1628; /* slightly lighter fallback so it's not pitch black */
+  }
+  .infra-gallery-wrap { border-radius: 12px; }
   .infra-arrow { display: none; }
-  .infra-tabs { gap: 3px; }
-  .infra-tab { padding: 3px 8px; }
+  .infra-tabs  { gap: 3px; }
+  .infra-tab   { padding: 3px 8px; }
+
+  /* Minimal vignette on tiny phones */
+  .infra-slide__vignette {
+    background: none;
+  }
 }

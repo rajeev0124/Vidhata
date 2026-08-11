@@ -624,93 +624,38 @@ function initInteractiveGrid() {
   });
 }
 
-// ── Hero Auto-Sliding Showcase ──────────────────────────────
-function initHeroSlider() {
-  const slider = $('#hero-slider');
-  const track = $('#hero-slider-track');
-  if (!slider || !track) return;
+// ── Hero Video Continuous Play ──────────────────────────────
+function initHeroVideo() {
+  const video = $('#hero-bg-video');
+  if (!video) return;
 
-  // Dynamically populate slides from MEDICAL_PRODUCTS if available
-  if (typeof MEDICAL_PRODUCTS !== 'undefined' && MEDICAL_PRODUCTS.length) {
-    track.innerHTML = '';
-    const uniqueImages = [];
-    MEDICAL_PRODUCTS.forEach(p => {
-      if (p.image && !uniqueImages.includes(p.image)) {
-        uniqueImages.push(p.image);
-      }
-    });
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
 
-    uniqueImages.forEach((imgSrc, idx) => {
-      const slide = document.createElement('div');
-      slide.className = `hero-slider__slide${idx === 0 ? ' active' : ''}`;
-      
-      const img = document.createElement('img');
-      img.src = imgSrc;
-      img.alt = "Vidhata Product";
-      img.className = "hero-showcase-img";
-      
-      slide.appendChild(img);
-      track.appendChild(slide);
-    });
+  const tryPlay = () => {
+    const p = video.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(() => {
+        // Autoplay blocked — play on first interaction
+        const unlockPlay = () => {
+          video.play().catch(() => {});
+          document.removeEventListener('click', unlockPlay);
+          document.removeEventListener('touchstart', unlockPlay);
+          document.removeEventListener('keydown', unlockPlay);
+        };
+        document.addEventListener('click', unlockPlay, { once: true });
+        document.addEventListener('touchstart', unlockPlay, { once: true });
+        document.addEventListener('keydown', unlockPlay, { once: true });
+      });
+    }
+  };
+
+  if (video.readyState >= 2) {
+    tryPlay();
+  } else {
+    video.addEventListener('loadeddata', tryPlay, { once: true });
   }
-
-  const slides = $$('.hero-slider__slide', track);
-  const prevBtn = $('#hero-slider-prev');
-  const nextBtn = $('#hero-slider-next');
-  const dotsContainer = $('#hero-slider-dots');
-
-  if (!slides.length) return;
-
-  let currentIndex = 0;
-  let timer = null;
-  const autoInterval = 1800; // 1.8 seconds smooth auto slide one by one
-
-  // Create dot indicators
-  if (dotsContainer) {
-    dotsContainer.innerHTML = '';
-    slides.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.className = `hero-slider__dot${idx === 0 ? ' active' : ''}`;
-      dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
-      dot.addEventListener('click', () => { goToSlide(idx); startAutoPlay(); });
-      dotsContainer.appendChild(dot);
-    });
-  }
-
-  const dots = dotsContainer ? $$('.hero-slider__dot', dotsContainer) : [];
-
-  function goToSlide(index) {
-    currentIndex = (index + slides.length) % slides.length;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    slides.forEach((slide, idx) => {
-      slide.classList.toggle('active', idx === currentIndex);
-    });
-
-    dots.forEach((dot, idx) => {
-      dot.classList.toggle('active', idx === currentIndex);
-    });
-  }
-
-  function nextSlide() {
-    goToSlide(currentIndex + 1);
-  }
-
-  function prevSlide() {
-    goToSlide(currentIndex - 1);
-  }
-
-  function startAutoPlay() {
-    stopAutoPlay();
-    timer = setInterval(nextSlide, autoInterval);
-  }
-
-  function stopAutoPlay() {
-    if (timer) clearInterval(timer);
-  }
-
-  // Continuous Auto Play (Unblocked by mouse hover)
-  startAutoPlay();
 }
 
 // ── Init Everything ────────────────────────────────────────
@@ -731,7 +676,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSafe('SmoothScroll', initSmoothScroll);
   initSafe('CookieBanner', initCookieBanner);
   initSafe('LeadModal', initLeadModal);
-  initSafe('HeroSlider', initHeroSlider);
+  initSafe('HeroVideo', initHeroVideo);
   initSafe('Parallax', initParallax);
   initSafe('BackToTop', initBackToTop);
   initSafe('Videos', initVideos);

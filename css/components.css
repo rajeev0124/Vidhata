@@ -1482,7 +1482,160 @@ a.card--interactive:active {
   align-items: center;
 }
 
+
+/* ════════════════════════════════════
+   HERO VIDEO — Professional Animations
+   ════════════════════════════════════ */
+
+/* Keyframes */
+@keyframes pv-float {
+  0%,100% { transform: translateY(0px);   }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes pv-glow-breathe {
+  0%,100% { opacity: 0.55; transform: scale(1);    }
+  50%      { opacity: 0.9;  transform: scale(1.04); }
+}
+
+@keyframes pv-border-spin {
+  0%   { --pv-angle: 0deg;   }
+  100% { --pv-angle: 360deg; }
+}
+
+@keyframes pv-tick-flash {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+@keyframes pv-shadow-pulse {
+  0%,100% { box-shadow:
+    0 24px 60px rgba(2,132,199,0.18),
+    0 8px 24px rgba(15,23,42,0.12); }
+  50%      { box-shadow:
+    0 32px 80px rgba(2,132,199,0.32),
+    0 12px 32px rgba(15,23,42,0.16); }
+}
+
+/* Register CSS property for angle (Chrome/Edge; graceful fallback elsewhere) */
+@property --pv-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* ── Outer border ring ── */
+.pv-border-ring {
+  position: relative;
+  border-radius: 26px;
+  padding: 3px;                          /* the "border" thickness */
+  background: conic-gradient(
+    from var(--pv-angle),
+    #0ea5e9 0%,
+    #38bdf8 25%,
+    #bae6fd 50%,
+    #0284c7 75%,
+    #0ea5e9 100%
+  );
+  animation:
+    pv-border-spin 6s linear infinite,
+    pv-float       6s ease-in-out infinite;
+}
+
+/* Ambient glow layer behind the card */
+.pv-border-ring::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 36px;
+  background: radial-gradient(
+    ellipse at 50% 60%,
+    rgba(14,165,233,0.30) 0%,
+    rgba(2,132,199,0.12) 50%,
+    transparent 75%
+  );
+  animation: pv-glow-breathe 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── Card itself ── */
+.hero-video-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  animation: pv-shadow-pulse 4s ease-in-out infinite;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.hero-video-wrapper:hover {
+  transform: scale(1.015) translateY(-4px);
+}
+
+/* ── Video ── */
+.hero-video-player {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+}
+
+/* ── Corner tick marks ── */
+.pv-tick {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  z-index: 5;
+  pointer-events: none;
+}
+.pv-tick::before,
+.pv-tick::after {
+  content: '';
+  position: absolute;
+  background: #ffffff;
+  border-radius: 2px;
+}
+.pv-tick::before { width: 100%; height: 2px; top: 0; left: 0; }
+.pv-tick::after  { width: 2px; height: 100%; top: 0; left: 0; }
+
+.pv-tick--tl { top: 12px;    left: 12px;  }
+.pv-tick--tr { top: 12px;    right: 12px; transform: scaleX(-1); }
+.pv-tick--bl { bottom: 12px; left: 12px;  transform: scaleY(-1); }
+.pv-tick--br { bottom: 12px; right: 12px; transform: scale(-1);  }
+
+.pv-tick { animation: pv-tick-flash 3s ease-in-out infinite; }
+.pv-tick--tr { animation-delay: 0.75s; }
+.pv-tick--bl { animation-delay: 1.5s;  }
+.pv-tick--br { animation-delay: 2.25s; }
+
+/* ── Bottom fade ── */
+.pv-fade-bottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 100px;
+  border-radius: 0 0 22px 22px;
+  background: linear-gradient(to top,
+    rgba(15,23,42,0.55) 0%,
+    rgba(15,23,42,0.15) 60%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+  .hero-video-player { height: 320px; }
+}
+@media (max-width: 576px) {
+  .hero-video-player  { height: 240px; }
+  .pv-border-ring     { animation: pv-float 6s ease-in-out infinite; padding: 2px; }
+}
+
+
 /* ── Frameless Automatic Product Showcase ── */
+
 .hero-showcase-card {
   position: relative;
   width: 100%;
@@ -2782,15 +2935,37 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 }
 
 @media (max-width: 768px) {
-  .cleanroom-slider__btn { width: 36px; height: 36px; }
-  .cleanroom-slider__dots { bottom: 16px; }
+  /* Remove right-edge mask — it clips image on narrow screens */
+  .cleanroom-slider {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
+  /* Reduce vignette — bottom was nearly black on small heights */
+  .cleanroom-slider::after {
+    background:
+      linear-gradient(to top, rgba(3,8,25,0.35) 0%, transparent 35%),
+      linear-gradient(to bottom, rgba(3,8,25,0.1) 0%, transparent 15%);
+  }
+
+  /* Disable scanline texture on mobile (darkens image) */
+  .cleanroom-slider::before { display: none; }
+
+  .cleanroom-slider__btn    { width: 36px; height: 36px; }
+  .cleanroom-slider__dots   { bottom: 16px; }
   .cleanroom-slider__counter { display: none; }
   .cleanroom-slider__corner { width: 16px; height: 16px; }
 }
 
 @media (max-width: 480px) {
-  .cleanroom-slider__btn { width: 32px; height: 32px; }
-  .cleanroom-slider__dot { width: 6px; height: 6px; }
+  /* Minimal vignette on tiny phones */
+  .cleanroom-slider::after {
+    background:
+      linear-gradient(to top, rgba(3,8,25,0.2) 0%, transparent 25%);
+  }
+
+  .cleanroom-slider__btn  { width: 32px; height: 32px; }
+  .cleanroom-slider__dot  { width: 6px; height: 6px; }
   .cleanroom-slider__dot.active { width: 20px; }
 }
 
@@ -5285,13 +5460,21 @@ img[data-reveal].revealed,
 }
 
 @media (max-width: 768px) {
-  .cr-slider { height: 280px; }
+  .cr-slider {
+    height: 280px;
+    /* Remove right-edge mask — clips image on narrow screens */
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    background: #0a1628; /* slightly lighter so fallback isn't pitch black */
+  }
   .cr-caption { bottom: 14px; left: 14px; padding: 5px 12px 5px 8px; }
   .cr-caption__text { font-size: 0.58rem; }
 }
 
 @media (max-width: 480px) {
-  .cr-slider { height: 220px; }
+  .cr-slider {
+    height: 220px;
+  }
   .cr-slider-wrap { border-radius: 16px; }
 }
 
@@ -5311,5 +5494,126 @@ img[data-reveal].revealed,
   pointer-events: none;
   border-radius: 20px;
   transition: background 0.12s ease;
+}
+
+/* ════════════════════════════════════
+   MEDICAL PAGE — Mobile Fixes
+   ════════════════════════════════════ */
+
+/* Scrollable tabs wrapper */
+.catalog-tabs-container--scrollable {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  justify-content: flex-start;
+  padding-bottom: 4px;
+  scrollbar-width: none;        /* Firefox */
+}
+.catalog-tabs-container--scrollable::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}
+.catalog-tabs-container--scrollable .catalog-tabs {
+  flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+  /* Stack cleanroom intro 2-col → 1-col */
+  .medical-intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--sp-8) !important;
+  }
+
+  /* Clients: 5-col → 3-col */
+  .medical-clients-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Clients: 3-col → 2-col */
+  .medical-clients-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* CTA buttons full-width */
+  .medical-intro-grid .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Tighten section padding */
+  .medical-intro-grid {
+    gap: var(--sp-6) !important;
+  }
+
+  /* Catalog grid 2 cols */
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Capabilities cards grid 2 cols */
+  section .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Clients: 2-col → 1-col */
+  .medical-clients-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Catalog grid single col */
+  .catalog-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Capabilities single col */
+  section .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Smaller card padding on tiny screens */
+  .card {
+    padding: var(--sp-5) !important;
+  }
+
+  /* Page hero text */
+  .page-hero h1 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem) !important;
+  }
+}
+
+/* ── Medical intro grid: always show both columns on mobile ──
+   The data-reveal scroll animation starts elements at opacity:0.
+   On mobile the gallery column may never enter the observer
+   threshold, so force it visible once the grid stacks. */
+@media (max-width: 991px) {
+  .medical-intro-grid [data-reveal],
+  .medical-intro-grid [data-reveal="left"],
+  .medical-intro-grid [data-reveal="right"] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Ensure the gallery itself has a reliable height when stacked */
+  .medical-intro-grid .infra-gallery-wrap {
+    display: block !important;
+    visibility: visible !important;
+    min-height: 300px;
+  }
+
+  .medical-intro-grid .infra-gallery {
+    height: 300px !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .medical-intro-grid .infra-gallery {
+    height: 240px !important;
+  }
 }
 
