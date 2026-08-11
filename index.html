@@ -110,51 +110,58 @@
   </div>
 
   <!-- ======================================================= -->
-  <!-- HERO SECTION — Logo Animation Video Hero               -->
+  <!-- HERO SECTION — Full-Screen Video Background Hero       -->
   <!-- ======================================================= -->
-  <!-- ======================================================= -->
-  <!-- HERO SECTION — Split-Screen Data & Product Showcase Hero -->
-  <!-- ======================================================= -->
-  <section class="hero hero--split" id="home">
-    <!-- Subtle background light gradient layer -->
-    <div class="hero__split-bg"></div>
+  <section class="hero hero--split" id="home" style="position:relative;background:#030712;color:#ffffff;display:flex;flex-direction:column;">
+    <!-- Full-screen Background Video — ONE video covers hero + stats bar -->
+    <div style="position:absolute;inset:0;overflow:hidden;z-index:1">
+      <video
+        id="hero-bg-video"
+        src="images/home video.mp4"
+        autoplay loop muted playsinline preload="auto"
+        style="width:100%;height:100%;object-fit:cover;opacity:1.0;filter:brightness(0.95);"
+      ></video>
+      <!-- Soft left-side dark vignette -->
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.55) 35%, rgba(15,23,42,0.1) 70%, rgba(15,23,42,0) 100%);"></div>
+    </div>
 
-    <div class="container hero__split-container" style="position:relative;z-index:2">
-      <div class="hero__split-grid">
+    <!-- Hero main content -->
+    <div class="container hero__split-container" style="position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding-left:var(--sp-6);flex:1;">
+      <div class="hero__split-grid" style="grid-template-columns: minmax(320px, 450px) 1fr; gap:2rem; align-items: center;">
 
-        <!-- LEFT COLUMN: Company Data & Key Information -->
-        <div class="hero__split-left">
+        <!-- Left Column: Main Hero Content -->
+        <div class="hero__split-left" style="align-items:flex-start;text-align:left">
           <!-- Eyebrow Badge -->
-          <div class="hero__eyebrow hero-anim-1"
-            style="background:rgba(14,165,233,0.08);border-color:rgba(14,165,233,0.25);color:#0284c7">
-            <span class="hero__eyebrow-dot" style="background:#0284c7"></span>
+          <div class="hero__eyebrow hero-anim-1 hero-pill-anim"
+            style="background:rgba(14,165,233,0.25);border-color:rgba(56,189,248,0.5);color:#38bdf8;margin:0 0 var(--sp-4) 0;backdrop-filter:blur(10px);cursor:pointer">
+            <span class="hero__eyebrow-dot" style="background:#38bdf8"></span>
             ISO 9001:2015 &amp; ISO 13485 Certified
           </div>
 
           <!-- Headline -->
-          <h1 class="hero__headline hero-anim-2" style="color:#0f172a;text-align:left">
-            Precision <span class="gradient-animated">Plastics,</span><br>
-            <span class="hero__hl-light" style="color:#475569">From Design to Delivery</span>
+          <h1 class="hero__headline hero-anim-2" style="color:#ffffff;text-align:left;font-size: clamp(2.2rem, 3.8vw, 3.2rem);line-height:1.15;text-shadow: 0 4px 25px rgba(0,0,0,0.85)">
+            Precision <span class="gradient-animated" style="background:linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.7));">Plastics,</span><br>
+            <span class="hero__hl-light" style="color:#f8fafc">From Design to Delivery</span>
           </h1>
 
           <!-- Subheadline -->
-          <p class="hero__subhead hero-anim-3" style="color:#475569;margin-bottom:var(--sp-6);text-align:left">
+          <p class="hero__subhead hero-anim-3" style="color:#f1f5f9;margin-bottom:var(--sp-6);text-align:left;font-size:1.05rem;line-height:1.6;text-shadow: 0 2px 12px rgba(0,0,0,0.9);font-weight:500">
             A single-roof partner for tooling, mould manufacturing, high-volume production, assembly &amp; cleanroom
             medical manufacturing &mdash; since 2003.
           </p>
 
           <!-- CTA Buttons -->
-          <div class="hero__actions hero-anim-4" style="display:flex;gap:12px;width:100%;max-width:540px">
-            <a href="contact.html" class="btn btn--primary btn--xl"
-              style="flex:1;justify-content:center;padding:13px 14px;font-size:0.9rem;white-space:nowrap"
+          <div class="hero__actions hero-anim-4" style="display:flex;flex-direction:column;gap:12px;width:100%;max-width:360px;margin:0">
+            <a href="contact.html" class="btn btn--primary btn--xl btn-shimmer"
+              style="justify-content:center;padding:13px 20px;font-size:0.95rem;white-space:nowrap;background:#0284c7;border-color:#0284c7;color:#ffffff"
               data-magnetic="0.2" data-ripple>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
               </svg>
               Request a Quote
             </a>
-            <a href="contact.html#consultation" class="btn btn--outline btn--xl"
-              style="flex:1;justify-content:center;padding:13px 14px;font-size:0.9rem;white-space:nowrap;background:#ffffff;color:#0f172a;border-color:#cbd5e1;box-shadow:0 2px 8px rgba(15,23,42,0.06)"
+            <a href="contact.html#consultation" class="btn btn--outline btn--xl hero-pill-anim"
+              style="justify-content:center;padding:13px 20px;font-size:0.95rem;white-space:nowrap;background:rgba(15,23,42,0.65);color:#ffffff;border-color:rgba(255,255,255,0.3);backdrop-filter:blur(10px);box-shadow:0 4px 15px rgba(0,0,0,0.3)"
               data-magnetic="0.2">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -162,120 +169,86 @@
               Schedule Consultation
             </a>
           </div>
-        </div>
 
-        <!-- RIGHT COLUMN: Hero Video Showcase -->
-        <div class="hero__split-right hero-anim-3">
-          <!-- Gradient border ring -->
-          <div class="pv-border-ring">
-            <div class="hero-video-wrapper" id="hero-video-card">
-              <!-- Corner ticks -->
-              <span class="pv-tick pv-tick--tl"></span>
-              <span class="pv-tick pv-tick--tr"></span>
-              <span class="pv-tick pv-tick--bl"></span>
-              <span class="pv-tick pv-tick--br"></span>
-              <!-- Video -->
-              <video
-                id="hero-bg-video"
-                class="hero-video-player"
-                src="images/home page.mp4"
-                autoplay loop muted playsinline preload="auto"
-              ></video>
-              <!-- Bottom fade -->
-              <div class="pv-fade-bottom"></div>
+          <!-- TRUST BADGES (Responsive Single Line / Mobile Wrap Layout) -->
+          <div class="hero__trust-badges hero-anim-5">
+            <div class="hero__trust-item hero-pill-anim">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              ISO 9001:2015
+            </div>
+            <div class="hero__trust-item hero-pill-anim">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              ISO 13485
+            </div>
+            <div class="hero__trust-item hero-pill-anim">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              CE &amp; USFDA
+            </div>
+            <div class="hero__trust-item hero-pill-anim">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              20+ Years
             </div>
           </div>
         </div>
 
+        <!-- Empty Right Area: Unobstructed View of Video -->
+        <div></div>
+
       </div>
+    </div>
 
-      <!-- TRUST BADGES (Below Data & Image Grid) -->
+    <!-- ── STATS BAR — same section, same video behind ── -->
+    <div style="position:relative;z-index:2;width:100%;border-top:1px solid rgba(255,255,255,0.12);margin-top:2rem;padding-top:0.5rem">
+      <div style="max-width:1280px;margin:0 auto;padding:0 var(--sp-6);">
+        <div class="hero__stats-grid">
 
-      <div class="hero__trust-badges hero-anim-5" style="margin-top:2rem;gap:10px;justify-content:center;width:100%">
-        <div class="hero__trust-item"
-          style="background:#ffffff;color:#334155;border-color:#e2e8f0;box-shadow:0 2px 6px rgba(15,23,42,0.04);padding:6px 16px;border-radius:20px;font-size:0.85rem">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-            <polyline points="22 4 12 14.01 9 11.01" />
-          </svg>
-          ISO 9001:2015 Certification
-        </div>
-        <div class="hero__trust-item"
-          style="background:#ffffff;color:#334155;border-color:#e2e8f0;box-shadow:0 2px 6px rgba(15,23,42,0.04);padding:6px 16px;border-radius:20px;font-size:0.85rem">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-            <polyline points="22 4 12 14.01 9 11.01" />
-          </svg>
-          ISO 13485 Certification
-        </div>
-        <div class="hero__trust-item"
-          style="background:#ffffff;color:#334155;border-color:#e2e8f0;box-shadow:0 2px 6px rgba(15,23,42,0.04);padding:6px 16px;border-radius:20px;font-size:0.85rem">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-            <polyline points="22 4 12 14.01 9 11.01" />
-          </svg>
-          CE &amp; USFDA Compliant
-        </div>
-        <div class="hero__trust-item"
-          style="background:#ffffff;color:#334155;border-color:#e2e8f0;box-shadow:0 2px 6px rgba(15,23,42,0.04);padding:6px 16px;border-radius:20px;font-size:0.85rem">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5">
-            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-            <polyline points="22 4 12 14.01 9 11.01" />
-          </svg>
-          20+ Years
-        </div>
-      </div>
-
-      <!-- FULL WIDTH KEY STATISTICS BAR (Spanning Left Data & Right Showcase Equally) -->
-      <div class="hero__stats-strip hero-anim-5" style="margin-top:1.5rem;width:100%">
-        <div class="hero-stats-bar hero-stats-bar--full">
-          <div style="text-align:center">
-            <div
-              style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.6rem,2.5vw,2.4rem);color:#0284c7;letter-spacing:-0.02em">
+          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;position:relative;">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#38bdf8;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">
               <span data-count="20" data-suffix="+">20+</span>
             </div>
-            <div
-              style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;font-weight:600">
-              Years Exp.</div>
+            <div style="font-family:var(--font-heading);font-size:0.72rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95)">Years Exp.</div>
+            <div class="hero__stat-divider" style="position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(255,255,255,0.15);"></div>
           </div>
-          <div style="text-align:center">
-            <div
-              style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.6rem,2.5vw,2.4rem);color:#0284c7;letter-spacing:-0.02em">
+
+          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;position:relative;">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#38bdf8;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">
               <span data-count="400" data-suffix="+">400+</span>
             </div>
-            <div
-              style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;font-weight:600">
-              Moulds</div>
+            <div style="font-family:var(--font-heading);font-size:0.72rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95)">Moulds</div>
+            <div class="hero__stat-divider" style="position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(255,255,255,0.15);"></div>
           </div>
-          <div style="text-align:center">
-            <div
-              style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.6rem,2.5vw,2.4rem);color:#0284c7;letter-spacing:-0.02em">
+
+          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;position:relative;">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#38bdf8;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">
               <span data-count="200" data-suffix="M+">200M+</span>
             </div>
-            <div
-              style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;font-weight:600">
-              Components</div>
+            <div style="font-family:var(--font-heading);font-size:0.72rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95)">Components</div>
+            <div class="hero__stat-divider" style="position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(255,255,255,0.15);"></div>
           </div>
-          <div style="text-align:center">
-            <div
-              style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.6rem,2.5vw,2.4rem);color:#d97706;letter-spacing:-0.02em">
-              <span data-count="5000" data-suffix="MT">5,000MT</span>
+
+          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;position:relative;">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#fbbf24;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">
+              <span data-count="5000" data-suffix="MT">5KMT</span>
             </div>
-            <div
-              style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;font-weight:600">
-              Material/Yr</div>
+            <div style="font-family:var(--font-heading);font-size:0.72rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95)">Material/Yr</div>
+            <div class="hero__stat-divider" style="position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(255,255,255,0.15);"></div>
           </div>
-          <div style="text-align:center">
-            <div
-              style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.6rem,2.5vw,2.4rem);color:#d97706;letter-spacing:-0.02em">
-              2</div>
-            <div
-              style="font-family:var(--font-heading);font-size:0.75rem;color:#475569;text-transform:uppercase;letter-spacing:0.06em;margin-top:3px;font-weight:600">
-              ISO Certs</div>
+
+          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;">
+            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#fbbf24;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">2</div>
+            <div style="font-family:var(--font-heading);font-size:0.72rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95)">ISO Certs</div>
           </div>
+
         </div>
       </div>
-
     </div>
 
     <div class="hero__scroll">
@@ -283,6 +256,10 @@
       <span>SCROLL</span>
     </div>
   </section>
+
+
+
+
 
 
   <!-- ======================================================= -->

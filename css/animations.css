@@ -619,6 +619,80 @@
   transition: opacity 0.5s ease;
 }
 
+/* ── Professional Hero Animations ───────────────────────── */
+@keyframes heroShimmer {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4), 0 0 0 0 rgba(56, 189, 248, 0.4); }
+  50% { box-shadow: 0 6px 30px rgba(2, 132, 199, 0.7), 0 0 15px 4px rgba(56, 189, 248, 0.6); }
+}
+
+@keyframes floatPill {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: translateX(-100%) skewX(-15deg);
+  animation: heroShimmer 4s infinite ease-in-out 1.5s;
+}
+
+.hero-pill-anim {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-pill-anim:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: rgba(56, 189, 248, 0.8) !important;
+  background: rgba(14, 165, 233, 0.25) !important;
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.35);
+}
+
+.hero-stat-card-anim {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border-radius: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-stat-card-anim:hover {
+  transform: translateY(-4px) scale(1.04);
+  background: rgba(15, 23, 42, 0.65) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 18px rgba(56, 189, 248, 0.25) !important;
+  z-index: 5;
+}
+
+.hero-stat-card-anim:hover div:first-child {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.8));
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-stat-card-anim:hover div:last-child {
+  color: #38bdf8 !important;
+  letter-spacing: 0.12em !important;
+  transition: all 0.3s ease;
+}
+
 /* ── Reduced Motion Support ───────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
