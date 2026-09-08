@@ -500,10 +500,14 @@ class ProductShowcase {
     this.renderProducts('all');
     this.setupEventListeners();
 
-    // Position glider initially
+    // Position glider initially with font readiness support
     const activeTab = this.tabsContainer.querySelector('.catalog-tab.active');
     if (activeTab) {
       setTimeout(() => this.positionGlider(activeTab), 50);
+      setTimeout(() => this.positionGlider(activeTab), 250);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => this.positionGlider(activeTab));
+      }
     }
   }
 
@@ -522,6 +526,11 @@ class ProductShowcase {
         this.positionGlider(tab);
         this.currentCategory = tab.dataset.category;
         this.renderProducts(this.currentCategory);
+        
+        // Smoothly scroll active tab into view on small screens
+        if (typeof tab.scrollIntoView === 'function') {
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
       });
     });
   }

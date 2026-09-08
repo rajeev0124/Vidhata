@@ -32,21 +32,22 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Hero Section */
+    /* Hero Section - Cleanroom Facility Background Clearly Visible */
     .cm-hero {
       position: relative;
-      background: linear-gradient(135deg, #07192C 0%, #0A2540 50%, #0A4E9B 100%);
+      background:
+        linear-gradient(90deg, rgba(6, 17, 34, 0.85) 0%, rgba(6, 17, 34, 0.7) 45%, rgba(6, 17, 34, 0.32) 80%, rgba(6, 17, 34, 0.2) 100%),
+        linear-gradient(180deg, rgba(6, 17, 34, 0.3) 0%, transparent 40%, rgba(6, 17, 34, 0.75) 100%),
+        url('images/cleanroom-hero.jpg') no-repeat center right / cover;
       color: #FFFFFF;
-      padding: 110px 0 85px 0;
+      padding: 130px 0 105px 0;
       overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
+    .cm-hero::before,
+    .cm-hero::after,
     .cm-hero__bg-grid {
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
+      display: none;
     }
     .cm-hero__inner {
       position: relative;
@@ -57,93 +58,123 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(44, 50, 136, 0.45);
-      border: 1px solid rgba(147, 197, 253, 0.35);
-      color: #93C5FD;
+      background: rgba(14, 165, 233, 0.18);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      color: #BAE6FD;
       padding: 8px 20px;
-      border-radius: 999px;
-      font-size: 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
       font-weight: 700;
       letter-spacing: 0.8px;
       text-transform: uppercase;
       margin-bottom: 24px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
     .cm-badge__pulse {
       width: 8px;
       height: 8px;
-      background: #60A5FA;
+      background: #38BDF8;
       border-radius: 50%;
-      box-shadow: 0 0 10px #60A5FA;
+      box-shadow: 0 0 10px #38BDF8;
       animation: pulseGlow 2s infinite ease-in-out;
+      flex-shrink: 0;
     }
     @keyframes pulseGlow {
       0%, 100% { opacity: 0.6; transform: scale(1); }
       50% { opacity: 1; transform: scale(1.3); }
     }
     .cm-hero__title {
-      font-size: clamp(3rem, 6.5vw, 4.8rem);
+      font-size: clamp(3rem, 6.2vw, 4.6rem);
       font-weight: 900;
-      letter-spacing: -0.025em;
+      letter-spacing: -0.03em;
       color: #FFFFFF;
       line-height: 1.08;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7);
     }
     .cm-hero__lead {
-      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
-      line-height: 1.6;
-      color: #E2E8F0;
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      line-height: 1.65;
+      color: #F1F5F9;
       margin-bottom: 38px;
-      max-width: 840px;
+      max-width: 800px;
       font-weight: 400;
+      text-shadow: 0 1px 14px rgba(0, 0, 0, 0.6);
     }
     .cm-hero__actions {
       display: flex;
-      gap: 18px;
+      gap: 16px;
       flex-wrap: wrap;
     }
     .cm-btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: #DF2A29;
+      background: linear-gradient(135deg, #EF4444 0%, #DF2A29 60%, #B91C1C 100%);
       color: #FFFFFF;
       font-weight: 700;
       font-size: 0.98rem;
-      padding: 15px 30px;
+      padding: 15px 32px;
       border-radius: 10px;
       text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 16px rgba(223, 42, 41, 0.4);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 6px 22px rgba(223, 42, 41, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.2);
       border: none;
       cursor: pointer;
     }
     .cm-btn-primary:hover {
-      background: #B91C1C;
-      color: #FFF;
+      background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+      color: #FFFFFF;
       transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(223, 42, 41, 0.55);
+      box-shadow: 0 8px 26px rgba(223, 42, 41, 0.6);
     }
     .cm-btn-secondary {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.14);
       color: #FFFFFF;
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.35);
       font-weight: 700;
       font-size: 0.98rem;
-      padding: 15px 30px;
+      padding: 15px 32px;
       border-radius: 10px;
       text-decoration: none;
-      backdrop-filter: blur(10px);
-      transition: all 0.25s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
       cursor: pointer;
     }
     .cm-btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.22);
-      color: #FFF;
+      background: rgba(255, 255, 255, 0.26);
+      border-color: rgba(255, 255, 255, 0.55);
+      color: #FFFFFF;
       transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
+    }
+    @media (max-width: 640px) {
+      .cm-badge {
+        font-size: 0.74rem;
+        padding: 6px 14px;
+        white-space: normal;
+        text-align: left;
+      }
+      .cm-hero__title {
+        font-size: 2.35rem;
+      }
+      .cm-hero__lead {
+        font-size: 1rem;
+      }
+      .cm-hero__actions {
+        flex-direction: column;
+      }
+      .cm-btn-primary, .cm-btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
     }
 
     /* Key Metrics Strip */
@@ -497,22 +528,22 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: #DF2A29;
+      background: #61B33B;
       color: #FFFFFF;
       font-weight: 800;
       font-size: 1.05rem;
       padding: 16px 28px;
-      border-radius: 10px;
+      border-radius: 9999px;
       border: none;
       cursor: pointer;
       transition: all 0.25s ease;
-      box-shadow: 0 4px 16px rgba(223, 42, 41, 0.35);
+      box-shadow: 0 4px 16px rgba(97, 179, 59, 0.32);
       margin-top: 10px;
     }
     .cm-btn-submit:hover {
-      background: #B91C1C;
+      background: #4F9930;
       transform: translateY(-2px);
-      box-shadow: 0 6px 22px rgba(223, 42, 41, 0.5);
+      box-shadow: 0 6px 22px rgba(97, 179, 59, 0.45);
     }
 
     /* Document Pack Panel */
@@ -660,7 +691,7 @@
       cursor: pointer;
     }
   </style>
-  <link rel="stylesheet" href="css/theme-neutral.css?v=nuvica-bright">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=arni-responsive-cm2">
 </head>
 <body>
 
@@ -693,7 +724,6 @@
     </a>
     <div class="navbar__nav">
       <a href="index.html" class="navbar__link">Home</a>
-      <a href="index.html#services" class="navbar__link">Services</a>
       <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
       <a href="contract-manufacturing.html" class="navbar__link active" style="color:var(--cm-blue);font-weight:700">Contract Mfg</a>
       <a href="industries.html" class="navbar__link">Industries</a>
@@ -723,7 +753,6 @@
 <div id="mobile-menu" class="navbar__mobile">
   <div class="navbar__mobile-group-title">Navigation</div>
   <a href="index.html" class="navbar__mobile-link">Home</a>
-  <a href="index.html#services" class="navbar__mobile-link">Services</a>
   <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
   <a href="contract-manufacturing.html" class="navbar__mobile-link active">Contract Mfg</a>
   <a href="industries.html" class="navbar__mobile-link">Industries</a>

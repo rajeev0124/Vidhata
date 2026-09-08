@@ -68,21 +68,34 @@
       font-weight: 600;
     }
 
-    /* Hero Section */
+    /* Hero Section - Clean Pure Medical Gradient Theme (No Photo) */
     .lic-hero {
       position: relative;
-      background: linear-gradient(135deg, #07192C 0%, #0A2540 55%, #0A4E9B 100%);
-      color: #FFFFFF;
-      padding: 90px 0 75px 0;
+      background-color: #FFFFFF;
+      background-image: 
+        radial-gradient(900px circle at 85% 15%, rgba(14, 165, 233, 0.12) 0%, rgba(14, 165, 233, 0.02) 55%, transparent 75%),
+        radial-gradient(750px circle at 15% 90%, rgba(37, 99, 235, 0.08) 0%, transparent 65%),
+        radial-gradient(ellipse 900px 450px at 50% 0%, rgba(56, 189, 248, 0.1) 0%, transparent 70%),
+        linear-gradient(180deg, #FFFFFF 0%, #F5F9FD 45%, #EEF6FC 85%, #FFFFFF 100%);
+      color: #0A2540;
+      padding: 110px 0 90px 0;
       overflow: hidden;
+      border-bottom: 1.5px solid #DFE6EE;
+      box-shadow: 0 4px 20px rgba(10, 37, 64, 0.03);
     }
     .lic-hero__bg-grid {
       position: absolute;
       inset: 0;
-      background-image: linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 40px 40px;
+      background-image: 
+        radial-gradient(rgba(14, 165, 233, 0.14) 1px, transparent 1px),
+        linear-gradient(rgba(223, 230, 238, 0.45) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(223, 230, 238, 0.45) 1px, transparent 1px);
+      background-size: 28px 28px, 84px 84px, 84px 84px;
+      mask-image: radial-gradient(ellipse 75% 65% at 50% 50%, #000 25%, transparent 90%);
+      -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 50%, #000 25%, transparent 90%);
       pointer-events: none;
+      z-index: 1;
+      opacity: 0.65;
     }
     .lic-hero__inner {
       position: relative;
@@ -92,32 +105,49 @@
     .lic-eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: #7DD3FC;
-      padding: 6px 16px;
-      border-radius: 999px;
+      gap: 10px;
+      background: #E1EFFF;
+      border: 1.5px solid #93C5FD;
+      color: #0369A1;
+      padding: 7px 18px;
+      border-radius: 9999px;
       font-size: 0.84rem;
       font-weight: 700;
-      letter-spacing: 0.5px;
-      margin-bottom: 20px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 10px rgba(14, 165, 233, 0.12);
+    }
+    .lic-eyebrow__pulse {
+      width: 8px;
+      height: 8px;
+      background: #0284C7;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(2, 132, 199, 0.6);
+      animation: pulseGlow 2s infinite ease-in-out;
+      flex-shrink: 0;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.3); }
     }
     .lic-hero__title {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-size: clamp(2.6rem, 5.2vw, 4.2rem);
       font-weight: 900;
-      letter-spacing: -0.025em;
-      color: #FFFFFF;
-      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #0A2540;
+      line-height: 1.1;
       margin-bottom: 18px;
+      text-shadow: none;
     }
     .lic-hero__subtitle {
-      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
-      line-height: 1.55;
-      color: #E2E8F0;
+      font-size: clamp(1.15rem, 2vw, 1.35rem);
+      line-height: 1.6;
+      color: #2A5885;
       margin: 0;
-      font-weight: 400;
-      max-width: 780px;
+      font-weight: 500;
+      max-width: 760px;
+      text-shadow: none;
     }
 
     /* Main Container */
@@ -164,12 +194,14 @@
       letter-spacing: 0.05em;
       margin: 0;
       line-height: 1.2;
+      word-break: break-word;
+      overflow-wrap: anywhere;
     }
 
     /* Spec Data Table / Grid */
     .lic-details-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 18px 32px;
       margin-bottom: 32px;
     }
@@ -425,7 +457,7 @@
       transform: translateY(-2px);
     }
   </style>
-  <link rel="stylesheet" href="css/theme-neutral.css?v=nuvica-bright">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=arni-responsive-lic1">
 </head>
 <body>
 
@@ -457,7 +489,6 @@
     </a>
     <div class="navbar__nav">
       <a href="index.html" class="navbar__link">Home</a>
-      <a href="index.html#services" class="navbar__link">Services</a>
       <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
       <a href="contract-manufacturing.html" class="navbar__link">Contract Mfg</a>
       <a href="industries.html" class="navbar__link">Industries</a>
@@ -486,7 +517,6 @@
 <div id="mobile-menu" class="navbar__mobile">
   <div class="navbar__mobile-group-title">Navigation</div>
   <a href="index.html" class="navbar__mobile-link">Home</a>
-  <a href="index.html#services" class="navbar__mobile-link">Services</a>
   <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
   <a href="contract-manufacturing.html" class="navbar__mobile-link">Contract Mfg</a>
   <a href="industries.html" class="navbar__mobile-link">Industries</a>
@@ -512,7 +542,8 @@
   <div class="container">
     <div class="lic-hero__inner">
       <div class="lic-eyebrow">
-        ISO 13485 &middot; ISO 9001 &middot; CDSCO manufacturing licence
+        <span class="lic-eyebrow__pulse"></span>
+        <span>ISO 13485 &middot; ISO 9001 &middot; CDSCO manufacturing licence</span>
       </div>
       <h1 class="lic-hero__title">Everything here can be checked.</h1>
       <p class="lic-hero__subtitle">
