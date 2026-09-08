@@ -15,11 +15,11 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: var(--grad-primary, linear-gradient(135deg, #38BDF8 0%, #0284C7 100%));
+  background: var(--grad-primary, linear-gradient(135deg, #0A4E9B 0%, #2C3288 100%));
   border: none;
   cursor: pointer;
   box-shadow:
-    0 4px 20px rgba(14, 165, 233, 0.50),
+    0 4px 20px rgba(44, 50, 136, 0.45),
     0 2px 8px  rgba(0, 0, 0, 0.14);
   display: flex;
   align-items: center;
@@ -35,12 +35,12 @@
 .vp-chat-toggle:hover {
   transform: scale(1.12);
   box-shadow:
-    0 6px 32px rgba(14, 165, 233, 0.65),
+    0 6px 30px rgba(44, 50, 136, 0.65),
     0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 .vp-chat-toggle:focus-visible {
-  outline: 3px solid rgba(14, 165, 233, 0.55);
+  outline: 3px solid rgba(10, 78, 155, 0.55);
   outline-offset: 4px;
 }
 
@@ -50,7 +50,7 @@
   position: absolute;
   inset: -5px;
   border-radius: 50%;
-  border: 2px solid rgba(14, 165, 233, 0.45);
+  border: 2px solid rgba(10, 78, 155, 0.45);
   animation: vp-ring-pulse 2.2s ease-out infinite;
   pointer-events: none;
 }
@@ -158,7 +158,7 @@
 /* ── Header ───────────────────────────────────────────────── */
 .vp-chat-header {
   padding: 16px 18px;
-  background: var(--grad-primary, linear-gradient(135deg, #38BDF8 0%, #0284C7 100%));
+  background: var(--grad-primary, linear-gradient(135deg, #0A4E9B 0%, #2C3288 100%));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -574,7 +574,7 @@
 .vp-chat-send {
   width: 36px;
   height: 36px;
-  background: var(--grad-primary, linear-gradient(135deg, #38BDF8 0%, #0284C7 100%));
+  background: var(--grad-primary, linear-gradient(135deg, #0A4E9B 0%, #2C3288 100%));
   border: none;
   border-radius: 50%;
   cursor: pointer;

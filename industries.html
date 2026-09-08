@@ -6,10 +6,11 @@
   <meta name="description" content="Explore the diverse industries Vidhata Plastics India Pvt. Ltd. serves, including Medical, Pharmaceutical, Electronics, LED Lighting, Consumer and Industrial products.">
   <title>Industries We Serve &mdash; Vidhata Plastics</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=nuvica">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=nuvica-bright">
 </head>
 <body>
 
@@ -18,39 +19,50 @@
   <div class="navbar__inner">
     <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" /><div class="navbar__logo-text"><span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span><span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span></div></a>
     <div class="navbar__nav">
-      <a href="index.html"         class="navbar__link">Home</a>
+      <a href="index.html" class="navbar__link">Home</a>
       <a href="index.html#services" class="navbar__link">Services</a>
       <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
-      <a href="industries.html"    class="navbar__link active">Industries</a>
-      <a href="infrastructure.html"class="navbar__link">Infrastructure</a>
-      <a href="quality.html"       class="navbar__link">Quality</a>
+      <a href="contract-manufacturing.html" class="navbar__link">Contract Mfg</a>
+      <a href="industries.html" class="navbar__link active">Industries</a>
+      <a href="infrastructure.html" class="navbar__link">Infrastructure</a>
+      <a href="quality.html" class="navbar__link">Quality</a>
+      <a href="licences.html" class="navbar__link">Licences</a>
       <div class="navbar__dropdown">
-        <a href="about.html"       class="navbar__link">Company &#9662;</a>
+        <a href="about.html" class="navbar__link navbar__dropdown-trigger">
+          <span>Company</span>
+          <span class="navbar__dropdown-chevron">&#9662;</span>
+        </a>
         <div class="navbar__dropdown-menu">
-          <a href="about.html"        class="navbar__dropdown-item">About Us</a>
+          <a href="about.html" class="navbar__dropdown-item">About Us</a>
           <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
-          <a href="careers.html"      class="navbar__dropdown-item">Careers</a>
-          <a href="blog.html"         class="navbar__dropdown-item">Blog &amp; Insights</a>
-          <a href="clients.html"      class="navbar__dropdown-item">Clients</a>
+          <a href="careers.html" class="navbar__dropdown-item">Careers</a>
+          <a href="blog.html" class="navbar__dropdown-item">Blog &amp; Insights</a>
+          <a href="clients.html" class="navbar__dropdown-item">Clients</a>
         </div>
       </div>
-      <a href="contact.html"       class="navbar__link navbar__cta">Request Quote</a>
+      <a href="contact.html" class="navbar__link navbar__cta">Request Quote</a>
     </div>
     <button id="hamburger" class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div id="mobile-menu" class="navbar__mobile">
-  <a href="index.html"          class="navbar__mobile-link">Home</a>
-  <a href="about.html"          class="navbar__mobile-link">About Us</a>
-  <a href="index.html#services"       class="navbar__mobile-link">Services</a>
-  <a href="medical.html"        class="navbar__mobile-link">Medical &amp; Pharma</a>
-  <a href="industries.html"     class="navbar__mobile-link">Industries</a>
+  <div class="navbar__mobile-group-title">Navigation</div>
+  <a href="index.html" class="navbar__mobile-link">Home</a>
+  <a href="index.html#services" class="navbar__mobile-link">Services</a>
+  <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
+  <a href="contract-manufacturing.html" class="navbar__mobile-link">Contract Mfg</a>
+  <a href="industries.html" class="navbar__mobile-link active">Industries</a>
   <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
-  <a href="quality.html"        class="navbar__mobile-link">Quality &amp; Certifications</a>
-  <a href="case-studies.html"   class="navbar__mobile-link">Case Studies</a>
-  <a href="clients.html"        class="navbar__mobile-link">Clients</a>
-  <a href="careers.html"        class="navbar__mobile-link">Careers</a>
-  <a href="contact.html"        class="navbar__mobile-link">Contact Us</a>
+  <a href="quality.html" class="navbar__mobile-link">Quality</a>
+  <a href="licences.html" class="navbar__mobile-link">Licences</a>
+  
+  <div class="navbar__mobile-group-title">Company</div>
+  <a href="about.html" class="navbar__mobile-link">About Us</a>
+  <a href="case-studies.html" class="navbar__mobile-link">Case Studies</a>
+  <a href="clients.html" class="navbar__mobile-link">Clients</a>
+  <a href="careers.html" class="navbar__mobile-link">Careers</a>
+  <a href="blog.html" class="navbar__mobile-link">Blog &amp; Insights</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact Us</a>
   <div style="margin-top:var(--sp-6)">
     <a href="contact.html" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Request a Quote</a>
   </div>
@@ -61,9 +73,9 @@
   <div class="bg-grid bg-grid--fade"></div>
   <div class="container">
     <div class="page-hero__breadcrumb"><a href="index.html">Home</a><span>&#8250;</span><span>Industries</span></div>
-    <div class="section-label hero-anim-1">Market Verticals</div>
-    <h1 class="hero-anim-2" style="max-width:700px">Industrial Diversification &amp;<br><span class="gradient-text">Product Engineering</span></h1>
-    <p class="hero-anim-3" style="font-size:var(--fs-md);max-width:580px;color:var(--clr-text-muted);margin-top:var(--sp-5)">Empowering key sectors with precision component supply chains.</p>
+    <div class="section-label hero-anim-1">What We Make</div>
+    <h1 class="hero-anim-2" style="max-width:700px">Six domains, <br><span class="gradient-text">one quality system.</span></h1>
+    <p class="hero-anim-3" style="font-size:var(--fs-md);max-width:580px;color:var(--clr-text-muted);margin-top:var(--sp-5)">Four in production today. Two in development, and we say which is which.</p>
   </div>
 </section>
 
@@ -75,13 +87,8 @@
       <div data-reveal="up" class="industry-card-content">
         <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">High Compliance</span>
         <h3 style="margin-bottom:var(--sp-4)">Medical &amp; Healthcare</h3>
-        <p style="margin-bottom:var(--sp-4)">We manufacture safety-critical sterile componentry for clinical applications.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)" data-stagger>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)" data-reveal="right">&bull; Dialysis components &amp; filtration cartridges</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)" data-reveal="right">&bull; Intravenous (IV) set connectors &amp; chambers</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)" data-reveal="right">&bull; Catheter connection components</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)" data-reveal="right">&bull; Diagnostic in-vitro (IVD) cassette shells</li>
-        </ul>
+        <p style="margin-bottom:var(--sp-4)">Sterile single-use devices across infusion therapy, nephrology and dialysis, oncology, critical care and cardiac surgery &mdash; twenty-six of them licensed under our own name.</p>
+        <p style="margin-bottom:var(--sp-4)">Moulded, assembled, leak-tested, packed and sterilised on the same line, under one device master record.</p>
         <div class="industry-card-btn" style="margin-top:var(--sp-6)" data-reveal="up"><a href="medical.html" class="btn btn--outline btn--sm">View Medical Division &rarr;</a></div>
       </div>
       <div data-reveal="scale" class="industry-card-media" data-3d="12" data-glow-color="rgba(14, 165, 233, 0.25)">
@@ -121,35 +128,28 @@
       </div>
       <div data-reveal="right" class="industry-card-content">
         <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Pharmaceutical Grade</span>
-        <h3 style="margin-bottom:var(--sp-4)">Pharmaceutical Packaging</h3>
-        <p style="margin-bottom:var(--sp-4)">Child-resistant closures, droppers, and blood collection systems designed for drug safety and accuracy.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Child Resistant Closures (CRC) &amp; Flip-off Seals</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Calibrated droppers &amp; Ophthalmic nozzles</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; High volume blood collection tubes</li>
-        </ul>
+        <h3 style="margin-bottom:var(--sp-4)">Pharma Packaging</h3>
+        <p style="margin-bottom:var(--sp-4)">Child-resistant closures from 24 to 53 mm at up to 32 cavity, 13 and 20 mm flip-off seals at 48 cavity, ophthalmic nozzles, droppers, unscrewing caps and blood-collection tubes.</p>
+        <p style="margin-bottom:var(--sp-4)">Cycle times from seven seconds, on moulds we designed and cut ourselves.</p>
       </div>
     </div>
 
     <hr class="divider">
 
     <!-- Sector 3: Image Right -->
-    <div class="industry-sector-card" id="bioprocess-cgt">
+    <div class="industry-sector-card" id="drug-delivery">
       <div data-reveal="right" class="industry-card-content">
-        <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">Biotech &amp; Life Sciences</span>
-        <h3 style="margin-bottom:var(--sp-4)">Bio-Process &amp; CGT</h3>
-        <p style="margin-bottom:var(--sp-4)">Cleanroom-manufactured fluidic components and single-use tubing assemblies for bio-pharma and gene therapy scaling.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Single-use bioprocess bag ports, connectors &amp; clamps</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Precision multi-port manifold tubing assemblies</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Cell culture vessels, microcarriers &amp; cryo preservation parts</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Biocompatible Class VI polymer components</li>
-        </ul>
-        <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="bioprocess-cgt.html" class="btn btn--outline btn--sm">View Bio-Process Division &rarr;</a></div>
+        <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Controlled Environment</span>
+        <h3 style="margin-bottom:var(--sp-4)">Drug Delivery Devices</h3>
+        <p style="margin-bottom:var(--sp-4)">Dosing and dispensing componentry, closures, and elastomeric infusion pumps in CBI and PCA configurations from 50 to 300 ml.</p>
+        <p style="margin-bottom:var(--sp-4)">Pilot work is under way on syringe barrels and assemblies. Auto-injectors and inhalers are a stated ambition, not a current capability.</p>
       </div>
       <div data-reveal="left" class="industry-card-media">
         <div class="industry-card-imgwrap">
-          <img src="images/bioprocess_cgt.png" alt="Bio-Process &amp; CGT cleanroom components" class="industry-card-img">
+          <img src="images/cleanroom-moulding.jpg" alt="Moulding cell in the controlled environment" class="industry-card-img">
+          <div class="med-gallery__caption">
+            <span class="med-gallery__caption-text">Moulding cell in the controlled environment</span>
+          </div>
         </div>
       </div>
     </div>
@@ -157,115 +157,148 @@
     <hr class="divider">
 
     <!-- Sector 4: Image Left -->
-    <div class="industry-sector-card" id="electronics">
+    <div class="industry-sector-card" id="ivd">
       <div data-reveal="left" class="industry-card-media">
         <div class="industry-card-imgwrap">
-          <img src="images/led-electronics.png" alt="Electronics housings" class="industry-card-img">
+          <img src="images/qc-lab.jpg" alt="QC and analytical laboratory" class="industry-card-img">
+          <div class="med-gallery__caption">
+            <span class="med-gallery__caption-text">QC and analytical laboratory</span>
+          </div>
         </div>
       </div>
       <div data-reveal="right" class="industry-card-content">
-        <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Flame Retardant</span>
-        <h3 style="margin-bottom:var(--sp-4)">Electronics &amp; Telecom</h3>
-        <p style="margin-bottom:var(--sp-4)">Providing structural housings and aesthetic panels using polycarbonate, ABS, and flame retardant polymers.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Mobile charger outer housings (e.g. Jio 12M volume)</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Electricity/Energy meter safety enclosures</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Point-of-Sale (POS) device structural parts</li>
-        </ul>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Sector 5: Image Right -->
-    <div class="industry-sector-card" id="lighting">
-      <div data-reveal="right" class="industry-card-content">
-        <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Optical Performance</span>
-        <h3 style="margin-bottom:var(--sp-4)">LED Lighting</h3>
-        <p style="margin-bottom:var(--sp-4)">Continuous high-transmittance polycarbonate extrusions and injection moulded street light enclosures.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Linear batten diffusers &amp; housings</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; High thermal conductivity downlight frames</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Street light covers with high weather ability</li>
-        </ul>
-      </div>
-      <div data-reveal="left" class="industry-card-media">
-        <div class="industry-card-imgwrap">
-          <img src="images/hero-bg.png" alt="LED Lighting components" class="industry-card-img">
-        </div>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Sector 6: Image Left -->
-    <div class="industry-sector-card" id="industrial">
-      <div data-reveal="left" class="industry-card-media">
-        <div class="industry-card-imgwrap">
-          <img src="images/toolroom.png" alt="Industrial machinery" class="industry-card-img">
-        </div>
-      </div>
-      <div data-reveal="right" class="industry-card-content">
-        <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Heavy Duty</span>
-        <h3 style="margin-bottom:var(--sp-4)">Industrial &amp; Footwear</h3>
-        <p style="margin-bottom:var(--sp-4)">Specialized polyurethane processing for footwear soles, alongside heavy structural battery containers.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Battery containers and structural engineering plastic boxes</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Polyurethane soles for Adidas, Ecco, and Bata</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Heavy duty engineering components</li>
-        </ul>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Sector 7: Image Right -->
-    <div class="industry-sector-card" id="consumer-cosmetics">
-      <div data-reveal="right" class="industry-card-content">
-        <span class="badge badge--primary" style="margin-bottom:var(--sp-3)">Premium Finish</span>
-        <h3 style="margin-bottom:var(--sp-4)">Consumer &amp; Cosmetics</h3>
-        <p style="margin-bottom:var(--sp-4)">Luxurious packaging, aerosol spray components, double-wall cosmetic jars, and custom lotion pump actuators.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; High-end acrylic lotion pump heads and actuators</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Double-wall cosmetic jars and closures (hot-stamping &amp; metallizing optional)</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Aerosol caps, spray nozzles, and domestic dispensers</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Premium consumer packaging and footwear soles</li>
-        </ul>
-        <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="consumer-cosmetics.html" class="btn btn--outline btn--sm">View Consumer &amp; Cosmetics &rarr;</a></div>
-      </div>
-      <div data-reveal="left" class="industry-card-media">
-        <div class="industry-card-imgwrap">
-          <img src="images/consumer_cosmetics.png" alt="Cosmetic packaging and caps" class="industry-card-img">
-        </div>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- Sector 8: Image Left -->
-    <div class="industry-sector-card" id="defense-aerospace">
-      <div data-reveal="left" class="industry-card-media">
-        <div class="industry-card-imgwrap">
-          <img src="images/defense_aerospace.png" alt="Defense and Aerospace plastic components" class="industry-card-img">
-        </div>
-      </div>
-      <div data-reveal="right" class="industry-card-content">
-        <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">Extreme Reliability</span>
-        <h3 style="margin-bottom:var(--sp-4)">Defense &amp; Aerospace</h3>
-        <p style="margin-bottom:var(--sp-4)">Flame-retardant structural flight bezels, custom military connector housings, and high-performance plastic components.</p>
-        <ul style="display:flex;flex-direction:column;gap:var(--sp-2)">
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Flight cockpit display console bezels and frames</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; High-durability circular military connector shells &amp; backshells</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Specialized radomes and aerospace engineering enclosures</li>
-          <li style="font-size:var(--fs-sm);color:var(--clr-text-muted)">&bull; Flame-retardant UL 94-V0 compliance engineering materials</li>
-        </ul>
-        <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="defense-aerospace.html" class="btn btn--outline btn--sm">View Defense &amp; Aerospace &rarr;</a></div>
+        <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">In Production</span>
+        <h3 style="margin-bottom:var(--sp-4)">IVD</h3>
+        <p style="margin-bottom:var(--sp-4)">Diagnostic and laboratory consumables and device componentry &mdash; moulded and assembled inside the controlled environment, with the same documentation discipline as a licensed device.</p>
+        <p style="margin-bottom:var(--sp-4)">Microfluidic cartridges and rapid-test componentry are areas we are actively developing with partners.</p>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer"><div class="container"><div class="footer__grid"><div><a href="index.html" class="navbar__logo" style="margin-bottom:var(--sp-4);display:inline-flex"><img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" /><div class="navbar__logo-text"><span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span><span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span></div></a><p class="footer__brand-desc">End-to-end plastics manufacturing for medical, pharma, electronics, and industrial sectors.</p><div class="footer__certbadges"><span class="footer__certbadge">ISO 9001:2015</span><span class="footer__certbadge">ISO 13485</span></div></div><div><div class="footer__col-title">Services</div><div class="footer__links"><a href="index.html#services" class="footer__link">Product Design</a><a href="index.html#services" class="footer__link">Tool &amp; Mould Mfg.</a><a href="index.html#services" class="footer__link">Manufacturing</a><a href="index.html#services" class="footer__link">Assembly</a><a href="index.html#services" class="footer__link">Regulatory</a></div></div><div><div class="footer__col-title">Company</div><div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a href="clients.html" class="footer__link">Clients</a><a href="quality.html" class="footer__link">Quality</a><a href="contact.html" class="footer__link">Contact</a></div></div><div><div class="footer__col-title">Contact</div><div class="footer__contact-item"><span class="footer__contact-icon">&#128222;</span><a href="tel:+919885100808" style="color:var(--clr-text-muted)">+91 98851 00808</a></div><div class="footer__contact-item"><span class="footer__contact-icon">&#9993;</span><a href="mailto:vikrant@vidhata.co.in" style="color:var(--clr-text-muted)">vikrant@vidhata.co.in</a></div></div></div><div class="footer__bottom"><p class="footer__copy">&copy; 2024 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p><div class="footer__social"><a href="#" class="footer__social-link">in</a><a href="#" class="footer__social-link"></a></div><div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy Policy</a></div></div></div></footer>
+<!-- Pipeline & Co-Development Section -->
+<section class="section section--alt" id="co-development">
+  <div class="container">
+    <div class="section-header--center" data-reveal="up">
+      <div class="section-label section-label--gold">Pipeline &amp; Co-Development</div>
+      <h2>Two we are building, and would rather build with you.</h2>
+      <p style="max-width:680px;margin:var(--sp-3) auto 0;color:var(--clr-text-muted)">We would rather tell you what we do not make yet than find out together, six months into a programme.</p>
+    </div>
+
+    <div class="flex flex-col gap-12">
+      <!-- Sector: Cell & Gene Therapy Consumables -->
+      <div class="industry-sector-card" id="cell-gene-therapy">
+        <div data-reveal="left" class="industry-card-media">
+          <div class="industry-card-imgwrap">
+            <img src="images/finished_goods_cleanroom.png" alt="Single-use connectors, fittings and clamps" class="industry-card-img">
+            <div class="med-gallery__caption">
+              <span class="med-gallery__caption-text">Single-Use Rigid Componentry</span>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="right" class="industry-card-content">
+          <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">In development</span>
+          <h3 style="margin-bottom:var(--sp-4)">Cell and gene therapy consumables</h3>
+          <p style="margin-bottom:var(--sp-4)">Today we make precision rigid parts &mdash; connectors, fittings and clamps for single-use assemblies.</p>
+          <p style="margin-bottom:var(--sp-4)">Not yet: bag manufacturing, TPE tubing extrusion, aseptic connector manufacture or GMP-grade polymer film. These are the next build.</p>
+          <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="bioprocess-cgt.html" class="btn btn--outline btn--sm">View CGT Capabilities &rarr;</a></div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <!-- Sector: Bioprocess Consumables -->
+      <div class="industry-sector-card" id="bioprocess-cgt">
+        <div data-reveal="right" class="industry-card-content">
+          <span class="badge badge--gold" style="margin-bottom:var(--sp-3)">In development</span>
+          <h3 style="margin-bottom:var(--sp-4)">Bioprocess consumables</h3>
+          <p style="margin-bottom:var(--sp-4)">Single-use fluid-path parts for upstream and downstream bioprocess, built on our extrusion and precision moulding.</p>
+          <p style="margin-bottom:var(--sp-4)">In progress: biocompatibility studies, USP Class VI qualification and mechanical and analytical testing.</p>
+          <div class="industry-card-btn" style="margin-top:var(--sp-6)"><a href="bioprocess-cgt.html" class="btn btn--outline btn--sm">View Bio-Process Division &rarr;</a></div>
+        </div>
+        <div data-reveal="left" class="industry-card-media">
+          <div class="industry-card-imgwrap">
+            <img src="images/bioprocess_cgt.png" alt="Bio-Process cleanroom components" class="industry-card-img">
+            <div class="med-gallery__caption">
+              <span class="med-gallery__caption-text">Bioprocess Fluid-Path Solutions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Col 1: Vidhata Medical -->
+      <div>
+        <a href="index.html" class="navbar__logo" style="margin-bottom:12px;display:inline-flex">
+          <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-name">Vidhata Medical</span>
+            <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+          </div>
+        </a>
+        <p class="footer__brand-desc">
+          The medical device and pharma packaging business of Vidhata Plastics India Private Limited. Contract manufacturing, Hyderabad.
+        </p>
+        <div class="footer__certbadges">
+          <span class="footer__certbadge">CDSCO MD-5</span>
+          <span class="footer__certbadge">ISO 13485:2016</span>
+          <span class="footer__certbadge">ISO 9001:2015</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Contact -->
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact-row">
+          <a href="mailto:info@vidhata.co.in" class="footer__contact-link">info@vidhata.co.in</a>
+        </div>
+        <div class="footer__contact-row">
+          <a href="tel:+919885100808" class="footer__contact-link">+91 98851 00808</a>
+        </div>
+        <div class="footer__hours">
+          Monday to Saturday, 09:00&ndash;18:00 IST (UTC+5:30)
+        </div>
+        <div class="footer__sla">
+          We reply within one working day.
+        </div>
+      </div>
+
+      <!-- Col 3: Unit 2 — Maheshwaram -->
+      <div>
+        <div class="footer__col-title">Unit 2 &mdash; Maheshwaram</div>
+        <p class="footer__facility-address">
+          S-1 P/C, Survey No. 114, E-City, Maheshwaram, Rangareddy, Telangana 501359
+        </p>
+        <div class="footer__facility-scope">
+          Toolroom, moulding, cleanroom, QC and stability lab
+        </div>
+      </div>
+
+      <!-- Col 4: Unit 1 — Cherlapally -->
+      <div>
+        <div class="footer__col-title">Unit 1 &mdash; Cherlapally</div>
+        <p class="footer__facility-address">
+          Plot No. 205/2, Phase II, IDA Cherlapally, Hyderabad 500051
+        </p>
+        <div class="footer__facility-scope">
+          Registered office
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Compliance Strip -->
+    <div class="footer__bottom">
+      <p class="footer__legal-line">
+        VIDHATA PLASTICS INDIA PRIVATE LIMITED &middot; CIN U25209TG1990PTC012152 &middot; GST 36AAACV8175G1Z2 &middot; Manufacturing licence MFG/MD/2026/000078 &middot; <a href="privacy.html">Privacy</a> &middot; &copy; 2026
+      </p>
+    </div>
+  </div>
+</footer>
 <a href="https://wa.me/919885100808" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
 <script>

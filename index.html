@@ -14,12 +14,13 @@
   <meta property="og:type" content="website">
   <title>Vidhata Plastics &mdash; Precision Plastics, From Design to Delivery</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=nuvica">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animations.css?v=contrast">
   <!-- GA4 placeholder -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script> -->
-  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/chatbot.css?v=original-colors">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=original-colors">
 </head>
 
 <body>
@@ -103,140 +104,119 @@
   <!-- ======================================================= -->
   <!-- HERO SECTION — Full-Screen Video Background Hero       -->
   <!-- ======================================================= -->
-  <section class="hero hero--split" id="home" style="position:relative;background:#030712;color:#ffffff;display:flex;flex-direction:column;">
-    <!-- Full-screen Background Video — ONE video covers hero + stats bar -->
-    <div style="position:absolute;inset:0;overflow:hidden;z-index:1">
-      <video
-        id="hero-bg-video"
-        src="images/home video.mp4"
-        autoplay loop muted playsinline preload="auto"
-        style="width:100%;height:100%;object-fit:cover;opacity:1.0;filter:brightness(0.95);"
-      ></video>
-      <!-- Soft left-side dark vignette -->
-      <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.55) 35%, rgba(15,23,42,0.1) 70%, rgba(15,23,42,0) 100%);"></div>
-    </div>
+  <section class="hero hero--split" id="home" style="position:relative;background:linear-gradient(160deg, #FFFFFF 0%, #F0F7FF 50%, #E1EFFF 100%);color:#0B1E36;display:flex;flex-direction:column;min-height:100vh;justify-content:center;align-items:center;">
 
     <!-- Hero main content -->
-    <div class="container hero__split-container" style="position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding-left:var(--sp-6);flex:1;">
-      <div class="hero__split-grid" style="grid-template-columns: minmax(320px, 450px) 1fr; gap:2rem; align-items: center;">
+    <div class="container" style="position:relative;z-index:2;width:100%;max-width:860px;margin:0 auto;padding:var(--sp-16) var(--sp-6) var(--sp-8);flex:1;display:flex;align-items:center;justify-content:center;">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;width:100%">
 
-        <!-- Left Column: Main Hero Content -->
-        <div class="hero__split-left" style="align-items:flex-start;text-align:left">
-          <!-- Eyebrow Badge -->
-          <div class="hero__eyebrow hero-anim-1 hero-pill-anim"
-            style="background:rgba(14,165,233,0.25);border-color:rgba(56,189,248,0.5);color:#38bdf8;margin:0 0 var(--sp-4) 0;backdrop-filter:blur(10px);cursor:pointer">
-            <span class="hero__eyebrow-dot" style="background:#38bdf8"></span>
-            Medical device contract manufacturing &middot; Hyderabad, India
-          </div>
-
-          <!-- Headline -->
-          <h1 class="hero__headline hero-anim-2" style="color:#ffffff;text-align:left;font-size: clamp(2.2rem, 3.8vw, 3.2rem);line-height:1.15;text-shadow: 0 4px 25px rgba(0,0,0,0.85)">
-            <span class="vidhata-life-wrapper">
-              <span class="vidhata-life-vidhata">Vidhata</span>
-              <span class="vidhata-life-life">Life<span class="vidhata-life-pulse-dot" aria-hidden="true"></span></span>
-            </span><br>
-            <span class="hero__hl-light" style="color:#f8fafc">From Design to Delivery</span>
-          </h1>
-
-          <!-- Subheadline -->
-          <p class="hero__subhead hero-anim-3" style="color:#f1f5f9;margin-bottom:var(--sp-6);text-align:left;font-size:1.05rem;line-height:1.6;text-shadow: 0 2px 12px rgba(0,0,0,0.9);font-weight:500">
-            A contract manufacturer of sterile single-use medical devices, pharma packaging and drug-delivery components &mdash; designed, tooled, moulded, assembled and released under one licence in Hyderabad, India.
-          </p>
-
-          <!-- CTA Buttons -->
-          <div class="hero__actions hero-anim-4" style="display:flex;flex-direction:column;gap:12px;width:100%;max-width:360px;margin:0">
-            <a href="contact.html" class="btn btn--primary btn--xl btn-shimmer"
-              style="justify-content:center;padding:13px 20px;font-size:0.95rem;white-space:nowrap;background:#0284c7;border-color:#0284c7;color:#ffffff"
-              data-magnetic="0.2" data-ripple>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-              </svg>
-              Request a Quote
-            </a>
-            <a href="contact.html#consultation" class="btn btn--outline btn--xl hero-pill-anim"
-              style="justify-content:center;padding:13px 20px;font-size:0.95rem;white-space:nowrap;background:rgba(15,23,42,0.65);color:#ffffff;border-color:rgba(255,255,255,0.3);backdrop-filter:blur(10px);box-shadow:0 4px 15px rgba(0,0,0,0.3)"
-              data-magnetic="0.2">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Schedule Consultation
-            </a>
-          </div>
-
-          <!-- TRUST BADGES (Responsive Single Line / Mobile Wrap Layout) -->
-          <div class="hero__trust-badges hero-anim-5">
-            <div class="hero__trust-item hero-pill-anim">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
-                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              ISO 9001:2015
-            </div>
-            <div class="hero__trust-item hero-pill-anim">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
-                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              ISO 13485
-            </div>
-            <div class="hero__trust-item hero-pill-anim">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5">
-                <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-              CE &amp; USFDA
-            </div>
-          </div>
+        <!-- Eyebrow Badge -->
+        <div class="hero__eyebrow hero-anim-1 hero-pill-anim" style="background:#E1EFFF;border:1.5px solid #93C5FD;color:#0369A1;font-weight:600;margin:0 0 var(--sp-4) 0;cursor:pointer">
+          <span class="hero__eyebrow-dot" style="background:#0284C7;box-shadow:0 0 10px #38BDF8"></span>
+          Medical device contract manufacturing &middot; Hyderabad, India
         </div>
 
-        <!-- Empty Right Area: Unobstructed View of Video -->
-        <div></div>
+        <!-- Headline -->
+        <h1 class="hero__headline hero-anim-2" style="color:#0A2540;text-align:center;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.12;margin-bottom:var(--sp-4)">
+          <span class="vidhata-life-wrapper">
+            <span class="vidhata-life-vidhata" style="color:#0A2540;-webkit-text-fill-color:#0A2540;font-weight:800">Vidhata</span>
+            <span class="vidhata-life-life" style="color:#0A4E9B;-webkit-text-fill-color:#0A4E9B;font-weight:800">Life<span class="vidhata-life-pulse-dot" style="background:#0A4E9B;box-shadow:0 0 8px rgba(10,78,155,0.5)" aria-hidden="true"></span></span>
+          </span><br>
+          <span class="hero__hl-light" style="color:#2A5885">From Design to Delivery</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="hero__subhead hero-anim-3" style="color:#2A5885;margin-bottom:var(--sp-8);text-align:center;font-size:1.1rem;line-height:1.65;font-weight:500;max-width:680px">
+          A contract manufacturer of sterile single-use medical devices, pharma packaging and drug-delivery components &mdash; designed, tooled, moulded, assembled and released under one licence in Hyderabad, India.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero__actions hero-anim-4" style="display:flex;flex-direction:row;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:var(--sp-8)">
+          <a href="contact.html" class="btn btn--primary btn--xl" style="justify-content:center;padding:14px 28px;font-size:1rem;white-space:nowrap;background:#1E75E8;border-color:#1E75E8;color:#ffffff;box-shadow:0 6px 20px rgba(30,117,232,0.45)" data-magnetic="0.2" data-ripple>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" /></svg>
+            Request a Quote
+          </a>
+          <a href="contact.html#consultation" class="btn btn--outline btn--xl" style="justify-content:center;padding:14px 28px;font-size:1rem;white-space:nowrap;background:#FFFFFF;color:#1E75E8;border:1.5px solid #93C5FD;font-weight:600" data-magnetic="0.2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            Schedule Consultation
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero__trust-badges hero-anim-5" style="justify-content:center;display:flex;flex-wrap:wrap;gap:8px;">
+          <div class="hero__trust-item hero-pill-anim" style="color:#0B1E36;border:1.5px solid #BFDBFE;background:rgba(255,255,255,0.95);font-weight:600">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E75E8" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+            ISO 9001:2015
+          </div>
+          <div class="hero__trust-item hero-pill-anim" style="color:#0B1E36;border:1.5px solid #BFDBFE;background:rgba(255,255,255,0.95);font-weight:600">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E75E8" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+            ISO 13485
+          </div>
+          <div class="hero__trust-item hero-pill-anim" style="color:#0B1E36;border:1.5px solid #BFDBFE;background:rgba(255,255,255,0.95);font-weight:600">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1E75E8" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+            CE &amp; USFDA
+          </div>
+        </div>
 
       </div>
     </div>
 
-    <!-- ── STATS BAR — same section, same video behind ── -->
-    <div style="position:relative;z-index:2;width:100%;border-top:1px solid rgba(255,255,255,0.12);margin-top:2rem;padding-top:0.5rem">
+    <!-- Stats Bar -->
+    <div style="width:100%;border-top:1.5px solid #BFDBFE;padding:1.25rem 0;background:#EDF5FD">
       <div style="max-width:1280px;margin:0 auto;padding:0 var(--sp-6);">
         <div class="hero__stats-grid">
 
-          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;position:relative;">
-            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#38bdf8;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">
+          <!-- Stat 1: 26 Sterile Devices -->
+          <div class="hero-stat-card-anim hero__stat-item">
+            <div class="hero__stat-number">
               <span data-count="26">26</span>
             </div>
-            <div style="font-family:var(--font-heading);font-size:0.74rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.05em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95);line-height:1.35;max-width:200px;margin-left:auto;margin-right:auto">sterile devices licensed on this line</div>
-            <div class="hero__stat-divider" style="position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(255,255,255,0.15);"></div>
+            <div class="hero__stat-label">
+              <span>sterile devices</span>
+              <span>licensed on this line</span>
+            </div>
           </div>
 
-          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;position:relative;">
-            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#38bdf8;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">
+          <!-- Stat 2: 530 Moulds Cut -->
+          <div class="hero-stat-card-anim hero__stat-item">
+            <div class="hero__stat-number">
               <span data-count="530">530</span>
             </div>
-            <div style="font-family:var(--font-heading);font-size:0.74rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.05em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95);line-height:1.35;max-width:200px;margin-left:auto;margin-right:auto">moulds cut in our own toolroom</div>
-            <div class="hero__stat-divider" style="position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(255,255,255,0.15);"></div>
+            <div class="hero__stat-label">
+              <span>moulds cut in</span>
+              <span>our own toolroom</span>
+            </div>
           </div>
 
-          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;position:relative;">
-            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#38bdf8;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">
+          <!-- Stat 3: 7,263 Sq Ft Cleanroom -->
+          <div class="hero-stat-card-anim hero__stat-item">
+            <div class="hero__stat-number">
               <span data-count="7263" data-no-abbrev="true">7,263</span>
             </div>
-            <div style="font-family:var(--font-heading);font-size:0.74rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.05em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95);line-height:1.35;max-width:200px;margin-left:auto;margin-right:auto">
-              sq ft cleanroom<br><span style="font-size:0.68rem;color:#94a3b8;font-weight:600;text-transform:none">675 m&sup2;</span>
+            <div class="hero__stat-label">
+              <span>sq ft cleanroom</span>
+              <span style="font-size:0.68rem;color:#777777;font-weight:600;text-transform:none;letter-spacing:normal">675 m&sup2;</span>
             </div>
-            <div class="hero__stat-divider" style="position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(255,255,255,0.15);"></div>
           </div>
 
-          <div class="hero-stat-card-anim hero__stat-item" style="text-align:center;padding:16px 8px;">
-            <div style="font-family:var(--font-heading);font-weight:800;font-size:clamp(1.4rem,2.2vw,2.2rem);color:#38bdf8;letter-spacing:-0.02em;text-shadow:0 2px 14px rgba(0,0,0,0.95)">
+          <!-- Stat 4: 150M Parts Moulded -->
+          <div class="hero-stat-card-anim hero__stat-item">
+            <div class="hero__stat-number">
               <span data-count="150" data-suffix="M">150M</span>
             </div>
-            <div style="font-family:var(--font-heading);font-size:0.74rem;color:#ffffff;text-transform:uppercase;letter-spacing:0.05em;margin-top:4px;font-weight:700;text-shadow:0 2px 8px rgba(0,0,0,0.95);line-height:1.35;max-width:200px;margin-left:auto;margin-right:auto">parts moulded to date</div>
+            <div class="hero__stat-label">
+              <span>parts moulded</span>
+              <span>to date</span>
+            </div>
           </div>
 
         </div>
       </div>
     </div>
 
-    <div class="hero__scroll">
-      <div class="hero__scroll-line"></div>
-      <span>SCROLL</span>
+    <div class="hero__scroll" style="color:#777777">
+      <div class="hero__scroll-line" style="background:#777777"></div>
+      <span style="color:#777777">SCROLL</span>
     </div>
   </section>
 
@@ -522,7 +502,7 @@
       <div class="ways-grid" data-stagger>
         
         <!-- CARD 1: Our own brand (VIREXA) -->
-        <div class="ways-card ways-card--brand" onclick="window.location.href='medical.html'" tabindex="0" role="link" aria-label="Learn more about our own brand VIREXA">
+        <div class="ways-card ways-card--brand" onclick="window.location.href='virexa.html'" tabindex="0" role="link" aria-label="Learn more about our own brand VIREXA">
           <div class="ways-card__top">
             <span class="ways-card__tag">
               <svg class="ways-tag-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -550,7 +530,7 @@
           </div>
 
           <div class="ways-card__action">
-            <a href="medical.html" class="ways-btn ways-btn--brand">
+            <a href="virexa.html" class="ways-btn ways-btn--brand">
               <span>About VIREXA</span>
               <svg class="ways-btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -561,7 +541,7 @@
         </div>
 
         <!-- CARD 2: Contract manufacturing (OEM & Loan licence) -->
-        <div class="ways-card ways-card--oem" onclick="window.location.href='contact.html'" tabindex="0" role="link" aria-label="Learn how contract manufacturing and loan licence works">
+        <div class="ways-card ways-card--oem" onclick="window.location.href='contract-manufacturing.html'" tabindex="0" role="link" aria-label="Learn how contract manufacturing and loan licence works">
           <div class="ways-card__top">
             <span class="ways-card__tag">
               <svg class="ways-tag-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -588,7 +568,7 @@
           </div>
 
           <div class="ways-card__action">
-            <a href="contact.html" class="ways-btn ways-btn--oem">
+            <a href="contract-manufacturing.html" class="ways-btn ways-btn--oem">
               <span>How it works</span>
               <svg class="ways-btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -599,7 +579,7 @@
         </div>
 
         <!-- CARD 3: Technology transfer -->
-        <div class="ways-card ways-card--transfer" onclick="window.location.href='contact.html'" tabindex="0" role="link" aria-label="Talk to us about technology transfer to India">
+        <div class="ways-card ways-card--transfer" onclick="window.location.href='contract-manufacturing.html#engagement-models'" tabindex="0" role="link" aria-label="Talk to us about technology transfer to India">
           <div class="ways-card__top">
             <span class="ways-card__tag">
               <svg class="ways-tag-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -631,7 +611,7 @@
           </div>
 
           <div class="ways-card__action">
-            <a href="contact.html" class="ways-btn ways-btn--transfer">
+            <a href="contract-manufacturing.html#engagement-models" class="ways-btn ways-btn--transfer">
               <span>Talk to us</span>
               <svg class="ways-btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1215,30 +1195,26 @@
           <div class="footer__col-title">Contact</div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DF2A29" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </span>
             <span>Unit 2 &mdash; E-City, Maheshwaram, Rangareddy, Telangana 501359</span>
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2C3288" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.22 4 2 2 0 012.2 2H5.2a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.28-.54a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 18.92z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.22 4 2 2 0 012.2 2H5.2a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.28-.54a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 18.92z"/></svg>
             </span>
-            <div style="display:flex;flex-direction:column;gap:2px">
-              <a href="tel:+918008801778" style="color:var(--clr-text-muted);transition:color 0.2s">+91 80088 01778
-                (Arvind Kandi)</a>
-              <a href="tel:+919885100808" style="color:var(--clr-text-muted);transition:color 0.2s">+91 98851 00808
-                (Vikrant K.)</a>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <a href="tel:+918008801778" class="footer__contact-link">+91 80088 01778 (Arvind Kandi)</a>
+              <a href="tel:+919885100808" class="footer__contact-link">+91 98851 00808 (Vikrant K.)</a>
             </div>
           </div>
           <div class="footer__contact-item">
             <span class="footer__contact-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </span>
-            <div style="display:flex;flex-direction:column;gap:2px">
-              <a href="mailto:arvind.kandi7@gmail.com"
-                style="color:var(--clr-text-muted);transition:color 0.2s">arvind.kandi7@gmail.com</a>
-              <a href="mailto:vikrant@vidhata.co.in"
-                style="color:var(--clr-text-muted);transition:color 0.2s">vikrant@vidhata.co.in</a>
+            <div style="display:flex;flex-direction:column;gap:4px">
+              <a href="mailto:arvind.kandi7@gmail.com" class="footer__contact-link">arvind.kandi7@gmail.com</a>
+              <a href="mailto:vikrant@vidhata.co.in" class="footer__contact-link">vikrant@vidhata.co.in</a>
             </div>
           </div>
         </div>
@@ -1259,8 +1235,7 @@
                 d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
             </svg>
           </a>
-          <a href="https://wa.me/919885100808" class="footer__social-link" aria-label="WhatsApp"
-            style="color:#25D366;border-color:rgba(37,211,102,0.3)">
+          <a href="https://wa.me/919885100808" class="footer__social-link" aria-label="WhatsApp">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />

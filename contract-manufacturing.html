@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contract Manufacturing & Dual Licensing Models — OEM Contract Manufacturing, Loan Licence, Technology Transfer, and Medical Tooling by Vidhata Plastics India. CDSCO Licence MFG/MD/2026/000078.">
+  <title>Contract Manufacturing &amp; Dual Licensing | Vidhata Plastics India</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css?v=nuvica">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <style>
+    :root {
+      --cm-navy: #0A2540;
+      --cm-blue: #0A4E9B;
+      --cm-accent: #2C3288;
+      --cm-red: #DF2A29;
+      --cm-teal: #0284C7;
+      --cm-surface: #FFFFFF;
+      --cm-bg: #F8FAFC;
+      --cm-text-main: #0F172A;
+      --cm-text-muted: #475569;
+      --cm-border: #E2E8F0;
+      --cm-shadow: 0 10px 30px -8px rgba(10, 37, 64, 0.08);
+    }
+
+    body {
+      background-color: var(--cm-bg);
+      color: var(--cm-text-main);
+      font-family: var(--font-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero Section */
+    .cm-hero {
+      position: relative;
+      background: linear-gradient(135deg, #07192C 0%, #0A2540 50%, #0A4E9B 100%);
+      color: #FFFFFF;
+      padding: 110px 0 85px 0;
+      overflow: hidden;
+    }
+    .cm-hero__bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    .cm-hero__inner {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+    }
+    .cm-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(44, 50, 136, 0.45);
+      border: 1px solid rgba(147, 197, 253, 0.35);
+      color: #93C5FD;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    }
+    .cm-badge__pulse {
+      width: 8px;
+      height: 8px;
+      background: #60A5FA;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #60A5FA;
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+    .cm-hero__title {
+      font-size: clamp(3rem, 6.5vw, 4.8rem);
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      color: #FFFFFF;
+      line-height: 1.08;
+      margin-bottom: 24px;
+    }
+    .cm-hero__lead {
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      line-height: 1.6;
+      color: #E2E8F0;
+      margin-bottom: 38px;
+      max-width: 840px;
+      font-weight: 400;
+    }
+    .cm-hero__actions {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .cm-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #DF2A29;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(223, 42, 41, 0.4);
+      border: none;
+      cursor: pointer;
+    }
+    .cm-btn-primary:hover {
+      background: #B91C1C;
+      color: #FFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(223, 42, 41, 0.55);
+    }
+    .cm-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .cm-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.22);
+      color: #FFF;
+      transform: translateY(-2px);
+    }
+
+    /* Key Metrics Strip */
+    .cm-metrics-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--cm-border);
+      box-shadow: 0 4px 20px -6px rgba(10, 37, 64, 0.05);
+      padding: 26px 0;
+    }
+    .cm-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+    @media (max-width: 992px) {
+      .cm-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+    @media (max-width: 576px) {
+      .cm-metrics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .cm-metric-item {
+      display: flex;
+      flex-direction: column;
+      border-left: 3px solid #0A4E9B;
+      padding-left: 16px;
+    }
+    .cm-metric-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: var(--cm-text-muted);
+      margin-bottom: 3px;
+    }
+    .cm-metric-value {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--cm-navy);
+      line-height: 1.2;
+    }
+
+    /* Four Ways Section */
+    .cm-models-section {
+      padding: 95px 0 80px 0;
+      background: #F8FAFC;
+    }
+    .cm-section-header {
+      max-width: 800px;
+      margin-bottom: 56px;
+    }
+    .cm-section-header .cm-eyebrow {
+      display: inline-block;
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--cm-blue);
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      padding: 6px 14px;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+    .cm-section-header h2 {
+      font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+      font-weight: 900;
+      color: var(--cm-navy);
+      line-height: 1.15;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    .cm-section-header p {
+      font-size: 1.12rem;
+      color: var(--cm-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Models Grid */
+    .cm-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 860px) {
+      .cm-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .cm-card {
+      background: #FFFFFF;
+      border: 1px solid var(--cm-border);
+      border-radius: 18px;
+      padding: 40px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 18px rgba(10, 37, 64, 0.04);
+      overflow: hidden;
+    }
+    .cm-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: transparent;
+      transition: background 0.3s ease;
+    }
+    .cm-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px -8px rgba(10, 37, 64, 0.12);
+      border-color: #CBD5E1;
+    }
+    .cm-card--01:hover::before { background: #0A4E9B; }
+    .cm-card--02:hover::before { background: #2C3288; }
+    .cm-card--03:hover::before { background: #0284C7; }
+    .cm-card--04:hover::before { background: #DF2A29; }
+
+    .cm-card__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    .cm-card__num {
+      font-size: 2.6rem;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: #94A3B8;
+      transition: color 0.3s ease;
+    }
+    .cm-card:hover .cm-card__num {
+      color: var(--cm-blue);
+    }
+    .cm-card__tag {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: #F1F5F9;
+      color: #475569;
+    }
+    .cm-card--02 .cm-card__tag {
+      background: #EFF6FF;
+      color: #1E40AF;
+      border: 1px solid #DBEAFE;
+    }
+
+    .cm-card__title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--cm-navy);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .cm-card__text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--cm-text-muted);
+      margin-bottom: 28px;
+    }
+    
+    .cm-card__feature-box {
+      background: #F8FAFC;
+      border: 1px solid #EDF2F7;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #334155;
+    }
+    .cm-card__feature-box strong {
+      color: var(--cm-navy);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cm-card__action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.94rem;
+      color: var(--cm-blue);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      margin-top: auto;
+    }
+    .cm-card__action:hover {
+      color: var(--cm-navy);
+      transform: translateX(4px);
+    }
+
+    /* Split Section: Form on Left, Document Pack on Right */
+    .cm-engagement-section {
+      padding: 90px 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--cm-border);
+    }
+    .cm-engagement-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: flex-start;
+    }
+    @media (max-width: 992px) {
+      .cm-engagement-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    /* Form Container */
+    .cm-form-panel {
+      background: #FFFFFF;
+      border: 1px solid var(--cm-border);
+      border-radius: 20px;
+      padding: 44px;
+      box-shadow: 0 12px 36px -6px rgba(10, 37, 64, 0.07);
+    }
+    @media (max-width: 576px) {
+      .cm-form-panel {
+        padding: 28px 20px;
+      }
+    }
+    .cm-form-panel h3 {
+      font-size: 2.1rem;
+      font-weight: 900;
+      color: var(--cm-navy);
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .cm-form-panel p {
+      font-size: 1.02rem;
+      color: var(--cm-text-muted);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    /* Checkbox Group */
+    .cm-checkbox-group-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--cm-navy);
+      margin-bottom: 14px;
+    }
+    .cm-checkbox-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 600px) {
+      .cm-checkbox-options {
+        grid-template-columns: 1fr;
+      }
+    }
+    .cm-checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #F8FAFC;
+      border: 1.5px solid var(--cm-border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #1E293B;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .cm-checkbox-label:hover {
+      background: #F1F5F9;
+      border-color: #94A3B8;
+    }
+    .cm-checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--cm-blue);
+      cursor: pointer;
+    }
+    .cm-checkbox-label.is-checked {
+      background: #EFF6FF;
+      border-color: var(--cm-blue);
+      color: var(--cm-blue);
+    }
+
+    /* Form Fields */
+    .cm-field-group {
+      margin-bottom: 20px;
+    }
+    .cm-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--cm-text-muted);
+      margin-bottom: 6px;
+    }
+    .cm-input {
+      width: 100%;
+      border: 1.5px solid var(--cm-border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.96rem;
+      background: #FAFAFA;
+      color: var(--cm-text-main);
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+    .cm-input:focus {
+      outline: none;
+      border-color: var(--cm-blue);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(10, 78, 155, 0.14);
+    }
+    .cm-input::placeholder {
+      color: #94A3B8;
+    }
+    textarea.cm-input {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .cm-btn-submit {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #DF2A29;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 16px 28px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(223, 42, 41, 0.35);
+      margin-top: 10px;
+    }
+    .cm-btn-submit:hover {
+      background: #B91C1C;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(223, 42, 41, 0.5);
+    }
+
+    /* Document Pack Panel */
+    .cm-docpack-panel {
+      background: linear-gradient(135deg, #0A2540 0%, #0F3B68 100%);
+      color: #FFFFFF;
+      border-radius: 20px;
+      padding: 44px;
+      box-shadow: 0 12px 36px -6px rgba(10, 37, 64, 0.15);
+      position: sticky;
+      top: 100px;
+    }
+    @media (max-width: 576px) {
+      .cm-docpack-panel {
+        padding: 28px 20px;
+      }
+    }
+    .cm-docpack-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #93C5FD;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 16px;
+    }
+    .cm-docpack-panel h3 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    .cm-docpack-panel p {
+      font-size: 1.02rem;
+      color: #CBD5E1;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    /* Document Checklist */
+    .cm-checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cm-checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #F8FAFC;
+      transition: all 0.2s ease;
+    }
+    .cm-checklist-item:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: rgba(255, 255, 255, 0.28);
+      transform: translateX(4px);
+    }
+    .cm-checklist-icon {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #10B981;
+      color: #FFFFFF;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .cm-btn-brochure {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #FFFFFF;
+      color: var(--cm-navy);
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 16px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
+    }
+    .cm-btn-brochure:hover {
+      background: #F1F5F9;
+      color: var(--cm-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    }
+
+
+    /* Modal for Document Pack Download */
+    .cm-modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 37, 64, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .cm-modal {
+      background: #FFFFFF;
+      border-radius: 18px;
+      max-width: 520px;
+      width: 100%;
+      padding: 36px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+    .cm-modal__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: #64748B;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="css/theme-neutral.css?v=nuvica-bright">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div id="reading-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--cm-blue);z-index:1001;width:0%"></div>
+
+<!-- Top Regulatory Certification Ribbon -->
+<div class="regulatory-ribbon" style="background:#0A2540;color:#94A3B8;font-size:0.76rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <span style="color:#CBD5E1">&#128737; <strong>CDSCO Licence:</strong> MFG/MD/2026/000078</span>
+      <span style="color:#CBD5E1">&#10004; <strong>Quality System:</strong> ISO 13485:2016 Certified</span>
+      <span style="color:#CBD5E1">&#127970; <strong>Cleanroom Suites:</strong> ISO Class 7 &amp; Class 8</span>
+    </div>
+    <div>
+      <span style="color:#38BDF8;font-weight:600">&#9889; Dual Licensing &amp; OEM Contract Manufacturing Line</span>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span>
+        <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+      </div>
+    </a>
+    <div class="navbar__nav">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="index.html#services" class="navbar__link">Services</a>
+      <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
+      <a href="contract-manufacturing.html" class="navbar__link active" style="color:var(--cm-blue);font-weight:700">Contract Mfg</a>
+      <a href="industries.html" class="navbar__link">Industries</a>
+      <a href="infrastructure.html" class="navbar__link">Infrastructure</a>
+      <a href="quality.html" class="navbar__link">Quality</a>
+      <a href="licences.html" class="navbar__link">Licences</a>
+      <div class="navbar__dropdown">
+        <a href="about.html" class="navbar__link navbar__dropdown-trigger">
+          <span>Company</span>
+          <span class="navbar__dropdown-chevron">&#9662;</span>
+        </a>
+        <div class="navbar__dropdown-menu">
+          <a href="about.html" class="navbar__dropdown-item">About Us</a>
+          <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
+          <a href="careers.html" class="navbar__dropdown-item">Careers</a>
+          <a href="blog.html" class="navbar__dropdown-item">Blog &amp; Insights</a>
+          <a href="clients.html" class="navbar__dropdown-item">Clients</a>
+        </div>
+      </div>
+      <a href="#tell-us-what-you-need" class="navbar__link navbar__cta">Request Quote</a>
+    </div>
+    <button id="hamburger" class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="navbar__mobile">
+  <div class="navbar__mobile-group-title">Navigation</div>
+  <a href="index.html" class="navbar__mobile-link">Home</a>
+  <a href="index.html#services" class="navbar__mobile-link">Services</a>
+  <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
+  <a href="contract-manufacturing.html" class="navbar__mobile-link active">Contract Mfg</a>
+  <a href="industries.html" class="navbar__mobile-link">Industries</a>
+  <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
+  <a href="quality.html" class="navbar__mobile-link">Quality</a>
+  <a href="licences.html" class="navbar__mobile-link">Licences</a>
+  
+  <div class="navbar__mobile-group-title">Company</div>
+  <a href="about.html" class="navbar__mobile-link">About Us</a>
+  <a href="case-studies.html" class="navbar__mobile-link">Case Studies</a>
+  <a href="clients.html" class="navbar__mobile-link">Clients</a>
+  <a href="careers.html" class="navbar__mobile-link">Careers</a>
+  <a href="blog.html" class="navbar__mobile-link">Blog &amp; Insights</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact Us</a>
+  <div style="margin-top:var(--sp-6)">
+    <a href="contact.html" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Request a Quote</a>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<header class="cm-hero">
+  <div class="cm-hero__bg-grid"></div>
+  <div class="container cm-hero__inner">
+    <div class="cm-badge">
+      <span class="cm-badge__pulse"></span>
+      <span>OEM &middot; Loan licence &middot; Technology transfer &middot; Tooling</span>
+    </div>
+    <h1 class="cm-hero__title">Bring what you have.</h1>
+    <p class="cm-hero__lead">
+      The rooms, the quality system and the documents are the same wherever you enter.
+    </p>
+    <div class="cm-hero__actions">
+      <a href="#engagement-models" class="cm-btn-primary">
+        <span>Four ways to engage</span>
+        <span>&darr;</span>
+      </a>
+      <a href="#ask-document-pack" class="cm-btn-secondary">
+        <span>Request Document Pack</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Regulatory & Technical Proof Bar -->
+<div class="cm-metrics-bar">
+  <div class="container cm-metrics-grid">
+    <div class="cm-metric-item">
+      <span class="cm-metric-label">Dual Licencing</span>
+      <span class="cm-metric-value">OEM &amp; Loan</span>
+    </div>
+    <div class="cm-metric-item">
+      <span class="cm-metric-label">Cleanroom Suites</span>
+      <span class="cm-metric-value">Class 7 &amp; 8</span>
+    </div>
+    <div class="cm-metric-item">
+      <span class="cm-metric-label">Quality System</span>
+      <span class="cm-metric-value">ISO 13485:2016</span>
+    </div>
+    <div class="cm-metric-item">
+      <span class="cm-metric-label">Toolroom CNCs</span>
+      <span class="cm-metric-value">25+ Machines</span>
+    </div>
+    <div class="cm-metric-item">
+      <span class="cm-metric-label">Sterilization</span>
+      <span class="cm-metric-value">ETO Validated</span>
+    </div>
+  </div>
+</div>
+
+<!-- Section: Four Ways to Engage -->
+<section class="cm-models-section" id="engagement-models">
+  <div class="container">
+    <div class="cm-section-header">
+      <span class="cm-eyebrow">Contract manufacturing models</span>
+      <h2>Four ways to engage.</h2>
+      <p>
+        Whether you are starting from a blank sheet, holding an active foreign file, or needing verified tooling, we offer proven legal and technical frameworks to manufacture sterile medical devices in India.
+      </p>
+    </div>
+
+    <div class="cm-cards-grid">
+      
+      <!-- MODEL 01 -->
+      <div class="cm-card cm-card--01">
+        <div>
+          <div class="cm-card__top">
+            <span class="cm-card__num">01</span>
+            <span class="cm-card__tag">Turnkey OEM</span>
+          </div>
+          <h3 class="cm-card__title">OEM contract manufacturing</h3>
+          <p class="cm-card__text">
+            Made under our licence and your brand. You bring the design or the concept; we tool it, mould it, assemble it, sterilise it and release it.
+          </p>
+          <div class="cm-card__feature-box">
+            <strong>What you provide:</strong>
+            Concept sketches, product specification, target branding, and clinical performance requirements.
+          </div>
+        </div>
+        <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('oem')">
+          <span>Choose OEM manufacturing</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- MODEL 02 -->
+      <div class="cm-card cm-card--02">
+        <div>
+          <div class="cm-card__top">
+            <span class="cm-card__num">02</span>
+            <span class="cm-card__tag" style="background:#DBEAFE;color:#1E3A8A;font-weight:800;">Established Precedent</span>
+          </div>
+          <h3 class="cm-card__title">Loan-licence manufacture</h3>
+          <p class="cm-card__text">
+            You hold the licence and the brand. We hold the premises, the cleanroom and the quality system. Another company already manufactures here this way.
+          </p>
+          <div class="cm-card__feature-box">
+            <strong>Regulatory framework:</strong>
+            Your company secures the CDSCO Form MD-6 loan licence mapped to our audited facility (Form MD-5). We execute production with complete segregation.
+          </div>
+        </div>
+        <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('loan')">
+          <span>Choose Loan-licence</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- MODEL 03 -->
+      <div class="cm-card cm-card--03">
+        <div>
+          <div class="cm-card__top">
+            <span class="cm-card__num">03</span>
+            <span class="cm-card__tag">Supply Localization</span>
+          </div>
+          <h3 class="cm-card__title">Technology transfer</h3>
+          <p class="cm-card__text">
+            Move a running product into India for supply security and cost. We rebuild the tooling and reconstruct the documentation alongside it.
+          </p>
+          <div class="cm-card__feature-box">
+            <strong>Seamless transition:</strong>
+            Full reverse engineering or CAD import, rapid validation runs, equivalent material testing, and CDSCO amendment filings without supply disruption.
+          </div>
+        </div>
+        <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('transfer')">
+          <span>Choose Technology transfer</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- MODEL 04 -->
+      <div class="cm-card cm-card--04">
+        <div>
+          <div class="cm-card__top">
+            <span class="cm-card__num">04</span>
+            <span class="cm-card__tag">Precision Tooling</span>
+          </div>
+          <h3 class="cm-card__title">Tooling only</h3>
+          <p class="cm-card__text">
+            Moulds for your own production &mdash; injection, extrusion, PU or press tools, proven on trial before handover.
+          </p>
+          <div class="cm-card__feature-box">
+            <strong>Guaranteed performance:</strong>
+            Built in our 25+ CNC toolroom using imported steel, complete with CMM dimensional reports and full sample trial sign-off.
+          </div>
+        </div>
+        <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('tooling')">
+          <span>Choose Tooling only</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Split Section: Tell us what you need & Or ask for the document pack -->
+<section class="cm-engagement-section" id="engagement-hub">
+  <div class="container cm-engagement-grid">
+    
+    <!-- LEFT COLUMN: Tell us what you need Form -->
+    <div class="cm-form-panel" id="tell-us-what-you-need">
+      <h3>Tell us what you need.</h3>
+      <p>
+        Select the engagement models that fit your requirements and share your device specifics. Our technical regulatory team will respond promptly.
+      </p>
+
+      <form id="contract-mfg-form" onsubmit="handleContractMfgSubmit(event)">
+        
+        <div class="cm-checkbox-group-title">Engagement Model(s) Required:</div>
+        
+        <div class="cm-checkbox-options">
+          <label class="cm-checkbox-label" id="lbl-oem">
+            <input type="checkbox" name="model" value="OEM manufacture" id="check-oem">
+            <span>OEM manufacture</span>
+          </label>
+          <label class="cm-checkbox-label" id="lbl-loan">
+            <input type="checkbox" name="model" value="Loan licence" id="check-loan">
+            <span>Loan licence</span>
+          </label>
+          <label class="cm-checkbox-label" id="lbl-transfer">
+            <input type="checkbox" name="model" value="Technology transfer" id="check-transfer">
+            <span>Technology transfer</span>
+          </label>
+          <label class="cm-checkbox-label" id="lbl-tooling">
+            <input type="checkbox" name="model" value="Tooling only" id="check-tooling">
+            <span>Tooling only</span>
+          </label>
+          <label class="cm-checkbox-label" id="lbl-virexa" style="grid-column: span 2;">
+            <input type="checkbox" name="model" value="VIREXA distribution" id="check-virexa">
+            <span>VIREXA distribution</span>
+          </label>
+        </div>
+
+        <div class="cm-field-group">
+          <label class="cm-label" for="cm-name">Your name *</label>
+          <input type="text" class="cm-input" id="cm-name" required placeholder="Full Name">
+        </div>
+
+        <div class="cm-field-group">
+          <label class="cm-label" for="cm-company">Company *</label>
+          <input type="text" class="cm-input" id="cm-company" required placeholder="Medical Device Company / Institution">
+        </div>
+
+        <div class="cm-field-group">
+          <label class="cm-label" for="cm-email">Work email *</label>
+          <input type="email" class="cm-input" id="cm-email" required placeholder="name@company.com">
+        </div>
+
+        <div class="cm-field-group">
+          <label class="cm-label" for="cm-project">What are you looking to make? *</label>
+          <textarea class="cm-input" id="cm-project" rows="4" required placeholder="Describe your product, materials, risk class, estimated annual volume, or specific tooling requirements..."></textarea>
+        </div>
+
+        <button type="submit" class="cm-btn-submit">
+          <span>Send</span>
+          <span>&rarr;</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- RIGHT COLUMN: Or ask for the document pack -->
+    <div class="cm-docpack-panel" id="ask-document-pack">
+      <span class="cm-docpack-badge">&#128196; Pre-Audit Due Diligence</span>
+      <h3>Or ask for the document pack.</h3>
+      <p>
+        The licence, and a document from each of the five checkpoints. Sent before you travel, so an audit visit starts from what you have already read.
+      </p>
+
+      <ul class="cm-checklist">
+        <li class="cm-checklist-item">
+          <span class="cm-checklist-icon">&#10004;</span>
+          <span>Manufacturing licence</span>
+        </li>
+        <li class="cm-checklist-item">
+          <span class="cm-checklist-icon">&#10004;</span>
+          <span>Design sign-off</span>
+        </li>
+        <li class="cm-checklist-item">
+          <span class="cm-checklist-icon">&#10004;</span>
+          <span>Trial and dimensional reports</span>
+        </li>
+        <li class="cm-checklist-item">
+          <span class="cm-checklist-icon">&#10004;</span>
+          <span>Validation report</span>
+        </li>
+        <li class="cm-checklist-item">
+          <span class="cm-checklist-icon">&#10004;</span>
+          <span>Batch record</span>
+        </li>
+        <li class="cm-checklist-item">
+          <span class="cm-checklist-icon">&#10004;</span>
+          <span>Release record</span>
+        </li>
+        <li class="cm-checklist-item">
+          <span class="cm-checklist-icon">&#10004;</span>
+          <span>Capability profile</span>
+        </li>
+      </ul>
+
+      <button type="button" class="cm-btn-brochure" onclick="openBrochureModal()">
+        <span>&#128229; Download the brochure</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Modal for Brochure / Document Pack Request -->
+<div class="cm-modal-backdrop" id="brochure-modal">
+  <div class="cm-modal">
+    <button class="cm-modal__close" onclick="closeBrochureModal()">&times;</button>
+    <div style="font-size:2.2rem;margin-bottom:10px">&#128196;</div>
+    <h3 style="font-size:1.5rem;font-weight:800;color:var(--cm-navy);margin-bottom:8px">Download Document Pack &amp; Brochure</h3>
+    <p style="font-size:0.92rem;color:var(--cm-text-muted);margin-bottom:20px;line-height:1.5">
+      Please enter your work email to immediately download the Vidhata Medical Manufacturing Capability Profile &amp; Regulatory Document Pack preview.
+    </p>
+
+    <form onsubmit="handleBrochureDownload(event)">
+      <div class="cm-field-group">
+        <label class="cm-label" for="pack-name">Your name</label>
+        <input type="text" class="cm-input" id="pack-name" required placeholder="Full Name">
+      </div>
+      <div class="cm-field-group">
+        <label class="cm-label" for="pack-company">Company</label>
+        <input type="text" class="cm-input" id="pack-company" required placeholder="Company / Institution">
+      </div>
+      <div class="cm-field-group">
+        <label class="cm-label" for="pack-email">Work email</label>
+        <input type="email" class="cm-input" id="pack-email" required placeholder="name@company.com">
+      </div>
+      <button type="submit" class="cm-btn-primary" style="width:100%;justify-content:center;padding:14px;margin-top:10px">
+        <span>Download Now (PDF)</span>
+        <span>&darr;</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Col 1: Vidhata Medical -->
+      <div>
+        <a href="index.html" class="navbar__logo" style="margin-bottom:12px;display:inline-flex">
+          <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-name">Vidhata Medical</span>
+            <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+          </div>
+        </a>
+        <p class="footer__brand-desc">
+          The medical device and pharma packaging business of Vidhata Plastics India Private Limited. Contract manufacturing, Hyderabad.
+        </p>
+        <div class="footer__certbadges">
+          <span class="footer__certbadge">CDSCO MD-5</span>
+          <span class="footer__certbadge">ISO 13485:2016</span>
+          <span class="footer__certbadge">ISO 9001:2015</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Contact -->
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact-row">
+          <a href="mailto:info@vidhata.co.in" class="footer__contact-link">info@vidhata.co.in</a>
+        </div>
+        <div class="footer__contact-row">
+          <a href="tel:+919885100808" class="footer__contact-link">+91 98851 00808</a>
+        </div>
+        <div class="footer__hours">
+          Monday to Saturday, 09:00&ndash;18:00 IST (UTC+5:30)
+        </div>
+        <div class="footer__sla">
+          We reply within one working day.
+        </div>
+      </div>
+
+      <!-- Col 3: Unit 2 — Maheshwaram -->
+      <div>
+        <div class="footer__col-title">Unit 2 &mdash; Maheshwaram</div>
+        <p class="footer__facility-address">
+          S-1 P/C, Survey No. 114, E-City, Maheshwaram, Rangareddy, Telangana 501359
+        </p>
+        <div class="footer__facility-scope">
+          Toolroom, moulding, cleanroom, QC and stability lab
+        </div>
+      </div>
+
+      <!-- Col 4: Unit 1 — Cherlapally -->
+      <div>
+        <div class="footer__col-title">Unit 1 &mdash; Cherlapally</div>
+        <p class="footer__facility-address">
+          Plot No. 205/2, Phase II, IDA Cherlapally, Hyderabad 500051
+        </p>
+        <div class="footer__facility-scope">
+          Registered office
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Compliance Strip -->
+    <div class="footer__bottom">
+      <p class="footer__legal-line">
+        VIDHATA PLASTICS INDIA PRIVATE LIMITED &middot; CIN U25209TG1990PTC012152 &middot; GST 36AAACV8175G1Z2 &middot; Manufacturing licence MFG/MD/2026/000078 &middot; <a href="privacy.html">Privacy</a> &middot; &copy; 2026
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919885100808" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/chatbot.js"></script>
+
+<script>
+// Checkbox styling toggle
+document.querySelectorAll('.cm-checkbox-label input[type="checkbox"]').forEach(box => {
+  box.addEventListener('change', function() {
+    if (this.checked) {
+      this.parentElement.classList.add('is-checked');
+    } else {
+      this.parentElement.classList.remove('is-checked');
+    }
+  });
+});
+
+// Select model from cards
+window.selectModel = function(modelKey) {
+  const map = {
+    'oem': 'check-oem',
+    'loan': 'check-loan',
+    'transfer': 'check-transfer',
+    'tooling': 'check-tooling',
+    'virexa': 'check-virexa'
+  };
+  const targetId = map[modelKey];
+  if (targetId) {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.checked = true;
+      el.parentElement.classList.add('is-checked');
+    }
+  }
+};
+
+// Form submission handler
+window.handleContractMfgSubmit = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('cm-name').value;
+  const company = document.getElementById('cm-company').value;
+  const email = document.getElementById('cm-email').value;
+  const project = document.getElementById('cm-project').value;
+
+  const selectedModels = [];
+  document.querySelectorAll('input[name="model"]:checked').forEach(cb => {
+    selectedModels.push(cb.value);
+  });
+
+  const modelsText = selectedModels.length > 0 ? selectedModels.join(', ') : 'General Contract Manufacturing';
+
+  alert(`Thank you, ${name}!\n\nYour inquiry for [${modelsText}] on behalf of ${company} has been received.\n\nOur regulatory and technical manufacturing team will review your specifications and reach out to ${email} within 24 hours with our feasibility assessment and next steps.`);
+  e.target.reset();
+  document.querySelectorAll('.cm-checkbox-label').forEach(lbl => lbl.classList.remove('is-checked'));
+};
+
+// Brochure Modal handlers
+window.openBrochureModal = function() {
+  document.getElementById('brochure-modal').style.display = 'flex';
+};
+
+window.closeBrochureModal = function() {
+  document.getElementById('brochure-modal').style.display = 'none';
+};
+
+window.handleBrochureDownload = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('pack-name').value;
+  const email = document.getElementById('pack-email').value;
+  const company = document.getElementById('pack-company').value;
+
+  alert(`Thank you, ${name}!\n\nThe Vidhata Plastics Medical Capability Profile & Document Pack preview has been sent to ${email} for ${company}.\n\nFor a physical or unredacted audit pack for regulatory inspection, our quality team will follow up directly.`);
+  closeBrochureModal();
+  e.target.reset();
+};
+
+// Close modal on click outside
+window.addEventListener('click', function(e) {
+  const modal = document.getElementById('brochure-modal');
+  if (e.target === modal) {
+    closeBrochureModal();
+  }
+});
+</script>
+
+</body>
+</html>

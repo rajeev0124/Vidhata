@@ -1,0 +1,1120 @@
+/*
+ * =============================================================
+ *  VIDHATA PLASTICS — BRIGHT NUVICA MEDICAL THEME
+ *  theme-neutral.css
+ *
+ *  Enhanced Brightness & Vibrancy Palette:
+ *  - Vibrant Medical Blue:  #1E75E8 (Bright, vivid sapphire blue for primary actions & accents)
+ *  - Glowing Cyan/Cerulean: #0284C7 (Bright active highlights, pulse dots, icon accents)
+ *  - Deep Midnight Slate:   #0B1E36 (High-contrast deep navy for crystal clear headings & footer)
+ *  - Clear Marine Slate:    #2A5885 (Legible, crisp secondary & body text)
+ *  - Crisp Sky Border:      #93C5FD (Lively, bright borders on cards, pills & dividers)
+ *  - Fresh Ice Tint:        #E1EFFF (Clean, bright medical tint for badges & alternating sections)
+ *  - Pure Crisp Canvas:     #F8FAFC (Ultra-clean, luminous page background)
+ *  - Pure Surface White:    #FFFFFF (Bright white card surfaces)
+ * =============================================================
+ */
+
+/* ── 1. DESIGN TOKEN OVERRIDES ─────────────────────────────── */
+:root {
+  --clr-bg:           #F8FAFC;
+  --clr-surface:      #E1EFFF;
+  --clr-card:         #FFFFFF;
+  --clr-card-hover:   #F0F7FF;
+  --clr-border:       #93C5FD;
+  --clr-border-gold:  rgba(30, 117, 232, 0.40);
+
+  --clr-primary:      #1E75E8;
+  --clr-primary-dark: #1462C9;
+  --clr-primary-glow: rgba(30, 117, 232, 0.25);
+
+  --clr-teal:         #0284C7;
+  --clr-teal-dark:    #0B1E36;
+  --clr-teal-glow:    rgba(2, 132, 199, 0.25);
+
+  --clr-gold:         #0284C7;
+  --clr-gold-dark:    #1E75E8;
+  --clr-gold-glow:    rgba(2, 132, 199, 0.20);
+
+  --clr-text:         #0B1E36;
+  --clr-text-muted:   #2A5885;
+  --clr-text-dim:     #4B7BAA;
+  --clr-white:        #FFFFFF;
+
+  --clr-success:      #0284C7;
+  --clr-error:        #DC2626;
+
+  --grad-primary:  linear-gradient(135deg, #1E75E8 0%, #0284C7 100%);
+  --grad-teal:     linear-gradient(135deg, #0284C7 0%, #0B1E36 100%);
+  --grad-gold:     linear-gradient(135deg, #1E75E8 0%, #38BDF8 100%);
+  --grad-hero:     linear-gradient(160deg, #FFFFFF 0%, #F0F7FF 50%, #E1EFFF 100%);
+  --grad-surface:  linear-gradient(180deg, #F0F7FF 0%, #FFFFFF 100%);
+  --grad-card:     linear-gradient(145deg, #FFFFFF 0%, #F0F7FF 100%);
+
+  --shadow-sm:   0 1px 4px rgba(11, 30, 54, 0.06);
+  --shadow-md:   0 4px 20px rgba(11, 30, 54, 0.09);
+  --shadow-lg:   0 10px 40px rgba(11, 30, 54, 0.12);
+  --shadow-xl:   0 20px 60px rgba(11, 30, 54, 0.16);
+  --shadow-blue: 0 8px 32px rgba(30, 117, 232, 0.28);
+  --shadow-gold: 0 8px 32px rgba(2, 132, 199, 0.25);
+  --shadow-glow: 0 0 60px rgba(30, 117, 232, 0.22);
+}
+
+/* ── 2. BASE DOCUMENT ───────────────────────────────────────── */
+html, body {
+  -webkit-filter: none !important;
+  filter: none !important;
+  background-color: #F8FAFC !important;
+  color: #0B1E36 !important;
+}
+
+/* ── 3. NAVBAR ──────────────────────────────────────────────── */
+.navbar,
+#navbar {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1.5px solid #BFDBFE !important;
+  box-shadow: 0 2px 14px rgba(30, 117, 232, 0.08) !important;
+  backdrop-filter: blur(16px) !important;
+}
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.99) !important;
+  box-shadow: 0 4px 22px rgba(11, 30, 54, 0.12) !important;
+}
+
+.navbar__logo-name    { color: #0B1E36 !important; }
+.navbar__logo-corp    { color: #1E75E8 !important; font-weight: 600 !important; }
+.navbar__logo-tagline { color: #2A5885 !important; }
+
+.navbar__link {
+  color: #0B1E36 !important;
+  font-weight: 600 !important;
+}
+.navbar__link:hover,
+.navbar__link.active {
+  color: #1E75E8 !important;
+}
+.navbar__link.active::after,
+.navbar__link:hover::after {
+  background: #1E75E8 !important;
+}
+
+.navbar__dropdown-menu {
+  background: #FFFFFF !important;
+  border: 1.5px solid #BFDBFE !important;
+  box-shadow: 0 10px 30px rgba(11, 30, 54, 0.14) !important;
+}
+.navbar__dropdown-item {
+  color: #0B1E36 !important;
+}
+.navbar__dropdown-item:hover {
+  background: #E1EFFF !important;
+  color: #1E75E8 !important;
+}
+
+.navbar__cta {
+  background: #1E75E8 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #1E75E8 !important;
+  box-shadow: 0 4px 14px rgba(30, 117, 232, 0.40) !important;
+}
+.navbar__cta:hover {
+  background: #1462C9 !important;
+  border-color: #1462C9 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(30, 117, 232, 0.50) !important;
+}
+
+.navbar__hamburger span {
+  background: #0B1E36 !important;
+}
+
+.navbar__mobile {
+  background: #FFFFFF !important;
+  border-color: #BFDBFE !important;
+}
+.navbar__mobile-link {
+  color: #0B1E36 !important;
+}
+.navbar__mobile-link.active {
+  color: #1E75E8 !important;
+  border-left-color: #1E75E8 !important;
+  background: #E1EFFF !important;
+}
+.navbar__mobile-group-title {
+  color: #1E75E8 !important;
+  border-bottom-color: #BFDBFE !important;
+}
+
+/* ── 4. REGULATORY RIBBON ───────────────────────────────────── */
+.regulatory-ribbon,
+[class*="regulatory-ribbon"] {
+  background: #0B1E36 !important;
+  border-bottom: 1px solid rgba(147, 197, 253, 0.25) !important;
+  color: #BAE6FD !important;
+}
+.regulatory-ribbon * {
+  color: #BAE6FD !important;
+}
+.regulatory-ribbon strong {
+  color: #FFFFFF !important;
+}
+
+/* ── 5. HOME PAGE HERO ──────────────────────────────────────── */
+#home,
+.hero,
+.hero--split {
+  background: linear-gradient(160deg, #FFFFFF 0%, #F0F7FF 50%, #E1EFFF 100%) !important;
+  color: #0B1E36 !important;
+}
+
+#home .hero__eyebrow {
+  background: #E1EFFF !important;
+  border: 1.5px solid #93C5FD !important;
+  color: #0369A1 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 10px rgba(30, 117, 232, 0.15) !important;
+}
+#home .hero__eyebrow-dot {
+  background: #0284C7 !important;
+  box-shadow: 0 0 10px #38BDF8 !important;
+}
+
+#home .hero__headline {
+  color: #0A2540 !important;
+}
+#home .vidhata-life-vidhata {
+  color: #0A2540 !important;
+  -webkit-text-fill-color: #0A2540 !important;
+  background: none !important;
+  filter: none !important;
+  font-weight: 800 !important;
+}
+#home .vidhata-life-life {
+  color: #0A4E9B !important;
+  -webkit-text-fill-color: #0A4E9B !important;
+  background: none !important;
+  filter: none !important;
+  font-weight: 800 !important;
+}
+#home .vidhata-life-pulse-dot {
+  background: #0A4E9B !important;
+  box-shadow: 0 0 8px rgba(10, 78, 155, 0.5) !important;
+}
+#home .hero__hl-light {
+  color: #2A5885 !important;
+}
+
+#home .hero__subhead {
+  color: #2A5885 !important;
+  font-size: 1.1rem !important;
+}
+
+/* Home CTA buttons */
+#home .hero__actions .btn--primary {
+  background: #1E75E8 !important;
+  border-color: #1E75E8 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px rgba(30, 117, 232, 0.45) !important;
+}
+#home .hero__actions .btn--primary:hover {
+  background: #1462C9 !important;
+  border-color: #1462C9 !important;
+  box-shadow: 0 8px 25px rgba(30, 117, 232, 0.60) !important;
+}
+
+#home .hero__actions .btn--outline {
+  background: #FFFFFF !important;
+  border: 1.5px solid #93C5FD !important;
+  color: #1E75E8 !important;
+  font-weight: 600 !important;
+}
+#home .hero__actions .btn--outline:hover {
+  background: #E1EFFF !important;
+  border-color: #1E75E8 !important;
+  color: #0B1E36 !important;
+}
+
+/* Hero trust badges */
+.hero__trust-badges,
+#home .hero__trust-badges {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#home .hero__trust-item {
+  color: #0B1E36 !important;
+  border: 1.5px solid #BFDBFE !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 8px rgba(30, 117, 232, 0.08) !important;
+}
+#home .hero__trust-item svg {
+  stroke: #1E75E8 !important;
+}
+
+/* Hero stats bar */
+#home .hero__stats-grid {
+  border-top-color: #BFDBFE !important;
+}
+#home .hero__stat-number,
+#home .hero__stat-item [style*="color:#111111"],
+#home .hero__stat-item [style*="color:#38bdf8"],
+#home .hero__stat-item [style*="color: #38bdf8"] {
+  color: #1E75E8 !important;
+  font-weight: 800 !important;
+}
+#home .hero__stat-label,
+#home .hero__stat-item [style*="color:#444444"],
+#home .hero__stat-item [style*="color:#ffffff"],
+#home .hero__stat-item [style*="color:#94a3b8"] {
+  color: #2A5885 !important;
+}
+#home .hero__stat-divider {
+  background: #BFDBFE !important;
+}
+
+/* Hero scroll indicator */
+.hero__scroll      { color: #1E75E8 !important; }
+.hero__scroll-line { background: #1E75E8 !important; }
+.hero__scroll span { color: #1E75E8 !important; }
+
+/* ── 6. SECTIONS & BACKGROUNDS ──────────────────────────────── */
+.section,
+section {
+  background: transparent;
+}
+.section--alt,
+.content-section--alt,
+.about-section--alt {
+  background: #EDF5FD !important;
+}
+.bg-grid {
+  opacity: 0.35 !important;
+  background-image:
+    linear-gradient(to right, rgba(30, 117, 232, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 117, 232, 0.15) 1px, transparent 1px) !important;
+}
+
+/* Section labels / Eyebrows */
+.section-label,
+.section-header__tag,
+.section-tag,
+span.section-tag {
+  background: #E1EFFF !important;
+  color: #0369A1 !important;
+  border: 1.5px solid #93C5FD !important;
+  font-weight: 600 !important;
+}
+
+/* ── 7. CARDS & CONTAINERS ──────────────────────────────────── */
+.card,
+.card--glass,
+.service-pro-card,
+.feature-card,
+.stat-card,
+[class*="stat-card"],
+[class*="feature-card"],
+[class*="timeline__item"],
+[class*="metric-card"],
+[class*="facility-card"],
+[class*="facility-item"],
+[class*="campus-box"],
+[class*="campus-card"],
+[class*="leader-card"],
+[class*="leader-item"],
+[class*="leader-profile-card"],
+[class*="roadmap-card"],
+[class*="roadmap-entry"],
+[class*="unit-card"],
+[class*="gallery-item"],
+[class*="oem-card"] {
+  background: #FFFFFF !important;
+  border: 1.5px solid #BFDBFE !important;
+  box-shadow: 0 4px 20px rgba(30, 117, 232, 0.08) !important;
+  color: #0B1E36 !important;
+}
+
+.service-pro-card:hover,
+.feature-card:hover,
+.card:hover {
+  border-color: #1E75E8 !important;
+  box-shadow: 0 10px 30px rgba(30, 117, 232, 0.22) !important;
+}
+
+.service-pro-card__icon,
+[class*="card__icon"] {
+  background: #E1EFFF !important;
+  color: #1E75E8 !important;
+  border: 1.5px solid #93C5FD !important;
+}
+.service-pro-card__icon svg,
+[class*="card__icon"] svg {
+  stroke: #1E75E8 !important;
+}
+
+.service-pro-card__title {
+  color: #0B1E36 !important;
+}
+.service-pro-card__desc {
+  color: #2A5885 !important;
+}
+.service-pro-card__link {
+  color: #1E75E8 !important;
+  font-weight: 600 !important;
+}
+
+/* ── 8. BUTTONS ─────────────────────────────────────────────── */
+.btn--primary,
+.btn.btn--primary,
+.btn-shimmer,
+.btn-action-primary {
+  background: #1E75E8 !important;
+  border-color: #1E75E8 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(30, 117, 232, 0.40) !important;
+}
+.btn--primary:hover,
+.btn-action-primary:hover {
+  background: #1462C9 !important;
+  border-color: #1462C9 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px rgba(30, 117, 232, 0.50) !important;
+}
+
+.btn--outline,
+.btn-action-secondary {
+  background: transparent !important;
+  border: 1.5px solid #93C5FD !important;
+  color: #1E75E8 !important;
+  font-weight: 600 !important;
+}
+.btn--outline:hover,
+.btn-action-secondary:hover {
+  background: #E1EFFF !important;
+  border-color: #1E75E8 !important;
+  color: #0B1E36 !important;
+}
+
+.btn--ghost {
+  color: #1E75E8 !important;
+}
+.btn--ghost:hover {
+  color: #1462C9 !important;
+}
+
+/* ── 9. BADGES ──────────────────────────────────────────────── */
+.badge,
+.badge--primary,
+.badge--gold,
+.badge--success {
+  background: #E1EFFF !important;
+  color: #0369A1 !important;
+  border: 1px solid #93C5FD !important;
+  font-weight: 600 !important;
+}
+
+/* ── 10. HEADINGS & GRADIENT TEXT ───────────────────────────── */
+.gradient-text,
+[style*="-webkit-text-fill-color: transparent"],
+[style*="-webkit-background-clip: text"] {
+  background: linear-gradient(135deg, #0B1E36 0%, #1E75E8 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* ── 11. DARK HERO BANNERS (Medical, Licences, About, Virexa) ── */
+.med-hero,
+.lic-hero,
+.virexa-hero,
+.about-hero,
+.clean-hero,
+[class*="page-hero"],
+[class*="hero--dark"] {
+  background: linear-gradient(145deg, #0B1E36 0%, #102B4C 100%) !important;
+  color: #FFFFFF !important;
+}
+
+.med-hero *,
+.lic-hero *,
+.virexa-hero *,
+.about-hero * {
+  border-color: rgba(147, 197, 253, 0.25) !important;
+}
+.about-hero h1,
+.med-hero h1,
+.lic-hero h1,
+.virexa-hero h1 {
+  color: #FFFFFF !important;
+}
+.about-hero__lead,
+.lic-hero__lead,
+.med-hero__lead {
+  color: #BAE6FD !important;
+}
+
+.about-eyebrow,
+.lic-eyebrow,
+.med-eyebrow {
+  background: rgba(30, 117, 232, 0.25) !important;
+  border-color: rgba(147, 197, 253, 0.45) !important;
+  color: #E0F2FE !important;
+  font-weight: 600 !important;
+}
+
+.candor-card,
+.about-candor-box,
+.clean-hero__candor-quote {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-left: 3.5px solid #1E75E8 !important;
+  border-color: rgba(147, 197, 253, 0.25) !important;
+}
+.candor-card__header { color: #BAE6FD !important; }
+.candor-card__text   { color: #F8FAFC !important; }
+
+/* Clean hero sidebar (About page) */
+.clean-hero__sidebar {
+  background: #FFFFFF !important;
+  border: 1.5px solid #BFDBFE !important;
+}
+.clean-hero__sidebar-title  { color: #1E75E8 !important; border-bottom-color: #E1EFFF !important; }
+.clean-hero__stat-label     { color: #2A5885 !important; }
+.clean-hero__stat-value     { color: #0B1E36 !important; font-weight: 700 !important; }
+.clean-hero__stat-row       { border-bottom-color: #EDF5FD !important; }
+
+/* ── 12. FOOTER (EXECUTIVE OBSIDIAN & LUXURY GOLD ACCENTS) ──── */
+.footer {
+  background: radial-gradient(circle at 50% 0%, #161B24 0%, #0A0D12 100%) !important;
+  color: #94A3B8 !important;
+  border-top: 1px solid rgba(212, 175, 55, 0.28) !important;
+  position: relative !important;
+  z-index: 10 !important;
+  padding: 76px 0 0 !important;
+  font-size: 0.9rem !important;
+  box-shadow: 0 -1px 25px rgba(212, 175, 55, 0.08), 0 -20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Luxury Crown Gold Line */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.2) 15%, #E5C158 50%, rgba(212, 175, 55, 0.2) 85%, transparent 100%);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+  pointer-events: none;
+}
+
+.footer__grid {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding-bottom: 48px !important;
+}
+
+/* Footer Brand & Logo */
+.footer .navbar__logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  gap: 12px !important;
+  margin-bottom: 16px !important;
+}
+
+.footer .navbar__logo-name {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 1.18rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+.footer .navbar__logo-corp {
+  color: #E5C158 !important;
+  font-weight: 500 !important;
+  font-size: 0.82rem !important;
+}
+
+.footer .navbar__logo-tagline {
+  color: #94A3B8 !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+.footer__brand-title {
+  color: #FFFFFF !important;
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+}
+
+.footer__brand-desc {
+  color: #94A3B8 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.65 !important;
+  max-width: 340px !important;
+  margin-top: 10px !important;
+}
+
+/* Certification Badges - Luxury Gold Glass */
+.footer__certbadges {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-top: 18px !important;
+}
+
+.footer__certbadge {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 5px 12px !important;
+  background: rgba(212, 175, 55, 0.07) !important;
+  border: 1px solid rgba(212, 175, 55, 0.32) !important;
+  border-radius: 6px !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  color: #F3E5AB !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 0 8px rgba(212, 175, 55, 0.06) !important;
+  transition: all 0.25s ease !important;
+}
+
+.footer__certbadge:hover {
+  background: rgba(212, 175, 55, 0.18) !important;
+  border-color: #E5C158 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.35) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Column Headings with Glowing Gold Accent Underlines */
+.footer__col-title {
+  color: #FFFFFF !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.footer__col-title::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, #E5C158 0%, #D4AF37 100%);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  border-radius: 2px;
+}
+
+/* Footer Navigation Links */
+.footer__links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.footer__link {
+  color: #94A3B8 !important;
+  text-decoration: none !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.footer__link:hover {
+  color: #F5D77F !important;
+  transform: translateX(4px) !important;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.35) !important;
+}
+
+/* Contact Details & Addresses */
+.footer__contact-row {
+  margin-bottom: 10px !important;
+}
+
+.footer__contact-link {
+  color: #CBD5E1 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 0.88rem !important;
+  transition: all 0.2s ease !important;
+  display: inline-block !important;
+}
+
+.footer__contact-link:hover {
+  color: #F5D77F !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.35) !important;
+}
+
+.footer__hours {
+  color: #94A3B8 !important;
+  font-size: 0.82rem !important;
+  line-height: 1.55 !important;
+  margin-top: 14px !important;
+}
+
+/* SLA Badge with Golden Glow Indicator */
+.footer__sla {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(212, 175, 55, 0.08) !important;
+  border: 1px solid rgba(212, 175, 55, 0.32) !important;
+  color: #F5D77F !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  padding: 5px 12px !important;
+  border-radius: 9999px !important;
+  margin-top: 12px !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+.footer__sla::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #E5C158;
+  box-shadow: 0 0 8px #E5C158;
+  flex-shrink: 0;
+}
+
+.footer__facility-address {
+  color: #CBD5E1 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 12px !important;
+}
+
+.footer__facility-scope {
+  color: #94A3B8 !important;
+  font-size: 0.8rem !important;
+  line-height: 1.5 !important;
+  padding-top: 10px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.footer__contact-item {
+  display: flex !important;
+  gap: 12px !important;
+  align-items: flex-start !important;
+  margin-bottom: 14px !important;
+  font-size: 0.875rem !important;
+  color: #CBD5E1 !important;
+  line-height: 1.5 !important;
+}
+
+/* Contact Icons with Gold Glow Box */
+.footer__contact-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  background: rgba(212, 175, 55, 0.08) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+  color: #E5C158 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), inset 0 0 6px rgba(212, 175, 55, 0.06) !important;
+  transition: all 0.2s ease !important;
+}
+
+.footer__contact-icon svg {
+  stroke: #E5C158 !important;
+}
+
+.footer__contact-item:hover .footer__contact-icon {
+  background: rgba(212, 175, 55, 0.16) !important;
+  border-color: #E5C158 !important;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Footer Bottom Bar, Legal & Social */
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 28px 0 36px !important;
+  margin-top: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+}
+
+.footer__copy {
+  color: #64748B !important;
+  font-size: 0.84rem !important;
+  margin: 0 !important;
+}
+
+.footer__legal-line {
+  color: #64748B !important;
+  font-size: 0.8rem !important;
+  line-height: 1.8 !important;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.footer__legal-line a,
+.footer__legal-link {
+  color: #94A3B8 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.footer__legal-line a:hover,
+.footer__legal-link:hover {
+  color: #F5D77F !important;
+}
+
+.footer__legal-links {
+  display: flex !important;
+  gap: 20px !important;
+}
+
+.footer__social {
+  display: flex !important;
+  gap: 10px !important;
+}
+
+.footer__social-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #94A3B8 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.footer__social-link:hover {
+  background: rgba(212, 175, 55, 0.12) !important;
+  border-color: rgba(212, 175, 55, 0.5) !important;
+  color: #F5D77F !important;
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.3) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ── 13. INNER PAGE CARDS & COMPONENTS ──────────────────────── */
+.timeline__dot       { background: #1E75E8 !important; border-color: #93C5FD !important; }
+.timeline__year      { color: #1E75E8 !important; font-weight: 700 !important; }
+.timeline__title     { color: #0B1E36 !important; }
+.timeline::before    { background: #BFDBFE !important; }
+
+.download-dossier-card,
+.brochure-card {
+  background: #0B1E36 !important;
+  color: #E1EFFF !important;
+  border: 1.5px solid #1E75E8 !important;
+}
+.download-dossier-card__title,
+.brochure-card__title { color: #FFFFFF !important; }
+.download-spec-pill,
+.brochure-meta-pill {
+  background: rgba(30, 117, 232, 0.25) !important;
+  border-color: rgba(147, 197, 253, 0.45) !important;
+  color: #E1EFFF !important;
+}
+.download-cta-btn,
+.btn-brochure {
+  background: #1E75E8 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(30, 117, 232, 0.45) !important;
+}
+.download-cta-btn:hover,
+.btn-brochure:hover {
+  background: #1462C9 !important;
+}
+
+.roadmap-disclaimer-banner {
+  background: #E1EFFF !important;
+  border-left-color: #1E75E8 !important;
+  color: #0B1E36 !important;
+}
+.roadmap-card__tag {
+  background: #E1EFFF !important;
+  color: #0369A1 !important;
+  font-weight: 600 !important;
+}
+.roadmap-card__status-dot {
+  background: #1E75E8 !important;
+  box-shadow: 0 0 8px #38BDF8 !important;
+}
+
+.audit-action-card,
+.audit-invitation-banner {
+  background: #0B1E36 !important;
+  color: #BAE6FD !important;
+  border: 1.5px solid #1E75E8 !important;
+}
+.audit-action-card__title,
+.audit-invitation-banner__title {
+  color: #FFFFFF !important;
+}
+.btn-audit-primary,
+.audit-btn-primary {
+  background: #1E75E8 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(30, 117, 232, 0.45) !important;
+}
+.btn-audit-secondary,
+.audit-btn-outline {
+  border-color: #93C5FD !important;
+  color: #FFFFFF !important;
+}
+
+.lic-section-card {
+  background: #FFFFFF !important;
+  border: 1.5px solid #BFDBFE !important;
+}
+.lic-accent  { color: #1E75E8 !important; }
+.lic-verify  { background: #E1EFFF !important; border-color: #93C5FD !important; }
+.lic-table th{ background: #EDF5FD !important; color: #0B1E36 !important; }
+
+.product-clean-card {
+  background: #FFFFFF !important;
+  border: 1.5px solid #BFDBFE !important;
+}
+.clean-spec-item    { border-bottom-color: #EDF5FD !important; }
+.clean-spec-label   { color: #2A5885 !important; }
+.clean-spec-value   { color: #0B1E36 !important; }
+.oem-card           { background: #EDF5FD !important; border-color: #93C5FD !important; }
+.related-card       { background: #FFFFFF !important; border-color: #BFDBFE !important; }
+
+/* ── 14. PAGE HERO — MODERN CLINICAL EXECUTIVE THEME ─────────── */
+.page-hero {
+  position: relative !important;
+  background:
+    radial-gradient(1000px circle at 85% 15%, rgba(30, 117, 232, 0.08) 0%, transparent 60%),
+    radial-gradient(800px circle at 15% 85%, rgba(56, 189, 248, 0.06) 0%, transparent 55%),
+    radial-gradient(600px circle at 50% 0%, rgba(255, 255, 255, 0.95) 0%, transparent 70%),
+    linear-gradient(180deg, #FFFFFF 0%, #F6FAFE 35%, #EDF4FD 75%, #F8FAFC 100%) !important;
+  border-bottom: 1px solid rgba(147, 197, 253, 0.45) !important;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.8), 0 4px 20px rgba(11, 30, 54, 0.03) !important;
+  overflow: hidden !important;
+  padding: calc(var(--nav-h) + var(--sp-16)) 0 var(--sp-20) !important;
+}
+
+.page-hero::before {
+  display: none !important;
+}
+
+/* Subtle cleanroom calibration reticle on right */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(30, 117, 232, 0.05) 0%, transparent 65%),
+    radial-gradient(circle, transparent 34%, rgba(147, 197, 253, 0.28) 35%, rgba(147, 197, 253, 0.28) 35.5%, transparent 36%),
+    radial-gradient(circle, transparent 54%, rgba(147, 197, 253, 0.20) 55%, rgba(147, 197, 253, 0.20) 55.5%, transparent 56%),
+    radial-gradient(circle, transparent 74%, rgba(147, 197, 253, 0.14) 75%, rgba(147, 197, 253, 0.14) 75.5%, transparent 76%);
+  border: 1px dashed rgba(147, 197, 253, 0.35);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .page-hero::after {
+    display: none !important;
+  }
+}
+
+/* Disable old muddy floating orbs */
+.page-hero .orb {
+  display: none !important;
+}
+
+/* Refined technical micro-grid */
+.page-hero .bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(30, 117, 232, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(147, 197, 253, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 197, 253, 0.15) 1px, transparent 1px) !important;
+  background-size: 24px 24px, 72px 72px, 72px 72px !important;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 45%, #000 20%, transparent 80%) !important;
+  mask-image: radial-gradient(ellipse 70% 65% at 50% 45%, #000 20%, transparent 80%) !important;
+  opacity: 0.85 !important;
+  z-index: 1;
+}
+
+.page-hero .bg-grid::after {
+  display: none !important;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Breadcrumb pill */
+.page-hero__breadcrumb {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 5px 14px !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(147, 197, 253, 0.5) !important;
+  border-radius: 9999px !important;
+  font-size: 0.82rem !important;
+  color: #2A5885 !important;
+  margin-bottom: var(--sp-5) !important;
+  box-shadow: 0 1px 4px rgba(11, 30, 54, 0.04) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.page-hero__breadcrumb a {
+  color: #2A5885 !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.page-hero__breadcrumb a:hover {
+  color: #1E75E8 !important;
+}
+
+.page-hero__breadcrumb span {
+  color: #93C5FD !important;
+}
+
+/* Medical Certification Badge (Pill) */
+.page-hero .section-label,
+.page-hero .section-label--gold {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 16px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1.5px solid #93C5FD !important;
+  border-radius: 9999px !important;
+  color: #0369A1 !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 2px 10px rgba(30, 117, 232, 0.08) !important;
+  margin-bottom: var(--sp-5) !important;
+}
+
+.page-hero .section-label::before,
+.page-hero .section-label--gold::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #0284C7 !important;
+  box-shadow: 0 0 8px #38BDF8 !important;
+  flex-shrink: 0 !important;
+}
+
+/* Hero Typography */
+.page-hero h1 {
+  color: #0A2540 !important;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: var(--sp-4) !important;
+}
+
+.page-hero .gradient-text--gold {
+  background: linear-gradient(135deg, #1E75E8 0%, #0284C7 60%, #0A4E9B 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.page-hero p {
+  color: #2A5885 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+  max-width: 620px !important;
+}
+
+/* ── 15. WHATSAPP FLOAT (Original Authentic WhatsApp Green) ── */
+.whatsapp-float {
+  background: #25D366 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45) !important;
+}
+.whatsapp-float:hover {
+  background: #20BA5A !important;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.65) !important;
+  color: #FFFFFF !important;
+}
+
+/* ── CHAT SYSTEM TOGGLE (Original Vidhata Brand Navy & Blue) ── */
+.vp-chat-toggle {
+  background: linear-gradient(135deg, #0A4E9B 0%, #2C3288 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(44, 50, 136, 0.45), 0 2px 8px rgba(0, 0, 0, 0.14) !important;
+}
+.vp-chat-toggle:hover {
+  background: linear-gradient(135deg, #1E60D5 0%, #1E2260 100%) !important;
+  box-shadow: 0 6px 28px rgba(44, 50, 136, 0.65), 0 4px 12px rgba(0, 0, 0, 0.20) !important;
+}
+.vp-chat-toggle::before {
+  border-color: rgba(30, 117, 232, 0.45) !important;
+}
+.vp-chat-toggle__icon svg {
+  color: #FFFFFF !important;
+}
+.vp-chat-header {
+  background: linear-gradient(135deg, #0A4E9B 0%, #2C3288 100%) !important;
+}
+.vp-chat-send {
+  background: linear-gradient(135deg, #0A4E9B 0%, #2C3288 100%) !important;
+}
+
+#back-to-top {
+  background: #FFFFFF !important;
+  border: 1.5px solid #93C5FD !important;
+  color: #1E75E8 !important;
+}
+#back-to-top:hover {
+  background: #1E75E8 !important;
+  color: #FFFFFF !important;
+}
+
+/* ── 14. SCROLLBAR & PROGRESS ───────────────────────────────── */
+#reading-progress {
+  background: #1E75E8 !important;
+}
+
+::-webkit-scrollbar            { width: 8px; }
+::-webkit-scrollbar-track      { background: #F8FAFC; }
+::-webkit-scrollbar-thumb      { background: #93C5FD; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover{ background: #1E75E8; }

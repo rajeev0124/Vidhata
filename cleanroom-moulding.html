@@ -11,10 +11,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=nuvica">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/infra-gallery.css">
   <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=nuvica-bright">
 </head>
 <div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:var(--grad-primary);z-index:1001;width:0%"></div>
 <nav id="navbar" class="navbar">
@@ -296,82 +297,70 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
+      <!-- Col 1: Vidhata Medical -->
       <div>
-        <a href="index.html" class="navbar__logo" style="margin-bottom:var(--sp-4);display:inline-flex">
+        <a href="index.html" class="navbar__logo" style="margin-bottom:12px;display:inline-flex">
           <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
           <div class="navbar__logo-text">
-            <span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span>
+            <span class="navbar__logo-name">Vidhata Medical</span>
             <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
           </div>
         </a>
-        <p class="footer__brand-desc">Fully integrated plastics manufacturer delivering world-class solutions for medical, pharmaceutical, electronics, and industrial sectors since 2003.</p>
+        <p class="footer__brand-desc">
+          The medical device and pharma packaging business of Vidhata Plastics India Private Limited. Contract manufacturing, Hyderabad.
+        </p>
         <div class="footer__certbadges">
+          <span class="footer__certbadge">CDSCO MD-5</span>
+          <span class="footer__certbadge">ISO 13485:2016</span>
           <span class="footer__certbadge">ISO 9001:2015</span>
-          <span class="footer__certbadge">ISO 13485</span>
-          <span class="footer__certbadge">CE</span>
-          <span class="footer__certbadge">QMSR</span>
         </div>
       </div>
-      <div>
-        <div class="footer__col-title">Company</div>
-        <div class="footer__links">
-          <a href="about.html"          class="footer__link">About Us</a>
-          <a href="about.html#leadership"class="footer__link">Leadership</a>
-          <a href="careers.html"        class="footer__link">Careers</a>
-          <a href="blog.html"           class="footer__link">Blog &amp; Insights</a>
-          <a href="case-studies.html"   class="footer__link">Case Studies</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer__col-title">Services</div>
-        <div class="footer__links">
-          <a href="index.html#services"       class="footer__link">Product Design</a>
-          <a href="index.html#services"      class="footer__link">Tool &amp; Mould Mfg.</a>
-          <a href="index.html#services"class="footer__link">Manufacturing</a>
-          <a href="medical.html"               class="footer__link">Medical &amp; Pharma</a>
-          <a href="quality.html"               class="footer__link">Quality &amp; Certs</a>
-        </div>
-      </div>
+
+      <!-- Col 2: Contact -->
       <div>
         <div class="footer__col-title">Contact</div>
-        <div class="footer__contact-item">
-          <span class="footer__contact-icon">&#128205;</span>
-          <span>Unit 2 &mdash; E-City, Maheshwaram, Rangareddy, Telangana 501359</span>
+        <div class="footer__contact-row">
+          <a href="mailto:info@vidhata.co.in" class="footer__contact-link">info@vidhata.co.in</a>
         </div>
-        <div class="footer__contact-item">
-          <span class="footer__contact-icon">&#128222;</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <a href="tel:+918008801778" style="color:var(--clr-text-muted);transition:color 0.2s">+91 80088 01778 (Arvind Kandi)</a>
-            <a href="tel:+919885100808" style="color:var(--clr-text-muted);transition:color 0.2s">+91 98851 00808 (Vikrant K.)</a>
-          </div>
+        <div class="footer__contact-row">
+          <a href="tel:+919885100808" class="footer__contact-link">+91 98851 00808</a>
         </div>
-        <div class="footer__contact-item">
-          <span class="footer__contact-icon">&#9993;</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <a href="mailto:arvind.kandi7@gmail.com" style="color:var(--clr-text-muted);transition:color 0.2s">arvind.kandi7@gmail.com</a>
-            <a href="mailto:vikrant@vidhata.co.in" style="color:var(--clr-text-muted);transition:color 0.2s">vikrant@vidhata.co.in</a>
-          </div>
+        <div class="footer__hours">
+          Monday to Saturday, 09:00&ndash;18:00 IST (UTC+5:30)
+        </div>
+        <div class="footer__sla">
+          We reply within one working day.
+        </div>
+      </div>
+
+      <!-- Col 3: Unit 2 — Maheshwaram -->
+      <div>
+        <div class="footer__col-title">Unit 2 &mdash; Maheshwaram</div>
+        <p class="footer__facility-address">
+          S-1 P/C, Survey No. 114, E-City, Maheshwaram, Rangareddy, Telangana 501359
+        </p>
+        <div class="footer__facility-scope">
+          Toolroom, moulding, cleanroom, QC and stability lab
+        </div>
+      </div>
+
+      <!-- Col 4: Unit 1 — Cherlapally -->
+      <div>
+        <div class="footer__col-title">Unit 1 &mdash; Cherlapally</div>
+        <p class="footer__facility-address">
+          Plot No. 205/2, Phase II, IDA Cherlapally, Hyderabad 500051
+        </p>
+        <div class="footer__facility-scope">
+          Registered office
         </div>
       </div>
     </div>
 
+    <!-- Legal Compliance Strip -->
     <div class="footer__bottom">
-      <p class="footer__copy">&copy; 2026 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p>
-      <div class="footer__social">
-        <a href="#" class="footer__social-link" aria-label="LinkedIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="#" class="footer__social-link" aria-label="Twitter">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-        </a>
-        <a href="https://wa.me/918008801778" class="footer__social-link" aria-label="WhatsApp" style="color:#25D366;border-color:rgba(37,211,102,0.3)">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        </a>
-      </div>
-      <div class="footer__legal-links">
-        <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
-        <a href="privacy.html#terms" class="footer__legal-link">Terms of Use</a>
-      </div>
+      <p class="footer__legal-line">
+        VIDHATA PLASTICS INDIA PRIVATE LIMITED &middot; CIN U25209TG1990PTC012152 &middot; GST 36AAACV8175G1Z2 &middot; Manufacturing licence MFG/MD/2026/000078 &middot; <a href="privacy.html">Privacy</a> &middot; &copy; 2026
+      </p>
     </div>
   </div>
 </footer>

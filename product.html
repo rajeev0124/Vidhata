@@ -3,697 +3,799 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Detailed medical product specifications, variants, documentation, and inquiry support. ISO 13485 compliant.">
-  <title>Product Details &mdash; Vidhata Plastics India</title>
+  <meta name="description" content="Technical specifications, clinical indications, material formulation, and OEM contract manufacturing for medical devices by Vidhata Plastics India. ISO 13485 compliant.">
+  <title>Medical Product Specifications &mdash; Vidhata Plastics India</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=nuvica">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/chatbot.css">
   <style>
-    /* == Premium Medical Details Styling == */
+    /* == Clean Clinical Product Page Styling == */
     :root {
-      --clr-med-primary: #0A4E9B;     /* Deep Medical Blue */
-      --clr-med-secondary: #0099CC;   /* Cyan Blue */
-      --clr-med-accent: #E6F2FF;      /* Light Blue Accent */
-      --clr-med-bg: #FFFFFF;
-      --clr-med-text-dark: #1E293B;
-      --clr-med-text-muted: #64748B;
-      --clr-med-border: #E2E8F0;
-      --shadow-med: 0 10px 25px -5px rgba(10, 78, 155, 0.05), 0 8px 10px -6px rgba(10, 78, 155, 0.05);
+      --med-navy: #0A2540;
+      --med-blue: #0A4E9B;
+      --med-cyan: #0099CC;
+      --med-accent-bg: #F0F6FD;
+      --med-accent-light: #EBF3FC;
+      --med-surface: #FFFFFF;
+      --med-text-main: #0F172A;
+      --med-text-muted: #475569;
+      --med-text-light: #64748B;
+      --med-border: #E2E8F0;
+      --med-border-light: #F1F5F9;
+      --med-success: #16A34A;
+      --med-shadow-sm: 0 2px 8px -2px rgba(10, 37, 64, 0.05);
+      --med-shadow-md: 0 12px 28px -6px rgba(10, 37, 64, 0.08), 0 4px 10px -4px rgba(10, 37, 64, 0.04);
+      --med-shadow-lg: 0 20px 40px -12px rgba(10, 37, 64, 0.12);
     }
 
     body {
-      background-color: #FAFCFF;
-      color: var(--clr-med-text-dark);
+      background-color: #F8FAFC;
+      color: var(--med-text-main);
+      font-family: var(--font-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+      -webkit-font-smoothing: antialiased;
     }
 
+    /* Top Regulatory Ribbon */
+    .regulatory-ribbon {
+      background: #0A2540;
+      color: #94A3B8;
+      font-size: 0.76rem;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      letter-spacing: 0.3px;
+    }
+    .regulatory-ribbon__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .regulatory-ribbon__items {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .regulatory-ribbon__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #CBD5E1;
+    }
+    .regulatory-ribbon__item strong {
+      color: #38BDF8;
+      font-weight: 600;
+    }
+
+    /* Breadcrumb Bar */
     .med-breadcrumbs {
-      background: var(--clr-med-bg);
-      border-bottom: 1px solid var(--clr-med-border);
-      padding-top: calc(var(--nav-h) + var(--sp-4));
-      padding-bottom: var(--sp-4);
+      background: var(--med-surface);
+      border-bottom: 1px solid var(--med-border);
+      padding: var(--sp-4) 0;
       font-size: var(--fs-xs);
-      color: var(--clr-med-text-muted);
+      color: var(--med-text-light);
+    }
+    .med-breadcrumbs__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .med-breadcrumbs__links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
     }
     .med-breadcrumbs a {
-      color: var(--clr-med-primary);
-      font-weight: var(--fw-bold);
+      color: var(--med-blue);
+      text-decoration: none;
+      font-weight: 600;
       transition: color 0.2s ease;
     }
     .med-breadcrumbs a:hover {
-      color: var(--clr-med-secondary);
+      color: var(--med-cyan);
     }
-    .med-breadcrumbs span {
-      margin: 0 var(--sp-2);
+    .med-breadcrumbs span.sep {
+      color: #CBD5E1;
+      margin: 0 2px;
+    }
+    .med-back-catalog-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--med-accent-bg);
+      color: var(--med-blue);
+      border: 1px solid rgba(10, 78, 155, 0.15);
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .med-back-catalog-btn:hover {
+      background: var(--med-blue);
+      color: #FFF;
+      border-color: var(--med-blue);
+      transform: translateX(-2px);
     }
 
-    .product-section {
-      background: var(--clr-med-bg);
-      border-radius: var(--radius-2xl);
-      border: 1px solid var(--clr-med-border);
-      box-shadow: var(--shadow-med);
-      padding: var(--sp-8);
+    /* Main Clean Showcase Card */
+    .product-clean-card {
+      background: var(--med-surface);
+      border-radius: 20px;
+      border: 1px solid var(--med-border);
+      box-shadow: var(--med-shadow-md);
+      padding: 36px 40px;
       margin-top: var(--sp-6);
+      margin-bottom: var(--sp-8);
     }
-
-    .product-detail-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: var(--sp-8);
-    }
-
-    @media (max-width: 992px) {
-      .product-detail-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 768px) {
+      .product-clean-card {
+        padding: 24px 20px;
       }
     }
 
-    /* Magnifier Image Zoom Frame */
-    .image-zoom-frame {
-      position: relative;
+    .product-header-section {
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--med-border-light);
+      padding-bottom: 22px;
+    }
+
+    .product-category-eyebrow {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--med-blue);
+      margin-bottom: 10px;
+      letter-spacing: 0.3px;
+    }
+
+    .product-title-heading {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--med-navy);
+      line-height: 1.25;
+      margin: 0 0 12px 0;
+    }
+    @media (max-width: 768px) {
+      .product-title-heading {
+        font-size: 1.65rem;
+      }
+    }
+
+    .product-lead-description {
+      font-size: 1.02rem;
+      line-height: 1.65;
+      color: var(--med-text-muted);
+      margin: 0;
+      max-width: 980px;
+    }
+
+    /* Clean 2-Column Grid */
+    .product-clean-grid {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 36px;
+      align-items: start;
+    }
+    @media (max-width: 992px) {
+      .product-clean-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    /* Left Visual Pane */
+    .product-visual-pane {
+      position: sticky;
+      top: calc(var(--nav-h) + 20px);
+    }
+    .product-main-viewport {
       width: 100%;
-      height: 380px;
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--clr-med-border);
-      background: #FAFBFE;
+      height: 420px;
+      border-radius: 16px;
+      background: #FFFFFF;
+      border: 1px solid var(--med-border);
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: zoom-in;
+      box-shadow: inset 0 0 30px rgba(10, 78, 155, 0.02);
     }
-    .image-zoom-frame img {
-      max-width: 100%;
-      max-height: 100%;
+    @media (max-width: 768px) {
+      .product-main-viewport {
+        height: 300px;
+      }
+    }
+    .product-main-viewport img {
+      max-width: 90%;
+      max-height: 90%;
       object-fit: contain;
-      transition: transform 0.1s ease-out;
-      transform-origin: center center;
+      mix-blend-mode: multiply;
+      transition: transform 0.2s ease-out;
     }
 
-    .med-thumbnail-gallery {
+    /* Right Specs Pane */
+    .product-specs-pane {
       display: flex;
-      flex-wrap: wrap;
-      gap: var(--sp-3);
-      margin-top: var(--sp-4);
-      justify-content: center;
+      flex-direction: column;
     }
-    .med-thumb-btn {
-      width: 64px;
-      height: 64px;
-      border-radius: var(--radius-md);
-      border: 2px solid var(--clr-med-border);
-      background: var(--clr-med-bg);
-      padding: var(--sp-1);
-      cursor: pointer;
-      transition: all 0.2s ease;
+
+    .product-specs-list {
       display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .med-thumb-btn:hover, .med-thumb-btn.active {
-      border-color: var(--clr-med-secondary);
-      transform: translateY(-2px);
-    }
-    .med-thumb-btn img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .badge-status {
-      display: inline-block;
-      padding: var(--sp-1) var(--sp-3);
-      border-radius: var(--radius-full);
-      font-size: var(--fs-xs);
-      font-weight: var(--fw-bold);
-      background: #E8F5E9;
-      color: #2E7D32;
-      margin-bottom: var(--sp-4);
+    .clean-spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #F1F5F9;
+    }
+    .clean-spec-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
-    .product-meta-header {
-      font-size: var(--sp-4);
-      color: var(--clr-med-secondary);
-      font-weight: var(--fw-bold);
+    .clean-spec-label {
+      font-size: 0.78rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .product-name-title {
-      font-size: var(--fs-2xl);
-      color: var(--clr-med-primary);
-      margin: var(--sp-2) 0;
-      font-weight: var(--fw-extrabold);
-    }
-    .product-code-label {
-      font-size: var(--fs-sm);
-      color: var(--clr-med-text-muted);
-      margin-bottom: var(--sp-4);
-    }
-    .product-code-val {
-      font-weight: var(--fw-bold);
-      color: var(--clr-med-text-dark);
+      letter-spacing: 0.6px;
+      color: #64748B;
     }
 
-    .med-tabs {
+    .clean-spec-value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--med-navy);
+      line-height: 1.55;
+    }
+
+    /* Made Under Your Brand Card */
+    .product-oem-card {
+      background: #F8FAFC;
+      border: 1px solid var(--med-border);
+      border-left: 4px solid var(--med-blue);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 22px 0 24px 0;
+    }
+    .product-oem-title {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--med-navy);
+      margin: 0 0 6px 0;
+    }
+    .product-oem-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: var(--med-text-muted);
+      margin: 0;
+    }
+
+    /* Action Buttons Row */
+    .product-actions-row {
       display: flex;
-      border-bottom: 2px solid var(--clr-med-border);
-      margin: var(--sp-6) 0 var(--sp-4);
-      gap: var(--sp-6);
+      gap: 14px;
+      flex-wrap: wrap;
     }
-    .med-tab-btn {
-      background: none;
+    .btn-action-primary {
+      flex: 1.3;
+      min-width: 200px;
+      background: linear-gradient(135deg, #0A4E9B 0%, #0088CC 100%);
+      color: #FFF;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 14px 24px;
+      border-radius: 10px;
       border: none;
-      font-size: var(--fs-sm);
-      font-weight: var(--fw-bold);
-      color: var(--clr-med-text-muted);
-      padding: var(--sp-2) 0 var(--sp-3);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(10, 78, 155, 0.25);
+      transition: all 0.2s ease;
       cursor: pointer;
-      position: relative;
-      transition: color 0.2s ease;
     }
-    .med-tab-btn:hover {
-      color: var(--clr-med-primary);
+    .btn-action-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(10, 78, 155, 0.35);
+      color: #FFF;
     }
-    .med-tab-btn.active {
-      color: var(--clr-med-primary);
+    .btn-action-secondary {
+      flex: 1;
+      min-width: 150px;
+      background: var(--med-surface);
+      color: var(--med-navy);
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 14px 20px;
+      border-radius: 10px;
+      border: 1.5px solid var(--med-border);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      cursor: pointer;
     }
-    .med-tab-btn.active::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--clr-med-primary);
+    .btn-action-secondary:hover {
+      border-color: var(--med-blue);
+      color: var(--med-blue);
+      background: var(--med-accent-bg);
     }
 
-    .med-tab-pane {
-      display: none;
-      animation: fadeIn 0.3s ease;
-      line-height: var(--lh-relaxed);
-      font-size: var(--fs-sm);
-      color: var(--clr-med-text-muted);
-    }
-    .med-tab-pane.active {
-      display: block;
-    }
-
-    /* Features Grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: var(--sp-4);
-      margin-top: var(--sp-6);
-    }
-    .feature-card {
-      background: var(--clr-med-bg);
-      border: 1px solid var(--clr-med-border);
-      border-radius: var(--radius-xl);
-      padding: var(--sp-5);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-      transition: all 0.25s ease;
-    }
-    .feature-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 15px -3px rgba(10, 78, 155, 0.08);
-      border-color: var(--clr-med-secondary);
-    }
-    .feature-header {
+    /* Section Titles */
+    .pro-section-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--med-navy);
+      margin: var(--sp-12) 0 var(--sp-6);
       display: flex;
       align-items: center;
-      gap: var(--sp-3);
-      font-weight: var(--fw-bold);
-      color: var(--clr-med-primary);
-      margin-bottom: var(--sp-2);
+      gap: 12px;
     }
-    .feature-icon {
-      color: var(--clr-med-secondary);
-      font-size: 1.2rem;
-    }
-
-    /* Specs Matrix */
-    .specs-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: var(--sp-4);
-      font-size: var(--fs-sm);
-    }
-    .specs-table tr {
-      border-bottom: 1px solid var(--clr-med-border);
-    }
-    .specs-table td {
-      padding: var(--sp-3) var(--sp-4);
-    }
-    .specs-label {
-      font-weight: var(--fw-bold);
-      color: var(--clr-med-text-dark);
-      background: #FAFBFE;
-      width: 35%;
-    }
-    .specs-value {
-      color: var(--clr-med-text-muted);
+    .pro-section-title::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 22px;
+      background: var(--med-blue);
+      border-radius: 4px;
     }
 
-    /* Variants Grid */
-    .variants-grid {
+    /* Related Products Grid */
+    .related-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: var(--sp-4);
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: var(--sp-5);
       margin-top: var(--sp-4);
     }
-    .variant-card {
-      background: var(--clr-med-bg);
-      border: 1px solid var(--clr-med-border);
-      border-radius: var(--radius-xl);
-      padding: var(--sp-5);
-      transition: all 0.2s ease;
-    }
-    .variant-card:hover {
-      border-color: var(--clr-med-primary);
-      box-shadow: var(--shadow-med);
-    }
-    .variant-title {
-      font-weight: var(--fw-extrabold);
-      color: var(--clr-med-primary);
-      font-size: var(--fs-sm);
-      margin-bottom: var(--sp-3);
-    }
-    .variant-detail {
-      font-size: var(--fs-xs);
-      color: var(--clr-med-text-muted);
-      margin-bottom: var(--sp-1);
-    }
-    .variant-detail strong {
-      color: var(--clr-med-text-dark);
-    }
-    .variant-btn {
-      width: 100%;
-      text-align: center;
-      background: var(--clr-med-accent);
-      color: var(--clr-med-primary);
-      font-size: var(--fs-xs);
-      font-weight: var(--fw-bold);
-      padding: var(--sp-2);
-      border-radius: var(--radius-md);
-      margin-top: var(--sp-4);
-      display: block;
-      transition: all 0.2s ease;
-    }
-    .variant-btn:hover {
-      background: var(--clr-med-primary);
-      color: var(--clr-med-bg);
-    }
-
-    /* Documents List */
-    .docs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: var(--sp-4);
-      margin-top: var(--sp-4);
-    }
-    .doc-card {
-      background: var(--clr-med-bg);
-      border: 1px solid var(--clr-med-border);
-      border-radius: var(--radius-xl);
-      padding: var(--sp-4);
+    .related-card {
+      background: var(--med-surface);
+      border: 1px solid var(--med-border);
+      border-radius: 14px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.2s ease;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
     }
-    .doc-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-med);
+    .related-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--med-shadow-md);
+      border-color: rgba(10, 78, 155, 0.3);
     }
-    .doc-name {
-      font-weight: var(--fw-bold);
-      font-size: var(--fs-sm);
-      color: var(--clr-med-text-dark);
-      margin-bottom: var(--sp-4);
+    .related-card__img-wrap {
+      height: 150px;
       display: flex;
       align-items: center;
-      gap: var(--sp-2);
+      justify-content: center;
+      margin-bottom: 14px;
+      background: #FAFCFE;
+      border-radius: 10px;
     }
-    .doc-icon {
-      color: #E53935;
-      font-size: 1.1rem;
+    .related-card__img-wrap img {
+      max-height: 85%;
+      max-width: 85%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
     }
-    .doc-btn {
-      background: #FAFAFA;
-      border: 1px solid var(--clr-med-border);
-      font-size: var(--fs-xs);
-      font-weight: var(--fw-bold);
-      padding: var(--sp-2);
-      border-radius: var(--radius-md);
-      text-align: center;
-      color: var(--clr-med-text-muted);
-      cursor: pointer;
-      transition: all 0.2s ease;
+    .related-card__title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--med-navy);
+      margin-bottom: 6px;
     }
-    .doc-btn:hover {
-      background: var(--clr-med-primary);
-      color: #FFF;
-      border-color: var(--clr-med-primary);
+    .related-card__desc {
+      font-size: 0.78rem;
+      color: var(--med-text-muted);
+      line-height: 1.45;
+      margin-bottom: 14px;
     }
-
-    /* Apps and Benefits */
-    .apps-flex {
+    .related-card__btn {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--med-blue);
       display: flex;
-      flex-wrap: wrap;
-      gap: var(--sp-2);
-      margin-top: var(--sp-4);
-    }
-    .app-chip {
-      background: var(--clr-med-accent);
-      color: var(--clr-med-primary);
-      padding: var(--sp-2) var(--sp-4);
-      border-radius: var(--radius-full);
-      font-size: var(--fs-xs);
-      font-weight: var(--fw-bold);
+      align-items: center;
+      gap: 4px;
+      margin-top: auto;
     }
 
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: var(--sp-4);
-      margin-top: var(--sp-4);
+    /* Inquiry RFQ Section */
+    .inquiry-card {
+      background: var(--med-surface);
+      border: 1px solid var(--med-border);
+      border-radius: 20px;
+      box-shadow: var(--med-shadow-md);
+      padding: var(--sp-8);
+      margin-top: var(--sp-10);
     }
-    .benefit-card {
-      background: #FAFCFF;
-      border: 1px solid var(--clr-med-border);
-      border-radius: var(--radius-xl);
-      padding: var(--sp-4);
-      text-align: center;
-      transition: all 0.2s ease;
-    }
-    .benefit-card:hover {
-      border-color: var(--clr-med-secondary);
-      background: #FFF;
-      box-shadow: var(--shadow-med);
-    }
-    .benefit-icon {
-      font-size: 1.5rem;
-      color: var(--clr-med-secondary);
-      margin-bottom: var(--sp-2);
-    }
-    .benefit-title {
-      font-weight: var(--fw-bold);
-      font-size: var(--fs-xs);
-      color: var(--clr-med-text-dark);
-    }
-
-    /* Inquiry Form */
     .inquiry-grid {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
-      gap: var(--sp-8);
-      margin-top: var(--sp-4);
+      gap: var(--sp-10);
+      align-items: start;
     }
-
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .inquiry-grid {
         grid-template-columns: 1fr;
+        gap: var(--sp-6);
       }
     }
-
-    .inquiry-text-block {
-      line-height: var(--lh-relaxed);
-    }
-    .inquiry-contact-flex {
-      display: flex;
-      align-items: center;
-      gap: var(--sp-3);
-      margin-top: var(--sp-4);
-      font-size: var(--fs-sm);
-    }
-    .inquiry-contact-icon {
-      color: var(--clr-med-secondary);
-    }
-
-    .inquiry-form-card {
-      background: var(--clr-med-bg);
-      border: 1px solid var(--clr-med-border);
-      border-radius: var(--radius-2xl);
-      padding: var(--sp-6);
-      box-shadow: var(--shadow-med);
-    }
     .inquiry-input-group {
-      margin-bottom: var(--sp-4);
+      margin-bottom: 14px;
     }
     .inquiry-label {
-      font-size: var(--fs-xs);
-      font-weight: var(--fw-bold);
-      color: var(--clr-med-text-dark);
-      margin-bottom: var(--sp-1);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--med-navy);
+      margin-bottom: 4px;
       display: block;
     }
     .inquiry-input {
       width: 100%;
-      border: 1px solid var(--clr-med-border);
-      border-radius: var(--radius-md);
-      padding: var(--sp-3);
-      font-size: var(--fs-sm);
+      border: 1.5px solid var(--med-border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
       background: #FAFAFA;
+      color: var(--med-text-main);
       transition: all 0.2s ease;
     }
     .inquiry-input:focus {
-      border-color: var(--clr-med-primary);
+      border-color: var(--med-blue);
       background: #FFF;
       outline: none;
-    }
-    .inquiry-btn {
-      background: linear-gradient(135deg, var(--clr-med-primary), var(--clr-med-secondary));
-      color: #FFF;
-      border: none;
-      font-weight: var(--fw-bold);
-      padding: var(--sp-3) var(--sp-6);
-      border-radius: var(--radius-md);
-      width: 100%;
-      cursor: pointer;
-      transition: opacity 0.2s ease;
-    }
-    .inquiry-btn:hover {
-      opacity: 0.95;
-    }
-
-    /* Details Grid sections headers */
-    .med-section-header {
-      font-size: var(--fs-md);
-      color: var(--clr-med-primary);
-      margin: var(--sp-8) 0 var(--sp-3);
-      font-weight: var(--fw-extrabold);
-      border-bottom: 2px solid var(--clr-med-accent);
-      padding-bottom: var(--sp-2);
-      display: flex;
-      align-items: center;
-      gap: var(--sp-2);
+      box-shadow: 0 0 0 3px rgba(10, 78, 155, 0.1);
     }
   </style>
+  <link rel="stylesheet" href="css/theme-neutral.css?v=nuvica-bright">
 </head>
 <body>
 
-<div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:var(--clr-med-primary);z-index:1001;width:0%"></div>
+<div id="reading-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--med-blue);z-index:1001;width:0%"></div>
 
-<nav id="navbar" class="navbar">
-  <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" /><div class="navbar__logo-text"><span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span><span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span></div></a>
-    <div class="navbar__nav">
-      <a href="index.html" class="navbar__link">Home</a>
-      <a href="index.html#services" class="navbar__link">Services</a>
-      <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
-      <a href="industries.html" class="navbar__link">Industries</a>
-      <a href="infrastructure.html" class="navbar__link">Infrastructure</a>
-      <a href="quality.html" class="navbar__link">Quality</a>
-      <div class="navbar__dropdown">
-        <a href="about.html" class="navbar__link">Company &#9662;</a>
-        <div class="navbar__dropdown-menu">
-          <a href="about.html" class="navbar__dropdown-item">About Us</a>
-          <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
-          <a href="careers.html" class="navbar__dropdown-item">Careers</a>
-          <a href="blog.html" class="navbar__dropdown-item">Blog &amp; Insights</a>
-          <a href="clients.html" class="navbar__dropdown-item">Clients</a>
-        </div>
-      </div>
-      <a href="contact.html" class="navbar__link navbar__cta">Request Quote</a>
+<!-- Top Regulatory Certification Ribbon -->
+<div class="regulatory-ribbon">
+  <div class="container regulatory-ribbon__inner">
+    <div class="regulatory-ribbon__items">
+      <span class="regulatory-ribbon__item">&#128737; <strong>CDSCO Licence:</strong> MFG/MD/2026/000078</span>
+      <span class="regulatory-ribbon__item">&#10004; <strong>Quality System:</strong> ISO 13485:2016 Certified</span>
+      <span class="regulatory-ribbon__item">&#127970; <strong>Cleanroom Suites:</strong> ISO Class 7 &amp; Class 8</span>
     </div>
-    <button id="hamburger" class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div>
+      <span style="color:#38BDF8;font-weight:600">&#9889; OEM Private Label &amp; Direct Supply Lines</span>
+    </div>
   </div>
-</nav>
-
-<div id="mobile-menu" class="navbar__mobile">
-  <a href="index.html" class="navbar__mobile-link">Home</a>
-  <a href="about.html" class="navbar__mobile-link">About Us</a>
-  <a href="index.html#services" class="navbar__mobile-link">Services</a>
-  <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
-  <a href="industries.html" class="navbar__mobile-link">Industries</a>
-  <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
-  <a href="quality.html" class="navbar__mobile-link">Quality &amp; Certifications</a>
-  <a href="case-studies.html" class="navbar__mobile-link">Case Studies</a>
-  <a href="clients.html" class="navbar__mobile-link">Clients</a>
-  <a href="careers.html" class="navbar__mobile-link">Careers</a>
-  <a href="contact.html" class="navbar__mobile-link">Contact Us</a>
 </div>
 
-<!-- 1. Breadcrumbs Trail -->
+<!-- Navigation Bar -->
+<nav id="navbar" class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span>
+        <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+      </div>
+    </a>
+      <div class="navbar__nav">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="index.html#services" class="navbar__link">Services</a>
+        <a href="medical.html" class="navbar__link active">Medical &amp; Pharma</a>
+        <a href="contract-manufacturing.html" class="navbar__link">Contract Mfg</a>
+        <a href="industries.html" class="navbar__link">Industries</a>
+        <a href="infrastructure.html" class="navbar__link">Infrastructure</a>
+        <a href="quality.html" class="navbar__link">Quality</a>
+        <a href="licences.html" class="navbar__link">Licences</a>
+        <div class="navbar__dropdown">
+          <a href="about.html" class="navbar__link navbar__dropdown-trigger">
+            <span>Company</span>
+            <span class="navbar__dropdown-chevron">&#9662;</span>
+          </a>
+          <div class="navbar__dropdown-menu">
+            <a href="about.html" class="navbar__dropdown-item">About Us</a>
+            <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
+            <a href="careers.html" class="navbar__dropdown-item">Careers</a>
+            <a href="blog.html" class="navbar__dropdown-item">Blog &amp; Insights</a>
+            <a href="clients.html" class="navbar__dropdown-item">Clients</a>
+          </div>
+        </div>
+        <a href="contact.html" class="navbar__link navbar__cta">Request Quote</a>
+      </div>
+      <button id="hamburger" class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="navbar__mobile">
+    <div class="navbar__mobile-group-title">Navigation</div>
+    <a href="index.html" class="navbar__mobile-link">Home</a>
+    <a href="index.html#services" class="navbar__mobile-link">Services</a>
+    <a href="medical.html" class="navbar__mobile-link active">Medical &amp; Pharma</a>
+    <a href="contract-manufacturing.html" class="navbar__mobile-link">Contract Mfg</a>
+    <a href="industries.html" class="navbar__mobile-link">Industries</a>
+    <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
+    <a href="quality.html" class="navbar__mobile-link">Quality</a>
+    <a href="licences.html" class="navbar__mobile-link">Licences</a>
+    
+    <div class="navbar__mobile-group-title">Company</div>
+    <a href="about.html" class="navbar__mobile-link">About Us</a>
+    <a href="case-studies.html" class="navbar__mobile-link">Case Studies</a>
+    <a href="clients.html" class="navbar__mobile-link">Clients</a>
+    <a href="careers.html" class="navbar__mobile-link">Careers</a>
+    <a href="blog.html" class="navbar__mobile-link">Blog &amp; Insights</a>
+    <a href="contact.html" class="navbar__mobile-link">Contact Us</a>
+    <div style="margin-top:var(--sp-6)">
+      <a href="contact.html" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Request a Quote</a>
+    </div>
+  </div>
+
+<!-- Breadcrumb Navigation -->
 <div class="med-breadcrumbs">
-  <div class="container">
-    <a href="index.html">Home</a><span>&rsaquo;</span><a href="medical.html">Medical &amp; Healthcare</a><span>&rsaquo;</span><span id="bc-category">Category</span><span>&rsaquo;</span><span id="bc-product">Product</span>
+  <div class="container med-breadcrumbs__flex">
+    <div class="med-breadcrumbs__links">
+      <a href="index.html">Home</a>
+      <span class="sep">&rsaquo;</span>
+      <a href="medical.html">Medical Devices</a>
+      <span class="sep">&rsaquo;</span>
+      <span id="bc-category" style="color:var(--med-text-light);font-weight:600">Category</span>
+      <span class="sep">&rsaquo;</span>
+      <span id="bc-product" style="color:var(--med-navy);font-weight:700">Product</span>
+    </div>
+    <a href="medical.html#product-showcase" class="med-back-catalog-btn">&larr; All 26 Devices</a>
   </div>
 </div>
 
 <main class="container" style="padding-bottom: var(--sp-16)">
-  <!-- 2. Product Detail Box -->
-  <div class="product-section">
-    <div class="product-detail-grid">
-      <!-- Left: Image Gallery & Zoom -->
-      <div>
-        <div class="image-zoom-frame" id="zoom-frame">
-          <img id="main-product-image" src="" alt="Product Main Image">
-        </div>
-        <div class="med-thumbnail-gallery" id="thumbnails-container">
-          <!-- Dyn Thumbnails -->
+  <!-- Product Specification Showcase Card -->
+  <div class="product-clean-card" id="product-detail-container">
+    
+    <!-- Top Product Header -->
+    <div class="product-header-section">
+      <div class="product-category-eyebrow" id="product-category-badge">Infusion therapy &middot; Class B sterile device</div>
+      <h1 class="product-title-heading" id="product-name">Infusion (Intravenous) Set Non-Vented</h1>
+      <p class="product-lead-description" id="product-lead-desc">
+        Administration of fluids from a container into the patient's vascular system through a vascular access device.
+      </p>
+    </div>
+
+    <!-- 2-Column Grid: Visual Left, Specifications & OEM Right -->
+    <div class="product-clean-grid">
+      
+      <!-- Visual Column (Left) -->
+      <div class="product-visual-pane">
+        <div class="product-main-viewport" id="zoom-frame">
+          <img id="main-product-image" src="/img/products/infusion-intravenous-set-non-vented.jpg" alt="/img/products/infusion-intravenous-set-non-vented.jpg" onerror="this.onerror=null;this.src='img/products/infusion-intravenous-set-non-vented.jpg'">
         </div>
       </div>
 
-      <!-- Right: Main Details -->
-      <div>
-        <span class="badge-status">&#10004; Available for Order</span>
-        <div class="product-meta-header" id="product-category-badge">Category</div>
-        <h1 class="product-name-title" id="product-name">Product Title</h1>
-        <div class="product-code-label">Item Code: <span class="product-code-val" id="product-code">--</span></div>
+      <!-- Content & Specification Column (Right) -->
+      <div class="product-specs-pane">
         
-        <p class="product-detail__lead" id="product-short-desc" style="color:var(--clr-med-text-muted); font-size:var(--fs-sm); margin-bottom:var(--sp-4)">
-          Short clinical description.
-        </p>
-
-        <!-- 3. Product Details Tabs (Description) -->
-        <div class="med-tabs">
-          <button class="med-tab-btn active" onclick="switchTab(this, 'clinical-overview')">Clinical Description</button>
-          <button class="med-tab-btn" onclick="switchTab(this, 'clinical-usage')">Usage &amp; Indications</button>
-          <button class="med-tab-btn" onclick="switchTab(this, 'clinical-safety')">Clinical Safety</button>
+        <!-- Key Specifications List -->
+        <div class="product-specs-list" id="hero-specs-body">
+          <div class="clean-spec-item">
+            <div class="clean-spec-label">Risk class</div>
+            <div class="clean-spec-value">Class B (India MDR 2017)</div>
+          </div>
+          <div class="clean-spec-item">
+            <div class="clean-spec-label">Sterility</div>
+            <div class="clean-spec-value">Supplied sterile</div>
+          </div>
+          <div class="clean-spec-item">
+            <div class="clean-spec-label">Shelf life</div>
+            <div class="clean-spec-value">3 years</div>
+          </div>
+          <div class="clean-spec-item">
+            <div class="clean-spec-label">Brand</div>
+            <div class="clean-spec-value">VIREXA, or your own</div>
+          </div>
+          <div class="clean-spec-item">
+            <div class="clean-spec-label">Licence</div>
+            <div class="clean-spec-value">MFG/MD/2026/000078</div>
+          </div>
+          <div class="clean-spec-item">
+            <div class="clean-spec-label">Principal materials</div>
+            <div class="clean-spec-value">PP spike cover · PVC drip chamber · ABS non-vented spike, clamp and roller · nylon mesh and PP fluid filter · ABS male luer lock · LDPE cap · PP and stainless needle set · PVC tube</div>
+          </div>
         </div>
 
-        <div class="med-tab-pane active" id="pane-clinical-overview">
-          <p id="product-long-desc"></p>
-        </div>
-        <div class="med-tab-pane" id="pane-clinical-usage">
-          <p>This sterile medical component is intended for use by trained healthcare professionals in vascular access and fluid regulation setups. It provides an immediate secure connection inside diagnostic or delivery circuits, minimizing patient discomfort and streamlining fluid path management.</p>
-        </div>
-        <div class="med-tab-pane" id="pane-clinical-safety">
-          <p>Fully compliant with ISO 13485 guidelines. Pyrogen-free and non-toxic. Ensure that clinical packaging seals are intact before use. Single-use only. Discard appropriately after surgical or dialysis cycles to prevent bio-burden hazard.</p>
+        <!-- Made Under Your Brand Box -->
+        <div class="product-oem-card">
+          <h3 class="product-oem-title">Made under your brand</h3>
+          <p class="product-oem-desc" id="hero-oem-desc">
+            This device is licensed, tooled and documented on our line. We can supply it under VIREXA, or manufacture it under your brand &mdash; as OEM contract manufacture under our licence, or under your own licence at our premises.
+          </p>
         </div>
 
-        <div style="margin-top: var(--sp-6); display:flex; gap: var(--sp-4);">
-          <a href="#inquiry-section" class="btn btn--gold btn--md" style="flex:1; justify-content:center">Send Inquiry</a>
-          <a href="medical.html#product-showcase" class="btn btn--outline btn--md" style="flex:1; justify-content:center">Back to Catalog</a>
+        <!-- Action Buttons Row -->
+        <div class="product-actions-row">
+          <a href="#inquiry-section" class="btn-action-primary">Enquire about this device</a>
+          <a href="medical.html#product-showcase" class="btn-action-secondary">All 26 devices</a>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- 4. Features Section -->
-  <div class="med-section-header"><span>&#11088;</span> Key Clinical Features</div>
-  <div class="features-grid" id="features-container">
-    <!-- Dyn Feature Cards -->
-  </div>
-
-  <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:var(--sp-8); margin-top:var(--sp-4);">
-    <!-- 5. Specifications Table -->
-    <div>
-      <div class="med-section-header"><span>&#128203;</span> Technical Specifications</div>
-      <table class="specs-table">
-        <tbody id="specs-table-body">
-          <!-- Dyn Specifications -->
-        </tbody>
-      </table>
-    </div>
-
-    <div>
-      <!-- 8. Applications Section -->
-      <div class="med-section-header"><span>&#127919;</span> Target Applications</div>
-      <div class="apps-flex" id="apps-container">
-        <!-- Dyn Application chips -->
       </div>
 
-      <!-- 9. Benefits Section -->
-      <div class="med-section-header"><span>&#8250;!</span> Key Benefits</div>
-      <div class="benefits-grid" id="benefits-container">
-        <!-- Dyn Benefit Cards -->
-      </div>
     </div>
+
   </div>
 
-  <!-- 6. Product Variants -->
-  <div class="med-section-header"><span>&#128166;</span> Available Product Variants</div>
-  <div class="variants-grid" id="variants-container">
-    <!-- Dyn Variant Cards -->
-  </div>
-
-  <!-- 7. Related Documents -->
-  <div class="med-section-header"><span>&#128196;</span> Related Medical Documents</div>
-  <div class="docs-grid" id="docs-container">
-    <!-- Dyn Document Download Cards -->
-  </div>
-
-  <!-- 10. Related Products -->
-  <div class="med-section-header"><span>&#128297;&mdash;</span> Related Medical Products</div>
-  <div class="grid-3" id="related-grid" data-stagger style="margin-top:var(--sp-4)">
+  <!-- Related Medical Devices -->
+  <div class="pro-section-title">Related Sterile Medical Devices</div>
+  <div class="related-grid" id="related-grid">
     <!-- Dyn Related recommendation cards -->
   </div>
 
-  <!-- 11. Inquiry Section -->
-  <div id="inquiry-section" class="med-section-header"><span>&#9993;</span> Medical Product Inquiry</div>
-  <div class="inquiry-grid">
-    <div class="inquiry-text-block">
-      <h3 style="color:var(--clr-med-primary)">Your Inquiry Matters</h3>
-      <p style="color:var(--clr-med-text-muted); font-size:var(--fs-sm); margin-top:var(--sp-2)">
-        At Vidhata Plastics, we partner with leading global pharmaceutical and medical device companies. Submit your requirements and our cleanroom engineering team will contact you within 24 hours.
-      </p>
-      <div class="inquiry-contact-flex">
-        <span class="inquiry-contact-icon">&#128234;</span>
-        <span>+91 98851 00808</span>
+  <!-- Inquiry & RFQ Form Section -->
+  <div id="inquiry-section" class="inquiry-card">
+    <div class="inquiry-grid">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(10,78,155,0.08);color:var(--med-blue);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;letter-spacing:0.5px;margin-bottom:10px;">
+          &#9993; DIRECT OEM &amp; DISTRIBUTOR INQUIRY
+        </div>
+        <h2 style="font-size:1.6rem;font-weight:800;color:var(--med-navy);margin-bottom:12px;">
+          Request Samples, Tooling or Quotation
+        </h2>
+        <p style="color:var(--med-text-muted);font-size:0.88rem;line-height:1.65;margin-bottom:20px">
+          Whether you require batch supply under our <strong>VIREXA</strong> brand or complete <strong>OEM contract manufacture</strong> under your own brand and licence, our cleanroom engineering team will review your specifications and respond within 24 hours.
+        </p>
+
+        <div style="background:#F8FAFC;border:1px solid var(--med-border);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem">
+            <span style="font-size:1.1rem;color:var(--med-blue)">&#128222;</span>
+            <div>
+              <strong style="color:var(--med-navy);display:block">Engineering &amp; Sales Contacts:</strong>
+              <a href="tel:+919885100808" style="color:var(--med-text-muted);text-decoration:none">+91 98851 00808 (Vikrant K.)</a> &middot; 
+              <a href="tel:+918008801778" style="color:var(--med-text-muted);text-decoration:none">+91 80088 01778 (Arvind K.)</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem">
+            <span style="font-size:1.1rem;color:var(--med-blue)">&#9993;</span>
+            <div>
+              <strong style="color:var(--med-navy);display:block">Technical Correspondence:</strong>
+              <a href="mailto:vikrant@vidhata.co.in" style="color:var(--med-text-muted);text-decoration:none">vikrant@vidhata.co.in</a>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:0.85rem">
+            <span style="font-size:1.1rem;color:var(--med-blue)">&#127970;</span>
+            <div>
+              <strong style="color:var(--med-navy);display:block">Manufacturing Facility:</strong>
+              <span style="color:var(--med-text-muted)">Unit 2 &mdash; E-City, Maheshwaram, Rangareddy, Telangana 501359, India</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="inquiry-contact-flex">
-        <span class="inquiry-contact-icon">&#9993;</span>
-        <span>vikrant@vidhata.co.in</span>
-      </div>
-      <div class="inquiry-contact-flex">
-        <span class="inquiry-contact-icon">&#127970;</span>
-        <span>Hyderabad, Telangana, India</span>
-      </div>
-    </div>
-    <div class="inquiry-form-card">
-      <form id="inquiry-form" onsubmit="handleInquirySubmit(event)">
-        <div class="inquiry-input-group">
-          <label class="inquiry-label" for="inq-name">Full Name</label>
-          <input class="inquiry-input" type="text" id="inq-name" required placeholder="Enter your full name">
+
+      <!-- RFQ Form Card -->
+      <form id="inquiry-form" onsubmit="handleInquirySubmit(event)" style="background:#FFF;border:1px solid var(--med-border);border-radius:14px;padding:24px;box-shadow:var(--med-shadow-sm)">
+        <h4 style="color:var(--med-navy);font-size:1.05rem;font-weight:700;margin-bottom:16px;">Product RFQ &amp; Sample Request</h4>
+        
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="inquiry-input-group">
+            <label class="inquiry-label" for="inq-name">Your Name *</label>
+            <input class="inquiry-input" type="text" id="inq-name" required placeholder="Dr. / Mr. / Ms. Name">
+          </div>
+          <div class="inquiry-input-group">
+            <label class="inquiry-label" for="inq-company">Hospital / Company *</label>
+            <input class="inquiry-input" type="text" id="inq-company" required placeholder="Organization Name">
+          </div>
         </div>
-        <div class="inquiry-input-group">
-          <label class="inquiry-label" for="inq-email">Business Email</label>
-          <input class="inquiry-input" type="email" id="inq-email" required placeholder="name@hospital.com">
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="inquiry-input-group">
+            <label class="inquiry-label" for="inq-email">Business Email *</label>
+            <input class="inquiry-input" type="email" id="inq-email" required placeholder="name@company.com">
+          </div>
+          <div class="inquiry-input-group">
+            <label class="inquiry-label" for="inq-phone">Contact Number *</label>
+            <input class="inquiry-input" type="tel" id="inq-phone" required placeholder="+91-XXXXX-XXXXX">
+          </div>
         </div>
+
         <div class="inquiry-input-group">
-          <label class="inquiry-label" for="inq-phone">Contact Phone</label>
-          <input class="inquiry-input" type="tel" id="inq-phone" placeholder="+91-XXXXX-XXXXX">
+          <label class="inquiry-label" for="inq-message">Specifications &amp; Volume Requirements</label>
+          <textarea class="inquiry-input" id="inq-message" rows="4" required></textarea>
         </div>
-        <div class="inquiry-input-group">
-          <label class="inquiry-label" for="inq-company">Hospital / Company Name</label>
-          <input class="inquiry-input" type="text" id="inq-company" required placeholder="Enter organization name">
-        </div>
-        <div class="inquiry-input-group">
-          <label class="inquiry-label" for="inq-message">Message / Specifications Required</label>
-          <textarea class="inquiry-input" id="inq-message" rows="4" required placeholder="Enter variant details or custom cleanroom manufacturing requirements..."></textarea>
-        </div>
-        <button class="inquiry-btn" type="submit">Send Inquiry</button>
+
+        <button type="submit" class="btn-action-primary" style="width:100%;font-size:0.95rem;padding:14px">
+          <span>&#10004;</span> Submit Device Specification Inquiry
+        </button>
       </form>
     </div>
   </div>
 </main>
 
-<footer class="footer"><div class="container"><div class="footer__grid"><div><a href="index.html" class="navbar__logo" style="margin-bottom:var(--sp-4);display:inline-flex"><img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" /><div class="navbar__logo-text"><span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span><span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span></div></a><p class="footer__brand-desc">End-to-end plastics manufacturing for medical, pharma, electronics, and industrial sectors.</p><div class="footer__certbadges"><span class="footer__certbadge">ISO 9001:2015</span><span class="footer__certbadge">ISO 13485</span></div></div><div><div class="footer__col-title">Services</div><div class="footer__links"><a href="index.html#services" class="footer__link">Product Design</a><a href="index.html#services" class="footer__link">Tool &amp; Mould Mfg.</a><a href="index.html#services" class="footer__link">Manufacturing</a><a href="index.html#services" class="footer__link">Assembly</a><a href="index.html#services" class="footer__link">Regulatory</a></div></div><div><div class="footer__col-title">Company</div><div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a href="clients.html" class="footer__link">Clients</a><a href="quality.html" class="footer__link">Quality</a><a href="contact.html" class="footer__link">Contact</a></div></div><div><div class="footer__col-title">Contact</div><div class="footer__contact-item"><span class="footer__contact-icon">&#128234;</span><a href="tel:+919885100808" style="color:var(--clr-text-muted)">+91 98851 00808</a></div><div class="footer__contact-item"><span class="footer__contact-icon">&#128205;</span><a href="mailto:vikrant@vidhata.co.in" style="color:var(--clr-text-muted)">vikrant@vidhata.co.in</a></div></div></div><div class="footer__bottom"><p class="footer__copy">&copy; 2024 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p><div class="footer__social"><a href="#" class="footer__social-link">in</a><a href="#" class="footer__social-link">ð&bull;Œ</a></div><div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy Policy</a></div></div></div></footer>
-<a href="https://wa.me/919885100808" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-<button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Col 1: Vidhata Medical -->
+      <div>
+        <a href="index.html" class="navbar__logo" style="margin-bottom:12px;display:inline-flex">
+          <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-name">Vidhata Medical</span>
+            <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+          </div>
+        </a>
+        <p class="footer__brand-desc">
+          The medical device and pharma packaging business of Vidhata Plastics India Private Limited. Contract manufacturing, Hyderabad.
+        </p>
+        <div class="footer__certbadges">
+          <span class="footer__certbadge">CDSCO MD-5</span>
+          <span class="footer__certbadge">ISO 13485:2016</span>
+          <span class="footer__certbadge">ISO 9001:2015</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Contact -->
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact-row">
+          <a href="mailto:info@vidhata.co.in" class="footer__contact-link">info@vidhata.co.in</a>
+        </div>
+        <div class="footer__contact-row">
+          <a href="tel:+919885100808" class="footer__contact-link">+91 98851 00808</a>
+        </div>
+        <div class="footer__hours">
+          Monday to Saturday, 09:00&ndash;18:00 IST (UTC+5:30)
+        </div>
+        <div class="footer__sla">
+          We reply within one working day.
+        </div>
+      </div>
+
+      <!-- Col 3: Unit 2 — Maheshwaram -->
+      <div>
+        <div class="footer__col-title">Unit 2 &mdash; Maheshwaram</div>
+        <p class="footer__facility-address">
+          S-1 P/C, Survey No. 114, E-City, Maheshwaram, Rangareddy, Telangana 501359
+        </p>
+        <div class="footer__facility-scope">
+          Toolroom, moulding, cleanroom, QC and stability lab
+        </div>
+      </div>
+
+      <!-- Col 4: Unit 1 — Cherlapally -->
+      <div>
+        <div class="footer__col-title">Unit 1 &mdash; Cherlapally</div>
+        <p class="footer__facility-address">
+          Plot No. 205/2, Phase II, IDA Cherlapally, Hyderabad 500051
+        </p>
+        <div class="footer__facility-scope">
+          Registered office
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Compliance Strip -->
+    <div class="footer__bottom">
+      <p class="footer__legal-line">
+        VIDHATA PLASTICS INDIA PRIVATE LIMITED &middot; CIN U25209TG1990PTC012152 &middot; GST 36AAACV8175G1Z2 &middot; Manufacturing licence MFG/MD/2026/000078 &middot; <a href="privacy.html">Privacy</a> &middot; &copy; 2026
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919885100808" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
@@ -701,29 +803,7 @@
 <script src="js/chatbot.js"></script>
 
 <script>
-// Image switching for gallery
-window.changeProductImage = function(thumbElement, imgSrc) {
-  document.getElementById('main-product-image').src = imgSrc;
-  thumbElement.parentElement.querySelectorAll('.med-thumb-btn').forEach(btn => btn.classList.remove('active'));
-  thumbElement.classList.add('active');
-};
-
-// Tabs switcher
-window.switchTab = function(btnElement, paneId) {
-  const container = btnElement.parentElement;
-  container.querySelectorAll('.med-tab-btn').forEach(btn => btn.classList.remove('active'));
-  btnElement.classList.add('active');
-
-  const containerColumn = container.parentElement;
-  containerColumn.querySelectorAll('.med-tab-pane').forEach(pane => pane.classList.remove('active'));
-  
-  const targetPane = containerColumn.querySelector(`#pane-${paneId}`);
-  if (targetPane) {
-    targetPane.classList.add('active');
-  }
-};
-
-// Submit feedback
+// Handle Inquiry Submit
 window.handleInquirySubmit = function(e) {
   e.preventDefault();
   const name = document.getElementById('inq-name').value;
@@ -731,274 +811,155 @@ window.handleInquirySubmit = function(e) {
   const company = document.getElementById('inq-company').value;
   const product = document.getElementById('product-name').textContent;
   
-  alert(`Thank you ${name}! Your inquiry for ${product} on behalf of ${company} has been sent successfully. We will email you back at ${email}.`);
+  alert(`Thank you ${name}! Your inquiry for "${product}" on behalf of ${company} has been received. Our cleanroom engineering team will contact you at ${email} within 24 hours.`);
   document.getElementById('inquiry-form').reset();
-};
-
-// Trigger pdf download notification
-window.downloadDoc = function(docName, productName) {
-  alert(`Initiating download: ${docName} for ${productName}.pdf`);
-};
-
-// Trigger Variant Inquiry
-window.inquireVariant = function(varName, varCode) {
-  const textarea = document.getElementById('inq-message');
-  textarea.value = `I am interested in requesting specifications/pricing for Variant: "${varName}" (Product Code: ${varCode}).`;
-  document.getElementById('inquiry-section').scrollIntoView({ behavior: 'smooth' });
-  textarea.focus();
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get('id');
+  let productId = urlParams.get('id');
+
+  // Default fallback if accessed without id
+  if (!productId && typeof MEDICAL_PRODUCTS !== 'undefined' && MEDICAL_PRODUCTS.length > 0) {
+    productId = MEDICAL_PRODUCTS[0].id;
+  }
 
   if (!productId) {
     window.location.href = 'medical.html';
     return;
   }
 
-  // Find product details
-  const product = MEDICAL_PRODUCTS.find(p => p.id === productId);
+  const product = (typeof MEDICAL_PRODUCTS !== 'undefined') ? MEDICAL_PRODUCTS.find(p => p.id === productId) : null;
   if (!product) {
     document.getElementById('product-detail-container').innerHTML = `
-      <div style="text-align:center; padding:var(--sp-20) var(--sp-4)">
-        <h2>Product Not Found</h2>
-        <p style="color:var(--clr-med-text-muted); margin-top:var(--sp-4)">We couldn't find the medical product you are searching for.</p>
-        <a href="medical.html" class="btn btn--gold btn--md" style="margin-top:var(--sp-8)">Back to Medical Catalog</a>
+      <div style="text-align:center; padding: 60px 20px;">
+        <h2 style="color:var(--med-navy);margin-bottom:12px">Product Not Found</h2>
+        <p style="color:var(--med-text-muted); margin-bottom: 24px">We couldn't locate the specified device in our licensed catalog.</p>
+        <a href="medical.html#product-showcase" class="btn-action-primary" style="display:inline-flex;width:auto">Back to Medical Catalog</a>
       </div>
     `;
     return;
   }
 
-  // Magnifier Zoom effect logic
+  // Magnifier Zoom Effect
   const frame = document.getElementById('zoom-frame');
   const img = document.getElementById('main-product-image');
 
-  frame.addEventListener('mousemove', (e) => {
-    const rect = frame.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    img.style.transformOrigin = `${x}% ${y}%`;
-    img.style.transform = 'scale(1.8)';
-  });
+  if (frame && img) {
+    frame.addEventListener('mousemove', (e) => {
+      const rect = frame.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      img.style.transformOrigin = `${x}% ${y}%`;
+      img.style.transform = 'scale(1.5)';
+    });
 
-  frame.addEventListener('mouseleave', () => {
-    img.style.transform = 'scale(1)';
-    img.style.transformOrigin = 'center center';
-  });
+    frame.addEventListener('mouseleave', () => {
+      img.style.transform = 'scale(1)';
+      img.style.transformOrigin = 'center center';
+    });
+  }
 
-  // Breadcrumbs & Titles
+  // Titles and Breadcrumbs
   document.getElementById('bc-category').textContent = product.categoryDisplay || product.category;
   document.getElementById('bc-product').textContent = product.title;
   document.getElementById('product-category-badge').textContent = product.categoryDisplay || product.category;
   document.getElementById('product-name').textContent = product.title;
-  document.title = `${product.title} &mdash; Medical Catalog | Vidhata Plastics`;
+  document.title = `${product.title} &mdash; Licensed Medical Device | Vidhata Plastics India`;
 
-  // Product code - use official VP code from database
-  const refCode = product.productCode || product.specs["Reference Code"] || "N/A";
-  document.getElementById('product-code').textContent = refCode;
+  // Description & OEM Note
+  document.getElementById('product-lead-desc').textContent = product.description;
+  if (product.oemNote) {
+    document.getElementById('hero-oem-desc').textContent = product.oemNote;
+  }
 
-  // Short & long descriptions
-  document.getElementById('product-short-desc').textContent = product.description.substring(0, 150) + "...";
-  document.getElementById('product-long-desc').textContent = product.description;
-
-  // Set Main Image
-  img.src = product.image;
-  img.alt = product.title;
-
-  // Gallery Thumbnails
-  const thumbsContainer = document.getElementById('thumbnails-container');
-  const productImages = product.images || [product.image];
-  thumbsContainer.innerHTML = '';
-
-  productImages.forEach((imgSrc, idx) => {
-    const btn = document.createElement('button');
-    btn.className = `med-thumb-btn ${idx === 0 ? 'active' : ''}`;
-    btn.onclick = function() { changeProductImage(this, imgSrc); };
-    btn.innerHTML = `<img src="${imgSrc}" alt="${product.title} Thumbnail ${idx + 1}">`;
-    thumbsContainer.appendChild(btn);
-  });
-
-  // Features Cards Section
-  const featuresContainer = document.getElementById('features-container');
-  featuresContainer.innerHTML = '';
-  
-  // Custom features map with detailed clinical texts
-  const baseFeatures = [
-    { name: "Compatible", desc: "Fits securely into vial and port rubber stoppers while maintaining sterility.", icon: "&#10004;" },
-    { name: "Efficient Flow", desc: "Large diameter design provides rapid fluid transfer rates.", icon: "&#9889;" },
-    { name: "Grip Flanges", desc: "Improves handling security and minimizes accidental slips.", icon: "&#10003;" },
-    { name: "Secure Connection", desc: "Prevents line decoupling to maintain medication integrity.", icon: "&#128297;&rsquo;" },
-    { name: "Minimizes Piercing", desc: "Reduces vial stopper coring risks, lowering contamination.", icon: "&#8250;!" },
-    { name: "Safe Materials", desc: "100% PVC-free, Latex-free, and DEHP-free formulation.", icon: "&#127807;" }
-  ];
-
-  const productFeatures = product.features || [];
-  const finalFeatures = baseFeatures.map((bf, idx) => {
-    // If product has features array, use it to populate descriptions
-    if (productFeatures[idx]) {
-      return { name: bf.name, desc: productFeatures[idx], icon: bf.icon };
+  // Main Image
+  const imgFilename = product.image ? product.image.split('/').pop() : (product.id + '.jpg');
+  const imgPath = '/img/products/' + imgFilename;
+  img.src = imgPath;
+  img.alt = imgPath;
+  img.onerror = function() {
+    if (!this.dataset.fallback) {
+      this.dataset.fallback = '1';
+      this.src = 'img/products/' + imgFilename;
+    } else if (this.dataset.fallback === '1') {
+      this.dataset.fallback = '2';
+      this.src = 'images/products/' + imgFilename;
+    } else {
+      this.src = 'images/medical-products.png';
     }
-    return bf;
-  });
-
-  finalFeatures.forEach(feat => {
-    const card = document.createElement('div');
-    card.className = 'feature-card';
-    card.innerHTML = `
-      <div class="feature-header">
-        <span class="feature-icon">${feat.icon}</span>
-        <span>${feat.name}</span>
-      </div>
-      <p style="font-size:var(--fs-xs); color:var(--clr-med-text-muted)">${feat.desc}</p>
-    `;
-    featuresContainer.appendChild(card);
-  });
-
-  // Specifications table
-  const specsBody = document.getElementById('specs-table-body');
-  specsBody.innerHTML = '';
-  
-  const baseSpecs = {
-    "Product Code": refCode,
-    "Category": product.categoryDisplay || product.category,
-    "Risk Class": product.specs["Risk Class"] || "Class B (India MDR 2017)",
-    "Licence Number": product.specs["Licence Number"] || "MFG/MD/2026/000078",
-    "Material": product.specs["Material"] || "Medical Grade Bio-compatible Polymer",
-    "Sterility": product.specs["Sterility"] || product.specs["Sterilization"] || "Supplied sterile (EO Sterilized)",
-    "Shelf Life": product.specs["Shelf Life"] || "3 Years",
-    "Brand Options": product.specs["Brand Availability"] || "VIREXA, or OEM Private Label",
-    "Cleanroom Environment": product.specs["Cleanroom Class"] || "ISO Class 7 & 8",
-    "Packaging": product.specs["Packaging"] || "Individual Sterile Medical Peel Pouch",
-    "Manufacturer": "Vidhata Plastics India Pvt. Ltd."
   };
 
-  Object.entries(baseSpecs).forEach(([lbl, val]) => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td class="specs-label">${lbl}</td>
-      <td class="specs-value">${val}</td>
+  // Specifications List
+  const heroSpecsBody = document.getElementById('hero-specs-body');
+  heroSpecsBody.innerHTML = '';
+
+  const defaultSpecs = {
+    "Risk class": "Class B (India MDR 2017)",
+    "Sterility": "Supplied sterile",
+    "Shelf life": "3 years",
+    "Brand": "VIREXA, or your own",
+    "Licence": "MFG/MD/2026/000078",
+    "Principal materials": "Medical grade biocompatible polymer"
+  };
+
+  const specs = Object.assign({}, defaultSpecs, product.specs || {});
+  const orderedKeys = ["Risk class", "Sterility", "Shelf life", "Brand", "Licence", "Variants", "Principal materials"];
+
+  orderedKeys.forEach(key => {
+    const val = specs[key] || defaultSpecs[key] || '';
+    if (!val) return;
+    const item = document.createElement('div');
+    item.className = 'clean-spec-item';
+    item.innerHTML = `
+      <div class="clean-spec-label">${key}</div>
+      <div class="clean-spec-value">${val}</div>
     `;
-    specsBody.appendChild(tr);
+    heroSpecsBody.appendChild(item);
   });
 
-  // Applications
-  const appsContainer = document.getElementById('apps-container');
-  appsContainer.innerHTML = '';
-  
-  let apps = ["Hospital", "ICU", "Emergency", "Operating Room"];
-  if (product.category.toLowerCase().includes("nephrology")) {
-    apps.push("Dialysis");
+  // Pre-fill RFQ Form
+  const textarea = document.getElementById('inq-message');
+  if (textarea) {
+    textarea.value = `Inquiry for ${product.title}. We are requesting pricing, sample availability, and OEM contract manufacturing terms under our brand.`;
   }
-  if (product.category.toLowerCase().includes("chemo")) {
-    apps.push("Chemotherapy");
-  }
-  apps.push("Home Care");
 
-  apps.forEach(app => {
-    const chip = document.createElement('span');
-    chip.className = 'app-chip';
-    chip.textContent = app;
-    appsContainer.appendChild(chip);
-  });
-
-  // Benefits Section
-  const benefitsContainer = document.getElementById('benefits-container');
-  benefitsContainer.innerHTML = '';
-  const benefits = [
-    { title: "Improves Safety", icon: "&#8250;!" },
-    { title: "Easy Handling", icon: "&#128161;" },
-    { title: "Sterile Formulation", icon: "&rdquo;" },
-    { title: "Reliable Performance", icon: "&trade;" },
-    { title: "Medical Grade Materials", icon: "&#129324;" },
-    { title: "International Standards", icon: "&#127757;" }
-  ];
-  benefits.forEach(b => {
-    const card = document.createElement('div');
-    card.className = 'benefit-card';
-    card.innerHTML = `
-      <div class="benefit-icon">${b.icon}</div>
-      <div class="benefit-title">${b.title}</div>
-    `;
-    benefitsContainer.appendChild(card);
-  });
-
-  // Product Variants
-  const variantsContainer = document.getElementById('variants-container');
-  variantsContainer.innerHTML = '';
-  
-  const variants = [
-    { name: "Standard Luer Lock Variant", code: refCode + "-STD", size: "Standard size", connection: "Male-Female Luer Lock", pack: "100 Units / Box" },
-    { name: "Pediatric Microbore Variant", code: refCode + "-PED", size: "Microbore size", connection: "Slip Luer Lock Connection", pack: "50 Units / Box" },
-    { name: "Extended Flow Rate Variant", code: refCode + "-EXT", size: "Extended length", connection: "Rotating Luer Lock", pack: "100 Units / Box" }
-  ];
-
-  variants.forEach(v => {
-    const card = document.createElement('div');
-    card.className = 'variant-card';
-    card.innerHTML = `
-      <div class="variant-title">${v.name}</div>
-      <div class="variant-detail">Product Code: <strong>${v.code}</strong></div>
-      <div class="variant-detail">Size: <strong>${v.size}</strong></div>
-      <div class="variant-detail">Connection Type: <strong>${v.connection}</strong></div>
-      <div class="variant-detail">Packaging: <strong>${v.pack}</strong></div>
-      <button class="variant-btn" onclick="inquireVariant('${v.name}', '${v.code}')">View Variant</button>
-    `;
-    variantsContainer.appendChild(card);
-  });
-
-  // Documents
-  const docsContainer = document.getElementById('docs-container');
-  docsContainer.innerHTML = '';
-  const docTypes = ["Ordering Sheet", "Product Brochure", "IFU (Instructions For Use)", "Technical Datasheet"];
-  docTypes.forEach(doc => {
-    const card = document.createElement('div');
-    card.className = 'doc-card';
-    card.innerHTML = `
-      <div class="doc-name">
-        <span class="doc-icon">PDF</span>
-        <span>${doc}</span>
-      </div>
-      <button class="doc-btn" onclick="downloadDoc('${doc}', '${product.title}')">Download</button>
-    `;
-    docsContainer.appendChild(card);
-  });
-
-  // Related Products (4 to 6 items)
+  // Related Medical Products
   const relatedContainer = document.getElementById('related-grid');
-  relatedContainer.innerHTML = '';
-  
-  const relatedList = MEDICAL_PRODUCTS
-    .filter(p => p.category.toLowerCase() === product.category.toLowerCase() && p.id !== product.id)
-    .slice(0, 4);
+  if (relatedContainer && typeof MEDICAL_PRODUCTS !== 'undefined') {
+    relatedContainer.innerHTML = '';
 
-  // Fallback if not enough related in the same category
-  if (relatedList.length < 4) {
-    MEDICAL_PRODUCTS
-      .filter(p => p.id !== product.id && !relatedList.some(r => r.id === p.id))
-      .slice(0, 4 - relatedList.length)
-      .forEach(p => relatedList.push(p));
-  }
+    const relatedList = MEDICAL_PRODUCTS
+      .filter(p => p.category.toLowerCase() === product.category.toLowerCase() && p.id !== product.id)
+      .slice(0, 4);
 
-  relatedList.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'card card--glass';
-    card.style = 'padding: var(--sp-6); display:flex; flex-direction:column; justify-content:space-between; height: 100%; cursor:pointer;';
-    card.onclick = function() { window.location.href = `product?id=${p.id}`; };
-    card.innerHTML = `
-      <div>
-        <div style="border-radius:var(--radius-lg); overflow:hidden; height:180px; margin-bottom:var(--sp-4); background:transparent; display:flex; align-items:center; justify-content:center; border: none; position:relative;">
-          <img src="${p.image}" alt="${p.title}" style="display:block; width:100%; height:100%; object-fit:contain; mix-blend-mode:multiply; padding:0; margin:0; background:transparent; transition:transform 0.7s cubic-bezier(0.175,0.885,0.32,1.275), filter 0.5s ease; position:relative; z-index:1;" onmouseover="this.style.transform='scale(1.15) rotate(-2deg)'; this.style.filter='contrast(1.1) brightness(1.05)'" onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.filter='none'">
+    if (relatedList.length < 4) {
+      MEDICAL_PRODUCTS
+        .filter(p => p.id !== product.id && !relatedList.some(r => r.id === p.id))
+        .slice(0, 4 - relatedList.length)
+        .forEach(p => relatedList.push(p));
+    }
+
+    relatedList.forEach(p => {
+      const card = document.createElement('a');
+      card.href = `product.html?id=${p.id}`;
+      card.className = 'related-card';
+      card.innerHTML = `
+        <div>
+          <div class="related-card__img-wrap">
+            <img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.onerror=null;this.src='images/medical-products.png'">
+          </div>
+          <div class="related-card__title">${p.title}</div>
+          <div class="related-card__desc">${p.description.substring(0, 85)}...</div>
         </div>
-        <h4 style="color:var(--clr-med-primary); font-size:var(--fs-md); margin-bottom:var(--sp-2)">${p.title}</h4>
-        <p style="font-size:var(--fs-xs); color:var(--clr-med-text-muted); line-height:var(--lh-relaxed); margin-bottom:var(--sp-4)">
-          ${p.description.substring(0, 100)}...
-        </p>
-      </div>
-      <button class="btn btn--outline btn--sm" style="width:100%; justify-content:center">View Details</button>
-    `;
-    relatedContainer.appendChild(card);
-  });
+        <div class="related-card__btn">
+          <span>View Device Specs</span>
+          <span>&rarr;</span>
+        </div>
+      `;
+      relatedContainer.appendChild(card);
+    });
+  }
 });
 </script>
 </body>

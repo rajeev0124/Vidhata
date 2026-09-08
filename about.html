@@ -3,280 +3,1044 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Vidhata Plastics India Pvt. Ltd. &mdash; 20+ years of precision plastics manufacturing excellence. Meet our leadership and learn our story.">
-  <title>About Us &mdash; Vidhata Plastics</title>
+  <meta name="description" content="About Vidhata Medical — Medical device and pharma packaging business of Vidhata Plastics India Pvt. Ltd. Unit 2 Maheshwaram & Unit 1 Cherlapally. CDSCO MD-5 licensed, ISO 13485 certified.">
+  <title>About Vidhata Medical &mdash; Vidhata Plastics India</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=nuvica">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/chatbot.css">
+  <style>
+    /* ==========================================================================
+       Vidhata Medical — Minimalist, High-Trust Corporate Editorial Styling
+       ========================================================================== */
+    :root {
+      --brand-navy: #0A2540;
+      --brand-blue: #0A4E9B;
+      --brand-cyan: #0284C7;
+      --brand-canvas: #FAFCFE;
+      --brand-surface: #FFFFFF;
+      --brand-border: #E2E8F0;
+      --brand-border-light: #F1F5F9;
+      --brand-text-dark: #0F172A;
+      --brand-text-body: #334155;
+      --brand-text-muted: #64748B;
+    }
+
+    body {
+      background-color: var(--brand-canvas);
+      color: var(--brand-text-body);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Regulatory Ribbon */
+    .regulatory-ribbon {
+      background: #081B30;
+      color: #94A3B8;
+      font-size: 0.76rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      letter-spacing: 0.3px;
+    }
+    .regulatory-ribbon__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .regulatory-ribbon__items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .regulatory-ribbon__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #CBD5E1;
+    }
+    .regulatory-ribbon__item strong {
+      color: #38BDF8;
+      font-weight: 600;
+    }
+
+    /* Container Standard */
+    .content-container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Clean Hero Section */
+    .clean-hero {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--brand-border);
+      padding: 72px 0 80px 0;
+    }
+    .clean-hero__breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--brand-text-muted);
+      margin-bottom: 24px;
+    }
+    .clean-hero__breadcrumbs a {
+      color: var(--brand-blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .clean-hero__eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--brand-cyan);
+      margin-bottom: 16px;
+    }
+    .clean-hero__title {
+      font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+      font-weight: 800;
+      color: var(--brand-navy);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      max-width: 950px;
+      margin-bottom: 36px;
+    }
+    .clean-hero__body-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .clean-hero__body-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    .clean-hero__narrative p {
+      font-size: 1.12rem;
+      line-height: 1.75;
+      color: var(--brand-text-dark);
+      margin-bottom: 24px;
+    }
+    .clean-hero__candor-quote {
+      background: #F8FAFC;
+      border-left: 3px solid var(--brand-navy);
+      padding: 24px 28px;
+      border-radius: 0 10px 10px 0;
+      margin: 28px 0;
+    }
+    .clean-hero__candor-quote p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--brand-navy);
+      font-weight: 500;
+      margin: 0;
+    }
+    .clean-hero__sidebar {
+      background: #F8FAFC;
+      border: 1px solid var(--brand-border);
+      border-radius: 14px;
+      padding: 32px 28px;
+    }
+    .clean-hero__sidebar-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--brand-text-muted);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--brand-border);
+    }
+    .clean-hero__stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 10px 0;
+      border-bottom: 1px dashed #E2E8F0;
+    }
+    .clean-hero__stat-row:last-child {
+      border-bottom: none;
+    }
+    .clean-hero__stat-label {
+      font-size: 0.88rem;
+      color: var(--brand-text-muted);
+    }
+    .clean-hero__stat-value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--brand-navy);
+    }
+
+    /* Section Spacing & Headers */
+    .content-section {
+      padding: 88px 0;
+    }
+    .content-section--alt {
+      background: #FFFFFF;
+      border-top: 1px solid var(--brand-border);
+      border-bottom: 1px solid var(--brand-border);
+    }
+    .section-header {
+      margin-bottom: 40px;
+      max-width: 780px;
+    }
+    .section-header__tag {
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--brand-cyan);
+      margin-bottom: 8px;
+    }
+    .section-header__title {
+      font-size: clamp(2rem, 3.2vw, 2.6rem);
+      font-weight: 800;
+      color: var(--brand-navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .section-header__desc {
+      font-size: 1.1rem;
+      color: var(--brand-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Facility Architecture & Metrics Layout */
+    .facility-overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 900px) {
+      .facility-overview-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    .facility-featured-photo {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--brand-border);
+      box-shadow: 0 10px 25px -5px rgba(10, 37, 64, 0.08);
+      position: relative;
+    }
+    .facility-featured-photo img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+    .facility-featured-photo__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 14px 20px;
+      background: linear-gradient(to top, rgba(10, 37, 64, 0.9), transparent);
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .facility-metrics-table {
+      background: #FFFFFF;
+      border: 1px solid var(--brand-border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--brand-border-light);
+    }
+    .metric-row:last-child {
+      border-bottom: none;
+    }
+    .metric-row__label {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--brand-text-body);
+    }
+    .metric-row__value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--brand-navy);
+      text-align: right;
+    }
+
+    /* 9-Item Photo Gallery */
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) {
+      .facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 580px) {
+      .facility-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .facility-item {
+      background: #FFFFFF;
+      border: 1px solid var(--brand-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .facility-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -4px rgba(10, 37, 64, 0.08);
+      border-color: #CBD5E1;
+    }
+    .facility-item__img-wrap {
+      width: 100%;
+      height: 200px;
+      background: #F1F5F9;
+      overflow: hidden;
+    }
+    .facility-item__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+      display: block;
+    }
+    .facility-item:hover .facility-item__img-wrap img {
+      transform: scale(1.04);
+    }
+    .facility-item__title {
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--brand-navy);
+      background: #FFFFFF;
+      border-top: 1px solid var(--brand-border-light);
+      margin: 0;
+      line-height: 1.4;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Brochure Download Callout */
+    .brochure-bar {
+      background: #FFFFFF;
+      border: 1px solid var(--brand-border);
+      border-radius: 16px;
+      padding: 36px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 28px;
+      box-shadow: 0 4px 16px rgba(10, 37, 64, 0.03);
+    }
+    .brochure-bar__left {
+      max-width: 680px;
+    }
+    .brochure-bar__title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin-bottom: 6px;
+    }
+    .brochure-bar__text {
+      font-size: 1.02rem;
+      color: var(--brand-text-body);
+      margin-bottom: 12px;
+      line-height: 1.55;
+    }
+    .brochure-bar__meta {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.8rem;
+      color: var(--brand-text-muted);
+      background: #F1F5F9;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .btn-brochure {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--brand-navy);
+      color: #FFFFFF;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-brochure:hover {
+      background: var(--brand-blue);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* Where We're Going (Roadmap) */
+    .future-intro-note {
+      font-size: 0.92rem;
+      color: var(--brand-text-muted);
+      background: #F8FAFC;
+      border-left: 3px solid #94A3B8;
+      padding: 10px 18px;
+      margin-bottom: 32px;
+      border-radius: 0 6px 6px 0;
+    }
+    .roadmap-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .roadmap-list {
+        grid-template-columns: 1fr;
+      }
+    }
+    .roadmap-entry {
+      background: #FFFFFF;
+      border: 1px solid var(--brand-border);
+      border-radius: 12px;
+      padding: 24px 26px;
+      transition: border-color 0.2s ease;
+    }
+    .roadmap-entry:hover {
+      border-color: #CBD5E1;
+    }
+    .roadmap-entry__name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--brand-navy);
+      margin-bottom: 6px;
+    }
+    .roadmap-entry__text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--brand-text-body);
+      margin: 0;
+    }
+
+    /* Dual Campus Locations */
+    .campuses-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    @media (max-width: 800px) {
+      .campuses-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .campus-box {
+      background: #FFFFFF;
+      border: 1px solid var(--brand-border);
+      border-radius: 14px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+    }
+    .campus-box__tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-blue);
+      margin-bottom: 12px;
+    }
+    .campus-box__name {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin-bottom: 12px;
+    }
+    .campus-box__address {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--brand-text-dark);
+      margin-bottom: 18px;
+    }
+    .campus-box__details {
+      background: #F8FAFC;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--brand-text-body);
+      border-left: 3px solid var(--brand-cyan);
+      margin-top: auto;
+    }
+
+    /* Leadership Profiles */
+    .leadership-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    @media (max-width: 800px) {
+      .leadership-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .leader-item {
+      background: #FFFFFF;
+      border: 1px solid var(--brand-border);
+      border-radius: 14px;
+      padding: 32px;
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+    }
+    @media (max-width: 500px) {
+      .leader-item {
+        flex-direction: column;
+      }
+    }
+    .leader-item__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #0A2540;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .leader-item__name {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--brand-navy);
+      margin-bottom: 2px;
+    }
+    .leader-item__title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--brand-cyan);
+      margin-bottom: 12px;
+    }
+    .leader-item__bio {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--brand-text-muted);
+      margin: 0;
+    }
+
+    /* Bottom Technical Audit CTA */
+    .audit-action-card {
+      background: #0A2540;
+      color: #FFFFFF;
+      border-radius: 16px;
+      padding: 48px;
+      text-align: center;
+    }
+    .audit-action-card__title {
+      font-size: clamp(1.8rem, 2.8vw, 2.2rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+    .audit-action-card__desc {
+      font-size: 1.05rem;
+      color: #CBD5E1;
+      max-width: 640px;
+      margin: 0 auto 28px auto;
+      line-height: 1.6;
+    }
+    .audit-action-card__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-audit-primary {
+      background: #0099CC;
+      color: #FFFFFF;
+      padding: 13px 28px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .btn-audit-primary:hover {
+      background: #0284C7;
+      color: #FFFFFF;
+    }
+    .btn-audit-secondary {
+      background: transparent;
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 13px 28px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-audit-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+    }
+  </style>
+  <link rel="stylesheet" href="css/theme-neutral.css?v=nuvica-bright">
 </head>
 <body>
-<!-- Loading Screen -->
 
-<div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:var(--grad-primary);z-index:1001;width:0%"></div>
+<!-- Reading Progress Bar -->
+<div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:#0099CC;z-index:1001;width:0%"></div>
 
-<!-- Navbar -->
+<!-- Top Regulatory Certification Ribbon -->
+<div class="regulatory-ribbon">
+  <div class="content-container regulatory-ribbon__inner">
+    <div class="regulatory-ribbon__items">
+      <span class="regulatory-ribbon__item">&#128737; <strong>CDSCO Licence:</strong> MFG/MD/2026/000078</span>
+      <span class="regulatory-ribbon__item">&#10004; <strong>Quality System:</strong> ISO 13485:2016 Certified</span>
+      <span class="regulatory-ribbon__item">&#127970; <strong>Cleanroom Suites:</strong> ISO Class 7 &amp; Class 8</span>
+    </div>
+    <div>
+      <span style="color:#38BDF8;font-weight:600">&#9889; OEM Private Label &amp; Direct Supply Lines</span>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation Bar -->
 <nav id="navbar" class="navbar">
   <div class="navbar__inner">
-    <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" /><div class="navbar__logo-text"><span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span><span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span></div></a>
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span>
+        <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+      </div>
+    </a>
     <div class="navbar__nav">
-      <a href="index.html"         class="navbar__link">Home</a>
+      <a href="index.html" class="navbar__link">Home</a>
       <a href="index.html#services" class="navbar__link">Services</a>
       <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
-      <a href="industries.html"    class="navbar__link">Industries</a>
-      <a href="infrastructure.html"class="navbar__link">Infrastructure</a>
-      <a href="quality.html"       class="navbar__link">Quality</a>
+      <a href="contract-manufacturing.html" class="navbar__link">Contract Mfg</a>
+      <a href="industries.html" class="navbar__link">Industries</a>
+      <a href="infrastructure.html" class="navbar__link">Infrastructure</a>
+      <a href="quality.html" class="navbar__link">Quality</a>
+      <a href="licences.html" class="navbar__link">Licences</a>
       <div class="navbar__dropdown">
-        <a href="about.html"       class="navbar__link">Company &#9662;</a>
+        <a href="about.html" class="navbar__link navbar__dropdown-trigger active">
+          <span>Company</span>
+          <span class="navbar__dropdown-chevron">&#9662;</span>
+        </a>
         <div class="navbar__dropdown-menu">
-          <a href="about.html"        class="navbar__dropdown-item">About Us</a>
+          <a href="about.html" class="navbar__dropdown-item">About Us</a>
           <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
-          <a href="careers.html"      class="navbar__dropdown-item">Careers</a>
-          <a href="blog.html"         class="navbar__dropdown-item">Blog &amp; Insights</a>
-          <a href="clients.html"      class="navbar__dropdown-item">Clients</a>
+          <a href="careers.html" class="navbar__dropdown-item">Careers</a>
+          <a href="blog.html" class="navbar__dropdown-item">Blog &amp; Insights</a>
+          <a href="clients.html" class="navbar__dropdown-item">Clients</a>
         </div>
       </div>
-      <a href="contact.html"       class="navbar__link navbar__cta">Request Quote</a>
+      <a href="contact.html" class="navbar__link navbar__cta">Request Quote</a>
     </div>
     <button id="hamburger" class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
+
+<!-- Mobile Navigation Drawer -->
 <div id="mobile-menu" class="navbar__mobile">
-  <a href="index.html"          class="navbar__mobile-link">Home</a>
-  <a href="about.html"          class="navbar__mobile-link">About Us</a>
-  <a href="index.html#services"       class="navbar__mobile-link">Services</a>
-  <a href="medical.html"        class="navbar__mobile-link">Medical &amp; Pharma</a>
-  <a href="industries.html"     class="navbar__mobile-link">Industries</a>
+  <div class="navbar__mobile-group-title">Navigation</div>
+  <a href="index.html" class="navbar__mobile-link">Home</a>
+  <a href="index.html#services" class="navbar__mobile-link">Services</a>
+  <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
+  <a href="contract-manufacturing.html" class="navbar__mobile-link">Contract Mfg</a>
+  <a href="industries.html" class="navbar__mobile-link">Industries</a>
   <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
-  <a href="quality.html"        class="navbar__mobile-link">Quality &amp; Certifications</a>
-  <a href="case-studies.html"   class="navbar__mobile-link">Case Studies</a>
-  <a href="clients.html"        class="navbar__mobile-link">Clients</a>
-  <a href="careers.html"        class="navbar__mobile-link">Careers</a>
-  <a href="contact.html"        class="navbar__mobile-link">Contact Us</a>
+  <a href="quality.html" class="navbar__mobile-link">Quality</a>
+  <a href="licences.html" class="navbar__mobile-link">Licences</a>
+  
+  <div class="navbar__mobile-group-title">Company</div>
+  <a href="about.html" class="navbar__mobile-link active">About Us</a>
+  <a href="case-studies.html" class="navbar__mobile-link">Case Studies</a>
+  <a href="clients.html" class="navbar__mobile-link">Clients</a>
+  <a href="careers.html" class="navbar__mobile-link">Careers</a>
+  <a href="blog.html" class="navbar__mobile-link">Blog &amp; Insights</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact Us</a>
   <div style="margin-top:var(--sp-6)">
-    <a href="contact.html" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Request a Quote</a>
+    <a href="contact.html" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Request Quote</a>
   </div>
 </div>
 
-<!-- Page Hero -->
-<section class="page-hero">
-  <div class="orb orb--blue orb--1"></div>
-  <div class="orb orb--gold orb--2"></div>
-  <div class="bg-grid bg-grid--fade"></div>
-  <div class="container">
-    <div class="page-hero__breadcrumb">
+<!-- Clean Executive Hero: About Vidhata Medical -->
+<header class="clean-hero">
+  <div class="content-container">
+    <div class="clean-hero__breadcrumbs">
       <a href="index.html">Home</a>
-      <span>&#8250;</span>
-      <span>About Us</span>
+      <span>&rsaquo;</span>
+      <a href="about.html">Company</a>
+      <span>&rsaquo;</span>
+      <span style="color:var(--brand-text-dark)">About Vidhata Medical</span>
     </div>
-    <div class="section-label hero-anim-1">Our Story</div>
-    <h1 class="hero-anim-2" style="max-width:700px">20 Years of Manufacturing<br><span class="gradient-text">Excellence</span></h1>
-    <p class="hero-anim-3" style="font-size:var(--fs-md);max-width:600px;color:var(--clr-text-muted);margin-top:var(--sp-5)">
-      From a single toolroom in Hyderabad to a fully integrated manufacturing powerhouse trusted by India's largest brands.
-    </p>
-  </div>
-</section>
 
-<!-- Company Overview -->
-<section class="section">
-  <div class="container">
-    <div class="about-overview-grid">
-      <div data-stagger style="position: relative;">
-        <!-- Ambient floating background particle -->
-        <div style="position: absolute; top: -20%; left: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(14,165,233,0.1) 0%, transparent 70%); animation: product-float 8s ease-in-out infinite; z-index: -1; pointer-events: none;"></div>
+    <span class="clean-hero__eyebrow">About Vidhata Medical</span>
+    <h1 class="clean-hero__title">A plastics company that went and learned the regulations.</h1>
 
-        <div class="section-label" data-reveal="up" style="animation: infra-dot-pulse 2.5s infinite; border: 1px solid rgba(14, 165, 233, 0.4); box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);">Who We Are</div>
-        <h2 data-reveal="up" style="margin-bottom:var(--sp-6); background: linear-gradient(90deg, #0f172a, #0284c7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">India's Premier Integrated Plastics Manufacturer</h2>
-        
-        <p data-reveal="up" style="margin-bottom:var(--sp-5)">Vidhata Plastics India Pvt. Ltd. is a fully integrated plastics manufacturing company specializing in product design, tooling, mould manufacturing, injection moulding, extrusion, polyurethane processing, assembly, and cleanroom medical manufacturing.</p>
-        
-        <p data-reveal="up" style="margin-bottom:var(--sp-8)">With over 20 years of industry experience, Vidhata delivers end-to-end manufacturing solutions under one roof, helping customers reduce lead times, improve quality, and simplify supply chain management.</p>
-        
-        <div class="about-stats-grid" data-stagger>
-          <div class="stat-card" data-reveal="scale" style="padding:var(--sp-5); transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(14, 165, 233, 0.15)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='var(--clr-border)';">
-            <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="20" data-suffix="+">20+</span></div>
-            <div class="stat-card__label">Years Experience</div>
-          </div>
-          <div class="stat-card" data-reveal="scale" style="padding:var(--sp-5); transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(14, 165, 233, 0.15)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='var(--clr-border)';">
-            <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="400" data-suffix="+">400+</span></div>
-            <div class="stat-card__label">Moulds Built</div>
-          </div>
-          <div class="stat-card" data-reveal="scale" style="padding:var(--sp-5); transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(14, 165, 233, 0.15)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='var(--clr-border)';">
-            <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="200" data-suffix="M+">200M+</span></div>
-            <div class="stat-card__label">Components Made</div>
-          </div>
-          <div class="stat-card" data-reveal="scale" style="padding:var(--sp-5); transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;" onmouseover="this.style.transform='translateY(-10px) scale(1.05)'; this.style.boxShadow='0 20px 40px rgba(14, 165, 233, 0.15)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='var(--clr-border)';">
-            <div class="stat-card__number" style="font-size:var(--fs-3xl)"><span data-count="5000" data-suffix="MT">5,000MT</span></div>
-            <div class="stat-card__label">Raw Material/Year</div>
-          </div>
+    <div class="clean-hero__body-grid">
+      <!-- Left: Narrative -->
+      <div class="clean-hero__narrative">
+        <p>
+          Vidhata Medical is the medical device and pharma packaging business of Vidhata Plastics India Private Limited. Unit 1 at Cherlapally has run since 1991. The toolroom followed in 2009. Unit 2 at Maheshwaram, where the medical work happens, opened in 2022.
+        </p>
+
+        <div class="clean-hero__candor-quote">
+          <p>
+            The plastics company is thirty-five years old. The medical business is not. Unit 2 opened in 2022 and the licence was issued in February 2026. We would rather you heard that from us.
+          </p>
         </div>
+
+        <p>
+          What carries across is the part that is hard to buy. A toolroom that has cut 530 moulds. A moulding floor that has run 150 million parts. People who have held tight tolerances for customers who check them.
+        </p>
       </div>
-      <div data-reveal="scale" data-3d="15" data-glow-color="rgba(14, 165, 233, 0.35)" style="perspective: 1200px; transform-style: preserve-3d;">
-        <style>
-          @keyframes auto-3d-float {
-            0% { transform: translateY(0) rotateX(4deg) rotateY(-4deg); box-shadow: 0 20px 40px rgba(15,23,42,0.15); }
-            50% { transform: translateY(-15px) rotateX(-2deg) rotateY(3deg); box-shadow: 0 45px 80px rgba(14, 165, 233, 0.2); }
-            100% { transform: translateY(0) rotateX(4deg) rotateY(-4deg); box-shadow: 0 20px 40px rgba(15,23,42,0.15); }
-          }
-        </style>
-        <div class="about-facility-wrap" style="position:relative; border-radius: var(--radius-2xl); overflow: hidden; border: 1px solid rgba(226, 232, 240, 0.8); animation: auto-3d-float 7s ease-in-out infinite; transform-style: preserve-3d;">
-          <div class="card-glow"></div>
-          <img src="images/about.jpg" alt="Vidhata Plastics facility" class="about-facility-img" style="object-fit: cover; width: 100%; height: 100%; transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;" onmouseover="this.style.transform='scale(1.15) rotateZ(1deg)'; this.style.filter='brightness(1.05) contrast(1.1) saturate(1.2)';" onmouseout="this.style.transform='scale(1) rotateZ(0deg)'; this.style.filter='none';">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--clr-bg) 0%,transparent 50%); pointer-events: none; transform: translateZ(10px);"></div>
-          <div style="position:absolute;bottom:var(--sp-6);left:var(--sp-6);right:var(--sp-6); z-index: 5; pointer-events: none; transform: translateZ(30px);">
-            <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap">
-              <span class="badge badge--primary" style="animation: product-float 5s ease-in-out infinite; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">ISO 9001:2015</span>
-              <span class="badge badge--gold" style="animation: product-float 6s ease-in-out infinite 0.5s; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">ISO 13485</span>
-              <span class="badge badge--success" style="animation: product-float 5.5s ease-in-out infinite 1s; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">CE Compliant</span>
-            </div>
-          </div>
+
+      <!-- Right: Clean Lineage Sidebar -->
+      <aside class="clean-hero__sidebar">
+        <div class="clean-hero__sidebar-title">Engineering Baseline</div>
+        <div class="clean-hero__stat-row">
+          <span class="clean-hero__stat-label">Toolroom Moulds Cut</span>
+          <span class="clean-hero__stat-value">530</span>
         </div>
-      </div>
+        <div class="clean-hero__stat-row">
+          <span class="clean-hero__stat-label">Parts Moulded</span>
+          <span class="clean-hero__stat-value">150 Million</span>
+        </div>
+        <div class="clean-hero__stat-row">
+          <span class="clean-hero__stat-label">Total Polymer Processed</span>
+          <span class="clean-hero__stat-value">5,500 MT</span>
+        </div>
+        <div class="clean-hero__stat-row">
+          <span class="clean-hero__stat-label">Tooling Experience</span>
+          <span class="clean-hero__stat-value">35 Years (Est. 1991)</span>
+        </div>
+        <div class="clean-hero__stat-row">
+          <span class="clean-hero__stat-label">CDSCO MD-5 Licence</span>
+          <span class="clean-hero__stat-value">Feb 2026</span>
+        </div>
+      </aside>
     </div>
   </div>
-</section>
+</header>
 
-<!-- Mission & Vision -->
-<section class="section section--alt">
-  <div class="container">
-    <div class="section-header--center" data-reveal="up">
-      <div class="section-label">Purpose</div>
-      <h2>Mission &amp; Vision</h2>
+<!-- The Facility: Architecture, Data Table & 9-Photo Gallery -->
+<section class="content-section">
+  <div class="content-container">
+    <div class="section-header">
+      <span class="section-header__tag">Maheshwaram Campus</span>
+      <h2 class="section-header__title">The facility.</h2>
+      <p class="section-header__desc">Three acres &mdash; 1.2 hectares &mdash; at Maheshwaram, ten minutes from Rajiv Gandhi International Airport.</p>
     </div>
-    <div class="grid-2" data-stagger>
-      <div class="card card--glass about-mission-card">
-        <div style="font-size:3rem;margin-bottom:var(--sp-5)">&#10003;</div>
-        <h3 style="margin-bottom:var(--sp-4);color:var(--clr-primary)">Our Mission</h3>
-        <p style="font-size:var(--fs-md);line-height:var(--lh-relaxed)">Deliver world-class plastic manufacturing solutions through innovation, quality, and customer-focused execution &mdash; making every product with precision and care.</p>
-      </div>
-      <div class="card card--glass card--gold about-mission-card">
-        <div style="font-size:3rem;margin-bottom:var(--sp-5)">&#10003;</div>
-        <h3 style="margin-bottom:var(--sp-4);color:var(--clr-gold)">Our Vision</h3>
-        <p style="font-size:var(--fs-md);line-height:var(--lh-relaxed)">Become a globally trusted manufacturing partner for medical, pharmaceutical, industrial, and consumer industries &mdash; setting the benchmark for quality Made in India.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Timeline -->
-<section class="section" id="history">
-  <div class="container">
-    <div class="about-timeline-grid">
-      <div data-reveal="right">
-        <div class="section-label">Our Journey</div>
-        <h2 style="margin-bottom:var(--sp-10)">Two Decades of Growth</h2>
-        <div class="timeline">
-          <div class="timeline__item" data-reveal="right" data-delay="0">
-            <div class="timeline__dot"></div>
-            <div class="timeline__year">2003</div>
-            <div class="timeline__title">Company Founded</div>
-            <div class="timeline__desc">Started as a precision toolroom in Hyderabad with a focus on quality mould manufacturing.</div>
-          </div>
-          <div class="timeline__item" data-reveal="right" data-delay="100">
-            <div class="timeline__dot"></div>
-            <div class="timeline__year">2007</div>
-            <div class="timeline__title">ISO 9001 Certification</div>
-            <div class="timeline__desc">Achieved ISO 9001 quality certification and expanded into high-volume injection moulding.</div>
-          </div>
-          <div class="timeline__item" data-reveal="right" data-delay="200">
-            <div class="timeline__dot"></div>
-            <div class="timeline__year">2012</div>
-            <div class="timeline__title">Medical Division Launch</div>
-            <div class="timeline__desc">Established dedicated cleanroom manufacturing facility for medical and pharmaceutical clients.</div>
-          </div>
-          <div class="timeline__item" data-reveal="right" data-delay="300">
-            <div class="timeline__dot"></div>
-            <div class="timeline__year">2016</div>
-            <div class="timeline__title">ISO 13485 Certification</div>
-            <div class="timeline__desc">Obtained ISO 13485 medical device quality management certification. Onboarded NephroPlus and Cathronic Medical.</div>
-          </div>
-          <div class="timeline__item" data-reveal="right" data-delay="400">
-            <div class="timeline__dot"></div>
-            <div class="timeline__year">2019</div>
-            <div class="timeline__title">Reliance Jio Partnership</div>
-            <div class="timeline__desc">Delivered 12 million charger housings for Reliance Jio &mdash; largest single order milestone.</div>
-          </div>
-          <div class="timeline__item" data-reveal="right" data-delay="500">
-            <div class="timeline__dot"></div>
-            <div class="timeline__year">2024</div>
-            <div class="timeline__title">200M+ Components Milestone</div>
-            <div class="timeline__desc">Surpassed 200 million components produced and 5,000 MT annual raw material processing capacity.</div>
-          </div>
+    <!-- Overview Grid: Main Photo & Spec Table -->
+    <div class="facility-overview-grid">
+      <div class="facility-featured-photo">
+        <img src="img/plant.jpg" alt="Unit 2 Maheshwaram Campus" onerror="this.onerror=null;this.src='images/about.jpg'">
+        <div class="facility-featured-photo__caption">Unit 2 &mdash; Maheshwaram, Hyderabad</div>
+      </div>
+
+      <div class="facility-metrics-table">
+        <div class="metric-row">
+          <span class="metric-row__label">Land</span>
+          <span class="metric-row__value">3 acres &middot; 1.2 hectares</span>
         </div>
-      </div>
-      <div data-reveal="left" class="about-values-sticky">
-        <div class="interactive-grid about-values-card">
-          <div class="section-label section-label--gold">Core Values</div>
-          <h3 style="margin-bottom:var(--sp-8)">What Drives Us</h3>
-          <div style="display:flex;flex-direction:column;gap:var(--sp-6)">
-            <div style="display:flex;gap:var(--sp-4);align-items:flex-start">
-              <div style="width:48px;height:48px;background:rgba(14, 165, 233,0.12);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.5rem">&#10003;</div>
-              <div><h5 style="margin-bottom:var(--sp-1)">Precision First</h5><p style="font-size:var(--fs-sm)">Every component meets exact specifications. Zero tolerance for defects.</p></div>
-            </div>
-            <div style="display:flex;gap:var(--sp-4);align-items:flex-start">
-              <div style="width:48px;height:48px;background:rgba(14, 165, 233,0.12);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.5rem">&#10003;</div>
-              <div><h5 style="margin-bottom:var(--sp-1)">Partnership Mindset</h5><p style="font-size:var(--fs-sm)">We don't just manufacture &mdash; we become an extension of your team.</p></div>
-            </div>
-            <div style="display:flex;gap:var(--sp-4);align-items:flex-start">
-              <div style="width:48px;height:48px;background:rgba(14, 165, 233,0.12);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.5rem">&#10003;</div>
-              <div><h5 style="margin-bottom:var(--sp-1)">Continuous Innovation</h5><p style="font-size:var(--fs-sm)">Constantly investing in new technologies and process improvements.</p></div>
-            </div>
-            <div style="display:flex;gap:var(--sp-4);align-items:flex-start">
-              <div style="width:48px;height:48px;background:rgba(14, 165, 233,0.12);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.5rem">&#9881;</div>
-              <div><h5 style="margin-bottom:var(--sp-1)">Speed &amp; Reliability</h5><p style="font-size:var(--fs-sm)">Fast turnaround without compromising on quality or compliance.</p></div>
-            </div>
-          </div>
+        <div class="metric-row">
+          <span class="metric-row__label">Built area</span>
+          <span class="metric-row__value">31,500 sq ft &middot; 2,927 m&sup2;</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-row__label">Medical device area</span>
+          <span class="metric-row__value">7,263 sq ft &middot; 675 m&sup2;</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-row__label">Moulds cut</span>
+          <span class="metric-row__value">530</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-row__label">Cavities</span>
+          <span class="metric-row__value">6,000+</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-row__label">Parts moulded</span>
+          <span class="metric-row__value">150 million</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-row__label">Material processed</span>
+          <span class="metric-row__value">5,500 metric tonnes</span>
         </div>
       </div>
     </div>
+
+    <!-- 9-Item Photo Gallery -->
+    <div class="facility-grid">
+      <!-- 1 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/plant.jpg" alt="Unit 2, Maheshwaram" loading="lazy" onerror="this.onerror=null;this.src='images/about.jpg'">
+        </div>
+        <h3 class="facility-item__title">Unit 2, Maheshwaram</h3>
+      </div>
+
+      <!-- 2 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/moulding-floor.jpg" alt="Injection moulding floor" loading="lazy" onerror="this.onerror=null;this.src='images/cleanroom-moulding.jpg'">
+        </div>
+        <h3 class="facility-item__title">Injection moulding floor</h3>
+      </div>
+
+      <!-- 3 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/toolroom.jpg" alt="CNC toolroom — EDM and machining" loading="lazy" onerror="this.onerror=null;this.src='images/toolroom.png'">
+        </div>
+        <h3 class="facility-item__title">CNC toolroom &mdash; EDM and machining</h3>
+      </div>
+
+      <!-- 4 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/cleanroom.jpg" alt="Controlled cleanroom production environment" loading="lazy" onerror="this.onerror=null;this.src='images/cleanroom.png'">
+        </div>
+        <h3 class="facility-item__title">Controlled cleanroom production environment</h3>
+      </div>
+
+      <!-- 5 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/qc-lab.jpg" alt="QC and analytical laboratory" loading="lazy">
+        </div>
+        <h3 class="facility-item__title">QC and analytical laboratory</h3>
+      </div>
+
+      <!-- 6 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/assembly-hall.jpg" alt="Cleanroom assembly hall" loading="lazy">
+        </div>
+        <h3 class="facility-item__title">Cleanroom assembly hall</h3>
+      </div>
+
+      <!-- 7 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/tooling.jpg" alt="Multi-cavity hot-runner tool" loading="lazy" onerror="this.onerror=null;this.src='images/Precision/Precision1.jpg'">
+        </div>
+        <h3 class="facility-item__title">Multi-cavity hot-runner tool</h3>
+      </div>
+
+      <!-- 8 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/sterilisation.jpg" alt="Autoclave and sterilisation" loading="lazy" onerror="this.onerror=null;this.src='images/Sterilization.jpg'">
+        </div>
+        <h3 class="facility-item__title">Autoclave and sterilisation</h3>
+      </div>
+
+      <!-- 9 -->
+      <div class="facility-item">
+        <div class="facility-item__img-wrap">
+          <img src="img/stability.jpg" alt="Stability chamber and finishing line" loading="lazy" onerror="this.onerror=null;this.src='images/qc-lab.jpg'">
+        </div>
+        <h3 class="facility-item__title">Stability chamber and finishing line</h3>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Leadership -->
-<section class="section section--alt" id="leadership">
-  <div class="container">
-    <div class="section-header--center" data-reveal="up">
-      <div class="section-label">Leadership</div>
-      <h2>The Team Behind Vidhata</h2>
-      <p>Combined 50+ years of engineering and manufacturing expertise driving the company forward.</p>
+<!-- Take It With You: Capability Profile / Brochure Download -->
+<section class="content-section content-section--alt">
+  <div class="content-container">
+    <div class="brochure-bar">
+      <div class="brochure-bar__left">
+        <h2 class="brochure-bar__title">Take it with you.</h2>
+        <p class="brochure-bar__text">
+          Our capability profile &mdash; equipment, quality system, domains and proven work &mdash; in one document.
+        </p>
+        <div class="brochure-bar__meta">
+          Capability profile &middot; /downloads/vidhata-medical-capability-profile.pdf &middot; updated 2026
+        </div>
+      </div>
+      <div>
+        <a href="downloads/vidhata-medical-capability-profile.pdf" class="btn-brochure" download>
+          <span>Download the brochure</span>
+          <span>&darr;</span>
+        </a>
+      </div>
     </div>
-    <div class="about-leadership-grid" data-stagger>
+  </div>
+</section>
+
+<!-- Where We're Going: Future Trajectory -->
+<section class="content-section">
+  <div class="content-container">
+    <div class="section-header">
+      <span class="section-header__tag">Strategic Horizon</span>
+      <h2 class="section-header__title">Where we're going.</h2>
+      <p class="section-header__desc">Stated in the future tense, on this page only.</p>
+    </div>
+
+    <div class="future-intro-note">
+      This roadmap outlines pipeline regulatory filings and capability developments currently in progress.
+    </div>
+
+    <div class="roadmap-list">
+      <!-- 1 -->
+      <div class="roadmap-entry">
+        <h3 class="roadmap-entry__name">Class C</h3>
+        <p class="roadmap-entry__text">Applications in progress. Not held, and not offered.</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="roadmap-entry">
+        <h3 class="roadmap-entry__name">US FDA</h3>
+        <p class="roadmap-entry__text">Establishment registration to be sought. No inspection to date.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="roadmap-entry">
+        <h3 class="roadmap-entry__name">Export</h3>
+        <p class="roadmap-entry__text">Free-sale certificates first, then regulated markets.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="roadmap-entry">
+        <h3 class="roadmap-entry__name">Cell and gene therapy</h3>
+        <p class="roadmap-entry__text">Bags, TPE tubing and aseptic connectors &mdash; the next capability build.</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="roadmap-entry">
+        <h3 class="roadmap-entry__name">Bioprocess</h3>
+        <p class="roadmap-entry__text">Biocompatibility studies and USP Class VI qualification under way.</p>
+      </div>
+
+      <!-- 6 -->
+      <div class="roadmap-entry">
+        <h3 class="roadmap-entry__name">Drug delivery</h3>
+        <p class="roadmap-entry__text">Syringe barrels and assemblies moving from pilot toward series.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Manufacturing Facilities -->
+<section class="content-section content-section--alt">
+  <div class="content-container">
+    <div class="section-header">
+      <span class="section-header__tag">Infrastructure</span>
+      <h2 class="section-header__title">Manufacturing Facilities</h2>
+      <p class="section-header__desc">Two dedicated campuses supporting precision tooling and sterile medical production.</p>
+    </div>
+
+    <div class="campuses-row">
+      <!-- Unit 2 -->
+      <div class="campus-box">
+        <span class="campus-box__tag">Medical Device Campus</span>
+        <h3 class="campus-box__name">Unit 2 &mdash; Maheshwaram</h3>
+        <p class="campus-box__address">
+          <strong>S-1 P/C, Survey No. 114, E-City, Maheshwaram</strong><br>
+          Rangareddy, Telangana 501359.
+        </p>
+        <div class="campus-box__details">
+          <strong>Scope:</strong> Toolroom, moulding, cleanroom, QC and stability lab.<br>
+          <strong>Logistics:</strong> Ten minutes from Rajiv Gandhi International Airport.
+        </div>
+      </div>
+
+      <!-- Unit 1 -->
+      <div class="campus-box">
+        <span class="campus-box__tag">Polymer Processing &amp; Tooling</span>
+        <h3 class="campus-box__name">Unit 1 &mdash; Cherlapally</h3>
+        <p class="campus-box__address">
+          <strong>Plot No. 205/2, Phase II, IDA Cherlapally</strong><br>
+          Hyderabad 500051.
+        </p>
+        <div class="campus-box__details">
+          <strong>Scope:</strong> Polyurethane processing and precision extrusion.<br>
+          <strong>Status:</strong> Registered office. Operational since 1991.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Leadership Team -->
+<section class="content-section" id="leadership">
+  <div class="content-container">
+    <div class="section-header">
+      <span class="section-header__tag">Leadership</span>
+      <h2 class="section-header__title">Executive Direction</h2>
+      <p class="section-header__desc">Over three decades of engineering, tooling, and cleanroom leadership.</p>
+    </div>
+
+    <div class="leadership-row">
       <!-- Leader 1 -->
-      <div class="card about-leader-card" data-tilt="6">
-        <div style="width:100px;height:100px;background:var(--grad-primary);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-5);font-family:var(--font-heading);font-weight:var(--fw-black);font-size:var(--fs-3xl);color:white;box-shadow:var(--shadow-blue)">K</div>
-        <h3 style="margin-bottom:var(--sp-2)">K. S. Rao</h3>
-        <div class="badge badge--primary" style="margin-bottom:var(--sp-4)">Managing Director</div>
-        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:var(--lh-relaxed)">30+ years of experience in engineering, manufacturing, process development, tooling, and production systems. The visionary founder who built Vidhata from the ground up.</p>
-        <div style="margin-top:var(--sp-5);padding-top:var(--sp-5);border-top:1px solid var(--clr-border);display:flex;justify-content:center;gap:var(--sp-6)">
-          <div style="text-align:center"><div style="font-family:var(--font-heading);font-weight:var(--fw-bold);color:var(--clr-primary);font-size:var(--fs-xl)">30+</div><div style="font-size:var(--fs-xs);color:var(--clr-text-dim)">Years Exp.</div></div>
-          <div style="text-align:center"><div style="font-family:var(--font-heading);font-weight:var(--fw-bold);color:var(--clr-primary);font-size:var(--fs-xl)">400+</div><div style="font-size:var(--fs-xs);color:var(--clr-text-dim)">Moulds Led</div></div>
+      <div class="leader-item">
+        <div class="leader-item__avatar">K</div>
+        <div>
+          <h3 class="leader-item__name">K. S. Rao</h3>
+          <div class="leader-item__title">Managing Director</div>
+          <p class="leader-item__bio">
+            35+ years of engineering, manufacturing, process development, tooling, and production systems experience. Founded Unit 1 in 1991 and established the precision toolroom in 2009.
+          </p>
         </div>
       </div>
+
       <!-- Leader 2 -->
-      <div class="card about-leader-card" data-tilt="6">
-        <div style="width:100px;height:100px;background:var(--grad-gold);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-5);font-family:var(--font-heading);font-weight:var(--fw-black);font-size:var(--fs-3xl);color:var(--clr-bg);box-shadow:var(--shadow-gold)">V</div>
-        <h3 style="margin-bottom:var(--sp-2)">Vikrant Kandimalla</h3>
-        <div class="badge badge--gold" style="margin-bottom:var(--sp-4)">Director</div>
-        <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:var(--lh-relaxed)">MS Aerospace Engineering from Embry-Riddle University. Expertise in product design, CAD engineering, and manufacturing optimization. Drives the technical and innovation agenda.</p>
-        <div style="margin-top:var(--sp-5);padding-top:var(--sp-5);border-top:1px solid var(--clr-border);display:flex;justify-content:center;gap:var(--sp-6)">
-          <div style="text-align:center"><div style="font-family:var(--font-heading);font-weight:var(--fw-bold);color:var(--clr-gold);font-size:var(--fs-xl)">MS</div><div style="font-size:var(--fs-xs);color:var(--clr-text-dim)">Aerospace Eng.</div></div>
-          <div style="text-align:center"><div style="font-family:var(--font-heading);font-weight:var(--fw-bold);color:var(--clr-gold);font-size:var(--fs-xl)">ERAU</div><div style="font-size:var(--fs-xs);color:var(--clr-text-dim)">Embry-Riddle</div></div>
+      <div class="leader-item">
+        <div class="leader-item__avatar">V</div>
+        <div>
+          <h3 class="leader-item__name">Vikrant Kandimalla</h3>
+          <div class="leader-item__title">Director</div>
+          <p class="leader-item__bio">
+            MS Aerospace Engineering from Embry-Riddle Aeronautical University. Leads engineering design, regulatory compliance, and cleanroom operations at Unit 2 Maheshwaram.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="section">
-  <div class="container">
-    <div class="border-beam-container" style="background:var(--grad-card);border:1px solid var(--clr-border);border-radius:var(--radius-2xl);padding:var(--sp-16);text-align:center" data-reveal="scale">
-      <h2 style="margin-bottom:var(--sp-5)">Ready to Work Together?</h2>
-      <p style="font-size:var(--fs-md);margin-bottom:var(--sp-8)">Let's discuss how Vidhata can become your manufacturing partner.</p>
-      <div style="display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap">
-        <a href="contact.html" class="btn btn--primary btn--lg">Get in Touch</a>
-        <a href="case-studies.html" class="btn btn--outline btn--lg">View Case Studies</a>
+<!-- Technical Audit CTA -->
+<section class="content-section content-section--alt" style="padding-bottom: 80px;">
+  <div class="content-container">
+    <div class="audit-action-card">
+      <h2 class="audit-action-card__title">Evaluate Vidhata for Your Next Device Run</h2>
+      <p class="audit-action-card__desc">
+        Review our CDSCO Form MD-5 licence on the public register, inspect product specifications, or schedule an on-site audit of our Maheshwaram cleanrooms.
+      </p>
+      <div class="audit-action-card__buttons">
+        <a href="contact.html" class="btn-audit-primary">Request Technical Audit</a>
+        <a href="licences.html" class="btn-audit-secondary">Verify Regulatory Licences</a>
       </div>
     </div>
   </div>
@@ -286,19 +1050,70 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
+      <!-- Col 1: Vidhata Medical -->
       <div>
-        <a href="index.html" class="navbar__logo" style="margin-bottom:var(--sp-4);display:inline-flex"><img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" /><div class="navbar__logo-text"><span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span><span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span></div></a>
-        <p class="footer__brand-desc">Fully integrated plastics manufacturer delivering world-class solutions for medical, pharmaceutical, electronics, and industrial sectors.</p>
-        <div class="footer__certbadges"><span class="footer__certbadge">ISO 9001:2015</span><span class="footer__certbadge">ISO 13485</span><span class="footer__certbadge">CE</span></div>
+        <a href="index.html" class="navbar__logo" style="margin-bottom:12px;display:inline-flex">
+          <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-name">Vidhata Medical</span>
+            <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+          </div>
+        </a>
+        <p class="footer__brand-desc">
+          The medical device and pharma packaging business of Vidhata Plastics India Private Limited. Contract manufacturing, Hyderabad.
+        </p>
+        <div class="footer__certbadges">
+          <span class="footer__certbadge">CDSCO MD-5</span>
+          <span class="footer__certbadge">ISO 13485:2016</span>
+          <span class="footer__certbadge">ISO 9001:2015</span>
+        </div>
       </div>
-      <div><div class="footer__col-title">Company</div><div class="footer__links"><a href="about.html" class="footer__link">About Us</a><a href="careers.html" class="footer__link">Careers</a><a href="blog.html" class="footer__link">Blog</a><a href="case-studies.html" class="footer__link">Case Studies</a></div></div>
-      <div><div class="footer__col-title">Services</div><div class="footer__links"><a href="index.html#services" class="footer__link">All Services</a><a href="medical.html" class="footer__link">Medical &amp; Pharma</a><a href="quality.html" class="footer__link">Quality</a><a href="infrastructure.html" class="footer__link">Infrastructure</a></div></div>
-      <div><div class="footer__col-title">Contact</div><div class="footer__contact-item"><span class="footer__contact-icon">&#10003;</span><a href="tel:+919885100808" style="color:var(--clr-text-muted)">+91 98851 00808</a></div><div class="footer__contact-item"><span class="footer__contact-icon">&#10003;</span><a href="mailto:vikrant@vidhata.co.in" style="color:var(--clr-text-muted)">vikrant@vidhata.co.in</a></div></div>
+
+      <!-- Col 2: Contact -->
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact-row">
+          <a href="mailto:info@vidhata.co.in" class="footer__contact-link">info@vidhata.co.in</a>
+        </div>
+        <div class="footer__contact-row">
+          <a href="tel:+919885100808" class="footer__contact-link">+91 98851 00808</a>
+        </div>
+        <div class="footer__hours">
+          Monday to Saturday, 09:00&ndash;18:00 IST (UTC+5:30)
+        </div>
+        <div class="footer__sla">
+          We reply within one working day.
+        </div>
+      </div>
+
+      <!-- Col 3: Unit 2 — Maheshwaram -->
+      <div>
+        <div class="footer__col-title">Unit 2 &mdash; Maheshwaram</div>
+        <p class="footer__facility-address">
+          S-1 P/C, Survey No. 114, E-City, Maheshwaram, Rangareddy, Telangana 501359
+        </p>
+        <div class="footer__facility-scope">
+          Toolroom, moulding, cleanroom, QC and stability lab
+        </div>
+      </div>
+
+      <!-- Col 4: Unit 1 — Cherlapally -->
+      <div>
+        <div class="footer__col-title">Unit 1 &mdash; Cherlapally</div>
+        <p class="footer__facility-address">
+          Plot No. 205/2, Phase II, IDA Cherlapally, Hyderabad 500051
+        </p>
+        <div class="footer__facility-scope">
+          Registered office
+        </div>
+      </div>
     </div>
+
+    <!-- Legal Compliance Strip -->
     <div class="footer__bottom">
-      <p class="footer__copy">&copy; 2024 Vidhata Plastics India Pvt. Ltd. All rights reserved.</p>
-      <div class="footer__social"><a href="#" class="footer__social-link">in</a><a href="#" class="footer__social-link">&#10003;</a></div>
-      <div class="footer__legal-links"><a href="privacy.html" class="footer__legal-link">Privacy Policy</a><a href="privacy.html#terms" class="footer__legal-link">Terms</a></div>
+      <p class="footer__legal-line">
+        VIDHATA PLASTICS INDIA PRIVATE LIMITED &middot; CIN U25209TG1990PTC012152 &middot; GST 36AAACV8175G1Z2 &middot; Manufacturing licence MFG/MD/2026/000078 &middot; <a href="privacy.html">Privacy</a> &middot; &copy; 2026
+      </p>
     </div>
   </div>
 </footer>
@@ -307,11 +1122,9 @@
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
-<div id="cookie-banner" class="cookie-banner"><div class="cookie-banner__title">&#10003; We use cookies</div><div class="cookie-banner__text">We use cookies to improve your experience.</div><div class="cookie-banner__actions"><button id="cookie-accept" class="btn btn--primary btn--sm">Accept</button><button id="cookie-decline" class="btn btn--ghost btn--sm">Decline</button></div></div>
 
 <script src="js/main.js"></script>
 <script src="js/animations.js"></script>
-  <script src="js/chatbot.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>
-

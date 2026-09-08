@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VIREXA — Twenty-six sterile single-use medical devices licensed and branded under our own name by Vidhata Plastics India. Available for institutional supply and distribution. CDSCO Licence MFG/MD/2026/000078.">
+  <title>VIREXA &mdash; Sterile Single-Use Medical Devices | Vidhata Plastics India</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css?v=nuvica">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <style>
+    :root {
+      --vx-navy: #0A2540;
+      --vx-blue: #0A4E9B;
+      --vx-cyan: #0099CC;
+      --vx-accent: #DF2A29;
+      --vx-surface: #FFFFFF;
+      --vx-bg: #F8FAFC;
+      --vx-text-main: #0F172A;
+      --vx-text-muted: #475569;
+      --vx-border: #E2E8F0;
+      --vx-shadow: 0 10px 30px -8px rgba(10, 37, 64, 0.08);
+    }
+
+    body {
+      background-color: var(--vx-bg);
+      color: var(--vx-text-main);
+      font-family: var(--font-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero Styling */
+    .virexa-hero {
+      position: relative;
+      background: linear-gradient(135deg, #0A2540 0%, #0F3B68 60%, #0A4E9B 100%);
+      color: #FFFFFF;
+      padding: 100px 0 80px 0;
+      overflow: hidden;
+    }
+    .virexa-hero__bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+    }
+    .virexa-hero__inner {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+    }
+    .virexa-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(223, 42, 41, 0.2);
+      border: 1px solid rgba(223, 42, 41, 0.4);
+      color: #FFA4A4;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .virexa-hero__title {
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .virexa-hero__lead {
+      font-size: 1.25rem;
+      line-height: 1.65;
+      color: #E2E8F0;
+      margin-bottom: 36px;
+      max-width: 780px;
+    }
+    .virexa-hero__actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .virexa-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #DF2A29;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(223, 42, 41, 0.4);
+    }
+    .virexa-btn-primary:hover {
+      background: #B91C1C;
+      color: #FFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(223, 42, 41, 0.5);
+    }
+    .virexa-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      transition: all 0.25s ease;
+    }
+    .virexa-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #FFF;
+      transform: translateY(-2px);
+    }
+
+    /* Key Metrics Ribbon */
+    .virexa-metrics-bar {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--vx-border);
+      box-shadow: 0 4px 16px -4px rgba(0,0,0,0.04);
+      padding: 24px 0;
+    }
+    .virexa-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+    @media (max-width: 992px) {
+      .virexa-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+    @media (max-width: 576px) {
+      .virexa-metrics-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .virexa-metric-item {
+      display: flex;
+      flex-direction: column;
+      border-left: 3px solid #0A4E9B;
+      padding-left: 14px;
+    }
+    .virexa-metric-label {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: var(--vx-text-muted);
+      margin-bottom: 2px;
+    }
+    .virexa-metric-value {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--vx-navy);
+      line-height: 1.2;
+    }
+
+    /* Editorial Story Section */
+    .virexa-story-section {
+      padding: 90px 0;
+      background: #FFFFFF;
+    }
+    .virexa-story-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (max-width: 992px) {
+      .virexa-story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .virexa-story-content h2 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--vx-navy);
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+    .virexa-story-content p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--vx-text-muted);
+      margin-bottom: 20px;
+    }
+    .virexa-story-highlight {
+      background: #F0F6FD;
+      border-left: 4px solid var(--vx-blue);
+      border-radius: 8px;
+      padding: 18px 24px;
+      margin-top: 28px;
+    }
+    .virexa-story-highlight p {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--vx-navy);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .virexa-image-frame {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 18px 36px -10px rgba(10, 37, 64, 0.15);
+      border: 1px solid var(--vx-border);
+      background: #F1F5F9;
+    }
+    .virexa-image-frame img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .virexa-image-frame:hover img {
+      transform: scale(1.03);
+    }
+    .virexa-image-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(10, 37, 64, 0.9) 0%, rgba(10, 37, 64, 0) 100%);
+      padding: 30px 24px 18px 24px;
+      color: #FFFFFF;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+    }
+
+    /* Six Fields Section */
+    .virexa-fields-section {
+      padding: 90px 0;
+      background: #F8FAFC;
+    }
+    .virexa-fields-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 56px auto;
+    }
+    .virexa-fields-header h2 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: var(--vx-navy);
+      margin-bottom: 14px;
+    }
+    .virexa-fields-header p {
+      font-size: 1.05rem;
+      color: var(--vx-text-muted);
+      line-height: 1.6;
+    }
+    .virexa-fields-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 992px) {
+      .virexa-fields-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .virexa-fields-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .virexa-field-card {
+      background: #FFFFFF;
+      border: 1px solid var(--vx-border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 12px rgba(10, 37, 64, 0.03);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .virexa-field-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -6px rgba(10, 37, 64, 0.1);
+      border-color: #CBD5E1;
+    }
+    .virexa-field-count {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--vx-blue);
+      line-height: 1;
+      margin-bottom: 12px;
+      font-family: var(--font-heading, sans-serif);
+    }
+    .virexa-field-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--vx-navy);
+      margin-bottom: 12px;
+    }
+    .virexa-field-desc {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--vx-text-muted);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .virexa-field-link {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--vx-blue);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+    }
+    .virexa-field-link:hover {
+      color: var(--vx-cyan);
+    }
+
+    /* Distribution & Institutional Supply Section */
+    .virexa-dist-section {
+      padding: 90px 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--vx-border);
+    }
+    .virexa-dist-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    @media (max-width: 992px) {
+      .virexa-dist-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .virexa-dist-info h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--vx-navy);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .virexa-dist-info p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--vx-text-muted);
+      margin-bottom: 28px;
+    }
+    .virexa-contact-card {
+      background: #F8FAFC;
+      border: 1px solid var(--vx-border);
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .virexa-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.92rem;
+    }
+    .virexa-contact-item strong {
+      color: var(--vx-navy);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .virexa-contact-item a {
+      color: var(--vx-blue);
+      text-decoration: none;
+    }
+
+    /* Inquiry Form Box */
+    .virexa-form-card {
+      background: #FFFFFF;
+      border: 1px solid var(--vx-border);
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: 0 10px 30px -4px rgba(10, 37, 64, 0.06);
+    }
+    .virexa-form-card h3 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--vx-navy);
+      margin-bottom: 8px;
+    }
+    .virexa-form-card p {
+      font-size: 0.9rem;
+      color: var(--vx-text-muted);
+      margin-bottom: 24px;
+    }
+    .virexa-input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .virexa-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--vx-text-muted);
+    }
+    .virexa-input {
+      width: 100%;
+      border: 1.5px solid var(--vx-border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 0.92rem;
+      background: #FAFAFA;
+      color: var(--vx-text-main);
+      transition: all 0.2s ease;
+    }
+    .virexa-input:focus {
+      outline: none;
+      border-color: var(--vx-blue);
+      background: #FFF;
+      box-shadow: 0 0 0 3px rgba(10, 78, 155, 0.12);
+    }
+  </style>
+  <link rel="stylesheet" href="css/theme-neutral.css?v=nuvica-bright">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div id="reading-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--vx-blue);z-index:1001;width:0%"></div>
+
+<!-- Top Regulatory Certification Ribbon -->
+<div class="regulatory-ribbon" style="background:#0A2540;color:#94A3B8;font-size:0.76rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <span style="color:#CBD5E1">&#128737; <strong>CDSCO Licence:</strong> MFG/MD/2026/000078</span>
+      <span style="color:#CBD5E1">&#10004; <strong>Quality System:</strong> ISO 13485:2016 Certified</span>
+      <span style="color:#CBD5E1">&#127970; <strong>Cleanroom Suites:</strong> ISO Class 7 &amp; Class 8</span>
+    </div>
+    <div>
+      <span style="color:#38BDF8;font-weight:600">&#9889; Official Single-Use Medical Brand of Vidhata Plastics</span>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation Bar -->
+<nav id="navbar" class="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+      <div class="navbar__logo-text">
+        <span class="navbar__logo-name">Vidhata Plastics <span class="navbar__logo-corp">India Pvt. Ltd.</span></span>
+        <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+      </div>
+    </a>
+    <div class="navbar__nav">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="index.html#services" class="navbar__link">Services</a>
+      <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
+      <a href="contract-manufacturing.html" class="navbar__link">Contract Mfg</a>
+      <a href="industries.html" class="navbar__link">Industries</a>
+      <a href="infrastructure.html" class="navbar__link">Infrastructure</a>
+      <a href="quality.html" class="navbar__link">Quality</a>
+      <a href="licences.html" class="navbar__link">Licences</a>
+      <div class="navbar__dropdown">
+        <a href="about.html" class="navbar__link navbar__dropdown-trigger">
+          <span>Company</span>
+          <span class="navbar__dropdown-chevron">&#9662;</span>
+        </a>
+        <div class="navbar__dropdown-menu">
+          <a href="about.html" class="navbar__dropdown-item">About Us</a>
+          <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
+          <a href="careers.html" class="navbar__dropdown-item">Careers</a>
+          <a href="blog.html" class="navbar__dropdown-item">Blog &amp; Insights</a>
+          <a href="clients.html" class="navbar__dropdown-item">Clients</a>
+        </div>
+      </div>
+      <a href="contact.html" class="navbar__link navbar__cta">Request Quote</a>
+    </div>
+    <button id="hamburger" class="navbar__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="navbar__mobile">
+  <div class="navbar__mobile-group-title">Navigation</div>
+  <a href="index.html" class="navbar__mobile-link">Home</a>
+  <a href="index.html#services" class="navbar__mobile-link">Services</a>
+  <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
+  <a href="contract-manufacturing.html" class="navbar__mobile-link">Contract Mfg</a>
+  <a href="industries.html" class="navbar__mobile-link">Industries</a>
+  <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
+  <a href="quality.html" class="navbar__mobile-link">Quality</a>
+  <a href="licences.html" class="navbar__mobile-link">Licences</a>
+  
+  <div class="navbar__mobile-group-title">Company</div>
+  <a href="about.html" class="navbar__mobile-link">About Us</a>
+  <a href="case-studies.html" class="navbar__mobile-link">Case Studies</a>
+  <a href="clients.html" class="navbar__mobile-link">Clients</a>
+  <a href="careers.html" class="navbar__mobile-link">Careers</a>
+  <a href="blog.html" class="navbar__mobile-link">Blog &amp; Insights</a>
+  <a href="contact.html" class="navbar__mobile-link">Contact Us</a>
+  <div style="margin-top:var(--sp-6)">
+    <a href="contact.html" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Request a Quote</a>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<header class="virexa-hero">
+  <div class="virexa-hero__bg-grid"></div>
+  <div class="container virexa-hero__inner">
+    <div class="virexa-badge">Our own brand of sterile single-use devices</div>
+    <h1 class="virexa-hero__title">VIREXA</h1>
+    <p class="virexa-hero__lead">
+      Twenty-six sterile devices, licensed and branded under our own name. The proof that we run a licensed line end to end &mdash; and a range you can distribute.
+    </p>
+    <div class="virexa-hero__actions">
+      <a href="#fields" class="virexa-btn-primary">
+        <span>See the range</span>
+        <span>&darr;</span>
+      </a>
+      <a href="#distribution-enquiries" class="virexa-btn-secondary">
+        <span>Distribution enquiries</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Regulatory & Technical Fact Strip -->
+<div class="virexa-metrics-bar">
+  <div class="container virexa-metrics-grid">
+    <div class="virexa-metric-item">
+      <span class="virexa-metric-label">Devices</span>
+      <span class="virexa-metric-value">26</span>
+    </div>
+    <div class="virexa-metric-item">
+      <span class="virexa-metric-label">Class</span>
+      <span class="virexa-metric-value">Class B</span>
+    </div>
+    <div class="virexa-metric-item">
+      <span class="virexa-metric-label">Sterile</span>
+      <span class="virexa-metric-value">All</span>
+    </div>
+    <div class="virexa-metric-item">
+      <span class="virexa-metric-label">Shelf life</span>
+      <span class="virexa-metric-value">3 years</span>
+    </div>
+    <div class="virexa-metric-item">
+      <span class="virexa-metric-label">Licence</span>
+      <span class="virexa-metric-value" style="font-size:1.05rem">MFG/MD/2026/000078</span>
+    </div>
+  </div>
+</div>
+
+<!-- Editorial Section: Why we built our own brand -->
+<section class="virexa-story-section">
+  <div class="container virexa-story-grid">
+    <div class="virexa-story-content">
+      <div class="section-label section-label--gold" style="margin-bottom:12px">Accountability &amp; Heritage</div>
+      <h2>Why we built our own brand.</h2>
+      <p>
+        Most contract manufacturers have never held a licence in their own name. They build to someone else's file. When a regulator asks a hard question, the customer has to answer it.
+      </p>
+      <p>
+        We did it the other way round. VIREXA is registered on our manufacturing licence for all twenty-six devices. We wrote the device master record. We passed the inspection. We carry the responsibility.
+      </p>
+      <div class="virexa-story-highlight">
+        <p>
+          That is the argument we make to an OEM. We have already done under our own name what you would ask us to do under yours.
+        </p>
+        <div style="margin-top:12px">
+          <a href="contract-manufacturing.html" style="color:var(--vx-blue);font-weight:700;font-size:0.92rem;text-decoration:none;display:inline-flex;align-items:center;gap:6px">
+            <span>Explore OEM, Loan Licence &amp; Technology Transfer models</span> &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="virexa-image-frame">
+      <img src="img/assembly-hall.jpg" alt="Cleanroom assembly hall" onerror="this.onerror=null;this.src='images/assembly & package/assembly & package1.jpg'">
+      <div class="virexa-image-caption">Cleanroom assembly hall</div>
+    </div>
+  </div>
+</section>
+
+<!-- Six Fields, Twenty-Six Devices Section -->
+<section class="virexa-fields-section" id="fields">
+  <div class="container">
+    <div class="virexa-fields-header">
+      <div class="section-label section-label--gold" style="margin-bottom:10px">Clinical Portfolio</div>
+      <h2>Six fields, twenty-six devices.</h2>
+      <p>
+        Engineered, moulded, assembled and packaged under ISO Class 7 and 8 cleanroom conditions, certified to ISO 13485:2016 and CDSCO Medical Device Rules 2017.
+      </p>
+    </div>
+
+    <div class="virexa-fields-grid">
+      
+      <!-- Field 1 -->
+      <div class="virexa-field-card">
+        <div class="virexa-field-count">11</div>
+        <h3 class="virexa-field-title">Infusion therapy</h3>
+        <p class="virexa-field-desc">
+          Vented and non-vented sets, premium and micro sets, filtered and auto-stop sets, measured-volume sets, elastomeric pumps.
+        </p>
+        <a href="medical.html#product-showcase" class="virexa-field-link">
+          <span>Explore Infusion Sets</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Field 2 -->
+      <div class="virexa-field-card">
+        <div class="virexa-field-count">5</div>
+        <h3 class="virexa-field-title">Nephrology and dialysis</h3>
+        <p class="virexa-field-desc">
+          Haemodialysis blood tubing, AV fistula needle sets, transducer protectors, peritoneal dialysis sets, catheter sets.
+        </p>
+        <a href="medical.html#product-showcase" class="virexa-field-link">
+          <span>Explore Dialysis Devices</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Field 3 -->
+      <div class="virexa-field-card">
+        <div class="virexa-field-count">4</div>
+        <h3 class="virexa-field-title">Lines and accessories</h3>
+        <p class="virexa-field-desc">
+          Extension lines, flow-regulator lines, three-way stopcock lines, PVC-free lines.
+        </p>
+        <a href="medical.html#product-showcase" class="virexa-field-link">
+          <span>Explore Lines &amp; Connectors</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Field 4 -->
+      <div class="virexa-field-card">
+        <div class="virexa-field-count">3</div>
+        <h3 class="virexa-field-title">Oncology</h3>
+        <p class="virexa-field-desc">
+          Chemotherapy infusion sets and extension lines, with and without flow regulator.
+        </p>
+        <a href="medical.html#product-showcase" class="virexa-field-link">
+          <span>Explore Oncology Sets</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Field 5 -->
+      <div class="virexa-field-card">
+        <div class="virexa-field-count">2</div>
+        <h3 class="virexa-field-title">Critical care and monitoring</h3>
+        <p class="virexa-field-desc">
+          Pressure monitoring lines and disposable pressure transducer kits.
+        </p>
+        <a href="medical.html#product-showcase" class="virexa-field-link">
+          <span>Explore Monitoring Lines</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Field 6 -->
+      <div class="virexa-field-card">
+        <div class="virexa-field-count">1</div>
+        <h3 class="virexa-field-title">Cardiac surgery</h3>
+        <p class="virexa-field-desc">
+          Cardioplegia adapters, straight and Y-type, with and without luer lock.
+        </p>
+        <a href="medical.html#product-showcase" class="virexa-field-link">
+          <span>Explore Cardiac Adapters</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:48px">
+      <a href="medical.html#product-showcase" class="virexa-btn-primary" style="font-size:1.02rem;padding:16px 36px">
+        <span>See every device</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Distribution and Institutional Supply Section -->
+<section class="virexa-dist-section" id="distribution-enquiries">
+  <div class="container virexa-dist-grid">
+    <div class="virexa-dist-info">
+      <div class="section-label section-label--gold" style="margin-bottom:12px">Supply &amp; Distribution</div>
+      <h2>Distribution and institutional supply.</h2>
+      <p>
+        VIREXA is available to hospital groups, distributors and institutional buyers in India. Tell us the range and the volume and we will come back with terms.
+      </p>
+
+      <div class="virexa-contact-card">
+        <div class="virexa-contact-item">
+          <span style="font-size:1.2rem;color:var(--vx-blue)">&#128222;</span>
+          <div>
+            <strong>Direct Commercial Contacts:</strong>
+            <a href="tel:+919885100808">+91 98851 00808</a> (Vikrant K.) &middot; 
+            <a href="tel:+918008801778">+91 80088 01778</a> (Arvind K.)
+          </div>
+        </div>
+
+        <div class="virexa-contact-item">
+          <span style="font-size:1.2rem;color:var(--vx-blue)">&#9993;</span>
+          <div>
+            <strong>Institutional Inquiries:</strong>
+            <a href="mailto:vikrant@vidhata.co.in">vikrant@vidhata.co.in</a>
+          </div>
+        </div>
+
+        <div class="virexa-contact-item">
+          <span style="font-size:1.2rem;color:var(--vx-blue)">&#127970;</span>
+          <div>
+            <strong>Audited Cleanroom Facility:</strong>
+            <span style="color:var(--vx-text-muted)">Unit 2 &mdash; E-City, Maheshwaram, Rangareddy, Telangana 501359, India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Distribution Inquiry Form -->
+    <div class="virexa-form-card">
+      <h3>Distribution enquiries</h3>
+      <p>Submit your institutional requirements or territory coverage for VIREXA products.</p>
+      
+      <form onsubmit="handleDistSubmit(event)">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="virexa-input-group">
+            <label class="virexa-label" for="dist-name">Your Name *</label>
+            <input class="virexa-input" type="text" id="dist-name" required placeholder="Full Name">
+          </div>
+          <div class="virexa-input-group">
+            <label class="virexa-label" for="dist-org">Organization / Hospital *</label>
+            <input class="virexa-input" type="text" id="dist-org" required placeholder="Company / Distributor Name">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="virexa-input-group">
+            <label class="virexa-label" for="dist-email">Business Email *</label>
+            <input class="virexa-input" type="email" id="dist-email" required placeholder="email@company.com">
+          </div>
+          <div class="virexa-input-group">
+            <label class="virexa-label" for="dist-phone">Phone / WhatsApp *</label>
+            <input class="virexa-input" type="tel" id="dist-phone" required placeholder="+91-XXXXX-XXXXX">
+          </div>
+        </div>
+
+        <div class="virexa-input-group">
+          <label class="virexa-label" for="dist-fields">Clinical Fields of Interest</label>
+          <select class="virexa-input" id="dist-fields">
+            <option value="all">All 26 VIREXA Devices (Full Catalog)</option>
+            <option value="infusion">Infusion Therapy (11 devices)</option>
+            <option value="nephrology">Nephrology &amp; Dialysis (5 devices)</option>
+            <option value="lines">Lines &amp; Accessories (4 devices)</option>
+            <option value="oncology">Oncology (3 devices)</option>
+            <option value="critical">Critical Care &amp; Monitoring (2 devices)</option>
+            <option value="cardiac">Cardiac Surgery (1 device)</option>
+          </select>
+        </div>
+
+        <div class="virexa-input-group">
+          <label class="virexa-label" for="dist-volume">Projected Volume &amp; Target Territory</label>
+          <textarea class="virexa-input" id="dist-volume" rows="3" required placeholder="e.g., Hospital supply in Telangana / 50,000 infusion sets monthly"></textarea>
+        </div>
+
+        <button type="submit" class="virexa-btn-primary" style="width:100%;justify-content:center;padding:15px">
+          <span>Submit Distribution Enquiry</span>
+          <span>&rarr;</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Col 1: Vidhata Medical -->
+      <div>
+        <a href="index.html" class="navbar__logo" style="margin-bottom:12px;display:inline-flex">
+          <img src="images/logo.png" alt="Vidhata Plastics Logo" class="navbar__logo-img" />
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-name">Vidhata Medical</span>
+            <span class="navbar__logo-tagline">Design &middot; Tooling &middot; Production &middot; Assembly</span>
+          </div>
+        </a>
+        <p class="footer__brand-desc">
+          The medical device and pharma packaging business of Vidhata Plastics India Private Limited. Contract manufacturing, Hyderabad.
+        </p>
+        <div class="footer__certbadges">
+          <span class="footer__certbadge">CDSCO MD-5</span>
+          <span class="footer__certbadge">ISO 13485:2016</span>
+          <span class="footer__certbadge">ISO 9001:2015</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Contact -->
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact-row">
+          <a href="mailto:info@vidhata.co.in" class="footer__contact-link">info@vidhata.co.in</a>
+        </div>
+        <div class="footer__contact-row">
+          <a href="tel:+919885100808" class="footer__contact-link">+91 98851 00808</a>
+        </div>
+        <div class="footer__hours">
+          Monday to Saturday, 09:00&ndash;18:00 IST (UTC+5:30)
+        </div>
+        <div class="footer__sla">
+          We reply within one working day.
+        </div>
+      </div>
+
+      <!-- Col 3: Unit 2 — Maheshwaram -->
+      <div>
+        <div class="footer__col-title">Unit 2 &mdash; Maheshwaram</div>
+        <p class="footer__facility-address">
+          S-1 P/C, Survey No. 114, E-City, Maheshwaram, Rangareddy, Telangana 501359
+        </p>
+        <div class="footer__facility-scope">
+          Toolroom, moulding, cleanroom, QC and stability lab
+        </div>
+      </div>
+
+      <!-- Col 4: Unit 1 — Cherlapally -->
+      <div>
+        <div class="footer__col-title">Unit 1 &mdash; Cherlapally</div>
+        <p class="footer__facility-address">
+          Plot No. 205/2, Phase II, IDA Cherlapally, Hyderabad 500051
+        </p>
+        <div class="footer__facility-scope">
+          Registered office
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Compliance Strip -->
+    <div class="footer__bottom">
+      <p class="footer__legal-line">
+        VIDHATA PLASTICS INDIA PRIVATE LIMITED &middot; CIN U25209TG1990PTC012152 &middot; GST 36AAACV8175G1Z2 &middot; Manufacturing licence MFG/MD/2026/000078 &middot; <a href="privacy.html">Privacy</a> &middot; &copy; 2026
+      </p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919885100808" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<button id="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/chatbot.js"></script>
+
+<script>
+window.handleDistSubmit = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('dist-name').value;
+  const org = document.getElementById('dist-org').value;
+  const email = document.getElementById('dist-email').value;
+  
+  alert(`Thank you ${name}! Your distribution inquiry for VIREXA on behalf of ${org} has been received. Our institutional supply team will review your requirements and reach out to ${email} with commercial terms within 24 hours.`);
+  e.target.reset();
+};
+</script>
+
+</body>
+</html>
