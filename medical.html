@@ -29,17 +29,8 @@
       </a>
       <div class="navbar__nav">
         <a href="index.html" class="navbar__link">Home</a>
-        <div class="navbar__dropdown">
-          <a href="services.html" class="navbar__link">Services &#9662;</a>
-          <div class="navbar__dropdown-menu">
-            <a href="services.html#design" class="navbar__dropdown-item">Product Design</a>
-            <a href="services.html#tooling" class="navbar__dropdown-item">Tool &amp; Mould Manufacturing</a>
-            <a href="services.html#manufacturing" class="navbar__dropdown-item">Manufacturing</a>
-            <a href="services.html#assembly" class="navbar__dropdown-item">Assembly</a>
-            <a href="services.html#regulatory" class="navbar__dropdown-item">Regulatory Support</a>
-            <a href="medical.html" class="navbar__dropdown-item">Medical &amp; Pharma</a>
-          </div>
-        </div>
+        <a href="index.html#services" class="navbar__link">Services</a>
+      <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
         <a href="industries.html" class="navbar__link">Industries</a>
         <a href="infrastructure.html" class="navbar__link">Infrastructure</a>
         <a href="quality.html" class="navbar__link">Quality</a>
@@ -62,7 +53,7 @@
   <div id="mobile-menu" class="navbar__mobile">
     <a href="index.html" class="navbar__mobile-link">Home</a>
     <a href="about.html" class="navbar__mobile-link">About Us</a>
-    <a href="services.html" class="navbar__mobile-link">Services</a>
+    <a href="index.html#services" class="navbar__mobile-link">Services</a>
     <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
     <a href="industries.html" class="navbar__mobile-link">Industries</a>
     <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
@@ -291,10 +282,13 @@
   <section class="section" id="product-showcase">
     <div class="container">
       <div class="section-header--center" data-reveal="up">
-        <div class="section-label section-label--gold">Medical Catalog</div>
-        <h2>Our Medical &amp; Pharma Products</h2>
-        <p style="max-width:600px;margin:var(--sp-2) auto var(--sp-8);color:var(--clr-text-muted)">
-          Explore our complete range of sterile disposables, catheter kits, infusion sets, and nephrology components.
+        <div class="section-label section-label--gold">Sterile Single-Use Devices &amp; Pharma Packaging</div>
+        <h2>What We Are Licensed to Make</h2>
+        <p style="max-width:760px;margin:var(--sp-2) auto var(--sp-3);color:var(--clr-text);font-size:var(--fs-base);line-height:var(--lh-relaxed)">
+          Twenty-six sterile single-use medical devices across six therapy areas, plus four pharma packaging formats. Every one is tooled, documented and audited here under CDSCO Form MD-5 licence <strong>MFG/MD/2026/000078</strong>.
+        </p>
+        <p style="max-width:720px;margin:0 auto var(--sp-8);color:var(--clr-text-muted);font-size:var(--fs-sm);line-height:var(--lh-relaxed)">
+          Available under our own VIREXA brand, or made under your brand on the same line &mdash; as OEM contract manufacture under our licence, or under your own licence at our premises.
         </p>
       </div>
 
@@ -302,17 +296,93 @@
       <div class="catalog-tabs-container catalog-tabs-container--scrollable" data-reveal="up">
         <div class="catalog-tabs" id="catalog-tabs">
           <div class="catalog-tabs__glider" id="catalog-glider"></div>
-          <button class="catalog-tab active" data-category="all">All Products</button>
-          <button class="catalog-tab" data-category="Catheter">Anesthesia/Catheter</button>
-          <button class="catalog-tab" data-category="Infusion">Infusion Therapy</button>
-          <button class="catalog-tab" data-category="Infusion Including Chemo">Chemotherapy Infusion</button>
-          <button class="catalog-tab" data-category="Nephrology">Nephrology</button>
-          <button class="catalog-tab" data-category="cardiology">Cardiology</button>
+          <button class="catalog-tab active" data-category="all">All 26</button>
+          <button class="catalog-tab" data-category="infusion">Infusion Therapy</button>
+          <button class="catalog-tab" data-category="nephro">Nephrology &amp; Dialysis</button>
+          <button class="catalog-tab" data-category="lines">Lines &amp; Accessories</button>
+          <button class="catalog-tab" data-category="onco">Oncology</button>
+          <button class="catalog-tab" data-category="critical">Critical Care</button>
+          <button class="catalog-tab" data-category="cardiac">Cardiac Surgery</button>
         </div>
       </div>
 
       <!-- Product Grid -->
       <div class="catalog-grid" id="catalog-grid"></div>
+    </div>
+  </section>
+
+  <!-- Pharma Packaging Section -->
+  <section class="section section--alt" id="pharma-packaging">
+    <div class="container">
+      <div class="section-header--center" data-reveal="up">
+        <div class="section-label section-label--gold">Dosage Formats</div>
+        <h2>Pharma Packaging, by Dosage Form</h2>
+        <p style="max-width:640px;margin:var(--sp-2) auto var(--sp-8);color:var(--clr-text-muted)">
+          Tooled in our own room, at the cavitation that keeps your unit cost where it needs to be.
+        </p>
+      </div>
+
+      <div class="grid-4" data-stagger>
+        <!-- 1. Ophthalmic -->
+        <div class="card card--glass" style="display:flex;flex-direction:column;overflow:hidden;border-radius:var(--radius-xl);padding:var(--sp-6)">
+          <div style="height:180px;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--sp-4);background:rgba(2,132,199,0.05);display:flex;align-items:center;justify-content:center">
+            <img src="images/medical-products.png" alt="Ophthalmic Packaging" style="max-height:100%;object-fit:contain">
+          </div>
+          <span class="product-card__badge" style="margin-bottom:var(--sp-2)">Packaging Format</span>
+          <h3 style="font-size:var(--fs-lg);margin-bottom:var(--sp-2);color:var(--clr-text)">Ophthalmic</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:var(--lh-relaxed);margin-bottom:var(--sp-4);flex-grow:1">
+            Droppers, nozzles and unscrewing caps engineered with ultra-precise orifice geometry for calibrated drop volume.
+          </p>
+          <div style="font-size:var(--fs-xs);color:var(--clr-primary);font-weight:var(--fw-semi)">
+            High-speed multi-cavity tooling &middot; Cleanroom moulded
+          </div>
+        </div>
+
+        <!-- 2. Oral-dose closures -->
+        <div class="card card--glass" style="display:flex;flex-direction:column;overflow:hidden;border-radius:var(--radius-xl);padding:var(--sp-6)">
+          <div style="height:180px;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--sp-4);background:rgba(2,132,199,0.05);display:flex;align-items:center;justify-content:center">
+            <img src="images/Component/Component2.jpg" alt="Oral-dose closures" style="max-height:100%;object-fit:contain">
+          </div>
+          <span class="product-card__badge" style="margin-bottom:var(--sp-2)">Packaging Format</span>
+          <h3 style="font-size:var(--fs-lg);margin-bottom:var(--sp-2);color:var(--clr-text)">Oral-Dose Closures</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:var(--lh-relaxed);margin-bottom:var(--sp-4);flex-grow:1">
+            Child-resistant, 24 to 53 mm closures, up to 32 cavity. Engineered for tamper evidence and torque consistency.
+          </p>
+          <div style="font-size:var(--fs-xs);color:var(--clr-primary);font-weight:var(--fw-semi)">
+            24 to 53 mm &middot; Up to 32 cavity
+          </div>
+        </div>
+
+        <!-- 3. Parenteral seals -->
+        <div class="card card--glass" style="display:flex;flex-direction:column;overflow:hidden;border-radius:var(--radius-xl);padding:var(--sp-6)">
+          <div style="height:180px;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--sp-4);background:rgba(2,132,199,0.05);display:flex;align-items:center;justify-content:center">
+            <img src="images/Precision/Precision1.jpg" alt="Parenteral seals" style="max-height:100%;object-fit:contain">
+          </div>
+          <span class="product-card__badge" style="margin-bottom:var(--sp-2)">Packaging Format</span>
+          <h3 style="font-size:var(--fs-lg);margin-bottom:var(--sp-2);color:var(--clr-text)">Parenteral Seals</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:var(--lh-relaxed);margin-bottom:var(--sp-4);flex-grow:1">
+            13 and 20 mm flip-off seals at 48 cavity. Zero-flash injection molding ensuring sterile vial seal integrity.
+          </p>
+          <div style="font-size:var(--fs-xs);color:var(--clr-primary);font-weight:var(--fw-semi)">
+            13 &amp; 20 mm &middot; 48 cavity tooling
+          </div>
+        </div>
+
+        <!-- 4. Blood collection -->
+        <div class="card card--glass" style="display:flex;flex-direction:column;overflow:hidden;border-radius:var(--radius-xl);padding:var(--sp-6)">
+          <div style="height:180px;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--sp-4);background:rgba(2,132,199,0.05);display:flex;align-items:center;justify-content:center">
+            <img src="images/High volume/High volume4.jpg" alt="Blood collection" style="max-height:100%;object-fit:contain">
+          </div>
+          <span class="product-card__badge" style="margin-bottom:var(--sp-2)">Packaging Format</span>
+          <h3 style="font-size:var(--fs-lg);margin-bottom:var(--sp-2);color:var(--clr-text)">Blood Collection</h3>
+          <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);line-height:var(--lh-relaxed);margin-bottom:var(--sp-4);flex-grow:1">
+            Blood-collection tubes, caps, and canisters manufactured with optical-grade polymers and leak-resistant closures.
+          </p>
+          <div style="font-size:var(--fs-xs);color:var(--clr-primary);font-weight:var(--fw-semi)">
+            Optical PET / PP &middot; Vacuum-tested
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -382,9 +452,9 @@
         <div>
           <div class="footer__col-title">Services</div>
           <div class="footer__links">
-            <a href="services.html#design" class="footer__link">Product Design</a>
-            <a href="services.html#tooling" class="footer__link">Tool &amp; Mould Mfg.</a>
-            <a href="services.html#manufacturing" class="footer__link">Manufacturing</a>
+            <a href="index.html#services" class="footer__link">Product Design</a>
+            <a href="index.html#services" class="footer__link">Tool &amp; Mould Mfg.</a>
+            <a href="index.html#services" class="footer__link">Manufacturing</a>
             <a href="medical.html" class="footer__link">Medical &amp; Pharma</a>
             <a href="quality.html" class="footer__link">Quality &amp; Certs</a>
           </div>

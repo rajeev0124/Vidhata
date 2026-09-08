@@ -160,9 +160,11 @@ function initCounters() {
   const counters = $$('[data-count]');
   if (!counters.length) return;
 
-  const formatNumber = (num, suffix) => {
-    if (num >= 1000000) return (num / 1000000).toFixed(0) + 'M' + suffix;
-    if (num >= 1000) return (num / 1000).toFixed(0) + 'K' + suffix;
+  const formatNumber = (num, suffix, noAbbrev) => {
+    if (!noAbbrev) {
+      if (num >= 1000000) return (num / 1000000).toFixed(0) + 'M' + suffix;
+      if (num >= 1000) return (num / 1000).toFixed(0) + 'K' + suffix;
+    }
     return num.toLocaleString() + suffix;
   };
 
@@ -170,6 +172,7 @@ function initCounters() {
     const target = parseInt(el.dataset.count);
     const suffix = el.dataset.suffix || '';
     const prefix = el.dataset.prefix || '';
+    const noAbbrev = el.dataset.noAbbrev === 'true';
     const duration = parseInt(el.dataset.duration) || 2000;
     const startTime = performance.now();
 
@@ -181,12 +184,12 @@ function initCounters() {
       const eased = easeOutQuart(progress);
       const current = Math.round(eased * target);
 
-      el.textContent = prefix + formatNumber(current, suffix);
+      el.textContent = prefix + formatNumber(current, suffix, noAbbrev);
 
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
-        el.textContent = prefix + formatNumber(target, suffix);
+        el.textContent = prefix + formatNumber(target, suffix, noAbbrev);
       }
     };
 
@@ -684,3 +687,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initSafe('LazyImages', initLazyImages);
   initSafe('InteractiveGrid', initInteractiveGrid);
 });
+

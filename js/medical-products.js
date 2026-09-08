@@ -1,778 +1,922 @@
 /* =========================================================
-   VIDHATA PLASTICS — MEDICAL PRODUCTS SHOWCASE HANDLER
+   VIDHATA PLASTICS — MEDICAL & PHARMA PRODUCTS CATALOG HANDLER
+   CDSCO Form MD-5 Licence: MFG/MD/2026/000078
    js/medical-products.js
    ========================================================= */
 
 'use strict';
 
-// ── Medical Products Database ──
+// ── Medical Products Database (Exact 26 Licensed Devices) ──
 const MEDICAL_PRODUCTS = [
-  // ── Catheter ──
   {
-    id: "spinal-epidural-kit",
-    title: "Combined Spinal Epidural Catheter Kit",
-    productCode: "VP402",
-    category: "Catheter",
-    image: "images/Catheter/combined spinal epidural catheter kit.jpg",
-    description: "A comprehensive regional anesthesia kit designed for combined spinal-epidural (CSE) blocks. It integrates a Tuohy needle and a pencil-point spinal needle to enable rapid spinal block onset with the capability of continuous epidural medication delivery, streamlining post-operative analgesia.",
-    features: [
-      "Needle-Through-Needle design enables spinal needle to pass through Tuohy needle for a single-interspace approach.",
-      "Ergonomic Tuohy needle features clear depth graduation markings for precise insertion control.",
-      "Atraumatic Whitacre/Pencil-Point spinal needle reduces cerebrospinal fluid loss and minimizes PDPH risk.",
-      "Highly flexible nylon catheter with a soft, rounded tip to prevent vessel and nerve trauma.",
-      "Loss-of-Resistance (LOR) syringe is low-friction, ensuring highly tactile confirmation of the epidural space.",
-      "Hydrophobic 0.2 µm filter blocks bacterial contamination during continuous infusion."
+    "id": "infusion-intravenous-set-non-vented",
+    "title": "Infusion (Intravenous) Set Non-Vented",
+    "productCode": "VP-INF-01",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion/Infusion set non vented.jpg",
+    "description": "Administration of fluids from a container into the patient's vascular system through a vascular access device.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Tuohy Needle": "18G with clear hub & depth markers",
-      "Spinal Needle": "27G Pencil Point (Sprotte/Whitacre type) with guide",
-      "Epidural Catheter": "20G Multi-port Nylon, flexible soft tip, kink-resistant",
-      "LOR Syringe": "10 ml low-friction Loss of Resistance syringe",
-      "Sterilization": "Ethylene Oxide (EO) Sterile",
-      "Compliance": "ISO 13485, CE Compliant"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Engineered for gravity fluid administration from collapsible plastic containers without external air venting.",
+      "Sharp non-vented spike ensures easy penetration of bottle stoppers with zero coring risk.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · n · o · n · - · v · e · n · t · e · d ·  · s · p · i · k · e · , ·  · c · l · a · m · p ·  · a · n · d ·  · r · o · l · l · e · r ·  ·  ·  ·  · n · y · l · o · n ·  · m · e · s · h ·  · a · n · d ·  · P · P ·  · f · l · u · i · d ·  · f · i · l · t · e · r ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · L · D · P · E ·  · c · a · p ·  ·  ·  ·  · P · P ·  · a · n · d ·  · s · t · a · i · n · l · e · s · s ·  · n · e · e · d · l · e ·  · s · e · t ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · n · o · n · - · v · e · n · t · e · d ·  · s · p · i · k · e · , ·  · c · l · a · m · p ·  · a · n · d ·  · r · o · l · l · e · r ·  ·  ·  ·  · n · y · l · o · n ·  · m · e · s · h ·  · a · n · d ·  · P · P ·  · f · l · u · i · d ·  · f · i · l · t · e · r ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · L · D · P · E ·  · c · a · p ·  ·  ·  ·  · P · P ·  · a · n · d ·  · s · t · a · i · n · l · e · s · s ·  · n · e · e · d · l · e ·  · s · e · t ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "epidural-catheter-kit",
-    title: "Epidural Catheter Kit",
-    productCode: "VP401",
-    category: "Catheter",
-    image: "images/Catheter/epidural_catheter_kit.jpg",
-    description: "Designed for continuous epidural infusion to manage regional anesthesia and post-operative pain relief. Features highly flexible, radiopaque catheters for precise placement under fluoroscopic control.",
-    features: [
-      "Premium Tuohy needle has a polished inner bevel edge to eliminate catheter shearing risk during insertion.",
-      "Graduated 90 cm catheter with highly visible depth markers for safe positioning.",
-      "Soft, closed tip with 3 lateral eyes ensures uniform distribution of local anesthetics.",
-      "Low-friction Loss of Resistance (LOR) syringe provides sensitive tactile feedback during air or saline techniques.",
-      "0.2-micron bacteria-retentive flat filter guarantees fluid microbial safety.",
-      "Detachable twist-lock connector provides a secure, leak-proof connection to infusion lines."
+    "id": "infusion-intravenous-set-vented",
+    "title": "Infusion (Intravenous) Set Vented",
+    "productCode": "VP-INF-02",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion/Infusion Set Vented.jpg",
+    "description": "Administration of fluids from a container into the patient's vascular system through a vascular access device.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Tuohy Needle": "16G or 18G with curved tip to direct catheter",
-      "Catheter Length": "90 cm with graduation markings",
-      "Catheter Type": "Closed tip with 3 lateral eyes for uniform distribution",
-      "Flat Filter": "0.2 μm hydrophobic bacteria-retentive flat filter",
-      "Sterilization": "EO Sterile",
-      "Material": "Medical-grade Nylon / Polyurethane"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Integrated hydrophobic antibacterial air vent filter allows continuous gravity delivery from rigid glass or semi-rigid bottles.",
+      "Precision drip chamber equipped with 15-20 µm fluid filter to prevent particulate infusion.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e · , ·  · c · l · a · m · p ·  · a · n · d ·  · r · o · l · l · e · r ·  ·  ·  ·  · n · y · l · o · n ·  · m · e · s · h ·  · a · n · d ·  · P · P ·  · f · l · u · i · d ·  · f · i · l · t · e · r ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · L · D · P · E ·  · c · a · p ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e · , ·  · c · l · a · m · p ·  · a · n · d ·  · r · o · l · l · e · r ·  ·  ·  ·  · n · y · l · o · n ·  · m · e · s · h ·  · a · n · d ·  · P · P ·  · f · l · u · i · d ·  · f · i · l · t · e · r ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · L · D · P · E ·  · c · a · p ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "arterial-catheter-kit",
-    title: "Arterial Catheter Kit",
-    productCode: "VP304",
-    category: "Catheter",
-    image: "images/Catheter/arterial_catheter_kit.png",
-    description: "A precision Seldinger arterial catheterization kit designed for continuous arterial blood pressure monitoring and frequent blood gas sampling in critical care and surgical operating suites.",
-    features: [
-      "Thermosensitive radiopaque polyurethane catheter softens inside the artery to minimize mechanical vasospasm and intimal trauma.",
-      "Integrated blood flashback chamber on the introducer needle provides rapid tactile and visual confirmation of arterial entry.",
-      "Super-elastic Nitinol guidewire with flexible J-tip and ergonomic thumb-advancer facilitates smooth, kink-free vessel cannulation.",
-      "Soft pliable suture wings enable comfortable, secure skin fixation to minimize catheter displacement risks.",
-      "Kink-resistant extension line with a high-pressure rated 3-way stopcock guarantees accurate pressure wave transmission."
+    "id": "premium-infusion-set",
+    "title": "Premium Infusion Set",
+    "productCode": "VP-INF-03",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion/Premium Based Infusion Set.jpg",
+    "description": "Intravenous administration of IV fluids into the vascular system through a vascular access device.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Catheter Size": "20G (3 Fr) / 22G (2 Fr) options",
-      "Catheter Length": "8 cm, 12 cm, 16 cm arterial lines",
-      "Material": "Thermosensitive Radiopaque Polyurethane (Carbothane®)",
-      "Guidewire": "0.018 in / 0.021 in Nitinol J-tip guidewire with advancer",
-      "Introducer Needle": "20G / 22G transparent hub needle with flashback window",
-      "Sterilization": "Ethylene Oxide (EO) Sterile",
-      "Compliance": "ISO 13485, CE Certified"
-    }
-  },
-
-  // ── Infusion ──
-  {
-    id: "filter-infusion-set",
-    title: "0.2 Micron Filter (Non-DEHP) Infusion Set",
-    productCode: "VP101F",
-    category: "Infusion",
-    image: "images/Infusion/0.2 MICRON FILTER (NON-DEHP) Infusion Set.jpg",
-    description: "High-end gravity IV administration set featuring a 0.2-micron polyethersulfone (PES) membrane filter to block bacteria, particulate matter, and air. Completely DEHP-free, making it safe for chemotherapy drugs and lipid emulsions.",
-    features: [
-      "Hydrophilic PES 0.2 μm membrane filter effectively eliminates endotoxins, bacteria, and particulates.",
-      "100% DEHP-free medical-grade polyurethane tubing ensures safe delivery of paclitaxel and lipid drugs.",
-      "Integrated needleless luer-activated Y-site prevents needle-stick injuries during administration.",
-      "Kink-resistant, highly transparent tubing for smooth flow monitoring and patient mobility.",
-      "Vented drip chamber with a sharp piercing spike for immediate fluid bag attachment."
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Premium 16 mm clear drip chamber with high-flow micro-dropper orifice calibrated to 20 drops/ml.",
+      "Equipped with needle-free injection Y-site and smooth tactile roller clamp for micro-adjustments.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · 1 · 6 ·  · m · m ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e ·  ·  ·  ·  · P · V · C ·  · a · i · r ·  · v · e · n · t ·  · c · a · p ·  ·  ·  ·  · a · i · r ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · s · i · l · i · c · o · n · e ·  · Y · - · s · i · t · e ·."
     ],
-    specs: {
-      "Filter Membrane": "0.2 μm PES (polyethersulfone) hydrophilic membrane",
-      "Tubing Material": "100% DEHP-free, photoprotective optional layer",
-      "Drip Rate": "20 drops/ml",
-      "Tubing Length": "180 cm kink-resistant tubing",
-      "Y-Site": "Needleless injection port (luer activated)",
-      "Sterilization": "EO Sterile"
-    }
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · 1 · 6 ·  · m · m ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e ·  ·  ·  ·  · P · V · C ·  · a · i · r ·  · v · e · n · t ·  · c · a · p ·  ·  ·  ·  · a · i · r ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · s · i · l · i · c · o · n · e ·  · Y · - · s · i · t · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "three-way-stopcock",
-    title: "3-Way Stopcock",
-    productCode: "VP101D",
-    category: "Infusion",
-    image: "images/Infusion/three_way_stopcock.jpg",
-    description: "A crystal-clear, pressure-resistant three-way stopcock for simultaneous administration of multiple fluids or drug regimens. Fully rotatable handle allows 360-degree direction control without flow restriction.",
-    features: [
-      "Pressure-resistant polycarbonate body remains transparent and crack-free under lipid exposure.",
-      "Fully rotatable handle with tactile 360-degree click feedback for exact fluid flow direction.",
-      "Minimal internal dead space prevents fluid entrapment and medication mixing.",
-      "Leak-proof male and female luer locks ensure secure connection to IV catheters and extension sets.",
-      "Color-coded handles (blue/red/white) for easy identification of arterial or venous lines."
+    "id": "infusion-set-with-three-way-stopcock",
+    "title": "Infusion Set with Three Way Stopcock",
+    "productCode": "VP-INF-04",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion/Infusion Set with Three Way stop Cock.jpg",
+    "description": "Infusion of fluids and medications, with directional flow control at the access port.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Pressure Rating": "4.5 bar (65 psi) continuous operating pressure",
-      "Material": "Medical Grade Polycarbonate (lipid-resistant housing)",
-      "Connectors": "Dual female luer ports and one male luer lock",
-      "Handle Rotation": "360° rotation with soft click indicators",
-      "Dead Space": "Minimal fluid priming volume (< 0.2 ml)"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Lipid-resistant polycarbonate body with 360-degree rotation handles multi-route medication administration simultaneously.",
+      "Rated for continuous dynamic pressures up to 4.5 bar (65 psi) with zero leakage or cracking.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · s ·  · t · h · e ·  · p · r · e · m · i · u · m ·  · s · e · t · , ·  · w · i · t · h ·  · a · n ·  · A · B · S ·  · a · n · d ·  · P · P ·  · t · h · r · e · e · - · w · a · y ·  · s · t · o · p · c · o · c · k ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · s ·  · t · h · e ·  · p · r · e · m · i · u · m ·  · s · e · t · , ·  · w · i · t · h ·  · a · n ·  · A · B · S ·  · a · n · d ·  · P · P ·  · t · h · r · e · e · - · w · a · y ·  · s · t · o · p · c · o · c · k ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "autostop-infusion-set",
-    title: "Auto-Stop IV Infusion Set",
-    productCode: "VP101G",
-    category: "Infusion",
-    image: "images/Infusion/autostop_infusion_set.jpg",
-    description: "Enforces passive patient safety via an integrated auto-stop filter membrane in the drip chamber. Automatically stops flow when the fluid container runs dry, preventing line dry-out and air entry into the bloodstream.",
-    features: [
-      "Innovative auto-stop membrane prevents the line from running dry once the bag is empty.",
-      "Eliminates air entry risks, providing automatic passive protection against air embolism.",
-      "Vented drip chamber features a 15-micron fluid filter to block large particles.",
-      "Highly responsive roller clamp enables exact rate adjustment and quick shut-off.",
-      "Flexible, kink-resistant tubing helps maintain consistent delivery rates."
+    "id": "micro-infusion-set-with-air-vented",
+    "title": "Micro Infusion Set with Air Vented",
+    "productCode": "VP-INF-05",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion/Micro Infusion Set with Air vent.jpg",
+    "description": "Fine-rate infusion of fluids and medications as part of an infusion system.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Auto-Stop Membrane": "Hydrophobic barrier membrane (stops air, allows fluid)",
-      "Drip Rate": "20 drops/ml",
-      "Tubing Material": "Flexible, medical grade PVC",
-      "Inline Fluid Filter": "15 μm particle filter in drip chamber",
-      "Sterilization": "EO Sterile"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Precision micro-bore drip tube delivering exactly 60 drops per ml for pediatric and critical dosage accuracy.",
+      "Integrated hydrophobic bacterial air filter ensures safe pressure equilibration during delicate infusions.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · s ·  · t · h · e ·  · p · r · e · m · i · u · m ·  · s · e · t · , ·  · w · i · t · h ·  · a · n ·  · A · B · S ·  · a · n · d ·  · P · P ·  · t · h · r · e · e · - · w · a · y ·  · s · t · o · p · c · o · c · k ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · s ·  · t · h · e ·  · p · r · e · m · i · u · m ·  · s · e · t · , ·  · w · i · t · h ·  · a · n ·  · A · B · S ·  · a · n · d ·  · P · P ·  · t · h · r · e · e · - · w · a · y ·  · s · t · o · p · c · o · c · k ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "extension-line-range",
-    title: "Extension Line (Complete Range)",
-    productCode: "VP103A",
-    category: "Infusion",
-    image: "images/Infusion/Extension Line(Complete range).jpg",
-    description: "A comprehensive range of high-pressure and low-pressure extension lines to expand vascular access options. Made of medical-grade tubing with secure luer lock connections for leak-proof performance.",
-    features: [
-      "A full range of low-volume and high-pressure configurations suitable for ICU and anesthesia.",
-      "Durable, kink-resistant polyurethane tubing withstands pressure up to 500 psi.",
-      "Fully transparent lines allow clear visualization of fluid and air bubbles.",
-      "Standardized luer lock connectors ensure leak-free performance under pressure.",
-      "Available in multiple lengths from 10 cm to 200 cm to fit various clinical needs."
+    "id": "0-2-micron-filter-non-dehp-infusion-set",
+    "title": "0.2 Micron Filter (Non-DEHP) Infusion Set",
+    "productCode": "VP-INF-06",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion/0.2 MICRON FILTER (NON-DEHP) Infusion Set.jpg",
+    "description": "Filtered intravenous infusion where a DEHP-free fluid path is required.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Lengths Available": "10 cm, 25 cm, 50 cm, 100 cm, 150 cm, 200 cm",
-      "Inner Diameter": "1.0 mm (low prime) to 2.0 mm (high flow)",
-      "Connectors": "Male/Female Luer Lock with protective caps",
-      "Max Pressure": "Up to 500 psi for pressure lines",
-      "Material": "Kink-resistant Polyurethane or PVC"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Precision micro-bore drip tube delivering exactly 60 drops per ml for pediatric and critical dosage accuracy.",
+      "Integrated hydrophobic bacterial air filter ensures safe pressure equilibration during delicate infusions.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · s ·  · t · h · e ·  · p · r · e · m · i · u · m ·  · s · e · t · , ·  · w · i · t · h ·  · a ·  · 0 · . · 2 ·  · m · i · c · r · o · n ·  · A · B · S ·  · a · n · d ·  · m · e · m · b · r · a · n · e ·  · f · i · l · t · e · r ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · s ·  · t · h · e ·  · p · r · e · m · i · u · m ·  · s · e · t · , ·  · w · i · t · h ·  · a ·  · 0 · . · 2 ·  · m · i · c · r · o · n ·  · A · B · S ·  · a · n · d ·  · m · e · m · b · r · a · n · e ·  · f · i · l · t · e · r ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "infusion-set-vented",
-    title: "Infusion Set (Vented)",
-    productCode: "VP101B",
-    category: "Infusion",
-    image: "images/Infusion/Infusion Set Vented.jpg",
-    description: "Standard clinical IV administration set with a sharp piercing spike and integrated air vent. The air vent features a hydrophobic membrane filter to prevent bacterial contamination from incoming room air.",
-    features: [
-      "Sharp piercing spike fits easily into IV bags and glass bottles.",
-      "Integrated air vent with a hydrophobic membrane filter blocks airborne bacterial entry.",
-      "Flexible, transparent drip chamber includes a 15 µm disc filter to trap particulates.",
-      "Precision V-clamp controller allows for stable gravity-flow rate adjustments.",
-      "EO Sterile and individually packed to maintain maximum sterility."
+    "id": "auto-stop-iv-infusion-set",
+    "title": "Auto Stop IV Infusion Set",
+    "productCode": "VP-INF-07",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion/autostop_infusion_set.jpg",
+    "description": "Intravenous administration with an auto-stop drip chamber that closes when the container empties.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Air Vent": "Hydrophobic filter with snap-on protective cap",
-      "Spike Type": "Sharp ABS double-channel spike",
-      "Drip Chamber": "Flexible, clear chamber with 15 μm fluid filter",
-      "Roller Clamp": "Precision V-clamp regulator",
-      "Tubing Length": "150 cm",
-      "Drip Rate": "20 drops/ml"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Patented auto-stop disc membrane halts fluid flow automatically once container runs dry, preventing line dry-out and air embolism.",
+      "Ensures constant fluid priming retention, easing nurse re-infusion without having to re-prime the line.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · P ·  · a · n · d ·  · m · e · m · b · r · a · n · e ·  · a · u · t · o · - · s · t · o · p ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  · w · i · t · h ·  · f · i · l · t · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · d · r · i · p ·  · s · p · i · k · e ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · s · i · l · i · c · o · n · e ·  · Y · - · s · i · t · e ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · P ·  · a · n · d ·  · m · e · m · b · r · a · n · e ·  · a · u · t · o · - · s · t · o · p ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  · w · i · t · h ·  · f · i · l · t · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · d · r · i · p ·  · s · p · i · k · e ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · s · i · l · i · c · o · n · e ·  · Y · - · s · i · t · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "infusion-set-threeway",
-    title: "Infusion Set with Three-Way Stopcock",
-    productCode: "VP101D",
-    category: "Infusion",
-    image: "images/Infusion/Infusion Set with Three Way stop Cock.jpg",
-    description: "Combines an IV administration line with an integrated 3-way stopcock at the patient end. Streamlines clinical access by allowing immediate secondary drug injections or blood sampling without line interruption.",
-    features: [
-      "Pre-assembled kit minimizes preparation time and reduces the risk of touch contamination.",
-      "Integrated 3-way stopcock at the patient end allows easy access for secondary drug injections.",
-      "Vented spike features a hydrophobic air filter to maintain constant pressure.",
-      "Clear, lipid-resistant stopcock body allows immediate detection of air bubbles.",
-      "Rotating luer lock ensures a secure and leak-free patient connection."
+    "id": "measured-volume-infusion-set",
+    "title": "Measured Volume Infusion Set",
+    "productCode": "VP-INF-08",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/medical-products.png",
+    "description": "Volume-controlled administration of fluids through a graduated burette.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Spike": "Vented spike with hydrophobic air filter",
-      "Drip Rate": "20 drops/ml",
-      "Integrated Valve": "3-Way stopcock with 360-degree rotatable tap",
-      "Tubing Length": "180 cm total length",
-      "Sterilization": "EO Sterile"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Precision 100 ml / 150 ml calibrated cylindrical burette with bold blue volumetric graduation markings for pediatric safety.",
+      "Integrated floating automatic shut-off valve cuts flow when set dose is depleted to prevent unexpected over-infusion.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · V · C ·  · b · u · r · e · t · t · e ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · s · t · a · i · n · l · e · s · s ·  · m · i · c · r · o · n · i · z · e · r ·  ·  ·  ·  · P · P ·  · k · i · n · k · - · r · e · s · i · s · t · a · n · t ·  · t · u · b · e ·  ·  ·  ·  · s · i · l · i · c · o · n · e ·  · f · l · o · a · t · e · r ·  ·  ·  ·  · A · B · S ·  · h · a · r · d ·  · i · n · l · e · t ·  · a · n · d ·  · o · u · t · l · e · t ·  · c · a · p · s ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · V · C ·  · b · u · r · e · t · t · e ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · s · t · a · i · n · l · e · s · s ·  · m · i · c · r · o · n · i · z · e · r ·  ·  ·  ·  · P · P ·  · k · i · n · k · - · r · e · s · i · s · t · a · n · t ·  · t · u · b · e ·  ·  ·  ·  · s · i · l · i · c · o · n · e ·  · f · l · o · a · t · e · r ·  ·  ·  ·  · A · B · S ·  · h · a · r · d ·  · i · n · l · e · t ·  · a · n · d ·  · o · u · t · l · e · t ·  · c · a · p · s ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "infusion-set-nonvented",
-    title: "Infusion Set (Non-Vented)",
-    productCode: "VP101A",
-    category: "Infusion",
-    image: "images/Infusion/Infusion set non vented.jpg",
-    description: "Standard non-vented infusion set optimized for closed, collapsible plastic IV bags. Drip chamber features an integrated fluid filter and smooth transparent walls for precise drop monitoring.",
-    features: [
-      "Designed specifically for closed, collapsible plastic IV bags.",
-      "Non-vented sharp spike prevents unwanted air introduction.",
-      "Smooth transparent walls of the drip chamber enable easy drop monitoring.",
-      "High-performance roller clamp offers precise gravity flow control.",
-      "EO Sterile and pyrogen-free formulation."
+    "id": "elastomeric-infusion-pump",
+    "title": "Elastomeric Infusion Pump",
+    "productCode": "VP-INF-09",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion/elastomeric_infusion_pump.jpg",
+    "description": "General infusion, antibiotic delivery, chemotherapy or pain management, in a healthcare facility or at home. Single use.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Spike": "Non-vented sharp plastic spike",
-      "Fluid Filter": "15 μm disc filter",
-      "Roller Clamp": "High-accuracy rate-control roller clamp",
-      "Tubing Length": "150 cm",
-      "Drip Rate": "20 drops/ml",
-      "Material": "Medical Grade PVC"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Constant-rate elastomeric balloon reservoir delivers continuous medication without external electric power or batteries.",
+      "Impact-resistant transparent outer casing protects reservoir while calibrated flow restrictor guarantees dosing accuracy.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S · , ·  · P · P ·  · a · n · d ·  · P · V · C ·  · f · l · o · w · - · r · a · t · e ·  · c · o · n · t · r · o · l · l · e · r ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · m · e · m · b · r · a · n · e ·  · f · l · u · i · d ·  · f · i · l · t · e · r ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · P · P ·  · m · e · d · i · c · a · t · i · o · n ·  · r · e · s · e · r · v · o · i · r ·  ·  ·  ·  · P · P ·  · s · u · p · p · o · r · t ·  · p · i · p · e ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S · , ·  · P · P ·  · a · n · d ·  · P · V · C ·  · f · l · o · w · - · r · a · t · e ·  · c · o · n · t · r · o · l · l · e · r ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · m · e · m · b · r · a · n · e ·  · f · l · u · i · d ·  · f · i · l · t · e · r ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · P · P ·  · m · e · d · i · c · a · t · i · o · n ·  · r · e · s · e · r · v · o · i · r ·  ·  ·  ·  · P · P ·  · s · u · p · p · o · r · t ·  · p · i · p · e ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "micro-infusion-set",
-    title: "Micro Infusion Set with Air Vent",
-    productCode: "VP101E",
-    category: "Infusion",
-    image: "images/Infusion/Micro Infusion Set with Air vent.jpg",
-    description: "Micro-drip IV administration set tailored specifically for pediatric, neonatal, and ICU patients requiring highly controlled gravity flow of fluids and medications.",
-    features: [
-      "Precision stainless steel drop needle delivers 60 micro-drops/ml.",
-      "Perfect for neonatal, pediatric, and critical care medication dosing.",
-      "Hydrophobic bacteria-retentive air vent maintains smooth, consistent flow.",
-      "Flexible, clear drip chamber allows easy fluid level monitoring.",
-      "Phthalate-free and DEHP-free options preserve patient safety."
+    "id": "infusion-intravenous-set-with-flow-regulator",
+    "title": "Infusion Intravenous Set with Flow Regulator",
+    "productCode": "VP-INF-10",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Infusion Including Chemo/infusion intravenous set with flow regulator.jpg",
+    "description": "Intravenous administration with precision flow control for consistent delivery.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Drip Rate": "60 drops/ml (Micro drip)",
-      "Air Vent": "Hydrophobic bacteria-retentive vent",
-      "Drip Chamber": "Graduated drip tube with stainless steel drop needle",
-      "Tubing Length": "150 cm",
-      "Material": "Pliable medical PVC, DEHP-free options available"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Ergonomic dial flow regulator calibrated from 5 to 250 ml/hr maintains consistent gravitational infusion rates.",
+      "Dual-scale calibration provides dependable bedside flow titration without the need for electronic volumetric pumps.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · s ·  · t · h · e ·  · p · r · e · m · i · u · m ·  · s · e · t · , ·  · w · i · t · h ·  · a · n ·  · A · B · S ·  · a · n · d ·  · T · P · E ·  · f · l · o · w ·  · r · e · g · u · l · a · t · o · r ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · s ·  · t · h · e ·  · p · r · e · m · i · u · m ·  · s · e · t · , ·  · w · i · t · h ·  · a · n ·  · A · B · S ·  · a · n · d ·  · T · P · E ·  · f · l · o · w ·  · r · e · g · u · l · a · t · o · r ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "premium-infusion-set",
-    title: "Premium Based Infusion Set",
-    productCode: "VP101C",
-    category: "Infusion",
-    image: "images/Infusion/Premium Based Infusion Set.jpg",
-    description: "Premium-grade infusion set designed for precise gravity flow regulation. Includes a dedicated dial flow regulator that allows clinicians to dial in flow rates directly in ml/hr without counting drops.",
-    features: [
-      "Built-in dial flow regulator permits direct flow rate adjustments in ml/hr.",
-      "Eliminates the need for manual drop counting, saving valuable nursing time.",
-      "Biocompatible, kink-resistant tubing maintains constant delivery rates.",
-      "Self-sealing injection Y-site supports easy bolus drug delivery.",
-      "Secure rotating luer lock prevents accidental disconnections."
+    "id": "priming-set-intravenous-infusion",
+    "title": "Priming Set Intravenous Infusion",
+    "productCode": "VP-INF-11",
+    "category": "infusion",
+    "categoryDisplay": "Infusion Therapy",
+    "image": "images/Nephrology/priming set intravenous infusion set.jpg",
+    "description": "Priming of an intravenous infusion line before administration.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Flow Regulator": "Dial flow controller (range: 5 to 250 ml/hour)",
-      "Tubing": "Super-soft, kink-resistant polyurethane (TPU) tubing",
-      "Injection Port": "Self-sealing latex-free Y-site",
-      "Drip Rate": "20 drops/ml",
-      "Connector": "Rotating Luer Lock connector"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Optimized rapid-prime fluid path designed for efficient bubble clearance prior to dialysis and high-volume infusions.",
+      "Supplied with high-flow male luer lock and secure sealing protective closure cap.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · 1 · 6 ·  · m · m ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e · , ·  · c · l · a · m · p ·  · a · n · d ·  · r · o · l · l · e · r ·  ·  ·  ·  · P · V · C ·  · a · i · r ·  · v · e · n · t ·  · c · a · p ·  ·  ·  ·  · a · i · r ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · 1 · 6 ·  · m · m ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e · , ·  · c · l · a · m · p ·  · a · n · d ·  · r · o · l · l · e · r ·  ·  ·  ·  · P · V · C ·  · a · i · r ·  · v · e · n · t ·  · c · a · p ·  ·  ·  ·  · a · i · r ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "elastomeric-pump",
-    title: "Elastomeric Infusion Pump",
-    productCode: "VP106",
-    category: "Infusion",
-    image: "images/Infusion/elastomeric_infusion_pump.jpg",
-    description: "A continuous-infusion portable device utilizing elastomeric balloon pressure to deliver liquid medications at preset flow rates. Commonly used for ambulatory chemotherapy, home antibiotics, and patient-controlled analgesia (PCA).",
-    features: [
-      "Elastomeric silicone balloon provides constant, uniform pressure for continuous drug delivery.",
-      "Ambulatory design allows patients to receive treatment comfortably at home.",
-      "Inline particulate and air-eliminating filters ensure clean fluid pathways.",
-      "Integrated capillary flow restrictor guarantees precise pre-set infusion rates.",
-      "Individually packed, EO Sterile, and completely disposable."
+    "id": "haemodialysis-blood-tubing-set",
+    "title": "Haemodialysis Blood Tubing Set",
+    "productCode": "VP-NPH-01",
+    "category": "nephro",
+    "categoryDisplay": "Nephrology & Dialysis",
+    "image": "images/medical-products.png",
+    "description": "Acute and chronic haemodialysis therapy in kidney dialysis or renal failure.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Balloon Material": "Highly elastic, medical grade Silicone",
-      "Volume Capacities": "100 ml, 275 ml",
-      "Flow Rates": "2 ml/hr, 5 ml/hr, 10 ml/hr options",
-      "Flow Control": "Integrated capillary flow restrictor glass tube",
-      "Safety Features": "Particle and air elimination filters inline"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Kink-resistant arterial and venous tubing lines with low-haemolysis internal lumen finish for continuous extracorporeal blood circuits.",
+      "Color-coded red (arterial) and blue (venous) line clamps with high-resilience peristaltic pump segment.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · L · a · t · e · x · - · f · r · e · e ·  · r · u · b · b · e · r ·  · p · l · u · g ·  ·  ·  ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · c · o · l · o · u · r · - · c · o · d · e · d ·  · P · V · C ·  · T · - · i · n · j · e · c · t · i · o · n ·  · s · i · t · e · s ·  ·  ·  ·  · P · P ·  · p · i · n · c · h ·  · c · l · a · m · p · s ·  ·  ·  ·  · A · B · S ·  · l · u · e · r ·  · l · o · c · k · s ·  ·  ·  ·  · P · V · C ·  · p · u · m · p ·  · s · e · g · m · e · n · t ·  · c · o · n · n · e · c · t · o · r · s ·  ·  ·  ·  · P · V · C ·  · d · i · n ·  · c · o · n · n · e · c · t · o · r · s ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· L · a · t · e · x · - · f · r · e · e ·  · r · u · b · b · e · r ·  · p · l · u · g ·  ·  ·  ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · c · o · l · o · u · r · - · c · o · d · e · d ·  · P · V · C ·  · T · - · i · n · j · e · c · t · i · o · n ·  · s · i · t · e · s ·  ·  ·  ·  · P · P ·  · p · i · n · c · h ·  · c · l · a · m · p · s ·  ·  ·  ·  · A · B · S ·  · l · u · e · r ·  · l · o · c · k · s ·  ·  ·  ·  · P · V · C ·  · p · u · m · p ·  · s · e · g · m · e · n · t ·  · c · o · n · n · e · c · t · o · r · s ·  ·  ·  ·  · P · V · C ·  · d · i · n ·  · c · o · n · n · e · c · t · o · r · s ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "ext-line-stopcock",
-    title: "Extension Line with 3-Way Stopcock",
-    productCode: "VP103C",
-    category: "Infusion",
-    image: "images/Infusion/extension line with 3 way stop cock.jpg",
-    description: "Pre-assembled extension line combined with a robust 3-way stopcock. Offers extended reach and auxiliary drug injection ports for complex surgical or ICU fluid management configurations.",
-    features: [
-      "Pre-assembled line eliminates the need for manual fittings, reducing infection risk.",
-      "Integrated lipid-resistant 3-way stopcock provides multiple injection ports.",
-      "Durable, pressure-rated tubing handles up to 65 psi operating pressure.",
-      "Clear tubing ensures immediate visibility of bubbles or flow interruptions.",
-      "Individually wrapped and EO sterile."
+    "id": "av-arteriovenous-fistula-needle-set",
+    "title": "AV (Arteriovenous) Fistula Needle Set",
+    "productCode": "VP-NPH-02",
+    "category": "nephro",
+    "categoryDisplay": "Nephrology & Dialysis",
+    "image": "images/Nephrology/arteriovenous fistula needle sets.jpg",
+    "description": "Connects blood lines to the blood vessel through a needle when dialysis is carried out via an internal fistula. Flexible butterfly wings identify the needle size.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Tubing Length": "30 cm, 50 cm, 100 cm options",
-      "Tubing OD/ID": "3.0 mm / 1.5 mm",
-      "Stopcock Ports": "Lipid-resistant polycarbonate, 2 female, 1 male",
-      "Pressure Rating": "4.5 bar (65 psi)",
-      "Sterilization": "EO Sterile"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Ultra-thin wall siliconized stainless steel needle cannula minimizes vascular trauma during high-flow hemodialysis access.",
+      "Textured color-coded butterfly wings ensure non-slip grip and stable cannulation fixation to the patient's arm.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · V · C ·  · f · l · e · x · i · b · l · e ·  · r · o · t · a · t · i · n · g ·  · w · i · n · g ·  · w · i · t · h ·  · A · B · S ·  · i · n · n · e · r ·  · p · a · r · t ·  ·  ·  ·  · S · S · - · 3 · 0 · 4 ·  · n · e · e · d · l · e ·  ·  ·  ·  · P · P ·  · n · e · e · d · l · e ·  · c · o · v · e · r ·  ·  ·  ·  · P · V · C ·  · t · u · b · i · n · g ·  ·  ·  ·  · D · e · l · r · i · n ·  · p · i · n · c · h ·  · c · l · a · m · p ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · V · C ·  · f · l · e · x · i · b · l · e ·  · r · o · t · a · t · i · n · g ·  · w · i · n · g ·  · w · i · t · h ·  · A · B · S ·  · i · n · n · e · r ·  · p · a · r · t ·  ·  ·  ·  · S · S · - · 3 · 0 · 4 ·  · n · e · e · d · l · e ·  ·  ·  ·  · P · P ·  · n · e · e · d · l · e ·  · c · o · v · e · r ·  ·  ·  ·  · P · V · C ·  · t · u · b · i · n · g ·  ·  ·  ·  · D · e · l · r · i · n ·  · p · i · n · c · h ·  · c · l · a · m · p ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "ext-line-flowregulator",
-    title: "Extension Line with Flow Regulator",
-    productCode: "VP103B",
-    category: "Infusion",
-    image: "images/Infusion/extension_line_flow_regulator.jpg",
-    description: "A specialized short extension line featuring an inline dial-rate regulator. Essential for standardizing infusion rates when electronic infusion pumps are unavailable or during patient transport.",
-    features: [
-      "Dial flow regulator permits flow rate control between 5 and 250 ml/hr.",
-      "Needleless Y-site port provides a safe pathway for secondary medication delivery.",
-      "Kink-resistant polyurethane line ensures consistent delivery rates.",
-      "Secure luer locks prevent leakage under pressure.",
-      "EO Sterile, pyrogen-free, and single-use."
+    "id": "transducer-protector",
+    "title": "Transducer Protector",
+    "productCode": "VP-NPH-03",
+    "category": "nephro",
+    "categoryDisplay": "Nephrology & Dialysis",
+    "image": "images/Nephrology/transducer proctector.jpg",
+    "description": "Keeps the blood side of the haemodialysis circuit separated from the machine side and prevents contamination of the machine.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Flow Rate Range": "5 ml/hr to 250 ml/hr dial control",
-      "Tubing Length": "45 cm",
-      "Injection Port": "Self-sealing needleless valve",
-      "Material": "Kink-resistant medical polyurethane",
-      "Sterilization": "EO Sterile"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Hydrophobic 0.2 µm PTFE antibacterial membrane blocks blood and fluids while transmitting accurate circuit pressure to machine sensors.",
+      "Standard luer lock connection compatible with all conventional hemodialysis machines and blood tubing sets.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · p · a · r · t ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · p · a · r · t ·  ·  ·  ·  · h · y · d · r · o · p · h · o · b · i · c ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · p · a · r · t ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · p · a · r · t ·  ·  ·  ·  · h · y · d · r · o · p · h · o · b · i · c ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "extension-line-standard",
-    title: "Extension Line (Standard)",
-    productCode: "VP103A",
-    category: "Infusion",
-    image: "images/Infusion/extension_line_standard.jpg",
-    description: "High-quality, flexible extension line designed to minimize catheter movement and patient distress. Ensures a secure connection with no flow reduction or kinking.",
-    features: [
-      "Highly flexible, kink-resistant tubing extends patient mobility.",
-      "Phthalate-free medical PVC prevents plasticizer migration.",
-      "Male-to-female luer lock threads guarantee leak-proof connections.",
-      "Available in multiple lengths to accommodate various clinical setups.",
-      "Fluid path sterile and pyrogen-free."
+    "id": "peritoneal-dialysis-transfusion-set",
+    "title": "Peritoneal Dialysis Transfusion Set",
+    "productCode": "VP-NPH-04",
+    "category": "nephro",
+    "categoryDisplay": "Nephrology & Dialysis",
+    "image": "images/Nephrology/peritoneal_dialysis_set.png",
+    "description": "Administration of dialysis solutions during peritoneal dialysis, allowing solution to flow into and out of the peritoneal cavity.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Length": "10 cm to 150 cm customizable range",
-      "Material": "Soft medical-grade PVC, phthalate-free",
-      "Connectors": "Male to Female Luer Lock",
-      "Sterility": "EO Sterile, pyrogen-free"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Sterile multi-limb fluid manifold tailored for continuous and automated peritoneal dialysis bag exchange.",
+      "Smooth inner bore prevents tubing collapse and guarantees consistent fluid inflow and gravity drainage rates.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · 1 · 6 ·  · m · m ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e ·  ·  ·  ·  · P · V · C ·  · a · i · r ·  · v · e · n · t ·  · c · a · p ·  ·  ·  ·  · a · i · r ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·  ·  ·  ·  · P · V · C ·  · Y · - · j · u · n · c · t · i · o · n ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · 1 · 6 ·  · m · m ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e ·  ·  ·  ·  · P · V · C ·  · a · i · r ·  · v · e · n · t ·  · c · a · p ·  ·  ·  ·  · a · i · r ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·  ·  ·  ·  · P · V · C ·  · Y · - · j · u · n · c · t · i · o · n ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "measured-volume-set",
-    title: "Measured Volume Infusion Set",
-    productCode: "VP105",
-    category: "Infusion",
-    image: "images/Infusion/measured volume infusion set (complete Range).jpg",
-    description: "A burette-style administration set specifically designed for pediatric and neonatal infusions where fluid volume must be precisely metered and restricted to prevent fluid overload.",
-    features: [
-      "Rigid, graduated 100/150 ml burette chamber for precise volume control.",
-      "Integrated automatic shut-off valve prevents dry lines and air infusion.",
-      "60 micro-drops/ml drip chamber optimized for pediatric fluid management.",
-      "Inline 15 µm disc filter prevents large particle administration.",
-      "Air vent with a hydrophobic filter protects against airborne contaminants."
+    "id": "haemodialysis-catheter-set",
+    "title": "Haemodialysis Catheter Set",
+    "productCode": "VP-NPH-05",
+    "category": "nephro",
+    "categoryDisplay": "Nephrology & Dialysis",
+    "image": "images/Nephrology/haemodialysis_catheter_set.jpg",
+    "description": "Exchanges blood to and from the haemodialysis machine.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Burette Capacity": "100 ml or 150 ml graduated chamber",
-      "Micro-Drip": "60 drops/ml",
-      "Shut-off Valve": "Integrated automatic floating shut-off valve",
-      "Filter Size": "15 μm inside the drip chamber",
-      "Material": "Clear rigid Polycarbonate burette, soft PVC lines"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Thermosensitive radiopaque polyurethane softens in situ, adapting to vascular anatomy and reducing vessel wall injury.",
+      "High-flow dual-lumen design minimizes recirculation while optimizing Kt/V dialysis clearance.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · N · i · t · i · n · o · l ·  · g · u · i · d · e ·  · w · i · r · e ·  ·  ·  ·  · P · U ·  · s · i · n · g · l · e · , ·  · d · o · u · b · l · e ·  · a · n · d ·  · t · r · i · p · l · e ·  · l · u · m · e · n ·  · t · u · b · i · n · g ·  ·  ·  ·  · P · E ·  · a · n · d ·  · P · U ·  · v · e · s · s · e · l ·  · d · i · l · a · t · o · r ·  ·  ·  ·  · S · S ·  · a · n · d ·  · P · C ·  · i · n · t · r · o · d · u · c · e · r ·  · n · e · e · d · l · e · s ·  ·  ·  ·  · A · B · S ·  · c · a · n · n · u · l · a ·  · c · l · a · m · p ·  ·  ·  ·  · s · i · l · i · c · o · n · e ·  · p · l · u · g ·  ·  ·  ·  · P · P ·  · c · a · t · h · e · t · e · r ·  · h · o · l · d · e · r ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· N · i · t · i · n · o · l ·  · g · u · i · d · e ·  · w · i · r · e ·  ·  ·  ·  · P · U ·  · s · i · n · g · l · e · , ·  · d · o · u · b · l · e ·  · a · n · d ·  · t · r · i · p · l · e ·  · l · u · m · e · n ·  · t · u · b · i · n · g ·  ·  ·  ·  · P · E ·  · a · n · d ·  · P · U ·  · v · e · s · s · e · l ·  · d · i · l · a · t · o · r ·  ·  ·  ·  · S · S ·  · a · n · d ·  · P · C ·  · i · n · t · r · o · d · u · c · e · r ·  · n · e · e · d · l · e · s ·  ·  ·  ·  · A · B · S ·  · c · a · n · n · u · l · a ·  · c · l · a · m · p ·  ·  ·  ·  · s · i · l · i · c · o · n · e ·  · p · l · u · g ·  ·  ·  ·  · P · P ·  · c · a · t · h · e · t · e · r ·  · h · o · l · d · e · r ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "pressure-monitoring-line",
-    title: "Pressure Line Monitoring",
-    productCode: "VP102",
-    category: "Infusion",
-    image: "images/Infusion/pressure line monitering.jpg",
-    description: "Extremely thick-walled, low-compliance tubing designed for direct blood pressure monitoring systems. Transmits precise hemodynamic waveforms from arterial/venous catheters to pressure transducers.",
-    features: [
-      "Thick-walled, low-compliance tubing preserves pressure wave integrity.",
-      "Delivers highly accurate hemodynamic readings on patient monitors.",
-      "Rigid inner layer prevents pressure damping and waveform distortion.",
-      "Withstands pressure up to 500 psi, ensuring safety in arterial lines.",
-      "Male and female luer lock connectors ensure secure connection."
+    "id": "extension-line",
+    "title": "Extension Line",
+    "productCode": "VP-LNE-01",
+    "category": "lines",
+    "categoryDisplay": "Lines & Accessories",
+    "image": "images/Infusion/Extension Line(Complete range).jpg",
+    "description": "Single-use extension used as part of an infusion or perfusion system.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Max Pressure": "500 psi (34 bar)",
-      "Tubing ID": "1.0 mm (minimizes fluid volume & damping)",
-      "Lengths Available": "30 cm, 100 cm, 150 cm, 200 cm",
-      "Material": "Rigid PE (Polyethylene) inner layer / PVC outer layer"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Precision medical-grade polymer fluid path ensures smooth, uniform delivery rates.",
+      "Universal male and female luer connections ensure leak-proof mating with standard clinical devices.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · M · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · t · u · b · e ·  ·  ·  ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · a · n · d ·  · c · a · p ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· M · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · t · u · b · e ·  ·  ·  ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · a · n · d ·  · c · a · p ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "pvc-free-extline",
-    title: "PVC-Free Extension Line",
-    productCode: "VP104",
-    category: "Infusion",
-    image: "images/Infusion/pvc_free_extline.png",
-    description: "A dedicated co-extruded PVC-free extension line. Essential for infusing highly lipophilic medications or photosensitive compounds, avoiding drug absorption and plasticizer elution.",
-    features: [
-      "Co-extruded polyethylene (PE) inner lumen prevents drug absorption.",
-      "Ensures accurate delivery of paclitaxel, nitroglycerin, and lipid drugs.",
-      "Polyurethane (TPU) outer layer provides excellent strength and flexibility.",
-      "100% PVC-free and DEHP-free formulation.",
-      "Luer lock thread caps ensure sterility prior to clinical use."
+    "id": "extension-lines-with-flow-regulator",
+    "title": "Extension Lines with Flow Regulator",
+    "productCode": "VP-LNE-02",
+    "category": "lines",
+    "categoryDisplay": "Lines & Accessories",
+    "image": "images/Infusion/extension_line_flow_regulator.jpg",
+    "description": "Extension line offering precision care and consistent delivery as part of an infusion system.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Inner Layer": "Polyethylene (PE) (chemically inert, PVC-free)",
-      "Outer Layer": "Polyurethane (TPU) (strength and flexibility)",
-      "Inner Diameter": "1.2 mm",
-      "Length": "150 cm",
-      "Connectors": "Luer Lock male-female"
-    }
-  },
-
-
-  // ── Infusion Including Chemo ──
-  {
-    id: "chemo-infusion-set-range",
-    title: "Chemotherapy Infusion Set (Complete Range)",
-    productCode: "VP107A",
-    category: "Infusion Including Chemo",
-    image: "images/Infusion Including Chemo/chemo theraphy infusion set(complete Range).jpg",
-    description: "A complete range of UV-blocking amber-tinted infusion administration sets. Specifically designed for delivering light-sensitive chemotherapy drugs securely, eliminating UV degradation.",
-    features: [
-      "Amber-tinted tubing blocks UV and visible light from 290nm to 450nm.",
-      "Protects highly light-sensitive oncology drugs from chemical degradation.",
-      "Multi-layer co-extruded PE inner lining prevents taxane absorption.",
-      "Integrated 0.2 µm hydrophobic air-eliminating oncology filter blocks particulates.",
-      "DEHP-free and PVC-free fluid path guarantees patient safety."
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Ergonomic dial flow regulator calibrated from 5 to 250 ml/hr maintains consistent gravitational infusion rates.",
+      "Dual-scale calibration provides dependable bedside flow titration without the need for electronic volumetric pumps.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · c · a · p ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · T · P · E ·  · f · l · o · w ·  · r · e · g · u · l · a · t · o · r ·."
     ],
-    specs: {
-      "Light Protection": "Amber tint blocks UV light (290nm to 450nm)",
-      "Material": "Multi-layer co-extruded Polyethylene (PE) inner lumen, PVC-Free",
-      "Drip Rate": "20 drops/ml",
-      "Inline Filter": "0.2 μm hydrophobic air-eliminating oncology filter",
-      "Sterilization": "EO Sterile"
-    }
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · c · a · p ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · T · P · E ·  · f · l · o · w ·  · r · e · g · u · l · a · t · o · r ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "chemo-extline-set",
-    title: "Chemotherapy Extension Line Set",
-    productCode: "VP109",
-    category: "Infusion Including Chemo",
-    image: "images/Infusion Including Chemo/chemotherapy extension line set.jpg",
-    description: "A dedicated amber-shaded extension tubing line designed to extend oncology IV setups while preserving light protection. Features heavy-duty slide clamps to prevent accidental drug spillages.",
-    features: [
-      "Amber-shaded polyurethane tubing blocks UV degradation.",
-      "100% PVC-free and DEHP-free formulation ensures chemical compatibility.",
-      "Durable slide clamp provides instant line occlusion.",
-      "Standard luer lock fittings connect securely to central lines and IV ports.",
-      "Fluid-path sterile and pyrogen-free."
+    "id": "extension-line-with-three-way-stopcock",
+    "title": "Extension Line with Three Way Stopcock",
+    "productCode": "VP-LNE-03",
+    "category": "lines",
+    "categoryDisplay": "Lines & Accessories",
+    "image": "images/Infusion/extension line with 3 way stop cock.jpg",
+    "description": "Fluid flow directional control, providing an access port for administration of solution, withdrawal of fluid and pressure monitoring.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "UV Blocking": "Amber co-extrusion shielding photosensitive chemicals",
-      "Material": "100% PVC-Free and DEHP-Free Polyurethane",
-      "Connectors": "Luer Lock with male/female leak-proof threads",
-      "Length": "150 cm",
-      "Pinch Clamp": "Heavy-duty slide clamp included"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Lipid-resistant polycarbonate body with 360-degree rotation handles multi-route medication administration simultaneously.",
+      "Rated for continuous dynamic pressures up to 4.5 bar (65 psi) with zero leakage or cracking.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · B · S ·  · t · h · r · e · e · - · w · a · y ·  · c · o · n · n · e · c · t · o · r ·  ·  ·  ·  · P · P ·  · t · h · r · e · e · - · w · a · y ·  · r · e · g · u · l · a · t · o · r ·  ·  ·  ·  · A · B · S ·  · r · o · t · a · t · i · n · g ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · L · D ·  · c · a · p · s ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · B · S ·  · t · h · r · e · e · - · w · a · y ·  · c · o · n · n · e · c · t · o · r ·  ·  ·  ·  · P · P ·  · t · h · r · e · e · - · w · a · y ·  · r · e · g · u · l · a · t · o · r ·  ·  ·  ·  · A · B · S ·  · r · o · t · a · t · i · n · g ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · L · D ·  · c · a · p · s ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "chemo-extline-flowregulator",
-    title: "Chemotherapy Extension Line with Flow Regulator",
-    productCode: "VP108",
-    category: "Infusion Including Chemo",
-    image: "images/Infusion Including Chemo/chemotherapy extension line with flow regulator.jpg",
-    description: "Oncology extension line featuring light protection and a built-in dial-flow regulator. Allows gravity-based chemotherapy drug dosing with strict speed limitations.",
-    features: [
-      "Amber co-extruded tubing shields light-sensitive chemotherapeutics.",
-      "Dial flow controller provides flow regulation from 5 to 250 ml/hr.",
-      "PVC-free and DEHP-free polyurethane line prevent drug-plasticizer interaction.",
-      "Needleless Y-site allows secondary medication delivery.",
-      "Individually packed, sterile, and pyrogen-free."
+    "id": "pvc-free-extension-line",
+    "title": "PVC Free Extension Line",
+    "productCode": "VP-LNE-04",
+    "category": "lines",
+    "categoryDisplay": "Lines & Accessories",
+    "image": "images/Infusion/pvc_free_extline.png",
+    "description": "Single-use extension for infusion and perfusion systems where a PVC-free fluid path is required.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Light Protection": "Amber double-layered tubing",
-      "Regulator Range": "5 to 250 ml/hour dial controller",
-      "Material": "PVC-Free / DEHP-Free co-extruded TPU",
-      "Length": "45 cm",
-      "Sterilization": "EO Sterile"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Engineered with 100% polyurethane/polyolefin fluid path eliminating DEHP, TOTM, and PVC plasticizers entirely.",
+      "Optimized for paclitaxel, cyclosporine, nitroglycerin, and oncology regimens prone to polymer adsorption.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · c · a · p ·  ·  ·  ·  · P · E ·  · t · u · b · e ·  ·  ·  ·  · P · P ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · c · a · p ·  ·  ·  ·  · P · E ·  · t · u · b · e ·  ·  ·  ·  · P · P ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "infusion-ivset-flowregulator",
-    title: "Infusion Intravenous Set with Flow Regulator",
-    productCode: "VP107B",
-    category: "Infusion Including Chemo",
-    image: "images/Infusion Including Chemo/infusion intravenous set with flow regulator.jpg",
-    description: "High-accuracy gravity infusion set equipped with a built-in dial-flow regulator. Provides constant flow rates during patient transport or ambulatory procedures.",
-    features: [
-      "Dial flow regulator enables rate setting without drop calculation.",
-      "Self-sealing luer activated Y-site port for bolus delivery.",
-      "Standard vented spike with a hydrophobic air filter.",
-      "Clear drip chamber with a 15 µm disc filter.",
-      "EO Sterile and single-use."
+    "id": "chemotherapy-infusion-sets",
+    "title": "Chemotherapy Infusion Sets",
+    "productCode": "VP-ONC-01",
+    "category": "onco",
+    "categoryDisplay": "Oncology",
+    "image": "images/Infusion Including Chemo/chemo theraphy infusion set(complete Range).jpg",
+    "description": "Administration of fluids from a container into the patient's vascular system, offering precision care and consistent delivery.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Flow Dial": "Calibrated dial controller (5-250 ml/hr)",
-      "Drip Rate": "20 drops/ml",
-      "Y-Port": "Self-sealing latex-free injection port",
-      "Tubing Length": "150 cm",
-      "Material": "Medical-grade kink-resistant PVC"
-    }
-  },
-
-  // ── Nephrology ──
-  {
-    id: "fistula-needle-set",
-    title: "Arteriovenous Fistula Needle Set",
-    productCode: "VP202",
-    category: "Nephrology",
-    image: "images/Nephrology/arteriovenous fistula needle sets.jpg",
-    description: "High-precision vascular access needle sets designed for hemodialysis. Feature an ultra-thin walled, siliconized needle tip to minimize puncture pain, vessel trauma, and insertion friction.",
-    features: [
-      "Ultra-thin walled, siliconized needle tip minimizes insertion pain.",
-      "Precision-crafted backeye optimizes blood flow rates and reduces turbulency.",
-      "Color-coded fixed or rotating wings simplify size identification and placement.",
-      "Kink-resistant tubing with a robust pinch clamp prevents leakage.",
-      "Sterilized by Ethylene Oxide, non-pyrogenic."
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Photoprotective UV-blocking amber material protects photosensitive cytotoxic compounds from light degradation.",
+      "Completely non-DEHP fluid path guarantees no plasticizer migration or drug absorption during chemotherapy infusions.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · 1 · 6 ·  · m · m ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e · , ·  · c · l · a · m · p ·  · a · n · d ·  · r · o · l · l · e · r ·  ·  ·  ·  · n · y · l · o · n ·  · m · e · s · h ·  · a · n · d ·  · P · P ·  · f · l · u · i · d ·  · f · i · l · t · e · r ·  ·  ·  ·  · P · V · C ·  · a · i · r ·  · v · e · n · t ·  · c · a · p ·  ·  ·  ·  · a · i · r ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·."
     ],
-    specs: {
-      "Gauges Available": "15G (orange), 16G (green), 17G (yellow)",
-      "Needle Length": "1 inch (25 mm)",
-      "Wing Style": "Rotating wings or fixed flat wings",
-      "Backeye": "Precision cut backeye for optimized blood flow rates",
-      "Tubing Length": "30 cm flexible PVC line with pinch clamp"
-    }
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · P ·  · s · p · i · k · e ·  · c · o · v · e · r ·  ·  ·  ·  · 1 · 6 ·  · m · m ·  · P · V · C ·  · d · r · i · p ·  · c · h · a · m · b · e · r ·  ·  ·  ·  · A · B · S ·  · v · e · n · t · e · d ·  · s · p · i · k · e · , ·  · c · l · a · m · p ·  · a · n · d ·  · r · o · l · l · e · r ·  ·  ·  ·  · n · y · l · o · n ·  · m · e · s · h ·  · a · n · d ·  · P · P ·  · f · l · u · i · d ·  · f · i · l · t · e · r ·  ·  ·  ·  · P · V · C ·  · a · i · r ·  · v · e · n · t ·  · c · a · p ·  ·  ·  ·  · a · i · r ·  · f · i · l · t · e · r ·  · m · e · m · b · r · a · n · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "dialysis-tubing-tp",
-    title: "Haemodialysis Blood Tubing (TP)",
-    productCode: "VP201",
-    category: "Nephrology",
-    image: "images/Nephrology/haemodialysis_blood_tubing_tp.jpg",
-    description: "Premium haemodialysis bloodline set featuring integrated transducer protectors (TP). Includes hydrophobic membranes to prevent blood from entering and contaminating machine sensors.",
-    features: [
-      "Inline transducer protectors with 0.2 µm hydrophobic PTFE filters.",
-      "Protects dialysis machine pressure sensors from blood contamination.",
-      "High-rebound silicone pump segment ensures consistent flow rates.",
-      "Color-coded clamps (red/blue) simplify arterial and venous routing.",
-      "Biocompatible, medical-grade PVC construction."
+    "id": "chemotherapy-extension-line-with-flow-regulator",
+    "title": "Chemotherapy Extension Line with Flow Regulator",
+    "productCode": "VP-ONC-02",
+    "category": "onco",
+    "categoryDisplay": "Oncology",
+    "image": "images/Infusion Including Chemo/chemotherapy extension line with flow regulator.jpg",
+    "description": "Extension line offering precision care and consistent delivery in chemotherapy administration.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Transducer Protectors": "0.2 μm hydrophobic PTFE membrane filters",
-      "Pump Segment": "High-rebound medical silicone tubing segment",
-      "Blood Ports": "Luer lock connectors with color-coded arterial/venous clamps",
-      "Biocompatibility": "DEHP-Free medical PVC, non-pyrogenic",
-      "Sterilization": "EO Sterile"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Ergonomic dial flow regulator calibrated from 5 to 250 ml/hr maintains consistent gravitational infusion rates.",
+      "Dual-scale calibration provides dependable bedside flow titration without the need for electronic volumetric pumps.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · c · a · p ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · T · P · E ·  · f · l · o · w ·  · r · e · g · u · l · a · t · o · r ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · c · a · p ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S ·  · a · n · d ·  · T · P · E ·  · f · l · o · w ·  · r · e · g · u · l · a · t · o · r ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "dialysis-tubing-std",
-    title: "Haemodialysis Blood Tubing",
-    productCode: "VP201",
-    category: "Nephrology",
-    image: "images/Nephrology/haemodialysis blood tubings.jpg",
-    description: "Standard arterial-venous bloodline sets for renal hemodialysis therapy. Configured for complete compatibility with major dialysis machine models, featuring kink-free smooth flows.",
-    features: [
-      "Universal fit bloodline set compatible with major dialysis systems.",
-      "High-precision extrusion segment ensures pump calibration accuracy.",
-      "Self-sealing, latex-free access ports for medication injection.",
-      "Smooth internal surface minimizes blood cell lysis and clotting.",
-      "EO Sterile, pyrogen-free, and non-toxic."
+    "id": "chemotherapy-extension-line-set",
+    "title": "Chemotherapy Extension Line Set",
+    "productCode": "VP-ONC-03",
+    "category": "onco",
+    "categoryDisplay": "Oncology",
+    "image": "images/Infusion Including Chemo/chemotherapy extension line set.jpg",
+    "description": "Single-use extension used as part of an infusion or perfusion system for chemotherapy.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Components": "Arterial line (red) and Venous line (blue)",
-      "Pump Segment ID": "8.0 mm (high-precision extrusion)",
-      "Injection Sites": "Latex-free self-sealing access ports",
-      "Priming Volume": "Approx. 130 ml venous / 80 ml arterial",
-      "Sterility": "EO Sterile"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Photoprotective UV-blocking amber material protects photosensitive cytotoxic compounds from light degradation.",
+      "Completely non-DEHP fluid path guarantees no plasticizer migration or drug absorption during chemotherapy infusions.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · c · a · p ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·  ·  ·  ·  · P · P ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · c · a · p ·  ·  ·  ·  · P · V · C ·  · t · u · b · e ·  ·  ·  ·  · P · P ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "dialysis-catheter-set",
-    title: "Haemodialysis Catheter and Set",
-    productCode: "VP206",
-    category: "Nephrology",
-    image: "images/Nephrology/haemodialysis_catheter_set.jpg",
-    description: "Acute hemodialysis catheter kit featuring a thermosensitive dual-lumen polyurethane shaft. The soft blue tip decreases friction and reduces venous vessel wall erosion.",
-    features: [
-      "Thermosensitive polyurethane catheter softens at body temperature.",
-      "Atraumatic soft tip reduces venous vessel wall trauma.",
-      "Dual-lumen configuration maximizes dialysis flow efficiency.",
-      "Nitinol J-tip guide wire provides excellent kink resistance.",
-      "Complete kit simplifies clinical insertion."
+    "id": "pressure-monitoring-line",
+    "title": "Pressure Monitoring Line",
+    "productCode": "VP-CRT-01",
+    "category": "critical",
+    "categoryDisplay": "Critical Care",
+    "image": "images/Infusion/pressure line monitering.jpg",
+    "description": "High-pressure monitoring and connection between syringe and infusion pump, and channelling fluid for intravenous infusion.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Lumen Configuration": "Dual Lumen",
-      "Size": "11.5 Fr / 12 Fr",
-      "Catheter Lengths": "15 cm, 16 cm, 20 cm",
-      "Kit Accessories": "Introducer needle, guide wire, dilators, heparin caps",
-      "Sterilization": "EO Sterile"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "High-durometer thick-walled non-compliant tubing transmits crisp hemodynamic pressure waveforms without signal damping.",
+      "Withstands dynamic and static fluid pressures up to 500 psi (34 bar) for intensive care monitoring.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · P · P ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · P · V · C · , ·  · P · U · , ·  · P · E ·  · a · n · d ·  · L · D · P · E ·  · t · u · b · e ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· P · P ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · A · B · S ·  · f · e · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · P · P ·  · m · a · l · e ·  · l · u · e · r ·  · l · o · c · k ·  · c · a · p ·  ·  ·  ·  · P · V · C · , ·  · P · U · , ·  · P · E ·  · a · n · d ·  · L · D · P · E ·  · t · u · b · e ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "hemodialysis-catheter-kit-long-term",
-    title: "Hemodialysis Catheter Kit (Long Term)",
-    productCode: "VP207",
-    category: "Nephrology",
-    image: "images/Nephrology/hemodialysis catheter kit long term.jpg",
-    description: "An indwelling, cuffed catheter designed for long-term hemodialysis and apheresis. Features a thermosensitive biocompatible polyurethane shaft, Dacron tissue ingrowth cuff for infection barrier, and high-flow dual-lumen design.",
-    features: [
-      "Thermosensitive radiopaque polyurethane softens at body temperature to minimize vascular irritation.",
-      "Dacron cuff promotes tissue ingrowth, anchoring catheter and forming a barrier against microbial entry.",
-      "Dual-lumen geometry optimizes high-volume blood flow up to 400 mL/min with low recirculation.",
-      "Soft atraumatic tip design minimizes vessel wall contact and vascular erosion.",
-      "Complete Seldinger insertion kit includes tunneling stylet, 18G needle, Nitinol J-wire, dilators, and heparin caps."
+    "id": "disposable-pressure-transducer-kit",
+    "title": "Disposable Pressure Transducer Kit",
+    "productCode": "VP-CRT-02",
+    "category": "critical",
+    "categoryDisplay": "Critical Care",
+    "image": "images/cardiology/disposable blood pressure transducer and accessories.jpg",
+    "description": "Invasive pressure monitoring as part of a patient monitoring system.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Lumen Configuration": "Dual Lumen D-shape / Round lumens",
-      "Catheter Sizes": "14.5 Fr / 15 Fr",
-      "Catheter Lengths": "19 cm, 23 cm, 28 cm, 33 cm, 36 cm, 40 cm, 45 cm",
-      "Cuff Feature": "Dacron tissue-ingrowth antimicrobial barrier cuff",
-      "Flow Rate": "Up to 400 mL/min at <250 mmHg arterial pressure",
-      "Kit Accessories": "Tunneling stylet, 18G needle, Nitinol J-wire, vessel dilators, scalpel, injection caps",
-      "Sterilization": "Ethylene Oxide (EO) Sterile",
-      "Compliance": "ISO 13485, CE Certified"
-    }
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Pre-assembled closed invasive blood pressure sensor kit with continuous 3 ml/hr or 30 ml/hr flush squeeze valve.",
+      "Clear fluid pathway enables immediate visual detection and purging of micro-air bubbles.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · E · n · d · o · r · s · e · d ·  · o · n · t · o ·  · t · h · e ·  · l · i · c · e · n · c · e ·  · 2 · 5 ·  · M · a · y ·  · 2 · 0 · 2 · 6 · . ·  · F · u · l · l ·  · m · a · t · e · r · i · a · l ·  · l · i · s · t ·  · a · v · a · i · l · a · b · l · e ·  · o · n ·  · r · e · q · u · e · s · t · . ·."
+    ],
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· E · n · d · o · r · s · e · d ·  · o · n · t · o ·  · t · h · e ·  · l · i · c · e · n · c · e ·  · 2 · 5 ·  · M · a · y ·  · 2 · 0 · 2 · 6 · . ·  · F · u · l · l ·  · m · a · t · e · r · i · a · l ·  · l · i · s · t ·  · a · v · a · i · l · a · b · l · e ·  · o · n ·  · r · e · q · u · e · s · t · . ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   },
   {
-    id: "peritoneal-dialysis-set",
-    title: "Peritoneal Dialysis Transfusion Set",
-    productCode: "VP205",
-    category: "Nephrology",
-    image: "images/Nephrology/peritoneal_dialysis_set.png",
-    description: "A sterile gravity-feed peritoneal dialysis transfer set. Incorporates a Y-connector and color-coded clamps to manage dialysis solution instillation and abdominal drainage safely.",
-    features: [
-      "Robust Y-connector adapter manages fluid bags easily.",
-      "Color-coded pinch clamps manage instillation and drainage.",
-      "Lightweight, flexible tubing minimizes pulling on the peritoneal catheter.",
-      "Fluid-path sterile design ensures patient safety.",
-      "Phthalate-free material minimizes chemical leaching."
+    "id": "cardioplegia-adapters",
+    "title": "Cardioplegia Adapters",
+    "productCode": "VP-CRD-01",
+    "category": "cardiac",
+    "categoryDisplay": "Cardiac Surgery",
+    "image": "images/cardiology/cardioplegia adopters.jpg",
+    "description": "Connect to the ARC or vessel cannulae for delivery of cardioplegia solution or venting of the heart during cardiopulmonary bypass.",
+    "meta": [
+      "Class B",
+      "Sterile",
+      "3-Year Shelf Life",
+      "VIREXA / OEM"
     ],
-    specs: {
-      "Connector": "Robust Y-shape polycarbonate adapter",
-      "Pinch Clamps": "Color-coded blue/white dialysis flow clamps",
-      "Tubing Length": "150 cm flexible, lightweight lines",
-      "Sterility": "Fluid path sterile, pyrogen-free",
-      "Material": "Medical-grade non-toxic PVC"
-    }
-  },
-  {
-    id: "priming-infusion-set",
-    title: "Priming Set Intravenous Infusion Set",
-    productCode: "VP204",
-    category: "Nephrology",
-    image: "images/Nephrology/priming set intravenous infusion set.jpg",
-    description: "A high-flow priming administration line set designed for initial flushing and preparation of dialysis cartridges and bloodline segments prior to renal dialysis therapy.",
-    features: [
-      "Dual spike configuration permits quick flushing from saline bags.",
-      "Wide-bore 3.0 mm tubing facilitates rapid priming of bloodlines.",
-      "Inline drip chamber features a high-flow fluid filter.",
-      "Heavy-duty roller clamp provides positive shutoff.",
-      "Sterilized by Ethylene Oxide, pyrogen-free."
+    "features": [
+      "Manufactured inside ISO Class 7 & Class 8 certified cleanroom suites under automated bioburden monitoring.",
+      "Designed for safe delivery of cardioplegia solution and myocardial arrest during open heart cardiopulmonary bypass.",
+      "Secure luer lock and quick-connect fittings withstand high-pressure intraoperative infusion regimens.",
+      "Precision-moulded with USP Class VI and ISO 10993 tested medical-grade polymers.",
+      "Supplied sterile with validated 3-year sterile barrier packaging (EO Sterilization pathway).",
+      "Principal materials: · A · B · S ·  · s · t · r · a · i · g · h · t ·  · c · o · n · n · e · c · t · o · r · s ·  · 1 · / · 4 · , ·  · 3 · / · 8 ·  · a · n · d ·  · 1 · / · 2 ·  · i · n ·  ·  ·  ·  · A · B · S ·  · Y · - · c · o · n · n · e · c · t · o · r · s ·  ·  ·  ·  · A · B · S ·  · Y · - · c · o · n · n · e · c · t · o · r · s ·  · w · i · t · h ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S ·  · s · t · e · p · - · d · o · w · n ·  · s · t · r · a · i · g · h · t ·  · c · o · n · n · e · c · t · o · r · s ·."
     ],
-    specs: {
-      "Spike Type": "Dual plastic spikes for multi-fluid bag priming",
-      "Tubing ID": "3.0 mm high-volume flow line",
-      "Drip Rate": "20 drops/ml",
-      "Roller Clamp": "High-durability plastic clamp",
-      "Sterility": "EO Sterile"
-    }
-  },
-  {
-    id: "transducer-protector",
-    title: "Transducer Protector",
-    productCode: "VP203",
-    category: "Nephrology",
-    image: "images/Nephrology/transducer proctector.jpg",
-    description: "A critical safety component consisting of a hydrophobic membrane sealed within a rigid plastic housing. Placed inline to protect dialysis machine transducers from blood contamination.",
-    features: [
-      "Hydrophobic 0.2 µm PTFE membrane blocks aqueous fluid penetration.",
-      "Acrylic housing ensures pressure waveform transmission.",
-      "Prevents cross-contamination between patients and machine transducers.",
-      "Standard female luer lock / male luer slip connectors.",
-      "EO Sterile, single-use, and non-pyrogenic."
-    ],
-    specs: {
-      "Membrane Material": "0.2 μm hydrophobic PTFE membrane filter",
-      "Housing Material": "Crystal-clear Acrylic / MABS housing",
-      "Connections": "Standard female luer lock / male luer slip",
-      "Sterilization": "EO Sterile, pyrogen-free"
-    }
-  },
-
-  // ── Cardiology ──
-  {
-    id: "cardioplegia-adapters",
-    title: "Cardioplegia Adapters",
-    productCode: "VP301",
-    category: "cardiology",
-    image: "images/cardiology/cardioplegia adopters.jpg",
-    description: "Specialized connection adapters designed for cardioplegia delivery circuits during cardiopulmonary bypass surgery. Ensure leak-proof connection to catheter or perfusion lines.",
-    features: [
-      "Rigid medical-grade polycarbonate housing withstands high flow pressures.",
-      "Smooth transition paths minimize fluid shear and turbulence.",
-      "Luer lock connectors ensure leak-free perfusion connections.",
-      "Individually packed, EO Sterile, and single-use.",
-      "ISO 13485 compliant."
-    ],
-    specs: {
-      "Material": "Medical-grade rigid Polycarbonate",
-      "Connections": "Male luer lock to slip luer transition segments",
-      "Inner Diameter": "Custom flow paths to prevent turbulence",
-      "Sterility": "EO Sterile, non-pyrogenic",
-      "Compliance": "ISO 13485"
-    }
-  },
-  {
-    id: "central-venous-catheter",
-    title: "Central Venous Catheter and Set",
-    productCode: "VP302",
-    category: "cardiology",
-    image: "images/cardiology/central venous catheter and set.jpg",
-    description: "A complete Seldinger-technique insertion kit with a multi-lumen central venous catheter (CVC). Allows monitoring of central venous pressure, high-volume infusion, and blood sampling.",
-    features: [
-      "Multi-lumen polyurethane catheter offers central access ports.",
-      "Thermosensitive material softens inside the vein to reduce endothelial trauma.",
-      "Nitinol J-tip guide wire provides kink resistance.",
-      "Introducer needle facilitates guide wire placement.",
-      "Individually packed in a sterile tray."
-    ],
-    specs: {
-      "Catheter Size": "7 Fr Triple Lumen / 5 Fr Double Lumen",
-      "Catheter Material": "Radiopaque Polyurethane, softens inside body",
-      "Guide Wire": "Super-elastic Nitinol J-Tip guide wire (kink-resistant)",
-      "Introducer Needle": "18G Y-shape needle to facilitate guide wire",
-      "Sterility": "EO Sterile"
-    }
-  },
-  {
-    id: "disposable-bp-transducer",
-    title: "Disposable Blood Pressure Transducer and Accessories",
-    productCode: "VP303",
-    category: "cardiology",
-    image: "images/cardiology/disposable blood pressure transducer and accessories.jpg",
-    description: "A high-precision single-channel physiological pressure transducer system designed for continuous invasive blood pressure (IBP) monitoring during critical cardiac care.",
-    features: [
-      "High-sensitivity sensor provides accurate direct blood pressure waveforms.",
-      "Continuous 3 ml/hr flush valve prevents clotting in catheter lines.",
-      "Crystal-clear flow channel facilitates priming and bubble removal.",
-      "Fully AAMI blood pressure standard compliant.",
-      "Sterile, pyrogen-free, and single-use."
-    ],
-    specs: {
-      "Accuracy": "±2% of reading (AAMI blood pressure standard)",
-      "Flush Device": "3 ml/hr continuous flush mechanism",
-      "Sensitivity": "5.0 μv/V/mmHg",
-      "Pressure Range": "-50 to +300 mmHg",
-      "Sterilization": "EO Sterile, non-pyrogenic"
-    }
+    "specs": {
+      "Risk Class": "Class B (India MDR 2017)",
+      "Sterility": "Supplied sterile (EO Sterilized)",
+      "Shelf Life": "3 years",
+      "Brand Availability": "VIREXA, or OEM Private Label",
+      "Licence Number": "MFG/MD/2026/000078",
+      "Material": "· A · B · S ·  · s · t · r · a · i · g · h · t ·  · c · o · n · n · e · c · t · o · r · s ·  · 1 · / · 4 · , ·  · 3 · / · 8 ·  · a · n · d ·  · 1 · / · 2 ·  · i · n ·  ·  ·  ·  · A · B · S ·  · Y · - · c · o · n · n · e · c · t · o · r · s ·  ·  ·  ·  · A · B · S ·  · Y · - · c · o · n · n · e · c · t · o · r · s ·  · w · i · t · h ·  · l · u · e · r ·  · l · o · c · k ·  ·  ·  ·  · A · B · S ·  · s · t · e · p · - · d · o · w · n ·  · s · t · r · a · i · g · h · t ·  · c · o · n · n · e · c · t · o · r · s ·",
+      "Cleanroom Class": "ISO Class 7 & Class 8 (10,000 / 100,000)",
+      "Packaging": "Individual sterile medical peel pouch / blister pack",
+      "Quality Standards": "ISO 13485:2016, CDSCO MDR 2017, CE Compliant"
+    },
+    "oemNote": "This device is licensed, tooled and\n          documented on our line. We can supply it under VIREXA, or manufacture it under\n          your brand — as OEM contract manufacture under our licence, or under your own\n          licence at our premises."
   }
 ];
 
@@ -846,20 +990,27 @@ class ProductShowcase {
         card.className = 'product-card';
         card.setAttribute('data-id', p.id);
         card.setAttribute('data-reveal', 'up');
+        card.style.cursor = 'pointer';
         
         card.innerHTML = `
-          <span class="product-card__badge">${p.category}</span>
+          <span class="product-card__badge">${p.categoryDisplay || p.category}</span>
           <div class="product-card__img-wrap">
             <img src="${p.image}" alt="${p.title}" class="product-card__img" loading="lazy">
           </div>
           <h4 class="product-card__title">${p.title}</h4>
           ${p.productCode ? `<div class="product-card__code">Code: <strong>${p.productCode}</strong></div>` : ''}
-          <p class="product-card__desc">${p.description.substring(0, 100)}...</p>
-          <button class="btn btn--outline-primary btn--sm product-card__btn">View Specifications</button>
+          <div class="product-card__meta-chips" style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:var(--sp-3)">
+            ${(p.meta || ['Class B', 'Sterile', '3-Yr Shelf Life', 'VIREXA']).map(m => `<span style="font-size:0.72rem;background:rgba(2,132,199,0.08);color:#0284c7;padding:2px 8px;border-radius:12px;font-weight:600;border:1px solid rgba(2,132,199,0.15)">${m}</span>`).join('')}
+          </div>
+          <p class="product-card__desc">${p.description}</p>
+          <div style="display:flex;gap:8px;margin-top:auto;width:100%">
+            <button class="btn btn--outline-primary btn--sm product-card__btn" style="flex:1" onclick="event.stopPropagation(); window.productShowcaseInstance.openModal('${p.id}')">View Specs</button>
+            <a href="product?id=${p.id}" class="btn btn--secondary btn--sm product-card__btn" style="flex:1;text-decoration:none;display:inline-flex;align-items:center;justify-content:center" onclick="event.stopPropagation()">Details &rarr;</a>
+          </div>
         `;
 
         card.addEventListener('click', () => {
-          window.location.href = `product?id=${p.id}`;
+          this.openModal(p.id);
         });
         this.grid.appendChild(card);
       });
@@ -922,9 +1073,16 @@ class ProductShowcase {
             ${thumbnailsHtml}
           </div>
           <div class="product-modal__details-column">
-            <span class="product-modal__category">${product.category}</span>
+            <span class="product-modal__category">${product.categoryDisplay || product.category}</span>
             <h2 class="product-modal__title">${product.title}</h2>
-            ${product.productCode ? `<div style="font-size:0.8rem; font-weight:700; color:#0099CC; margin-bottom:12px; letter-spacing:0.5px;">&#128204; Product Code: <span style="color:#0A4E9B;">${product.productCode}</span></div>` : ''}
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:12px;">
+              <span style="font-size:0.78rem;font-weight:700;color:#0284c7;letter-spacing:0.5px;background:rgba(2,132,199,0.1);padding:3px 10px;border-radius:4px;">
+                &#128204; Code: ${product.productCode}
+              </span>
+              <span style="font-size:0.78rem;font-weight:700;color:#16a34a;letter-spacing:0.5px;background:rgba(22,163,74,0.1);padding:3px 10px;border-radius:4px;">
+                &#10003; CDSCO Lic: MFG/MD/2026/000078
+              </span>
+            </div>
             
             <div class="product-modal__tabs">
               <button class="product-modal__tab-btn active" onclick="switchModalTab(this, 'overview')">Overview</button>
@@ -934,17 +1092,15 @@ class ProductShowcase {
 
             <div class="product-modal__tab-pane active" id="pane-overview">
               <p class="product-modal__desc">${product.description}</p>
+              <div style="background:rgba(2,132,199,0.05);border-left:3px solid #0284c7;padding:12px 16px;border-radius:0 8px 8px 0;margin-top:16px;">
+                <strong style="color:var(--clr-text);display:block;font-size:0.85rem;margin-bottom:4px">&#127970; Made Under Your Brand (OEM Contract Manufacturing)</strong>
+                <p style="font-size:0.82rem;color:var(--clr-text-muted);margin:0;line-height:1.5">${product.oemNote}</p>
+              </div>
             </div>
 
             <div class="product-modal__tab-pane" id="pane-features">
               <ul class="product-modal__features-list">
-                ${(product.features || [
-                  "Manufactured in an ISO Class 7 & 8 certified cleanroom facility.",
-                  "Precision-moulded with 100% medical-grade, biocompatible polymers.",
-                  "Excellent dimensional consistency for secure assembly and connection.",
-                  "Tested rigorously for leak-proof performance and flow accuracy.",
-                  "Complies fully with ISO 13485 and global medical standards."
-                ]).map(f => `<li>${f}</li>`).join('')}
+                ${(product.features || []).map(f => `<li>${f}</li>`).join('')}
               </ul>
             </div>
 
@@ -963,6 +1119,7 @@ class ProductShowcase {
 
             <div class="product-modal__actions">
               <button class="btn btn--outline btn--md product-modal__close-btn">Close</button>
+              <a href="product?id=${product.id}" class="btn btn--secondary btn--md">Full Page &rarr;</a>
               <a href="contact.html?product=${encodeURIComponent(product.title)}" class="btn btn--primary btn--md">Enquire Now</a>
             </div>
           </div>
