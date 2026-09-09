@@ -1,20 +1,18 @@
 /*
  * =============================================================
- *  VIDHATA PLASTICS — ARNI MEDICA THEME & DESIGN SYSTEM
+ *  VIDHATA PLASTICS — SERENE BIO-MEDICAL & SKY LIGHT THEME (Natural, Peaceful & Light)
  *  theme-neutral.css
  *
- *  Faithfully Recreated from Arni Medica (https://www.arnimedica.com/):
- *  - Primary Cerulean Medical Blue: #1A8FD8 (Brand primary, active states & badges)
- *  - High-Contrast Text Blue:       #1670C0 (WCAG AA accessible blue for links & display)
- *  - Deep Medical Navy:             #17223B (Hero headings, cards, text, and dark footer)
- *  - Utility Dark Navy:             #1F2733 (Top regulatory ribbon & utility bar)
- *  - Signature Accent Orange:       #F26B21 (Section underlines, active dots & highlights)
- *  - Signature Orange Text:         #E0601A (Explore & learn-more links)
- *  - Signature Green CTA Button:    #61B33B (Primary actions, 'Request a Quote', Contact CTAs)
- *  - Green CTA Hover:               #4F9930
- *  - Light Ice Blue Surface:        #EEF6FC (Alternating sections, pills, card tints)
- *  - Clean Canvas White:            #FFFFFF (Pure crisp canvas & card surfaces)
- *  - Crisp Border Line:             #DFE6EE (Clean modern borders)
+ *  Natural, Peaceful, Generic & Light Medical Design:
+ *  - Calming Sky Blue:              #0284C7 (Brand primary, active states & badges)
+ *  - Light Breeze Blue:             #38BDF8 (Vibrant sky accent & glow)
+ *  - Soft Sky Mist Surface:         #F0F9FF (Airy section backgrounds & pill tints)
+ *  - Soothing Nature Mint Green:    #10B981 (Primary CTA buttons, badges & active states)
+ *  - Nature Mint Hover:             #059669
+ *  - Gentle Deep Slate:             #1E293B (Headings, titles, high-contrast readable text)
+ *  - Soft Slate Muted:              #475569 (Body text, technical paragraphs)
+ *  - Pure Cloud White:              #FFFFFF (Pristine cleanroom canvas & card surfaces)
+ *  - Whisper Light Border:          #DFE6EE (Crisp hairline precision borders)
  * =============================================================
  */
 
@@ -23,52 +21,52 @@
 /* ── 1. DESIGN TOKEN OVERRIDES ─────────────────────────────── */
 :root {
   --clr-bg:           #FFFFFF;
-  --clr-surface:      #EEF6FC;
+  --clr-surface:      #F0F9FF;
   --clr-card:         #FFFFFF;
-  --clr-card-hover:   #F5F9FD;
+  --clr-card-hover:   #F8FAFC;
   --clr-border:       #DFE6EE;
-  --clr-border-gold:  rgba(242, 107, 33, 0.40);
+  --clr-border-gold:  rgba(16, 185, 129, 0.35);
 
-  --clr-primary:      #1A8FD8;
-  --clr-primary-dark: #1670C0;
-  --clr-primary-glow: rgba(26, 143, 216, 0.25);
+  --clr-primary:      #0284C7;
+  --clr-primary-dark: #0369A1;
+  --clr-primary-glow: rgba(2, 132, 199, 0.20);
 
-  --clr-teal:         #1670C0;
-  --clr-teal-dark:    #17223B;
-  --clr-teal-glow:    rgba(22, 112, 192, 0.25);
+  --clr-teal:         #38BDF8;
+  --clr-teal-dark:    #0284C7;
+  --clr-teal-glow:    rgba(56, 189, 248, 0.20);
 
-  --clr-gold:         #F26B21;
-  --clr-gold-dark:    #E0601A;
-  --clr-gold-glow:    rgba(242, 107, 33, 0.25);
+  --clr-gold:         #10B981;
+  --clr-gold-dark:    #059669;
+  --clr-gold-glow:    rgba(16, 185, 129, 0.20);
 
-  --clr-green-btn:    #61B33B;
-  --clr-green-hover:  #4F9930;
+  --clr-green-btn:    #10B981;
+  --clr-green-hover:  #059669;
 
-  --clr-text:         #17223B;
-  --clr-text-muted:   #5F6B7A;
-  --clr-text-dim:     #8A96A6;
+  --clr-text:         #1E293B;
+  --clr-text-muted:   #475569;
+  --clr-text-dim:     #64748B;
   --clr-white:        #FFFFFF;
 
-  --clr-success:      #61B33B;
+  --clr-success:      #10B981;
   --clr-error:        #FF1B00;
 
   --font-heading:     'Poppins', 'Segoe UI', Inter, Arial, sans-serif;
   --font-body:        'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
 
-  --grad-primary:  linear-gradient(135deg, #1A8FD8 0%, #1670C0 100%);
-  --grad-teal:     linear-gradient(135deg, #1A8FD8 0%, #17223B 100%);
-  --grad-gold:     linear-gradient(135deg, #F26B21 0%, #E0601A 100%);
-  --grad-hero:     linear-gradient(160deg, #FFFFFF 0%, #F5F9FD 50%, #EEF6FC 100%);
-  --grad-surface:  linear-gradient(180deg, #EEF6FC 0%, #FFFFFF 100%);
-  --grad-card:     linear-gradient(145deg, #FFFFFF 0%, #F5F9FD 100%);
+  --grad-primary:  linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
+  --grad-teal:     linear-gradient(135deg, #BAE6FD 0%, #0284C7 100%);
+  --grad-gold:     linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  --grad-hero:     linear-gradient(160deg, #FFFFFF 0%, #F0F9FF 50%, #ECFDF5 100%);
+  --grad-surface:  linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);
+  --grad-card:     linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
 
   --shadow-sm:   0 2px 8px rgba(23, 34, 59, 0.06);
   --shadow-md:   0 10px 30px rgba(23, 34, 59, 0.09);
   --shadow-lg:   0 18px 40px rgba(23, 34, 59, 0.13);
   --shadow-xl:   0 24px 60px rgba(23, 34, 59, 0.17);
-  --shadow-blue: 0 8px 30px rgba(26, 143, 216, 0.28);
-  --shadow-gold: 0 8px 30px rgba(242, 107, 33, 0.25);
-  --shadow-glow: 0 0 50px rgba(26, 143, 216, 0.20);
+  --shadow-blue: 0 8px 30px rgba(2, 132, 199, 0.20);
+  --shadow-gold: 0 8px 30px rgba(16, 185, 129, 0.20);
+  --shadow-glow: 0 0 50px rgba(56, 189, 248, 0.20);
 }
 
 /* ── 2. BASE DOCUMENT & TYPOGRAPHY ─────────────────────────── */
@@ -82,7 +80,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading) !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   font-weight: 700 !important;
 }
 
@@ -95,20 +93,20 @@ p, li, span, input, select, textarea {
 #navbar {
   background: rgba(255, 255, 255, 0.98) !important;
   border-bottom: 1.5px solid #DFE6EE !important;
-  box-shadow: 0 2px 14px rgba(23, 34, 59, 0.08) !important;
+  box-shadow: 0 2px 14px rgba(2, 132, 199, 0.06) !important;
   backdrop-filter: blur(16px) !important;
 }
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.99) !important;
-  box-shadow: 0 4px 22px rgba(23, 34, 59, 0.12) !important;
+  box-shadow: 0 4px 22px rgba(2, 132, 199, 0.08) !important;
 }
 
-.navbar__logo-name    { color: #17223B !important; font-family: var(--font-heading) !important; font-weight: 700 !important; }
-.navbar__logo-corp    { color: #1A8FD8 !important; font-weight: 600 !important; }
-.navbar__logo-tagline { color: #5F6B7A !important; }
+.navbar__logo-name    { color: #1E293B !important; font-family: var(--font-heading) !important; font-weight: 700 !important; }
+.navbar__logo-corp    { color: #0284C7 !important; font-weight: 600 !important; }
+.navbar__logo-tagline { color: #64748B !important; }
 
 .navbar__link {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   font-size: 14.5px !important;
@@ -116,179 +114,180 @@ p, li, span, input, select, textarea {
 }
 .navbar__link:hover,
 .navbar__link.active {
-  color: #1670C0 !important;
+  color: #0284C7 !important;
 }
 .navbar__link.active::after,
 .navbar__link:hover::after {
-  background: #1A8FD8 !important;
+  background: #0284C7 !important;
   height: 3px !important;
 }
 
 .navbar__dropdown-menu {
   background: #FFFFFF !important;
   border: 1px solid #DFE6EE !important;
-  border-top: 3px solid #1A8FD8 !important;
-  box-shadow: 0 14px 34px rgba(23, 34, 59, 0.14) !important;
+  border-top: 3px solid #0284C7 !important;
+  box-shadow: 0 14px 34px rgba(2, 132, 199, 0.08) !important;
   border-radius: 8px !important;
 }
 .navbar__dropdown-item {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   border-left: 3px solid transparent !important;
   transition: all 0.2s ease !important;
 }
 .navbar__dropdown-item:hover {
-  background: #EEF6FC !important;
-  color: #1670C0 !important;
-  border-left-color: #F26B21 !important;
+  background: #F0F9FF !important;
+  color: #0284C7 !important;
+  border-left-color: #10B981 !important;
 }
 
 /* Arni Medica signature green pill CTA */
 .navbar__cta {
-  background: #61B33B !important;
+  background: #10B981 !important;
   color: #FFFFFF !important;
   border: none !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   letter-spacing: 0.5px !important;
-  box-shadow: 0 4px 15px rgba(97, 179, 59, 0.35) !important;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.30) !important;
   transition: all 0.2s ease !important;
 }
 .navbar__cta:hover {
-  background: #4F9930 !important;
+  background: #059669 !important;
   border: none !important;
   color: #FFFFFF !important;
-  box-shadow: 0 6px 20px rgba(97, 179, 59, 0.50) !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.40) !important;
   transform: translateY(-1px) !important;
 }
 
 .navbar__hamburger span {
-  background: #17223B !important;
+  background: #1E293B !important;
 }
 
 .navbar__mobile {
-  background: #17223B !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: #FFFFFF !important;
+  border-color: #DFE6EE !important;
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.10) !important;
 }
 .navbar__mobile-link {
-  color: #FFFFFF !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid #F0F9FF !important;
 }
 .navbar__mobile-link.active {
-  color: #FFB98E !important;
-  border-left-color: #F26B21 !important;
+  color: #0284C7 !important;
+  border-left-color: #10B981 !important;
 }
 .navbar__mobile-group-title {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
 }
 
 /* ── 4. REGULATORY RIBBON (Arni Medica Utility Bar) ─────────── */
 .regulatory-ribbon,
 [class*="regulatory-ribbon"] {
-  background: #1F2733 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  color: #CFD8E3 !important;
+  background: #F0F9FF !important;
+  border-bottom: 1px solid #DFE6EE !important;
+  color: #475569 !important;
   font-size: 13.5px !important;
 }
 .regulatory-ribbon * {
-  color: #CFD8E3 !important;
+  color: #475569 !important;
 }
 .regulatory-ribbon a {
-  color: #FFFFFF !important;
+  color: #0284C7 !important;
 }
 .regulatory-ribbon strong {
-  color: #FFFFFF !important;
+  color: #0284C7 !important;
 }
 
 /* ── 5. HOME PAGE HERO ──────────────────────────────────────── */
 #home,
 .hero,
 .hero--split {
-  background: linear-gradient(160deg, #FFFFFF 0%, #F5F9FD 50%, #EEF6FC 100%) !important;
-  color: #17223B !important;
+  background: linear-gradient(160deg, #FFFFFF 0%, #F0F9FF 50%, #ECFDF5 100%) !important;
+  color: #1E293B !important;
 }
 
 #home .hero__eyebrow {
-  background: #EEF6FC !important;
-  border: 1.5px solid #1A8FD8 !important;
-  color: #1670C0 !important;
+  background: #E0F2FE !important;
+  border: 1.5px solid #38BDF8 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   border-radius: 30px !important;
-  box-shadow: 0 2px 10px rgba(26, 143, 216, 0.15) !important;
+  box-shadow: 0 2px 10px rgba(56, 189, 248, 0.15) !important;
 }
 #home .hero__eyebrow-dot {
-  background: #F26B21 !important;
-  box-shadow: 0 0 10px #F26B21 !important;
+  background: #10B981 !important;
+  box-shadow: 0 0 10px #10B981 !important;
 }
 
 #home .hero__headline {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
 }
 #home .vidhata-life-vidhata {
-  color: #17223B !important;
-  -webkit-text-fill-color: #17223B !important;
+  color: #1E293B !important;
+  -webkit-text-fill-color: #1E293B !important;
   background: none !important;
   filter: none !important;
   font-weight: 800 !important;
 }
 #home .vidhata-life-life {
-  color: #1A8FD8 !important;
-  -webkit-text-fill-color: #1A8FD8 !important;
+  color: #0284C7 !important;
+  -webkit-text-fill-color: #0284C7 !important;
   background: none !important;
   filter: none !important;
   font-weight: 800 !important;
 }
 #home .vidhata-life-pulse-dot {
-  background: #F26B21 !important;
-  box-shadow: 0 0 8px rgba(242, 107, 33, 0.6) !important;
+  background: #10B981 !important;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6) !important;
 }
 #home .hero__hl-light {
-  color: #5F6B7A !important;
+  color: #64748B !important;
 }
 
 #home .hero__subhead {
-  color: #5F6B7A !important;
+  color: #475569 !important;
   font-size: 1.1rem !important;
   font-family: var(--font-body) !important;
 }
 
 /* Home CTA buttons (Arni Medica style) */
 #home .hero__actions .btn--primary {
-  background: #61B33B !important;
-  border-color: #61B33B !important;
+  background: #10B981 !important;
+  border-color: #10B981 !important;
   color: #FFFFFF !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   letter-spacing: 0.5px !important;
-  box-shadow: 0 6px 20px rgba(97, 179, 59, 0.40) !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35) !important;
 }
 #home .hero__actions .btn--primary:hover {
-  background: #4F9930 !important;
-  border-color: #4F9930 !important;
-  box-shadow: 0 8px 25px rgba(97, 179, 59, 0.55) !important;
+  background: #059669 !important;
+  border-color: #059669 !important;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.45) !important;
   transform: translateY(-2px) !important;
 }
 
 #home .hero__actions .btn--outline {
   background: #FFFFFF !important;
-  border: 2px solid #1A8FD8 !important;
-  color: #1670C0 !important;
+  border: 2px solid #0284C7 !important;
+  color: #0284C7 !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
 }
 #home .hero__actions .btn--outline:hover {
-  background: #EEF6FC !important;
-  border-color: #1670C0 !important;
-  color: #17223B !important;
+  background: #F0F9FF !important;
+  border-color: #0369A1 !important;
+  color: #0369A1 !important;
   transform: translateY(-2px) !important;
 }
 
@@ -303,16 +302,16 @@ p, li, span, input, select, textarea {
   margin-right: auto !important;
 }
 #home .hero__trust-item {
-  color: #17223B !important;
+  color: #1E293B !important;
   border: 1px solid #DFE6EE !important;
   border-radius: 30px !important;
   background: #FFFFFF !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
-  box-shadow: 0 2px 8px rgba(23, 34, 59, 0.06) !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.05) !important;
 }
 #home .hero__trust-item svg {
-  stroke: #1A8FD8 !important;
+  stroke: #0284C7 !important;
 }
 
 /* Hero stats bar */
@@ -323,7 +322,7 @@ p, li, span, input, select, textarea {
 #home .hero__stat-item [style*="color:#111111"],
 #home .hero__stat-item [style*="color:#38bdf8"],
 #home .hero__stat-item [style*="color: #38bdf8"] {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-weight: 800 !important;
 }
@@ -331,7 +330,7 @@ p, li, span, input, select, textarea {
 #home .hero__stat-item [style*="color:#444444"],
 #home .hero__stat-item [style*="color:#ffffff"],
 #home .hero__stat-item [style*="color:#94a3b8"] {
-  color: #5F6B7A !important;
+  color: #64748B !important;
   font-family: var(--font-body) !important;
 }
 #home .hero__stat-divider {
@@ -339,9 +338,9 @@ p, li, span, input, select, textarea {
 }
 
 /* Hero scroll indicator */
-.hero__scroll      { color: #1A8FD8 !important; }
-.hero__scroll-line { background: #1A8FD8 !important; }
-.hero__scroll span { color: #1A8FD8 !important; }
+.hero__scroll      { color: #0284C7 !important; }
+.hero__scroll-line { background: #0284C7 !important; }
+.hero__scroll span { color: #0284C7 !important; }
 
 /* ── 6. SECTIONS & BACKGROUNDS ──────────────────────────────── */
 .section,
@@ -351,13 +350,13 @@ section {
 .section--alt,
 .content-section--alt,
 .about-section--alt {
-  background: #EEF6FC !important;
+  background: #F0F9FF !important;
 }
 .bg-grid {
   opacity: 0.35 !important;
   background-image:
-    linear-gradient(to right, rgba(26, 143, 216, 0.12) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(26, 143, 216, 0.12) 1px, transparent 1px) !important;
+    linear-gradient(to right, rgba(2, 132, 199, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(2, 132, 199, 0.08) 1px, transparent 1px) !important;
 }
 
 /* Section labels / Eyebrows */
@@ -365,8 +364,9 @@ section {
 .section-header__tag,
 .section-tag,
 span.section-tag {
-  background: #EEF6FC !important;
-  color: #1670C0 !important;
+  background: #E0F2FE !important;
+  color: #0284C7 !important;
+  border: 1px solid #BAE6FD !important;
   border: 1px solid #DFE6EE !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
@@ -379,7 +379,7 @@ span.section-tag {
 .section__heading {
   position: relative !important;
   font-family: var(--font-heading) !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   font-weight: 700 !important;
 }
 
@@ -390,9 +390,9 @@ span.section-tag {
   display: block !important;
   width: 70px !important;
   height: 3px !important;
-  background: #F26B21 !important;
+  background: linear-gradient(90deg, #38BDF8 0%, #10B981 100%) !important;
   margin: 14px auto 0 !important;
-  border-radius: 2px !important;
+  border-radius: 3px !important;
 }
 
 /* ── 7. CARDS & CONTAINERS ──────────────────────────────────── */
@@ -420,38 +420,38 @@ span.section-tag {
   background: #FFFFFF !important;
   border: 1px solid #DFE6EE !important;
   border-radius: 10px !important;
-  box-shadow: 0 10px 30px rgba(23, 34, 59, 0.08) !important;
-  color: #17223B !important;
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.06) !important;
+  color: #1E293B !important;
   transition: all 0.3s ease !important;
 }
 
 .service-pro-card:hover,
 .feature-card:hover,
 .card:hover {
-  border-color: #1A8FD8 !important;
-  box-shadow: 0 18px 40px rgba(23, 34, 59, 0.14) !important;
+  border-color: #38BDF8 !important;
+  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.10) !important;
   transform: translateY(-4px) !important;
 }
 
 .service-pro-card__icon,
 [class*="card__icon"] {
-  background: #EEF6FC !important;
-  color: #1A8FD8 !important;
-  border: 1px solid #DFE6EE !important;
+  background: #F0F9FF !important;
+  color: #0284C7 !important;
+  border: 1px solid #BAE6FD !important;
   border-radius: 10px !important;
 }
 .service-pro-card__icon svg,
 [class*="card__icon"] svg {
-  stroke: #1A8FD8 !important;
+  stroke: #0284C7 !important;
 }
 
 .service-pro-card__title {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
 }
 .service-pro-card__desc {
-  color: #5F6B7A !important;
+  color: #475569 !important;
 }
 
 /* Arni Medica Signature Explore Orange Links */
@@ -459,7 +459,7 @@ span.section-tag {
 [class*="card__link"],
 .feature-card__link,
 .card__link {
-  color: #E0601A !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   letter-spacing: 0.5px !important;
@@ -469,7 +469,7 @@ span.section-tag {
 [class*="card__link"]:hover,
 .feature-card__link:hover,
 .card__link:hover {
-  color: #8F3806 !important;
+  color: #0369A1 !important;
 }
 
 /* ── 8. BUTTONS ─────────────────────────────────────────────── */
@@ -477,30 +477,30 @@ span.section-tag {
 .btn.btn--primary,
 .btn-shimmer,
 .btn-action-primary {
-  background: #61B33B !important;
-  border-color: #61B33B !important;
+  background: #10B981 !important;
+  border-color: #10B981 !important;
   color: #FFFFFF !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   letter-spacing: 0.5px !important;
-  box-shadow: 0 4px 16px rgba(97, 179, 59, 0.35) !important;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.30) !important;
   transition: all 0.25s ease !important;
 }
 .btn--primary:hover,
 .btn-action-primary:hover {
-  background: #4F9930 !important;
-  border-color: #4F9930 !important;
+  background: #059669 !important;
+  border-color: #059669 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 6px 22px rgba(97, 179, 59, 0.50) !important;
+  box-shadow: 0 6px 22px rgba(16, 185, 129, 0.40) !important;
   transform: translateY(-2px) !important;
 }
 
 .btn--outline,
 .btn-action-secondary {
   background: transparent !important;
-  border: 2px solid #1A8FD8 !important;
-  color: #1670C0 !important;
+  border: 2px solid #0284C7 !important;
+  color: #0284C7 !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
@@ -508,19 +508,19 @@ span.section-tag {
 }
 .btn--outline:hover,
 .btn-action-secondary:hover {
-  background: #EEF6FC !important;
-  border-color: #1670C0 !important;
-  color: #17223B !important;
+  background: #F0F9FF !important;
+  border-color: #0369A1 !important;
+  color: #0369A1 !important;
   transform: translateY(-2px) !important;
 }
 
 .btn--ghost {
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
 }
 .btn--ghost:hover {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
 }
 
 /* ── 9. BADGES ──────────────────────────────────────────────── */
@@ -528,8 +528,9 @@ span.section-tag {
 .badge--primary,
 .badge--gold,
 .badge--success {
-  background: #EEF6FC !important;
-  color: #1670C0 !important;
+  background: #E0F2FE !important;
+  color: #0284C7 !important;
+  border: 1px solid #BAE6FD !important;
   border: 1px solid #DFE6EE !important;
   border-radius: 20px !important;
   font-family: var(--font-heading) !important;
@@ -540,7 +541,7 @@ span.section-tag {
 .gradient-text,
 [style*="-webkit-text-fill-color: transparent"],
 [style*="-webkit-background-clip: text"] {
-  background: linear-gradient(135deg, #17223B 0%, #1A8FD8 100%) !important;
+  background: linear-gradient(135deg, #0284C7 0%, #10B981 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -553,35 +554,35 @@ span.section-tag {
 .about-hero,
 .clean-hero,
 [class*="hero--dark"] {
-  background: radial-gradient(circle at 85% 20%, rgba(26, 143, 216, 0.25) 0%, transparent 60%), linear-gradient(145deg, #17223B 0%, #1F2733 100%) !important;
-  color: #FFFFFF !important;
+  background: linear-gradient(160deg, #F0F9FF 0%, #FFFFFF 60%, #ECFDF5 100%) !important;
+  color: #1E293B !important;
 }
 
 .med-hero *,
 .lic-hero *,
 .virexa-hero *,
 .about-hero * {
-  border-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: #DFE6EE !important;
 }
 .about-hero h1,
 .med-hero h1,
 .lic-hero h1,
 .virexa-hero h1 {
-  color: #FFFFFF !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
 }
 .about-hero__lead,
 .lic-hero__lead,
 .med-hero__lead {
-  color: #CFD8E3 !important;
+  color: #475569 !important;
 }
 
 .about-eyebrow,
 .lic-eyebrow,
 .med-eyebrow {
-  background: rgba(26, 143, 216, 0.20) !important;
-  border-color: rgba(26, 143, 216, 0.45) !important;
-  color: #EEF6FC !important;
+  background: #E0F2FE !important;
+  border-color: #38BDF8 !important;
+  color: #0284C7 !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
@@ -590,13 +591,14 @@ span.section-tag {
 .candor-card,
 .about-candor-box,
 .clean-hero__candor-quote {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-left: 3.5px solid #F26B21 !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
+  background: #FFFFFF !important;
+  border-left: 3.5px solid #10B981 !important;
+  border-color: #DFE6EE !important;
   border-radius: 8px !important;
+  box-shadow: 0 4px 18px rgba(2, 132, 199, 0.06) !important;
 }
-.candor-card__header { color: #EEF6FC !important; }
-.candor-card__text   { color: #FFFFFF !important; }
+.candor-card__header { color: #0284C7 !important; }
+.candor-card__text   { color: #1E293B !important; }
 
 /* Clean hero sidebar (About page) */
 .clean-hero__sidebar {
@@ -604,24 +606,24 @@ span.section-tag {
   border: 1px solid #DFE6EE !important;
   border-radius: 10px !important;
 }
-.clean-hero__sidebar-title  { color: #1A8FD8 !important; border-bottom-color: #EEF6FC !important; font-family: var(--font-heading) !important; }
-.clean-hero__stat-label     { color: #5F6B7A !important; }
-.clean-hero__stat-value     { color: #17223B !important; font-weight: 700 !important; }
-.clean-hero__stat-row       { border-bottom-color: #EEF6FC !important; }
+.clean-hero__sidebar-title  { color: #0284C7 !important; border-bottom-color: #F0F9FF !important; font-family: var(--font-heading) !important; }
+.clean-hero__stat-label     { color: #64748B !important; }
+.clean-hero__stat-value     { color: #1E293B !important; font-weight: 700 !important; }
+.clean-hero__stat-row       { border-bottom-color: #F0F9FF !important; }
 
 /* ── 12. FOOTER (ARNI MEDICA DEEP NAVY THEME) ───────────────── */
 .footer {
-  background: #17223B !important;
-  color: #CFD8E3 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: #F8FAFC !important;
+  color: #475569 !important;
+  border-top: 1px solid #DFE6EE !important;
   position: relative !important;
   z-index: 10 !important;
   padding: 76px 0 0 !important;
   font-size: 0.9rem !important;
-  box-shadow: 0 -10px 30px rgba(23, 34, 59, 0.15) !important;
+  box-shadow: 0 -4px 20px rgba(2, 132, 199, 0.04) !important;
 }
 
-/* Arni Medica Signature Accent Top Line */
+/* Serene Sky & Mint Signature Accent Top Line */
 .footer::before {
   content: '';
   position: absolute;
@@ -629,12 +631,12 @@ span.section-tag {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #1A8FD8 0%, #1670C0 40%, #F26B21 65%, #61B33B 100%);
+  background: linear-gradient(90deg, #38BDF8 0%, #0284C7 40%, #10B981 70%, #34D399 100%);
   pointer-events: none;
 }
 
 .footer__grid {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid #DFE6EE !important;
   padding-bottom: 48px !important;
 }
 
@@ -648,7 +650,7 @@ span.section-tag {
 }
 
 .footer .navbar__logo-name {
-  color: #FFFFFF !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
   font-size: 1.18rem !important;
@@ -656,20 +658,20 @@ span.section-tag {
 }
 
 .footer .navbar__logo-corp {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
   font-weight: 600 !important;
   font-size: 0.82rem !important;
 }
 
 .footer .navbar__logo-tagline {
-  color: #CFD8E3 !important;
+  color: #64748B !important;
   font-size: 0.72rem !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
 }
 
 .footer__brand-title {
-  color: #FFFFFF !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-size: 1.18rem !important;
   font-weight: 700 !important;
@@ -677,14 +679,14 @@ span.section-tag {
 }
 
 .footer__brand-desc {
-  color: #CFD8E3 !important;
+  color: #475569 !important;
   font-size: 0.875rem !important;
   line-height: 1.65 !important;
   max-width: 340px !important;
   margin-top: 10px !important;
 }
 
-/* Certification Badges - Arni Medica Style Pills */
+/* Certification Badges - Light Peaceful Pills */
 .footer__certbadges {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -696,29 +698,29 @@ span.section-tag {
   display: inline-flex !important;
   align-items: center !important;
   padding: 6px 14px !important;
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: #FFFFFF !important;
+  border: 1px solid #DFE6EE !important;
   border-radius: 20px !important;
   font-size: 0.75rem !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
-  color: #FFFFFF !important;
+  color: #0284C7 !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   transition: all 0.25s ease !important;
 }
 
 .footer__certbadge:hover {
-  background: #1A8FD8 !important;
-  border-color: #1A8FD8 !important;
+  background: #0284C7 !important;
+  border-color: #0284C7 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 0 14px rgba(26, 143, 216, 0.4) !important;
+  box-shadow: 0 0 14px rgba(2, 132, 199, 0.3) !important;
   transform: translateY(-2px) !important;
 }
 
-/* Column Headings with Arni Accent Underlines */
+/* Column Headings with Nature Mint Accent Underlines */
 .footer__col-title {
-  color: #FFFFFF !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-size: 0.92rem !important;
   font-weight: 700 !important;
@@ -735,7 +737,7 @@ span.section-tag {
   display: inline-block;
   width: 22px;
   height: 2.5px;
-  background: #F26B21;
+  background: #10B981;
   border-radius: 2px;
 }
 
@@ -747,7 +749,7 @@ span.section-tag {
 }
 
 .footer__link {
-  color: #CFD8E3 !important;
+  color: #64748B !important;
   text-decoration: none !important;
   font-size: 0.875rem !important;
   font-weight: 500 !important;
@@ -758,7 +760,7 @@ span.section-tag {
 }
 
 .footer__link:hover {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
   transform: translateX(4px) !important;
 }
 
@@ -768,7 +770,7 @@ span.section-tag {
 }
 
 .footer__contact-link {
-  color: #FFFFFF !important;
+  color: #1E293B !important;
   text-decoration: none !important;
   font-weight: 500 !important;
   font-size: 0.88rem !important;
@@ -777,13 +779,13 @@ span.section-tag {
 }
 
 .footer__contact-link:hover {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
   text-decoration: underline !important;
   text-underline-offset: 3px !important;
 }
 
 .footer__hours {
-  color: #CFD8E3 !important;
+  color: #64748B !important;
   font-size: 0.82rem !important;
   line-height: 1.55 !important;
   margin-top: 14px !important;
@@ -794,9 +796,9 @@ span.section-tag {
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
-  background: rgba(97, 179, 59, 0.15) !important;
-  border: 1px solid rgba(97, 179, 59, 0.40) !important;
-  color: #A3E689 !important;
+  background: #ECFDF5 !important;
+  border: 1px solid #A7F3D0 !important;
+  color: #059669 !important;
   font-size: 0.76rem !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
@@ -812,24 +814,24 @@ span.section-tag {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #61B33B;
-  box-shadow: 0 0 8px #61B33B;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
   flex-shrink: 0;
 }
 
 .footer__facility-address {
-  color: #CFD8E3 !important;
+  color: #475569 !important;
   font-size: 0.875rem !important;
   line-height: 1.6 !important;
   margin-bottom: 12px !important;
 }
 
 .footer__facility-scope {
-  color: #8A96A6 !important;
+  color: #64748B !important;
   font-size: 0.8rem !important;
   line-height: 1.5 !important;
   padding-top: 10px !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-top: 1px solid #DFE6EE !important;
 }
 
 .footer__contact-item {
@@ -838,11 +840,11 @@ span.section-tag {
   align-items: flex-start !important;
   margin-bottom: 14px !important;
   font-size: 0.875rem !important;
-  color: #CFD8E3 !important;
+  color: #475569 !important;
   line-height: 1.5 !important;
 }
 
-/* Contact Icons with Blue Box */
+/* Contact Icons with Sky Blue Box */
 .footer__contact-icon {
   display: inline-flex !important;
   align-items: center !important;
@@ -850,21 +852,21 @@ span.section-tag {
   width: 32px !important;
   height: 32px !important;
   border-radius: 8px !important;
-  background: rgba(26, 143, 216, 0.12) !important;
-  border: 1px solid rgba(26, 143, 216, 0.30) !important;
+  background: #E0F2FE !important;
+  border: 1px solid #BAE6FD !important;
   flex-shrink: 0 !important;
   margin-top: 2px !important;
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
   transition: all 0.2s ease !important;
 }
 
 .footer__contact-icon svg {
-  stroke: #1A8FD8 !important;
+  stroke: #0284C7 !important;
 }
 
 .footer__contact-item:hover .footer__contact-icon {
-  background: #1A8FD8 !important;
-  border-color: #1A8FD8 !important;
+  background: #0284C7 !important;
+  border-color: #0284C7 !important;
   color: #FFFFFF !important;
 }
 .footer__contact-item:hover .footer__contact-icon svg {
@@ -873,7 +875,7 @@ span.section-tag {
 
 /* Footer Bottom Bar, Legal & Social */
 .footer__bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-top: 1px solid #DFE6EE !important;
   padding: 28px 0 36px !important;
   margin-top: 48px !important;
   display: flex !important;
@@ -884,13 +886,13 @@ span.section-tag {
 }
 
 .footer__copy {
-  color: #8A96A6 !important;
+  color: #64748B !important;
   font-size: 0.84rem !important;
   margin: 0 !important;
 }
 
 .footer__legal-line {
-  color: #8A96A6 !important;
+  color: #64748B !important;
   font-size: 0.8rem !important;
   line-height: 1.8 !important;
   text-align: center !important;
@@ -900,14 +902,14 @@ span.section-tag {
 
 .footer__legal-line a,
 .footer__legal-link {
-  color: #CFD8E3 !important;
+  color: #64748B !important;
   text-decoration: none !important;
   transition: color 0.2s ease !important;
 }
 
 .footer__legal-line a:hover,
 .footer__legal-link:hover {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
 }
 
 .footer__legal-links {
@@ -927,45 +929,45 @@ span.section-tag {
   width: 36px !important;
   height: 36px !important;
   border-radius: 8px !important;
-  background: rgba(255, 255, 255, 0.06) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  color: #CFD8E3 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #DFE6EE !important;
+  color: #64748B !important;
   transition: all 0.2s ease !important;
 }
 
 .footer__social-link:hover {
-  background: #1A8FD8 !important;
-  border-color: #1A8FD8 !important;
+  background: #0284C7 !important;
+  border-color: #0284C7 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 0 14px rgba(26, 143, 216, 0.4) !important;
+  box-shadow: 0 0 14px rgba(2, 132, 199, 0.3) !important;
   transform: translateY(-2px) !important;
 }
 
 /* ── 13. INNER PAGE CARDS & COMPONENTS ──────────────────────── */
-.timeline__dot       { background: #1A8FD8 !important; border-color: #DFE6EE !important; }
-.timeline__year      { color: #1670C0 !important; font-family: var(--font-heading) !important; font-weight: 700 !important; }
-.timeline__title     { color: #17223B !important; font-family: var(--font-heading) !important; }
+.timeline__dot       { background: #0284C7 !important; border-color: #DFE6EE !important; }
+.timeline__year      { color: #0284C7 !important; font-family: var(--font-heading) !important; font-weight: 700 !important; }
+.timeline__title     { color: #1E293B !important; font-family: var(--font-heading) !important; }
 .timeline::before    { background: #DFE6EE !important; }
 
 .download-dossier-card,
 .brochure-card {
-  background: #17223B !important;
-  color: #EEF6FC !important;
-  border: 1.5px solid #1A8FD8 !important;
+  background: #F0F9FF !important;
+  color: #1E293B !important;
+  border: 1.5px solid #BAE6FD !important;
   border-radius: 10px !important;
 }
 .download-dossier-card__title,
-.brochure-card__title { color: #FFFFFF !important; font-family: var(--font-heading) !important; }
+.brochure-card__title { color: #1E293B !important; font-family: var(--font-heading) !important; }
 .download-spec-pill,
 .brochure-meta-pill {
-  background: rgba(26, 143, 216, 0.20) !important;
-  border-color: rgba(26, 143, 216, 0.40) !important;
-  color: #EEF6FC !important;
+  background: #E0F2FE !important;
+  border-color: #38BDF8 !important;
+  color: #0284C7 !important;
   border-radius: 20px !important;
 }
 .download-cta-btn,
 .btn-brochure {
-  background: #61B33B !important;
+  background: #10B981 !important;
   color: #FFFFFF !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
@@ -974,39 +976,39 @@ span.section-tag {
 }
 .download-cta-btn:hover,
 .btn-brochure:hover {
-  background: #4F9930 !important;
+  background: #059669 !important;
 }
 
 .roadmap-disclaimer-banner {
-  background: #EEF6FC !important;
-  border-left-color: #1A8FD8 !important;
-  color: #17223B !important;
+  background: #F0F9FF !important;
+  border-left-color: #0284C7 !important;
+  color: #1E293B !important;
   border-radius: 8px !important;
 }
 .roadmap-card__tag {
-  background: #EEF6FC !important;
-  color: #1670C0 !important;
+  background: #F0F9FF !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   border-radius: 20px !important;
 }
 .roadmap-card__status-dot {
-  background: #1A8FD8 !important;
-  box-shadow: 0 0 8px #1A8FD8 !important;
+  background: #0284C7 !important;
+  box-shadow: 0 0 8px #0284C7 !important;
 }
 
 /* ── AUDIT FACILITY SECTION (Facility Audit Invitation) ──────── */
 #audit,
 section#audit,
 section[id="audit"] {
-  background: #EEF6FC !important;
+  background: #F0F9FF !important;
   padding: var(--sp-20) 0 !important;
 }
 
 .audit-facility-box {
   background: #FFFFFF !important;
   border: 1px solid #DFE6EE !important;
-  border-top: 4px solid #1A8FD8 !important;
+  border-top: 4px solid #0284C7 !important;
   border-radius: 20px !important;
   padding: 56px 40px !important;
   text-align: center !important;
@@ -1017,9 +1019,9 @@ section[id="audit"] {
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
-  background: #EEF6FC !important;
-  border: 1.5px solid #1A8FD8 !important;
-  color: #1670C0 !important;
+  background: #F0F9FF !important;
+  border: 1.5px solid #0284C7 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-size: 0.78rem !important;
   font-weight: 700 !important;
@@ -1030,14 +1032,14 @@ section[id="audit"] {
   margin-bottom: 20px !important;
 }
 .audit-badge svg {
-  stroke: #1A8FD8 !important;
+  stroke: #0284C7 !important;
 }
 
 .audit-title {
   font-family: var(--font-heading) !important;
   font-size: clamp(2.2rem, 4vw, 3rem) !important;
   font-weight: 700 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   letter-spacing: -0.02em !important;
   margin-bottom: 14px !important;
   line-height: 1.15 !important;
@@ -1054,24 +1056,27 @@ section[id="audit"] {
 
 .audit-action-card,
 .audit-invitation-banner {
-  background: #17223B !important;
-  color: #CFD8E3 !important;
-  border: 1px solid #1A8FD8 !important;
+  background: linear-gradient(135deg, #F0F9FF 0%, #ECFDF5 100%) !important;
+  color: #475569 !important;
+  border: 1.5px solid #BAE6FD !important;
   border-radius: 10px !important;
 }
 .audit-action-card__title,
 .audit-invitation-banner__title {
-  color: #FFFFFF !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
 }
 
 .btn-audit-primary,
 .audit-btn-primary {
+  background: #10B981 !important;
+  border-color: #10B981 !important;
+  color: #FFFFFF !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 8px !important;
-  background: #61B33B !important;
+  background: #10B981 !important;
   border: none !important;
   color: #FFFFFF !important;
   padding: 14px 28px !important;
@@ -1085,7 +1090,7 @@ section[id="audit"] {
 }
 .btn-audit-primary:hover,
 .audit-btn-primary:hover {
-  background: #4F9930 !important;
+  background: #059669 !important;
   color: #FFFFFF !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 6px 22px rgba(97, 179, 59, 0.50) !important;
@@ -1099,8 +1104,8 @@ section[id="audit"] {
   justify-content: center !important;
   gap: 8px !important;
   background: #FFFFFF !important;
-  border: 2px solid #1A8FD8 !important;
-  color: #1670C0 !important;
+  border: 2px solid #0284C7 !important;
+  color: #0284C7 !important;
   padding: 14px 26px !important;
   border-radius: 30px !important;
   font-family: var(--font-heading) !important;
@@ -1111,13 +1116,13 @@ section[id="audit"] {
 .btn-audit-secondary:hover,
 .audit-btn-outline:hover,
 .audit-btn-call:hover {
-  background: #EEF6FC !important;
-  border-color: #1670C0 !important;
-  color: #17223B !important;
+  background: #F0F9FF !important;
+  border-color: #0284C7 !important;
+  color: #1E293B !important;
   transform: translateY(-2px) !important;
 }
 .audit-btn-call svg {
-  stroke: #1670C0 !important;
+  stroke: #0284C7 !important;
 }
 
 .lic-section-card {
@@ -1125,19 +1130,19 @@ section[id="audit"] {
   border: 1px solid #DFE6EE !important;
   border-radius: 10px !important;
 }
-.lic-accent  { color: #1A8FD8 !important; }
-.lic-verify  { background: #EEF6FC !important; border-color: #DFE6EE !important; border-radius: 20px !important; }
-.lic-table th{ background: #EEF6FC !important; color: #17223B !important; font-family: var(--font-heading) !important; }
+.lic-accent  { color: #0284C7 !important; }
+.lic-verify  { background: #F0F9FF !important; border-color: #DFE6EE !important; border-radius: 20px !important; }
+.lic-table th{ background: #F0F9FF !important; color: #1E293B !important; font-family: var(--font-heading) !important; }
 
 .product-clean-card {
   background: #FFFFFF !important;
   border: 1px solid #DFE6EE !important;
   border-radius: 10px !important;
 }
-.clean-spec-item    { border-bottom-color: #EEF6FC !important; }
+.clean-spec-item    { border-bottom-color: #F0F9FF !important; }
 .clean-spec-label   { color: #5F6B7A !important; }
-.clean-spec-value   { color: #17223B !important; }
-.oem-card           { background: #EEF6FC !important; border-color: #DFE6EE !important; border-radius: 10px !important; }
+.clean-spec-value   { color: #1E293B !important; }
+.oem-card           { background: #F0F9FF !important; border-color: #DFE6EE !important; border-radius: 10px !important; }
 .related-card       { background: #FFFFFF !important; border-color: #DFE6EE !important; border-radius: 10px !important; }
 
 /* ── 14. PAGE HERO — MODERN CLINICAL EXECUTIVE THEME ─────────── */
@@ -1147,7 +1152,7 @@ section[id="audit"] {
     radial-gradient(1000px circle at 85% 15%, rgba(26, 143, 216, 0.08) 0%, transparent 60%),
     radial-gradient(800px circle at 15% 85%, rgba(242, 107, 33, 0.05) 0%, transparent 55%),
     radial-gradient(600px circle at 50% 0%, rgba(255, 255, 255, 0.95) 0%, transparent 70%),
-    linear-gradient(180deg, #FFFFFF 0%, #F5F9FD 35%, #EEF6FC 75%, #FFFFFF 100%) !important;
+    linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 40%, #ECFDF5 80%, #FFFFFF 100%) !important;
   border-bottom: 1px solid #DFE6EE !important;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.8), 0 4px 20px rgba(23, 34, 59, 0.03) !important;
   overflow: hidden !important;
@@ -1238,7 +1243,7 @@ section[id="audit"] {
 }
 
 .page-hero__breadcrumb a:hover {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
 }
 
 .page-hero__breadcrumb span {
@@ -1255,7 +1260,7 @@ section[id="audit"] {
   background: rgba(255, 255, 255, 0.95) !important;
   border: 1.5px solid #DFE6EE !important;
   border-radius: 9999px !important;
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-size: 0.78rem !important;
   font-weight: 700 !important;
@@ -1272,14 +1277,14 @@ section[id="audit"] {
   width: 8px !important;
   height: 8px !important;
   border-radius: 50% !important;
-  background: #F26B21 !important;
-  box-shadow: 0 0 8px #F26B21 !important;
+  background: #10B981 !important;
+  box-shadow: 0 0 8px #10B981 !important;
   flex-shrink: 0 !important;
 }
 
 /* Hero Typography */
 .page-hero h1 {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-size: clamp(2.2rem, 4.5vw, 3.4rem) !important;
   font-weight: 800 !important;
@@ -1289,7 +1294,7 @@ section[id="audit"] {
 }
 
 .page-hero .gradient-text--gold {
-  background: linear-gradient(135deg, #17223B 0%, #1A8FD8 60%, #F26B21 100%) !important;
+  background: linear-gradient(135deg, #0284C7 0%, #38BDF8 60%, #10B981 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -1318,12 +1323,12 @@ section[id="audit"] {
 
 /* ── CHAT SYSTEM TOGGLE (Arni Cerulean & Navy Theme) ───────── */
 .vp-chat-toggle {
-  background: linear-gradient(135deg, #1A8FD8 0%, #17223B 100%) !important;
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 50%, #10B981 100%) !important;
   color: #FFFFFF !important;
   box-shadow: 0 4px 20px rgba(23, 34, 59, 0.35), 0 2px 8px rgba(0, 0, 0, 0.14) !important;
 }
 .vp-chat-toggle:hover {
-  background: linear-gradient(135deg, #1670C0 0%, #1F2733 100%) !important;
+  background: linear-gradient(135deg, #0284C7 0%, #10B981 100%) !important;
   box-shadow: 0 6px 28px rgba(23, 34, 59, 0.45), 0 4px 12px rgba(0, 0, 0, 0.20) !important;
 }
 .vp-chat-toggle::before {
@@ -1333,34 +1338,34 @@ section[id="audit"] {
   color: #FFFFFF !important;
 }
 .vp-chat-header {
-  background: linear-gradient(135deg, #17223B 0%, #1A8FD8 100%) !important;
+  background: linear-gradient(135deg, #0284C7 0%, #10B981 100%) !important;
   font-family: var(--font-heading) !important;
 }
 .vp-chat-send {
-  background: #61B33B !important;
+  background: #10B981 !important;
 }
 
 #back-to-top {
   background: #FFFFFF !important;
   border: 1.5px solid #DFE6EE !important;
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
   box-shadow: 0 4px 12px rgba(23, 34, 59, 0.08) !important;
 }
 #back-to-top:hover {
-  background: #1A8FD8 !important;
-  border-color: #1A8FD8 !important;
+  background: #0284C7 !important;
+  border-color: #0284C7 !important;
   color: #FFFFFF !important;
 }
 
 /* ── 16. SCROLLBAR & PROGRESS ───────────────────────────────── */
 #reading-progress {
-  background: #1A8FD8 !important;
+  background: #0284C7 !important;
 }
 
 ::-webkit-scrollbar            { width: 8px; }
 ::-webkit-scrollbar-track      { background: #FFFFFF; }
 ::-webkit-scrollbar-thumb      { background: #DFE6EE; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover{ background: #1A8FD8; }
+::-webkit-scrollbar-thumb:hover{ background: #0284C7; }
 
 /* ── 17. MEDICAL & PHARMA PAGE — ARNI MEDICA BASE STYLING ──── */
 
@@ -1375,13 +1380,13 @@ section[id="audit"] {
 .medical-intro-grid h2 {
   font-family: var(--font-heading) !important;
   font-size: clamp(1.85rem, 3vw, 2.35rem) !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   line-height: 1.25 !important;
   margin-bottom: var(--sp-5) !important;
 }
 
 .medical-intro-grid p {
-  color: #5F6B7A !important;
+  color: #475569 !important;
   font-size: 1.02rem !important;
   line-height: 1.68 !important;
 }
@@ -1397,7 +1402,8 @@ section[id="audit"] {
 .medical-intro-grid .infra-gallery {
   height: 400px !important;
   border-radius: 16px !important;
-  background: #0B192C !important;
+  background: #F0F9FF !important;
+  border: 1px solid #BAE6FD !important;
 }
 
 /* Section 3: Cleanroom Capabilities Grid (.grid-3) */
@@ -1423,12 +1429,12 @@ section .grid-3 .card {
 
 section .grid-3 .card:hover {
   transform: translateY(-6px) !important;
-  box-shadow: 0 16px 36px rgba(23, 34, 59, 0.10) !important;
-  border-color: #1A8FD8 !important;
+  box-shadow: 0 16px 36px rgba(2, 132, 199, 0.10) !important;
+  border-color: #38BDF8 !important;
 }
 
 section .grid-3 .card h4 {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-size: 1.25rem !important;
   font-weight: 700 !important;
@@ -1436,14 +1442,14 @@ section .grid-3 .card h4 {
 }
 
 section .grid-3 .card p {
-  color: #5F6B7A !important;
+  color: #475569 !important;
   font-size: 0.92rem !important;
   line-height: 1.62 !important;
   margin-bottom: 18px !important;
 }
 
 section .grid-3 .card span[style*="Explore"] {
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   font-size: 0.88rem !important;
@@ -1455,7 +1461,7 @@ section .grid-3 .card span[style*="Explore"] {
 }
 
 section .grid-3 .card:hover span[style*="Explore"] {
-  color: #F26B21 !important;
+  color: #10B981 !important;
   transform: translateX(3px) !important;
 }
 
@@ -1485,7 +1491,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .catalog-tabs {
-  background: #EEF6FC !important;
+  background: #F0F9FF !important;
   border: 1.5px solid #DFE6EE !important;
   border-radius: 9999px !important;
   padding: 5px !important;
@@ -1501,7 +1507,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   height: calc(100% - 10px) !important;
   top: 5px !important;
   left: 0 !important;
-  background: linear-gradient(135deg, #1A8FD8 0%, #1670C0 100%) !important;
+  background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%) !important;
   border-radius: 9999px !important;
   box-shadow: 0 4px 14px rgba(26, 143, 216, 0.35) !important;
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), width 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
@@ -1512,7 +1518,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .catalog-tab {
   background: transparent !important;
   border: none !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 600 !important;
   font-size: 0.88rem !important;
@@ -1526,7 +1532,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .catalog-tab:hover {
-  color: #1670C0 !important;
+  color: #0284C7 !important;
 }
 
 .catalog-tab.active {
@@ -1559,7 +1565,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .product-card:hover {
   transform: translateY(-6px) !important;
   box-shadow: 0 16px 36px rgba(23, 34, 59, 0.10) !important;
-  border-color: #1A8FD8 !important;
+  border-color: #0284C7 !important;
 }
 
 .product-card::after {
@@ -1567,8 +1573,8 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .product-card__badge {
-  background: #EEF6FC !important;
-  color: #1670C0 !important;
+  background: #F0F9FF !important;
+  color: #0284C7 !important;
   border: 1px solid rgba(26, 143, 216, 0.25) !important;
   border-radius: 9999px !important;
   font-family: var(--font-heading) !important;
@@ -1614,7 +1620,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .product-card__title {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-size: 1.12rem !important;
   font-weight: 700 !important;
@@ -1632,7 +1638,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 
 .product-card .btn,
 .product-card__btn {
-  background: #61B33B !important;
+  background: #10B981 !important;
   color: #FFFFFF !important;
   border: none !important;
   border-radius: 9999px !important;
@@ -1652,14 +1658,14 @@ section .grid-3 .card:hover span[style*="Explore"] {
 
 .product-card .btn:hover,
 .product-card__btn:hover {
-  background: #4F9930 !important;
+  background: #059669 !important;
   box-shadow: 0 6px 18px rgba(97, 179, 59, 0.35) !important;
   transform: translateY(-1px) !important;
 }
 
 /* Section 5: Pharma Packaging (#pharma-packaging) */
 #pharma-packaging {
-  background: #EEF6FC !important;
+  background: #F0F9FF !important;
 }
 
 #pharma-packaging .grid-4 {
@@ -1683,7 +1689,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 #pharma-packaging .card:hover {
   transform: translateY(-6px) !important;
   box-shadow: 0 16px 36px rgba(23, 34, 59, 0.10) !important;
-  border-color: #1A8FD8 !important;
+  border-color: #0284C7 !important;
 }
 
 #pharma-packaging .card [style*="height:180px"] {
@@ -1702,7 +1708,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 #pharma-packaging .card h3 {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-size: 1.15rem !important;
   font-weight: 700 !important;
@@ -1718,7 +1724,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 #pharma-packaging .card div[style*="var(--clr-primary)"] {
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-size: 0.8rem !important;
   font-weight: 600 !important;
@@ -1739,7 +1745,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   border: 1.5px solid #DFE6EE !important;
   border-radius: 14px !important;
   padding: 20px 16px !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
   font-size: 0.95rem !important;
@@ -1751,7 +1757,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .medical-clients-grid .card:hover {
-  border-color: #1A8FD8 !important;
+  border-color: #0284C7 !important;
   transform: translateY(-3px) !important;
   box-shadow: 0 8px 22px rgba(26, 143, 216, 0.12) !important;
 }
@@ -1760,10 +1766,10 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .cm-hero {
   position: relative !important;
   background:
-    radial-gradient(1000px circle at 85% 15%, rgba(26, 143, 216, 0.08) 0%, transparent 60%),
-    radial-gradient(800px circle at 15% 85%, rgba(242, 107, 33, 0.05) 0%, transparent 55%),
-    linear-gradient(180deg, #FFFFFF 0%, #F5F9FD 45%, #EEF6FC 85%, #FFFFFF 100%) !important;
-  color: #17223B !important;
+    radial-gradient(1000px circle at 85% 15%, rgba(2, 132, 199, 0.08) 0%, transparent 60%),
+    radial-gradient(800px circle at 15% 85%, rgba(16, 185, 129, 0.05) 0%, transparent 55%),
+    linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 45%, #ECFDF5 85%, #FFFFFF 100%) !important;
+  color: #1E293B !important;
   padding: calc(var(--nav-h, 72px) + 52px) 0 72px 0 !important;
   overflow: hidden !important;
   border-top: none !important;
@@ -1813,7 +1819,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   gap: 10px !important;
   background: rgba(255, 255, 255, 0.95) !important;
   border: 1.5px solid #DFE6EE !important;
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   padding: 8px 20px !important;
   border-radius: 9999px !important;
   font-family: var(--font-heading) !important;
@@ -1830,9 +1836,9 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .cm-hero .cm-badge__pulse {
   width: 8px !important;
   height: 8px !important;
-  background: #F26B21 !important;
+  background: #10B981 !important;
   border-radius: 50% !important;
-  box-shadow: 0 0 8px #F26B21 !important;
+  box-shadow: 0 0 8px #10B981 !important;
   flex-shrink: 0 !important;
 }
 
@@ -1841,7 +1847,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-family: var(--font-heading) !important;
   font-weight: 800 !important;
   letter-spacing: -0.025em !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   line-height: 1.1 !important;
   margin-bottom: 20px !important;
   text-shadow: none !important;
@@ -1861,7 +1867,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   display: inline-flex !important;
   align-items: center !important;
   gap: 10px !important;
-  background: #61B33B !important;
+  background: #10B981 !important;
   color: #FFFFFF !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
@@ -1876,7 +1882,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .cm-hero .cm-btn-primary:hover {
-  background: #4F9930 !important;
+  background: #059669 !important;
   color: #FFFFFF !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 8px 24px rgba(97, 179, 59, 0.45) !important;
@@ -1887,7 +1893,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   align-items: center !important;
   gap: 10px !important;
   background: #FFFFFF !important;
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   border: 1.5px solid #DFE6EE !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
@@ -1903,9 +1909,9 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .cm-hero .cm-btn-secondary:hover {
-  background: #EEF6FC !important;
-  border-color: #1A8FD8 !important;
-  color: #1670C0 !important;
+  background: #F0F9FF !important;
+  border-color: #0284C7 !important;
+  color: #0284C7 !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 6px 20px rgba(26, 143, 216, 0.15) !important;
 }
@@ -1928,11 +1934,11 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .cm-card:hover {
   transform: translateY(-6px) !important;
   box-shadow: 0 16px 36px rgba(23, 34, 59, 0.10) !important;
-  border-color: #1A8FD8 !important;
+  border-color: #0284C7 !important;
 }
 
 .cm-card__title {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-size: 1.65rem !important;
   font-weight: 800 !important;
@@ -1945,20 +1951,20 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .cm-card__feature-box {
-  background: #EEF6FC !important;
+  background: #F0F9FF !important;
   border: 1px solid #DFE6EE !important;
   border-radius: 12px !important;
-  color: #17223B !important;
+  color: #1E293B !important;
 }
 
 .cm-card__action {
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
 }
 
 .cm-card__action:hover {
-  color: #F26B21 !important;
+  color: #10B981 !important;
 }
 
 /* Engagement Hub */
@@ -1976,7 +1982,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .cm-form-panel h3 {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 800 !important;
 }
@@ -1984,37 +1990,37 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .cm-checkbox-label {
   background: #F8FAFD !important;
   border: 1.5px solid #DFE6EE !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   border-radius: 10px !important;
   transition: all 0.2s ease !important;
 }
 
 .cm-checkbox-label:hover {
-  background: #EEF6FC !important;
-  border-color: #1A8FD8 !important;
+  background: #F0F9FF !important;
+  border-color: #0284C7 !important;
 }
 
 .cm-checkbox-label.is-checked {
-  background: #EEF6FC !important;
-  border-color: #1A8FD8 !important;
-  color: #1670C0 !important;
+  background: #F0F9FF !important;
+  border-color: #0284C7 !important;
+  color: #0284C7 !important;
 }
 
 .cm-input {
   border: 1.5px solid #DFE6EE !important;
   background: #F8FAFD !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   border-radius: 10px !important;
 }
 
 .cm-input:focus {
-  border-color: #1A8FD8 !important;
+  border-color: #0284C7 !important;
   background: #FFFFFF !important;
   box-shadow: 0 0 0 3px rgba(26, 143, 216, 0.15) !important;
 }
 
 .cm-btn-submit {
-  background: #61B33B !important;
+  background: #10B981 !important;
   color: #FFFFFF !important;
   border-radius: 9999px !important;
   font-family: var(--font-heading) !important;
@@ -2023,21 +2029,31 @@ section .grid-3 .card:hover span[style*="Explore"] {
   transition: all 0.25s ease !important;
 }
 
+.cm-btn-submit {
+  background: #10B981 !important;
+  border-color: #10B981 !important;
+}
 .cm-btn-submit:hover {
-  background: #4F9930 !important;
+  background: #059669 !important;
   box-shadow: 0 6px 22px rgba(97, 179, 59, 0.45) !important;
   transform: translateY(-2px) !important;
 }
 
 .cm-docpack-panel {
-  background: linear-gradient(145deg, #17223B 0%, #1A8FD8 100%) !important;
+  background: linear-gradient(145deg, #F0F9FF 0%, #ECFDF5 100%) !important;
+  border: 1.5px solid #BAE6FD !important;
   border-radius: 20px !important;
   box-shadow: 0 16px 40px rgba(23, 34, 59, 0.15) !important;
 }
 
 .cm-btn-brochure {
   background: #FFFFFF !important;
-  color: #17223B !important;
+  color: #0284C7 !important;
+  border: 1.5px solid #0284C7 !important;
+}
+.cm-btn-brochure:hover {
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
   border-radius: 9999px !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
@@ -2045,29 +2061,29 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .cm-btn-brochure:hover {
-  background: #EEF6FC !important;
-  color: #1670C0 !important;
+  background: #F0F9FF !important;
+  color: #0284C7 !important;
   transform: translateY(-2px) !important;
 }
 
 /* ── Licences & Regulatory Certifications — Arni Medica Base Styling ── */
 .regulatory-ribbon {
-  background: #0B192C !important;
-  color: #94A3B8 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: #F0F9FF !important;
+  color: #475569 !important;
+  border-bottom: 1px solid #DFE6EE !important;
 }
 
 .regulatory-ribbon__item strong {
-  color: #1A8FD8 !important;
+  color: #0284C7 !important;
 }
 
 .lic-hero {
   position: relative !important;
   background:
-    radial-gradient(1000px circle at 85% 15%, rgba(26, 143, 216, 0.12) 0%, transparent 60%),
-    radial-gradient(800px circle at 15% 85%, rgba(242, 107, 33, 0.06) 0%, transparent 55%),
-    linear-gradient(135deg, #07192C 0%, #0F2338 55%, #13385E 100%) !important;
-  color: #FFFFFF !important;
+    radial-gradient(1000px circle at 85% 15%, rgba(2, 132, 199, 0.10) 0%, transparent 60%),
+    radial-gradient(800px circle at 15% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 55%),
+    linear-gradient(160deg, #F0F9FF 0%, #FFFFFF 55%, #ECFDF5 100%) !important;
+  color: #1E293B !important;
   padding: 90px 0 75px 0 !important;
 }
 
@@ -2075,9 +2091,9 @@ section .grid-3 .card:hover span[style*="Explore"] {
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  color: #7DD3FC !important;
+  background: #E0F2FE !important;
+  border: 1px solid #BAE6FD !important;
+  color: #0284C7 !important;
   padding: 6px 16px !important;
   border-radius: 9999px !important;
   font-family: var(--font-heading) !important;
@@ -2092,7 +2108,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-size: clamp(2.4rem, 5vw, 3.8rem) !important;
   font-weight: 800 !important;
   letter-spacing: -0.025em !important;
-  color: #FFFFFF !important;
+  color: #1E293B !important;
   line-height: 1.15 !important;
   margin-bottom: 18px !important;
 }
@@ -2101,7 +2117,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-family: var(--font-body) !important;
   font-size: clamp(1.15rem, 2.2vw, 1.4rem) !important;
   line-height: 1.55 !important;
-  color: #E2E8F0 !important;
+  color: #475569 !important;
 }
 
 .lic-main-content {
@@ -2128,7 +2144,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-family: var(--font-heading) !important;
   font-size: 0.84rem !important;
   font-weight: 700 !important;
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   letter-spacing: 0.04em !important;
   margin-bottom: 8px !important;
 }
@@ -2137,7 +2153,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-family: 'Outfit', monospace, -apple-system, sans-serif !important;
   font-size: clamp(1.8rem, 3.5vw, 2.6rem) !important;
   font-weight: 900 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   letter-spacing: 0.04em !important;
   line-height: 1.2 !important;
   word-break: break-word !important;
@@ -2168,21 +2184,21 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .lic-detail-val {
   font-size: 1.05rem !important;
   font-weight: 600 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   line-height: 1.4 !important;
   word-break: break-word !important;
 }
 
 .lic-detail-val--brand {
   font-weight: 800 !important;
-  color: #1670C0 !important;
+  color: #0284C7 !important;
 }
 
 .lic-verify-btn {
   display: inline-flex !important;
   align-items: center !important;
   gap: 10px !important;
-  background: #1670C0 !important;
+  background: #0284C7 !important;
   color: #FFFFFF !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
@@ -2204,7 +2220,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .lic-intl-box {
   background: #F8FAFD !important;
   border: 1.5px solid #DFE6EE !important;
-  border-left: 4px solid #1A8FD8 !important;
+  border-left: 4px solid #0284C7 !important;
   border-radius: 14px !important;
   padding: 24px 28px !important;
   margin-top: 24px !important;
@@ -2214,7 +2230,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-family: var(--font-heading) !important;
   font-size: 1.15rem !important;
   font-weight: 800 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   margin: 0 0 12px 0 !important;
 }
 
@@ -2231,7 +2247,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   border-top: 1px dashed #DFE6EE !important;
   font-size: 0.92rem !important;
   font-weight: 700 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
@@ -2241,7 +2257,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-family: var(--font-heading) !important;
   font-size: 1.85rem !important;
   font-weight: 800 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   margin-bottom: 24px !important;
 }
 
@@ -2264,7 +2280,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 .lic-iso-card:hover {
   transform: translateY(-4px) !important;
   box-shadow: 0 12px 30px rgba(23, 34, 59, 0.08) !important;
-  border-color: #1A8FD8 !important;
+  border-color: #0284C7 !important;
 }
 
 .lic-iso-eyebrow {
@@ -2273,7 +2289,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.06em !important;
-  color: #1670C0 !important;
+  color: #0284C7 !important;
   margin-bottom: 6px !important;
 }
 
@@ -2281,7 +2297,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-family: var(--font-heading) !important;
   font-size: 1.5rem !important;
   font-weight: 800 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   margin: 0 0 20px 0 !important;
 }
 
@@ -2310,7 +2326,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .lic-iso-table td.field-value {
-  color: #17223B !important;
+  color: #1E293B !important;
   font-weight: 700 !important;
   text-align: right !important;
 }
@@ -2328,7 +2344,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-family: var(--font-heading) !important;
   font-size: 1.85rem !important;
   font-weight: 800 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   margin: 0 0 10px 0 !important;
 }
 
@@ -2360,14 +2376,14 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .lic-gap-item:hover {
-  background: #EEF6FC !important;
-  border-color: #1A8FD8 !important;
+  background: #F0F9FF !important;
+  border-color: #0284C7 !important;
 }
 
 .lic-gap-label {
   font-size: 0.98rem !important;
   font-weight: 700 !important;
-  color: #17223B !important;
+  color: #1E293B !important;
 }
 
 .status-pill {
@@ -2395,7 +2411,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .lic-audit-banner {
-  background: linear-gradient(135deg, #17223B 0%, #1A8FD8 100%) !important;
+  background: linear-gradient(135deg, #0284C7 0%, #10B981 100%) !important;
   color: #FFFFFF !important;
   border-radius: 20px !important;
   padding: 36px 40px !important;
@@ -2412,6 +2428,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-size: 1.4rem !important;
   font-weight: 800 !important;
   margin: 0 0 6px 0 !important;
+  color: #1E293B !important;
 }
 
 .lic-audit-banner p {
@@ -2426,7 +2443,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   align-items: center !important;
   gap: 8px !important;
   background: #FFFFFF !important;
-  color: #17223B !important;
+  color: #1E293B !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
   font-size: 0.94rem !important;
@@ -2439,8 +2456,8 @@ section .grid-3 .card:hover span[style*="Explore"] {
 }
 
 .lic-audit-btn:hover {
-  background: #EEF6FC !important;
-  color: #1670C0 !important;
+  background: #F0F9FF !important;
+  color: #0284C7 !important;
   transform: translateY(-2px) !important;
 }
 

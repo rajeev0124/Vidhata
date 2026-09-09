@@ -83,7 +83,7 @@
   font-family: var(--font-heading, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
   font-weight: 800;
   font-size: 1.02rem;
-  color: #0A2540;
+  color: #1E293B;
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
@@ -143,12 +143,12 @@
 }
 
 .navbar__link:hover {
-  color: #0A4E9B;
+  color: #0284C7;
   background: rgba(10, 78, 155, 0.05);
 }
 
 .navbar__link.active {
-  color: #0A4E9B;
+  color: #0284C7;
   background: rgba(10, 78, 155, 0.08);
   font-weight: 700;
 }
@@ -161,7 +161,7 @@
   transform: translateX(-50%);
   width: 16px;
   height: 2px;
-  background: #0A4E9B;
+  background: #0284C7;
   border-radius: 99px;
 }
 
@@ -186,7 +186,7 @@
 .navbar__dropdown.open .navbar__dropdown-chevron,
 .navbar__dropdown:focus-within .navbar__dropdown-chevron {
   transform: rotate(180deg);
-  color: #0A4E9B;
+  color: #0284C7;
 }
 
 .navbar__dropdown-menu {
@@ -229,13 +229,13 @@
 
 .navbar__dropdown-item:hover {
   background: #F0F6FD;
-  color: #0A4E9B;
+  color: #0284C7;
   padding-left: 17px;
 }
 
 /* CTA in nav */
 .navbar__cta {
-  background: linear-gradient(135deg, #0A4E9B 0%, #0284C7 100%) !important;
+  background: linear-gradient(135deg, #0284C7 0%, #0284C7 100%) !important;
   color: #FFFFFF !important;
   border-radius: 8px !important;
   padding: 8px 16px !important;
@@ -285,7 +285,7 @@
   display: block;
   height: 2px;
   width: 20px;
-  background: #0A2540;
+  background: #1E293B;
   border-radius: 99px;
   transition: transform 0.25s ease,
               opacity 0.25s ease,
@@ -353,7 +353,7 @@
 
 .navbar__mobile-link:hover,
 .navbar__mobile-link.active {
-  color: #0A4E9B;
+  color: #0284C7;
   background: #F0F6FD;
 }
 
@@ -2032,7 +2032,7 @@ a.card--interactive:active {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #cbd5e1;
-  color: #0f172a;
+  color: #1E293B;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2650,7 +2650,7 @@ a.card--interactive:active {
 }
 
 .clients-strip__logo:hover {
-  color: #2C3288;
+  color: #0284C7;
   border-color: rgba(44, 50, 136, 0.3);
   background: #FFFFFF;
   transform: translateY(-2px);
@@ -3078,7 +3078,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #DF2A29;
+  background: #10B981;
   position: relative;
   flex-shrink: 0;
 }
@@ -3112,7 +3112,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-size: clamp(2.2rem, 3.8vw, 3rem);
   font-weight: 800;
   line-height: 1.15;
-  color: #0F172A;
+  color: #1E293B;
   letter-spacing: -0.025em;
   margin-bottom: var(--sp-4);
 }
@@ -3130,7 +3130,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   display: block;
   margin-top: 6px;
   font-weight: 600;
-  color: #0F172A;
+  color: #1E293B;
 }
 
 /* 3-Column Grid */
@@ -3164,20 +3164,20 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 
 /* Variants */
 .ways-card--brand {
-  border-top-color: #DF2A29;
+  border-top-color: #10B981;
 }
 .ways-card--brand:hover {
   border-color: rgba(223, 42, 41, 0.35);
-  border-top-color: #DF2A29;
+  border-top-color: #10B981;
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(223, 42, 41, 0.02) 100%);
 }
 
 .ways-card--oem {
-  border-top-color: #2C3288;
+  border-top-color: #0284C7;
 }
 .ways-card--oem:hover {
   border-color: rgba(44, 50, 136, 0.35);
-  border-top-color: #2C3288;
+  border-top-color: #0284C7;
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(44, 50, 136, 0.02) 100%);
 }
 
@@ -3215,11 +3215,11 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 
 .ways-card--brand .ways-card__tag {
   background: rgba(223, 42, 41, 0.09);
-  color: #DF2A29;
+  color: #10B981;
 }
 .ways-card--oem .ways-card__tag {
   background: rgba(44, 50, 136, 0.09);
-  color: #2C3288;
+  color: #0284C7;
 }
 .ways-card--transfer .ways-card__tag {
   background: rgba(2, 132, 199, 0.09);
@@ -3275,7 +3275,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: 1.45rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #1E293B;
   line-height: 1.25;
   margin-bottom: 10px;
 }
@@ -3321,22 +3321,22 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 
 .ways-btn--brand {
   background: rgba(223, 42, 41, 0.08);
-  color: #DF2A29;
+  color: #10B981;
 }
 .ways-card:hover .ways-btn--brand,
 .ways-btn--brand:hover {
-  background: #DF2A29;
+  background: #10B981;
   color: #FFFFFF;
   box-shadow: 0 4px 14px rgba(223, 42, 41, 0.3);
 }
 
 .ways-btn--oem {
   background: rgba(44, 50, 136, 0.08);
-  color: #2C3288;
+  color: #0284C7;
 }
 .ways-card:hover .ways-btn--oem,
 .ways-btn--oem:hover {
-  background: #2C3288;
+  background: #0284C7;
   color: #FFFFFF;
   box-shadow: 0 4px 14px rgba(44, 50, 136, 0.3);
 }
@@ -3424,7 +3424,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-size: clamp(2rem, 3.4vw, 2.75rem);
   font-weight: 800;
   line-height: 1.18;
-  color: #0F172A;
+  color: #1E293B;
   letter-spacing: -0.025em;
   margin-bottom: var(--sp-3);
 }
@@ -3443,7 +3443,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   position: relative;
   background: linear-gradient(155deg, #FFFFFF 0%, #F8FAFC 100%);
   border: 1px solid #CBD5E1;
-  border-top: 5px solid #DF2A29;
+  border-top: 5px solid #10B981;
   border-radius: 20px;
   padding: 36px 36px;
   max-width: 840px;
@@ -3513,7 +3513,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   display: inline-block;
   background: rgba(223, 42, 41, 0.08);
   border: 1px solid rgba(223, 42, 41, 0.2);
-  color: #DF2A29;
+  color: #10B981;
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 700;
@@ -3543,7 +3543,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-size: clamp(1.4rem, 2.8vw, 1.85rem);
   font-weight: 800;
   letter-spacing: 0.06em;
-  color: #0F172A;
+  color: #1E293B;
   background: #F1F5F9;
   border: 1px dashed #CBD5E1;
   padding: 10px 18px;
@@ -3589,7 +3589,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 }
 
 .cert-cell-val--highlight {
-  color: #DF2A29;
+  color: #10B981;
   font-weight: 700;
 }
 
@@ -3608,7 +3608,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #2C3288;
+  background: #0284C7;
   color: #FFFFFF;
   padding: 12px 24px;
   border-radius: 999px;
@@ -3648,7 +3648,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: clamp(1.5rem, 2.5vw, 1.95rem);
   font-weight: 800;
-  color: #0F172A;
+  color: #1E293B;
   letter-spacing: -0.02em;
   margin-bottom: 4px;
 }
@@ -3726,7 +3726,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: 1.18rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #1E293B;
   line-height: 1.25;
 }
 
@@ -3752,7 +3752,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 
 .shipping-advisory-box {
   background: rgba(44, 50, 136, 0.05);
-  border-left: 3px solid #2C3288;
+  border-left: 3px solid #0284C7;
   border-radius: 6px;
   padding: 10px 14px;
   display: flex;
@@ -3762,7 +3762,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 }
 
 .advisory-icon {
-  color: #2C3288;
+  color: #0284C7;
   font-weight: bold;
   font-size: 1rem;
   line-height: 1;
@@ -3788,13 +3788,13 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 700;
-  color: #2C3288;
+  color: #0284C7;
   text-decoration: none;
   transition: all 0.2s ease;
 }
 
 .shipping-talk-link:hover {
-  color: #DF2A29;
+  color: #10B981;
   transform: translateX(3px);
 }
 
@@ -3817,7 +3817,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 .room-card {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-top: 4px solid #2C3288;
+  border-top: 4px solid #0284C7;
   border-radius: 16px;
   padding: 22px 18px;
   display: flex;
@@ -3831,7 +3831,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 .room-card:hover {
   transform: translateY(-5px);
   border-color: rgba(44, 50, 136, 0.35);
-  border-top-color: #DF2A29;
+  border-top-color: #10B981;
   box-shadow: 0 16px 32px -4px rgba(15, 23, 42, 0.1);
 }
 
@@ -3841,7 +3841,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #DF2A29;
+  color: #10B981;
   background: rgba(223, 42, 41, 0.08);
   padding: 3px 8px;
   border-radius: 6px;
@@ -3855,7 +3855,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   border-radius: 12px;
   background: rgba(44, 50, 136, 0.06);
   border: 1px solid rgba(44, 50, 136, 0.12);
-  color: #2C3288;
+  color: #0284C7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3867,14 +3867,14 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   transform: scale(1.1);
   background: rgba(223, 42, 41, 0.08);
   border-color: rgba(223, 42, 41, 0.2);
-  color: #DF2A29;
+  color: #10B981;
 }
 
 .room-card__title {
   font-family: var(--font-heading);
   font-size: 1.18rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #1E293B;
   margin-bottom: 8px;
   line-height: 1.25;
 }
@@ -3923,7 +3923,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #1E293B;
   margin-bottom: 4px;
 }
 
@@ -3989,7 +3989,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 .domain-card {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-top: 4px solid #2C3288;
+  border-top: 4px solid #0284C7;
   border-radius: 18px;
   padding: 28px 24px;
   display: flex;
@@ -4006,7 +4006,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 .domain-card:hover {
   transform: translateY(-5px);
   border-color: rgba(44, 50, 136, 0.3);
-  border-top-color: #DF2A29;
+  border-top-color: #10B981;
   box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.1);
 }
 
@@ -4023,7 +4023,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   border-radius: 14px;
   background: rgba(44, 50, 136, 0.06);
   border: 1px solid rgba(44, 50, 136, 0.12);
-  color: #2C3288;
+  color: #0284C7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4033,7 +4033,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 .domain-card:hover .domain-card__icon-box {
   background: rgba(223, 42, 41, 0.08);
   border-color: rgba(223, 42, 41, 0.2);
-  color: #DF2A29;
+  color: #10B981;
   transform: scale(1.08);
 }
 
@@ -4082,7 +4082,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #1E293B;
   margin-bottom: 10px;
   line-height: 1.25;
 }
@@ -4103,13 +4103,13 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 700;
-  color: #2C3288;
+  color: #0284C7;
   transition: all 0.2s ease;
   margin-top: auto;
 }
 
 .domain-card:hover .domain-card__action {
-  color: #DF2A29;
+  color: #10B981;
   transform: translateX(4px);
 }
 
@@ -4155,7 +4155,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   border-radius: 12px;
   background: rgba(44, 50, 136, 0.06);
   border: 1px solid rgba(44, 50, 136, 0.12);
-  color: #2C3288;
+  color: #0284C7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4166,7 +4166,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
 .service-pro-card:hover .service-pro-card__icon {
   background: rgba(223, 42, 41, 0.08);
   border-color: rgba(223, 42, 41, 0.2);
-  color: #DF2A29;
+  color: #10B981;
   transform: scale(1.06);
 }
 
@@ -4174,7 +4174,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #1E293B;
   margin-bottom: 8px;
   line-height: 1.25;
 }
@@ -4219,20 +4219,20 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   font-family: var(--font-heading);
   font-size: 0.82rem;
   font-weight: 700;
-  color: #2C3288;
+  color: #0284C7;
   margin-top: auto;
   transition: all 0.2s ease;
   user-select: none;
 }
 
 .service-pro-card:hover .service-pro-card__link {
-  color: #DF2A29;
+  color: #10B981;
   transform: translateX(3px);
 }
 
 /* ── Executive Audit Facility Box ────────────────────── */
 .audit-facility-box {
-  background: linear-gradient(135deg, #0F172A 0%, #1E2260 55%, #0F172A 100%);
+  background: linear-gradient(135deg, #1E293B 0%, #1E2260 55%, #1E293B 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 24px;
   padding: 56px 40px;
@@ -4290,7 +4290,7 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: #DF2A29;
+  background: #10B981;
   color: #FFFFFF;
   padding: 14px 28px;
   border-radius: 999px;
