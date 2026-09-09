@@ -40,7 +40,7 @@
   --grad-primary:    linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
   --grad-teal:       linear-gradient(135deg, #BAE6FD 0%, #0284C7 100%);
   --grad-gold:       linear-gradient(135deg, #34D399 0%, #10B981 100%);
-  --grad-hero:       linear-gradient(160deg, #FFFFFF 0%, #F0F9FF 50%, #ECFDF5 100%);
+  --grad-hero:       linear-gradient(160deg, #FFFFFF 0%, #E0F2FE 40%, #BAE6FD 75%, #ECFDF5 100%);
   --grad-surface:    linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);
   --grad-card:       linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
 

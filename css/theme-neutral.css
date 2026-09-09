@@ -207,7 +207,7 @@ p, li, span, input, select, textarea {
 #home,
 .hero,
 .hero--split {
-  background: linear-gradient(160deg, #FFFFFF 0%, #F0F9FF 50%, #ECFDF5 100%) !important;
+  background: linear-gradient(160deg, #FFFFFF 0%, #E0F2FE 40%, #BAE6FD 75%, #ECFDF5 100%) !important;
   color: #1E293B !important;
 }
 
