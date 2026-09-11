@@ -22,7 +22,7 @@ ISO 13485 Certified
 2. About Us
 Company Overview
 
-Vidhata Plastics India Pvt. Ltd. is a fully integrated plastics manufacturing company specializing in product design, tooling, mould manufacturing, injection moulding, extrusion, polyurethane processing, assembly, and cleanroom medical manufacturing.
+Vidhata Life (An SBU of Vidhata Plastics) is a fully integrated plastics manufacturing company specializing in product design, tooling, mould manufacturing, injection moulding, extrusion, polyurethane processing, assembly, and cleanroom medical manufacturing.
 
 With over 20 years of industry experience, Vidhata delivers end-to-end manufacturing solutions under one roof, helping customers reduce lead times, improve quality, and simplify supply chain management.
 

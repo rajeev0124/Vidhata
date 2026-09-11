@@ -1,7 +1,7 @@
 {
   "name": "vidhata-website",
   "version": "1.0.0",
-  "description": "Vidhata Plastics India Pvt. Ltd. - Corporate Website",
+  "description": "Vidhata Life (An SBU of Vidhata Plastics) - Corporate Website",
   "scripts": {
     "start": "node dev-server.js",
     "dev": "node dev-server.js"

@@ -101,9 +101,9 @@ p, li, span, input, select, textarea {
   box-shadow: 0 4px 22px rgba(2, 132, 199, 0.08) !important;
 }
 
-.navbar__logo-name    { color: #1E293B !important; font-family: var(--font-heading) !important; font-weight: 700 !important; }
+.navbar__logo-name    { color: #1E293B !important; font-family: var(--font-heading) !important; font-weight: 700 !important; font-size: 1.05rem !important; }
 .navbar__logo-corp    { color: #0284C7 !important; font-weight: 600 !important; }
-.navbar__logo-tagline { color: #64748B !important; }
+.navbar__logo-tagline { color: #0284C7 !important; font-size: 0.68rem !important; font-weight: 600 !important; letter-spacing: 0.01em !important; text-transform: none !important; }
 
 .navbar__link {
   color: #1E293B !important;
@@ -250,6 +250,12 @@ p, li, span, input, select, textarea {
 }
 #home .hero__hl-light {
   color: #64748B !important;
+  font-size: clamp(1.35rem, 2.8vw, 2.15rem) !important;
+  font-weight: 500 !important;
+  display: inline-block !important;
+  margin-top: 8px !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.01em !important;
 }
 
 #home .hero__subhead {
@@ -664,10 +670,11 @@ span.section-tag {
 }
 
 .footer .navbar__logo-tagline {
-  color: #64748B !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 0.05em !important;
-  text-transform: uppercase !important;
+  color: #0284C7 !important;
+  font-size: 0.76rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
 }
 
 .footer__brand-title {
@@ -2494,7 +2501,7 @@ img, svg, video, iframe {
     font-size: 13.5px !important;
   }
   .navbar__logo-tagline {
-    display: none !important;
+    font-size: 0.65rem !important;
   }
   .services-pro-grid {
     grid-template-columns: repeat(4, 1fr) !important;
@@ -2586,7 +2593,7 @@ img, svg, video, iframe {
     display: flex !important;
   }
   .navbar__logo-tagline {
-    display: none !important;
+    font-size: 0.65rem !important;
   }
   
   /* Hero Section */
@@ -2835,6 +2842,9 @@ img, svg, video, iframe {
   }
   .navbar__logo-corp {
     display: none !important;
+  }
+  .navbar__logo-tagline {
+    font-size: 0.60rem !important;
   }
   
   /* Full height smooth mobile drawer */

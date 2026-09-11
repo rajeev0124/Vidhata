@@ -97,12 +97,12 @@
 }
 
 .navbar__logo-tagline {
-  font-size: 0.62rem;
-  font-weight: 700;
+  font-size: 0.68rem;
+  font-weight: 600;
   color: #0284C7;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-top: 2px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  margin-top: 1px;
   white-space: nowrap;
 }
 
@@ -484,9 +484,10 @@
 
 .footer .navbar__logo-tagline {
   color: #94A3B8 !important;
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
 .footer__brand-title {
@@ -7298,4 +7299,150 @@ img[data-reveal].revealed,
     height: 240px !important;
   }
 }
+
+/* ── 10-Stage Lifecycle Development Process Section ────────────── */
+.stages-section {
+  padding: 80px 0;
+  background: #FFFFFF;
+  position: relative;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .stages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .stages-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.stage-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 28px 22px 26px;
+  border: 1.5px solid #E2E8F0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 2px 6px rgba(15, 23, 42, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stage-card:hover {
+  transform: translateY(-5px);
+  border-color: #38BDF8;
+  box-shadow: 0 18px 36px -6px rgba(2, 132, 199, 0.12), 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
+.stage-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.stage-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.stage-card__badge--develop {
+  background: #E0F2FE;
+  color: #0284C7;
+  border: 1px solid #BAE6FD;
+}
+
+.stage-card__badge--tool {
+  background: #ECFDF5;
+  color: #059669;
+  border: 1px solid #A7F3D0;
+}
+
+.stage-card__badge--make {
+  background: #F0FDF4;
+  color: #047857;
+  border: 1px solid #86EFAC;
+}
+
+.stage-card__badge--release {
+  background: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid #7DD3FC;
+}
+
+.stage-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #0284C7;
+  transition: transform 0.25s ease;
+}
+
+.stage-card:hover .stage-card__icon {
+  transform: scale(1.08);
+}
+
+.stage-card__title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+}
+
+.stage-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.stage-card__item {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #475569;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-weight: 500;
+}
+
+.stage-card__check {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #10B981;
+}
+
 
