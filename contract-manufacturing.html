@@ -303,7 +303,13 @@
     .cm-card--01:hover::before { background: #0A4E9B; }
     .cm-card--02:hover::before { background: #2C3288; }
     .cm-card--03:hover::before { background: #0284C7; }
-    .cm-card--04:hover::before { background: #DF2A29; }
+    .cm-card--04:hover::before { background: #059669; }
+    .cm-card--05:hover::before { background: #DF2A29; }
+    @media (min-width: 861px) {
+      .cm-card--05 {
+        grid-column: span 2;
+      }
+    }
 
     .cm-card__top {
       display: flex;
@@ -336,6 +342,21 @@
       background: #EFF6FF;
       color: #1E40AF;
       border: 1px solid #DBEAFE;
+    }
+    .cm-card--03 .cm-card__tag {
+      background: #E0F2FE;
+      color: #0284C7;
+      border: 1px solid #BAE6FD;
+    }
+    .cm-card--04 .cm-card__tag {
+      background: #ECFDF5;
+      color: #059669;
+      border: 1px solid #A7F3D0;
+    }
+    .cm-card--05 .cm-card__tag {
+      background: #FEF2F2;
+      color: #DC2626;
+      border: 1px solid #FECACA;
     }
 
     .cm-card__title {
@@ -726,8 +747,8 @@
       <a href="index.html" class="navbar__link">Home</a>
       <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
       <a href="contract-manufacturing.html" class="navbar__link active" style="color:var(--cm-blue);font-weight:700">Contract Mfg</a>
-      <a href="industries.html" class="navbar__link">Industries</a>
-      <a href="infrastructure.html" class="navbar__link">Infrastructure</a>
+      <a href="markets.html" class="navbar__link">Markets</a>
+      <a href="end-to-end.html" class="navbar__link">End-to-end</a>
       <a href="quality.html" class="navbar__link">Quality</a>
       <a href="licences.html" class="navbar__link">Licences</a>
       <div class="navbar__dropdown">
@@ -755,8 +776,8 @@
   <a href="index.html" class="navbar__mobile-link">Home</a>
   <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
   <a href="contract-manufacturing.html" class="navbar__mobile-link active">Contract Mfg</a>
-  <a href="industries.html" class="navbar__mobile-link">Industries</a>
-  <a href="infrastructure.html" class="navbar__mobile-link">Infrastructure</a>
+  <a href="markets.html" class="navbar__mobile-link">Markets</a>
+  <a href="end-to-end.html" class="navbar__mobile-link">End-to-end</a>
   <a href="quality.html" class="navbar__mobile-link">Quality</a>
   <a href="licences.html" class="navbar__mobile-link">Licences</a>
   
@@ -778,60 +799,21 @@
   <div class="container cm-hero__inner">
     <div class="cm-badge">
       <span class="cm-badge__pulse"></span>
-      <span>OEM &middot; Loan licence &middot; Technology transfer &middot; Tooling</span>
+      <span>OEM &middot; Loan licence &middot; Technology transfer &middot; Turnkey &middot; Tooling</span>
     </div>
     <h1 class="cm-hero__title">Bring what you have.</h1>
     <p class="cm-hero__lead">
-      The rooms, the quality system and the documents are the same wherever you enter.
+      A concept, a drawing, a running product or a licence. The rooms, the quality system and the documents are the same wherever you enter.
     </p>
-    <div class="cm-hero__actions">
-      <a href="#engagement-models" class="cm-btn-primary">
-        <span>Four ways to engage</span>
-        <span>&darr;</span>
-      </a>
-      <a href="#ask-document-pack" class="cm-btn-secondary">
-        <span>Request Document Pack</span>
-        <span>&rarr;</span>
-      </a>
-    </div>
   </div>
 </header>
 
-<!-- Regulatory & Technical Proof Bar -->
-<div class="cm-metrics-bar">
-  <div class="container cm-metrics-grid">
-    <div class="cm-metric-item">
-      <span class="cm-metric-label">Dual Licencing</span>
-      <span class="cm-metric-value">OEM &amp; Loan</span>
-    </div>
-    <div class="cm-metric-item">
-      <span class="cm-metric-label">Cleanroom Suites</span>
-      <span class="cm-metric-value">Class 7 &amp; 8</span>
-    </div>
-    <div class="cm-metric-item">
-      <span class="cm-metric-label">Quality System</span>
-      <span class="cm-metric-value">ISO 13485:2016</span>
-    </div>
-    <div class="cm-metric-item">
-      <span class="cm-metric-label">Toolroom CNCs</span>
-      <span class="cm-metric-value">25+ Machines</span>
-    </div>
-    <div class="cm-metric-item">
-      <span class="cm-metric-label">Sterilization</span>
-      <span class="cm-metric-value">ETO Validated</span>
-    </div>
-  </div>
-</div>
-
-<!-- Section: Four Ways to Engage -->
+<!-- Section: Engagement Models -->
 <section class="cm-models-section" id="engagement-models">
   <div class="container">
     <div class="cm-section-header">
       <span class="cm-eyebrow">Contract manufacturing models</span>
       <h2>Four ways to engage.</h2>
-      <p>
-        Whether you are starting from a blank sheet, holding an active foreign file, or needing verified tooling, we offer proven legal and technical frameworks to manufacture sterile medical devices in India.
-      </p>
     </div>
 
     <div class="cm-cards-grid">
@@ -841,16 +823,12 @@
         <div>
           <div class="cm-card__top">
             <span class="cm-card__num">01</span>
-            <span class="cm-card__tag">Turnkey OEM</span>
+            <span class="cm-card__tag">OEM Contract Mfg</span>
           </div>
           <h3 class="cm-card__title">OEM contract manufacturing</h3>
           <p class="cm-card__text">
-            Made under our licence and your brand. You bring the design or the concept; we tool it, mould it, assemble it, sterilise it and release it.
+            Made under our licence and your brand. You bring the design or the concept; we tool it, mould it, assemble it, sterilise it and release it &mdash; inside ISO Class 7 and 8 cleanrooms classified to ISO 14644-1.
           </p>
-          <div class="cm-card__feature-box">
-            <strong>What you provide:</strong>
-            Concept sketches, product specification, target branding, and clinical performance requirements.
-          </div>
         </div>
         <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('oem')">
           <span>Choose OEM manufacturing</span>
@@ -863,16 +841,12 @@
         <div>
           <div class="cm-card__top">
             <span class="cm-card__num">02</span>
-            <span class="cm-card__tag" style="background:#DBEAFE;color:#1E3A8A;font-weight:800;">Established Precedent</span>
+            <span class="cm-card__tag" style="background:#DBEAFE;color:#1E3A8A;font-weight:800;">Loan Licence</span>
           </div>
           <h3 class="cm-card__title">Loan-licence manufacture</h3>
           <p class="cm-card__text">
-            You hold the licence and the brand. We hold the premises, the cleanroom and the quality system. Another company already manufactures here this way.
+            You hold the licence and the brand. We hold the premises, the ISO 14644-1 Class 7 and 8 cleanrooms and the quality system. Another company already manufactures here this way.
           </p>
-          <div class="cm-card__feature-box">
-            <strong>Regulatory framework:</strong>
-            Your company secures the CDSCO Form MD-6 loan licence mapped to our audited facility (Form MD-5). We execute production with complete segregation.
-          </div>
         </div>
         <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('loan')">
           <span>Choose Loan-licence</span>
@@ -885,19 +859,15 @@
         <div>
           <div class="cm-card__top">
             <span class="cm-card__num">03</span>
-            <span class="cm-card__tag">Supply Localization</span>
+            <span class="cm-card__tag" style="background:#E0F2FE;color:#0284C7;font-weight:800;">Turnkey Pipeline</span>
           </div>
-          <h3 class="cm-card__title">Technology transfer</h3>
+          <h3 class="cm-card__title">Turnkey &mdash; concept to finished product</h3>
           <p class="cm-card__text">
-            Move a running product into India for supply security and cost. We rebuild the tooling and reconstruct the documentation alongside it.
+            You bring the clinical idea. We take it through feasibility, design, tooling, validation, manufacture, sterilisation, packaging and the technical file, and hand back a registered product ready for your channel.
           </p>
-          <div class="cm-card__feature-box">
-            <strong>Seamless transition:</strong>
-            Full reverse engineering or CAD import, rapid validation runs, equivalent material testing, and CDSCO amendment filings without supply disruption.
-          </div>
         </div>
-        <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('transfer')">
-          <span>Choose Technology transfer</span>
+        <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('turnkey')">
+          <span>Choose Turnkey model</span>
           <span>&rarr;</span>
         </a>
       </div>
@@ -907,16 +877,30 @@
         <div>
           <div class="cm-card__top">
             <span class="cm-card__num">04</span>
-            <span class="cm-card__tag">Precision Tooling</span>
+            <span class="cm-card__tag" style="background:#ECFDF5;color:#059669;font-weight:800;">Supply Localization</span>
+          </div>
+          <h3 class="cm-card__title">Technology transfer</h3>
+          <p class="cm-card__text">
+            Move a running product into India for supply security and cost. We rebuild the tooling and reconstruct the documentation alongside it.
+          </p>
+        </div>
+        <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('transfer')">
+          <span>Choose Technology transfer</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- MODEL 05 -->
+      <div class="cm-card cm-card--05">
+        <div>
+          <div class="cm-card__top">
+            <span class="cm-card__num">05</span>
+            <span class="cm-card__tag" style="background:#FEF2F2;color:#DC2626;font-weight:800;">Precision Tooling</span>
           </div>
           <h3 class="cm-card__title">Tooling only</h3>
           <p class="cm-card__text">
             Moulds for your own production &mdash; injection, extrusion, PU or press tools, proven on trial before handover.
           </p>
-          <div class="cm-card__feature-box">
-            <strong>Guaranteed performance:</strong>
-            Built in our 25+ CNC toolroom using imported steel, complete with CMM dimensional reports and full sample trial sign-off.
-          </div>
         </div>
         <a href="#tell-us-what-you-need" class="cm-card__action" onclick="selectModel('tooling')">
           <span>Choose Tooling only</span>
@@ -952,6 +936,10 @@
             <input type="checkbox" name="model" value="Loan licence" id="check-loan">
             <span>Loan licence</span>
           </label>
+          <label class="cm-checkbox-label" id="lbl-turnkey">
+            <input type="checkbox" name="model" value="Turnkey — concept to product" id="check-turnkey">
+            <span>Turnkey — concept to product</span>
+          </label>
           <label class="cm-checkbox-label" id="lbl-transfer">
             <input type="checkbox" name="model" value="Technology transfer" id="check-transfer">
             <span>Technology transfer</span>
@@ -960,7 +948,7 @@
             <input type="checkbox" name="model" value="Tooling only" id="check-tooling">
             <span>Tooling only</span>
           </label>
-          <label class="cm-checkbox-label" id="lbl-virexa" style="grid-column: span 2;">
+          <label class="cm-checkbox-label" id="lbl-virexa">
             <input type="checkbox" name="model" value="VIREXA distribution" id="check-virexa">
             <span>VIREXA distribution</span>
           </label>
@@ -1005,6 +993,10 @@
         <li class="cm-checklist-item">
           <span class="cm-checklist-icon">&#10004;</span>
           <span>Manufacturing licence</span>
+        </li>
+        <li class="cm-checklist-item">
+          <span class="cm-checklist-icon">&#10004;</span>
+          <span>Cleanroom classification report</span>
         </li>
         <li class="cm-checklist-item">
           <span class="cm-checklist-icon">&#10004;</span>
@@ -1106,7 +1098,7 @@
         <div class="footer__links">
           <a href="about.html" class="footer__link">About Us</a>
           <a href="about.html#leadership" class="footer__link">Leadership</a>
-          <a href="infrastructure.html" class="footer__link">Toolroom &amp; Facilities</a>
+          <a href="end-to-end.html" class="footer__link">End-to-end</a>
           <a href="licences.html" class="footer__link">Licences &amp; Certs</a>
           <a href="careers.html" class="footer__link">Careers</a>
           <a href="blog.html" class="footer__link">Blog &amp; Insights</a>
@@ -1247,6 +1239,7 @@ window.selectModel = function(modelKey) {
   const map = {
     'oem': 'check-oem',
     'loan': 'check-loan',
+    'turnkey': 'check-turnkey',
     'transfer': 'check-transfer',
     'tooling': 'check-tooling',
     'virexa': 'check-virexa'

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Ten stages, one roof, one quality system. Vidhata Life provides end-to-end medical device lifecycle development: R&amp;D, product design, toolroom, cleanroom moulding, ISO Class 7 &amp; 8 assembly, sterilization, and turnkey release.">
+  <title>Ten Stages Lifecycle Development &mdash; Vidhata Life</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css?v=serene-light-2026">
+  <link rel="stylesheet" href="css/components.css?v=serene-light-2026">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/chatbot.css?v=serene-light-2026">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=serene-light-2026">
+</head>
+
+<body>
+
+  <div id="reading-progress"
+    style="position:fixed;top:0;left:0;height:2px;background:var(--grad-primary);z-index:1001;width:0%"></div>
+  <nav id="navbar" class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo"><img src="images/logo.png" alt="Vidhata Life Logo"
+          class="navbar__logo-img" />
+        <div class="navbar__logo-text">
+          <span class="navbar__logo-name">Vidhata Life</span>
+          <span class="navbar__logo-tagline">An SBU of Vidhata Plastics</span>
+        </div>
+      </a>
+      <div class="navbar__nav">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="medical.html" class="navbar__link">Medical &amp; Pharma</a>
+        <a href="contract-manufacturing.html" class="navbar__link">Contract Mfg</a>
+        <a href="markets.html" class="navbar__link">Markets</a>
+        <a href="end-to-end.html" class="navbar__link active">End-to-end</a>
+        <a href="quality.html" class="navbar__link">Quality</a>
+        <a href="licences.html" class="navbar__link">Licences</a>
+        <div class="navbar__dropdown">
+          <a href="about.html" class="navbar__link navbar__dropdown-trigger">
+            <span>Company</span>
+            <span class="navbar__dropdown-chevron">&#9662;</span>
+          </a>
+          <div class="navbar__dropdown-menu">
+            <a href="about.html" class="navbar__dropdown-item">About Us</a>
+            <a href="case-studies.html" class="navbar__dropdown-item">Case Studies</a>
+            <a href="careers.html" class="navbar__dropdown-item">Careers</a>
+            <a href="blog.html" class="navbar__dropdown-item">Blog &amp; Insights</a>
+            <a href="clients.html" class="navbar__dropdown-item">Clients</a>
+          </div>
+        </div>
+        <a href="contact.html" class="navbar__link navbar__cta">Request Quote</a>
+      </div>
+      <button id="hamburger" class="navbar__hamburger"
+        aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="navbar__mobile">
+    <div class="navbar__mobile-group-title">Navigation</div>
+    <a href="index.html" class="navbar__mobile-link">Home</a>
+    <a href="medical.html" class="navbar__mobile-link">Medical &amp; Pharma</a>
+    <a href="contract-manufacturing.html" class="navbar__mobile-link">Contract Mfg</a>
+    <a href="markets.html" class="navbar__mobile-link">Markets</a>
+    <a href="end-to-end.html" class="navbar__mobile-link active">End-to-end</a>
+    <a href="quality.html" class="navbar__mobile-link">Quality</a>
+    <a href="licences.html" class="navbar__mobile-link">Licences</a>
+
+    <div class="navbar__mobile-group-title">Company</div>
+    <a href="about.html" class="navbar__mobile-link">About Us</a>
+    <a href="case-studies.html" class="navbar__mobile-link">Case Studies</a>
+    <a href="clients.html" class="navbar__mobile-link">Clients</a>
+    <a href="careers.html" class="navbar__mobile-link">Careers</a>
+    <a href="blog.html" class="navbar__mobile-link">Blog &amp; Insights</a>
+    <a href="contact.html" class="navbar__mobile-link">Contact Us</a>
+    <div style="margin-top:var(--sp-6)">
+      <a href="contact.html" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">Request a
+        Quote</a>
+    </div>
+  </div>
+
+  <section class="page-hero e2e-hero">
+    <div class="orb orb--blue orb--1"></div>
+    <div class="orb orb--gold orb--2"></div>
+    <div class="bg-grid bg-grid--fade"></div>
+    <div class="container">
+      <div class="e2e-hero__inner">
+        <div class="page-hero__breadcrumb">
+          <a href="index.html">Home</a>
+          <span>&#8250;</span>
+          <span>End-to-End</span>
+        </div>
+
+        <div class="e2e-hero__eyebrow hero-anim-1">
+          <span class="e2e-hero__eyebrow-dot"></span>
+          <span>R&amp;D &middot; Design &middot; Tooling &middot; Manufacture &middot; Turnkey</span>
+        </div>
+
+        <h1 class="e2e-hero__title hero-anim-2">
+          Ten stages, one roof,<br>
+          <span class="gradient-text">one quality system.</span>
+        </h1>
+
+        <p class="e2e-hero__lead hero-anim-3">
+          Join at any stage. We can take it the rest of the way &mdash; or hand it back to you at the end of any one.
+        </p>
+
+        <p class="e2e-hero__desc hero-anim-4">
+          Most manufacturers do one or two of these well and subcontract the rest. We own all ten, which is why design
+          intent survives from the first CAD model to the sealed pack, and why there is one company to hold accountable
+          when something is wrong.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ten Stages Section -->
+  <section class="ten-stages-section">
+    <div class="container">
+
+      <!-- Phase Quick Links -->
+      <div class="phase-nav-strip" data-reveal="down">
+        <a href="#phase-develop" class="phase-nav-item" style="color:#0284C7">
+          <span class="phase-nav-num" style="background:#E0F2FE; color:#0284C7">01</span>
+          <span>Develop (01–03)</span>
+        </a>
+        <span class="phase-nav-arrow">&rarr;</span>
+        <a href="#phase-tool" class="phase-nav-item" style="color:#059669">
+          <span class="phase-nav-num" style="background:#ECFDF5; color:#059669">02</span>
+          <span>Tool (04–05)</span>
+        </a>
+        <span class="phase-nav-arrow">&rarr;</span>
+        <a href="#phase-make" class="phase-nav-item" style="color:#047857">
+          <span class="phase-nav-num" style="background:#F0FDF4; color:#047857">03</span>
+          <span>Make (06–08)</span>
+        </a>
+        <span class="phase-nav-arrow">&rarr;</span>
+        <a href="#phase-release" class="phase-nav-item" style="color:#4338CA">
+          <span class="phase-nav-num" style="background:#EEF2FF; color:#4338CA">04</span>
+          <span>Release (09–10)</span>
+        </a>
+      </div>
+
+      <!-- PHASE 01: DEVELOP -->
+      <div class="phase-group" id="phase-develop" data-reveal="up">
+        <div class="phase-header">
+          <span class="phase-header__badge phase-header__badge--develop">Phase 01</span>
+          <div class="phase-header__info">
+            <h2 class="phase-header__title">Develop</h2>
+            <span class="phase-header__stages">Stages 01 &ndash; 03 &middot; Engineering &amp; Design Proving</span>
+          </div>
+        </div>
+
+        <div class="phase-cards-grid phase-cards-grid--3" data-stagger>
+          <!-- Stage 01 -->
+          <div class="ten-stage-card ten-stage-card--develop">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">01</span>
+              <span class="ten-stage-card__badge">Develop</span>
+            </div>
+            <h3 class="ten-stage-card__title">Ideation and feasibility</h3>
+            <p class="ten-stage-card__desc">
+              Bring a clinical need, a competitor sample or a sketch. We assess whether it can be moulded, what it would
+              cost at volume, and which regulatory route it falls under &mdash; before anyone spends money on tooling.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">A feasibility note and an indicative cost per part.</div>
+            </div>
+          </div>
+
+          <!-- Stage 02 -->
+          <div class="ten-stage-card ten-stage-card--develop">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">02</span>
+              <span class="ten-stage-card__badge">Develop</span>
+            </div>
+            <h3 class="ten-stage-card__title">Product design and design for manufacture</h3>
+            <p class="ten-stage-card__desc">
+              Full 3D CAD, part and assembly design, material selection across medical-grade polymers, and
+              design-for-manufacture review. Where a design already exists, we review it for mouldability and cost
+              before we quote.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">A DFM report and a released 3D model.</div>
+            </div>
+          </div>
+
+          <!-- Stage 03 -->
+          <div class="ten-stage-card ten-stage-card--develop">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">03</span>
+              <span class="ten-stage-card__badge">Develop</span>
+            </div>
+            <h3 class="ten-stage-card__title">Simulation and analysis</h3>
+            <p class="ten-stage-card__desc">
+              Mould-flow simulation before a tool is cut, and structural analysis with strength and fatigue assessment
+              where the part carries load. Our engineering lead came from aerospace structures and built this discipline
+              into the company.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">Mould-flow and analysis reports.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 02: TOOL -->
+      <div class="phase-group" id="phase-tool" data-reveal="up">
+        <div class="phase-header">
+          <span class="phase-header__badge phase-header__badge--tool">Phase 02</span>
+          <div class="phase-header__info">
+            <h2 class="phase-header__title">Tool</h2>
+            <span class="phase-header__stages">Stages 04 &ndash; 05 &middot; Tooling &amp; Mould Proving</span>
+          </div>
+        </div>
+
+        <div class="phase-cards-grid phase-cards-grid--2" data-stagger>
+          <!-- Stage 04 -->
+          <div class="ten-stage-card ten-stage-card--tool">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">04</span>
+              <span class="ten-stage-card__badge">Tool</span>
+            </div>
+            <h3 class="ten-stage-card__title">Prototype and rapid tooling</h3>
+            <p class="ten-stage-card__desc">
+              Prototype parts and soft tools for design proving, plus rapid tooling in polyurethane &mdash; a
+              formulation and processing capability our managing director developed over thirty years.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">Prototype parts you can hold and test.</div>
+            </div>
+          </div>
+
+          <!-- Stage 05 -->
+          <div class="ten-stage-card ten-stage-card--tool">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">05</span>
+              <span class="ten-stage-card__badge">Tool</span>
+            </div>
+            <h3 class="ten-stage-card__title">Hard tool build, trial and proving</h3>
+            <p class="ten-stage-card__desc">
+              The production mould is designed and cut in our own toolroom &mdash; 530 moulds and more than 6,000
+              cavities to date &mdash; then trialled and dimensionally proven before it runs. The company that cuts the
+              tool is the company that moulds the part.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">Trial and dimensional reports.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 03: MAKE -->
+      <div class="phase-group" id="phase-make" data-reveal="up">
+        <div class="phase-header">
+          <span class="phase-header__badge phase-header__badge--make">Phase 03</span>
+          <div class="phase-header__info">
+            <h2 class="phase-header__title">Make</h2>
+            <span class="phase-header__stages">Stages 06 &ndash; 08 &middot; Manufacture &amp; Packaging</span>
+          </div>
+        </div>
+
+        <div class="phase-cards-grid phase-cards-grid--3" data-stagger>
+          <!-- Stage 06 -->
+          <div class="ten-stage-card ten-stage-card--make">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">06</span>
+              <span class="ten-stage-card__badge">Make</span>
+            </div>
+            <h3 class="ten-stage-card__title">Validation and specification testing</h3>
+            <p class="ten-stage-card__desc">
+              Materials and finished parts tested against the agreed specification in our own QC and stability
+              laboratory, with the quality and regulatory documentation written as we go.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">A validation report.</div>
+            </div>
+          </div>
+
+          <!-- Stage 07 -->
+          <div class="ten-stage-card ten-stage-card--make">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">07</span>
+              <span class="ten-stage-card__badge">Make</span>
+            </div>
+            <h3 class="ten-stage-card__title">Cleanroom manufacture and assembly</h3>
+            <p class="ten-stage-card__desc">
+              Moulding, assembly and leak-testing inside a 7,263 sq ft cleanroom held at ISO Class 7 and 8 and
+              classified in accordance with ISO 14644-1, with staged in-process quality control at every step.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">In-process QC records.</div>
+            </div>
+          </div>
+
+          <!-- Stage 08 -->
+          <div class="ten-stage-card ten-stage-card--make">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">08</span>
+              <span class="ten-stage-card__badge">Make</span>
+            </div>
+            <h3 class="ten-stage-card__title">Sterilisation and primary packaging</h3>
+            <p class="ten-stage-card__desc">
+              Sterilisation and primary and secondary packaging on site, so the part never leaves controlled conditions
+              between moulding and the sealed pack.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">The batch record.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 04: RELEASE -->
+      <div class="phase-group" id="phase-release" data-reveal="up">
+        <div class="phase-header">
+          <span class="phase-header__badge phase-header__badge--release">Phase 04</span>
+          <div class="phase-header__info">
+            <h2 class="phase-header__title">Release</h2>
+            <span class="phase-header__stages">Stages 09 &ndash; 10 &middot; Compliance &amp; Turnkey Supply</span>
+          </div>
+        </div>
+
+        <div class="phase-cards-grid phase-cards-grid--2" data-stagger>
+          <!-- Stage 09 -->
+          <div class="ten-stage-card ten-stage-card--release">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">09</span>
+              <span class="ten-stage-card__badge">Release</span>
+            </div>
+            <h3 class="ten-stage-card__title">QMS, technical file and regulatory support</h3>
+            <p class="ten-stage-card__desc">
+              Device Master Record, Design History File and technical file preparation, and support through the CDSCO
+              route. Delivered alongside a manufacturing programme, with retained regulatory partners where a submission
+              needs specialist work.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">A technical file your regulatory team can submit.</div>
+            </div>
+          </div>
+
+          <!-- Stage 10 -->
+          <div class="ten-stage-card ten-stage-card--release">
+            <div class="ten-stage-card__top">
+              <span class="ten-stage-card__number">10</span>
+              <span class="ten-stage-card__badge">Release</span>
+            </div>
+            <h3 class="ten-stage-card__title">Batch release, logistics and turnkey supply</h3>
+            <p class="ten-stage-card__desc">
+              Released against the batch record and shipped with its inspection reports. For turnkey programmes we hold
+              the licence, carry the stock and deliver a finished, packaged, labelled product ready for your channel.
+            </p>
+            <div class="stage-deliverable">
+              <div class="stage-deliverable__label">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>You receive</span>
+              </div>
+              <div class="stage-deliverable__content">The release record, and the goods.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Closing CTA Strip -->
+  <section class="section"
+    style="padding: var(--sp-16) 0; background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%); border-top: 1px solid #E2E8F0;">
+    <div class="container text-center" style="max-width: 780px; margin: 0 auto;" data-reveal="up">
+      <div class="ways-badge"
+        style="display:inline-flex; align-items:center; gap:8px; background:#F0FDF4; border:1.5px solid #86EFAC; padding:6px 18px; border-radius:30px; margin-bottom:var(--sp-4);">
+        <span class="ways-badge__pulse"
+          style="background:#10B981; width:8px; height:8px; border-radius:50%; display:inline-block;"></span>
+        <span class="ways-badge__text"
+          style="color:#047857; font-weight:700; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase;">Engage
+          At Any Stage</span>
+      </div>
+      <h2
+        style="font-size: clamp(2rem, 3.5vw, 2.6rem); font-weight: 800; color: #0F172A; letter-spacing: -0.02em; margin-bottom: var(--sp-4);">
+        Where does your programme start?
+      </h2>
+      <p style="font-size: 1.05rem; color: #475569; line-height: 1.65; margin-bottom: var(--sp-8);">
+        A concept needs all ten. A finished design needs stages four to ten. A running product being moved into India needs five to ten. A tooling job stops at five.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="contract-manufacturing.html#engagement-models" class="btn btn--primary btn--lg">See the engagement models</a>
+        <a href="contact.html" class="btn btn--outline btn--lg">Walk the plant</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Col 1: Brand & Certifications -->
+        <div>
+          <a href="index.html" class="navbar__logo" style="margin-bottom:14px;display:inline-flex">
+            <img src="images/logo.png" alt="Vidhata Life Logo" class="navbar__logo-img" />
+            <div class="navbar__logo-text">
+              <span class="navbar__logo-name">Vidhata Life</span>
+              <span class="navbar__logo-tagline">An SBU of Vidhata Plastics</span>
+            </div>
+          </a>
+          <p class="footer__brand-desc">
+            The medical device and pharma packaging business of Vidhata Plastics India Private Limited. Delivering
+            world-class cleanroom injection moulding, precision tooling, and contract manufacturing solutions since
+            1990.
+          </p>
+          <div class="footer__certbadges">
+            <a href="licences.html" class="footer__certbadge">CDSCO MD-5</a>
+            <a href="licences.html" class="footer__certbadge">ISO 13485:2016</a>
+            <a href="licences.html" class="footer__certbadge">ISO 9001:2015</a>
+            <a href="licences.html" class="footer__certbadge">CE</a>
+            <a href="licences.html" class="footer__certbadge">QMSR</a>
+          </div>
+          <div class="footer__sla">
+            We reply within one working day.
+          </div>
+        </div>
+
+        <!-- Col 2: Company -->
+        <div>
+          <div class="footer__col-title">Company</div>
+          <div class="footer__links">
+            <a href="about.html" class="footer__link">About Us</a>
+            <a href="about.html#leadership" class="footer__link">Leadership</a>
+            <a href="end-to-end.html" class="footer__link">End-to-end</a>
+            <a href="licences.html" class="footer__link">Licences &amp; Certs</a>
+            <a href="careers.html" class="footer__link">Careers</a>
+            <a href="blog.html" class="footer__link">Blog &amp; Insights</a>
+            <a href="case-studies.html" class="footer__link">Case Studies</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Services & Capabilities -->
+        <div>
+          <div class="footer__col-title">Services</div>
+          <div class="footer__links">
+            <a href="medical.html" class="footer__link">Medical &amp; Pharma</a>
+            <a href="cleanroom-moulding.html" class="footer__link">Cleanroom Moulding</a>
+            <a href="contract-manufacturing.html" class="footer__link">Contract Manufacturing</a>
+            <a href="assembly-packaging.html" class="footer__link">Assembly &amp; Packaging</a>
+            <a href="extruders.html" class="footer__link">Extrusion &amp; Tubing</a>
+            <a href="quality.html" class="footer__link">Quality &amp; Testing</a>
+            <a href="virexa.html" class="footer__link">VIREXA Finished Goods</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Facilities -->
+        <div>
+          <div class="footer__col-title">Facilities</div>
+          <div class="footer__facility-block">
+            <div class="footer__facility-title">
+              <span class="footer__facility-tag">Unit 2 &middot; Plant</span> Maheshwaram
+            </div>
+            <p class="footer__facility-address">
+              S-1 P/C, Survey No. 114, E-City, Maheshwaram, Rangareddy, Telangana 501359
+            </p>
+            <div class="footer__facility-scope">
+              Toolroom, moulding, cleanroom (ISO 7 &amp; 8), QC and stability lab
+            </div>
+          </div>
+          <div class="footer__facility-block" style="margin-top:16px;">
+            <div class="footer__facility-title">
+              <span class="footer__facility-tag">Unit 1 &middot; Regd Office</span> Cherlapally
+            </div>
+            <p class="footer__facility-address">
+              Plot No. 205/2, Phase II, IDA Cherlapally, Hyderabad 500051
+            </p>
+            <div class="footer__facility-scope">
+              Registered corporate office &amp; operations
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 5: Contact -->
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.22 4 2 2 0 012.2 2H5.2a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.72 6.72l1.28-.54a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 18.92z" />
+              </svg>
+            </span>
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <a href="tel:+919885100808" class="footer__contact-link">+91 98851 00808 <span
+                  class="footer__contact-person">(Vikrant K.)</span></a>
+              <a href="tel:+918008801778" class="footer__contact-link">+91 80088 01778 <span
+                  class="footer__contact-person">(Arvind Kandi)</span></a>
+            </div>
+          </div>
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </span>
+            <div style="display:flex;flex-direction:column;gap:3px">
+              <a href="mailto:info@vidhata.co.in" class="footer__contact-link">info@vidhata.co.in</a>
+              <a href="mailto:vikrant@vidhata.co.in" class="footer__contact-link">vikrant@vidhata.co.in</a>
+              <a href="mailto:arvind.kandi7@gmail.com" class="footer__contact-link">arvind.kandi7@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer__hours">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              style="flex-shrink:0;margin-top:2px;stroke:#E5C158">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span>Mon &ndash; Sat, 09:00&ndash;18:00 IST (UTC+5:30)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statutory & Compliance Strip -->
+      <div class="footer__bottom">
+        <p class="footer__legal-line">
+          VIDHATA PLASTICS INDIA PRIVATE LIMITED &middot; CIN U25209TG1990PTC012152 &middot; GST 36AAACV8175G1Z2
+          &middot; Manufacturing licence MFG/MD/2026/000078 (CDSCO Form MD-5)
+        </p>
+        <div class="footer__bottom-row">
+          <p class="footer__copy">&copy; 2026 Vidhata Life &middot; An SBU of Vidhata Plastics. All rights reserved.</p>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/company/vidhata-plastics" class="footer__social-link"
+              aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/919885100808" class="footer__social-link" aria-label="WhatsApp" target="_blank"
+              rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </a>
+          </div>
+          <div class="footer__legal-links">
+            <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+            <a href="privacy.html#terms" class="footer__legal-link">Terms of Use</a>
+            <a href="licences.html" class="footer__legal-link">Licences &amp; Certifications</a>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <a href="https://wa.me/919885100808" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><svg
+      viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg></a>
+  <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6" />
+    </svg></button>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+
+</html>

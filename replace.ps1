@@ -2,7 +2,7 @@ $files = @(
   "d:\Vidhata\services.html",
   "d:\Vidhata\quality.html",
   "d:\Vidhata\index.html",
-  "d:\Vidhata\infrastructure.html",
+  "d:\Vidhata\end-to-end.html",
   "d:\Vidhata\js\animations.js",
   "d:\Vidhata\css\animations.css",
   "d:\Vidhata\case-studies.html",
