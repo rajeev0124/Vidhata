@@ -358,25 +358,30 @@ p, li, span, input, select, textarea {
 
 /* Hero stats bar */
 #home .hero__stats-grid {
-  border-top-color: #DFE6EE !important;
+  border-top-color: transparent !important;
+  border: none !important;
 }
 #home .hero__stat-number,
 #home .hero__stat-item [style*="color:#111111"],
 #home .hero__stat-item [style*="color:#38bdf8"],
 #home .hero__stat-item [style*="color: #38bdf8"] {
-  color: #0284C7 !important;
+  color: #38BDF8 !important;
   font-family: var(--font-heading) !important;
   font-weight: 800 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
 }
 #home .hero__stat-label,
+#home .hero__stat-label span,
 #home .hero__stat-item [style*="color:#444444"],
 #home .hero__stat-item [style*="color:#ffffff"],
 #home .hero__stat-item [style*="color:#94a3b8"] {
-  color: #64748B !important;
+  color: #F8FAFC !important;
   font-family: var(--font-body) !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6) !important;
+  font-weight: 600 !important;
 }
 #home .hero__stat-divider {
-  background: #DFE6EE !important;
+  background: rgba(255, 255, 255, 0.15) !important;
 }
 
 /* Hero scroll indicator */
@@ -2850,100 +2855,9 @@ img, svg, video, iframe {
 }
 
 /* ============================================================
-   TIER 1: LAPTOP & COMPACT DESKTOP (992px to 1280px)
+   TIER 1: LAPTOP VIEW (992px to 1600px & Height <= 850px)
+   Consolidated into Master Laptop Optimization Suite at end of file
    ============================================================ */
-@media (min-width: 992px) and (max-width: 1280px) {
-  .navbar__inner {
-    padding: 0 16px !important;
-  }
-  .navbar__link {
-    padding: 8px 8px !important;
-    font-size: 13.5px !important;
-  }
-  .navbar__cta {
-    padding: 9px 18px !important;
-    font-size: 13.5px !important;
-  }
-  .navbar__logo-tagline {
-    font-size: 0.65rem !important;
-  }
-  .services-pro-grid {
-    grid-template-columns: repeat(4, 1fr) !important;
-    gap: 14px !important;
-  }
-  .service-pro-card {
-    padding: 20px 16px !important;
-  }
-  .rooms-track {
-    grid-template-columns: repeat(5, 1fr) !important;
-    gap: 12px !important;
-  }
-  .room-card {
-    padding: 18px 14px !important;
-  }
-
-  /* Medical Page Laptop Refinements */
-  .medical-intro-grid {
-    gap: 36px !important;
-  }
-  .medical-intro-grid .infra-gallery {
-    height: 350px !important;
-  }
-  #pharma-packaging .grid-4 {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 18px !important;
-  }
-  .catalog-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 20px !important;
-  }
-  .catalog-tab {
-    padding: 8px 14px !important;
-    font-size: 0.84rem !important;
-  }
-
-  /* Contract Manufacturing Laptop Refinements */
-  .cm-metrics-grid {
-    gap: 16px !important;
-  }
-  .cm-metric-value {
-    font-size: 1.25rem !important;
-  }
-  .cm-cards-grid {
-    gap: 22px !important;
-  }
-  .cm-card {
-    padding: 30px 24px !important;
-  }
-  .cm-engagement-grid {
-    gap: 36px !important;
-  }
-  .cm-form-panel,
-  .cm-docpack-panel {
-    padding: 34px 28px !important;
-  }
-
-  /* Licences Page Laptop Refinements */
-  .lic-hero {
-    padding: 75px 0 60px 0 !important;
-  }
-  .lic-section-card,
-  .lic-gap-section {
-    padding: 34px 32px !important;
-  }
-  .lic-details-grid {
-    gap: 16px 24px !important;
-  }
-  .lic-iso-grid {
-    gap: 22px !important;
-  }
-  .lic-iso-card {
-    padding: 26px 24px !important;
-  }
-  .lic-audit-banner {
-    padding: 32px 32px !important;
-  }
-}
 
 /* ============================================================
    TIER 2: TABLET VIEW (641px to 991px — iPads, Surfaces, Tabs)
@@ -4715,34 +4629,34 @@ img, svg, video, iframe {
   margin: 0 0 1rem 0 !important;
   text-align: left !important;
   align-self: flex-start !important;
-  background: rgba(14, 165, 233, 0.2) !important;
-  border: 1.5px solid rgba(56, 189, 248, 0.5) !important;
-  color: #7DD3FC !important;
+  background: rgba(14, 165, 233, 0.15) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.40) !important;
+  color: rgba(125, 211, 252, 0.90) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
 }
 
 #home.hero--video-bg .hero__headline {
-  color: #FFFFFF !important;
+  color: rgba(255, 255, 255, 0.88) !important;
   text-align: left !important;
   font-size: clamp(2.3rem, 4.8vw, 3.8rem) !important;
   font-weight: 800 !important;
   line-height: 1.14 !important;
   letter-spacing: -0.025em !important;
   margin: 0 0 1rem 0 !important;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75), 0 6px 30px rgba(0, 0, 0, 0.5) !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75), 0 6px 30px rgba(0, 0, 0, 0.45) !important;
 }
 
 #home.hero--video-bg .hero__subhead {
-  color: #E2E8F0 !important;
+  color: rgba(226, 232, 240, 0.82) !important;
   text-align: left !important;
   font-size: clamp(1.05rem, 1.8vw, 1.2rem) !important;
   line-height: 1.68 !important;
   font-weight: 400 !important;
   max-width: 620px !important;
   margin: 0 0 2rem 0 !important;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75) !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.70) !important;
 }
 
 #home.hero--video-bg .hero__actions {
@@ -4757,29 +4671,33 @@ img, svg, video, iframe {
 }
 
 #home.hero--video-bg .hero__actions .btn--primary {
-  background: #10B981 !important;
-  border-color: #10B981 !important;
-  color: #FFFFFF !important;
-  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.45) !important;
+  background: rgba(16, 185, 129, 0.85) !important;
+  border: 1.5px solid rgba(16, 185, 129, 0.90) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.35) !important;
 }
 
 #home.hero--video-bg .hero__actions .btn--primary:hover {
   background: #059669 !important;
   border-color: #059669 !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.55) !important;
 }
 
 #home.hero--video-bg .hero__actions .btn--outline {
-  background: rgba(255, 255, 255, 0.12) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
-  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+  color: rgba(255, 255, 255, 0.88) !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
 }
 
 #home.hero--video-bg .hero__actions .btn--outline:hover {
-  background: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.22) !important;
   border-color: #FFFFFF !important;
   color: #FFFFFF !important;
   transform: translateY(-2px) !important;
@@ -4799,16 +4717,16 @@ img, svg, video, iframe {
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
-  color: #F8FAFC !important;
-  border: 1px solid rgba(255, 255, 255, 0.28) !important;
-  background: rgba(15, 23, 42, 0.6) !important;
+  color: rgba(248, 250, 252, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  background: rgba(15, 23, 42, 0.45) !important;
   backdrop-filter: blur(14px) !important;
   -webkit-backdrop-filter: blur(14px) !important;
   padding: 6px 14px !important;
   border-radius: 9999px !important;
   font-size: 0.82rem !important;
   font-weight: 600 !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
 }
 
 #home.hero--video-bg .hero__trust-item svg {
@@ -4829,3 +4747,1303 @@ img, svg, video, iframe {
     justify-content: center !important;
   }
 }
+
+/* Hero Stats Strip on Live Video (Seamless & Transparent) */
+#home.hero--video-bg .hero__stats-strip,
+#home .hero__stats-strip {
+  background: transparent !important;
+  border-top: none !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  padding: 0.5rem 0 2rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+#home.hero--video-bg .hero__stats-grid,
+#home .hero__stats-grid {
+  background: transparent !important;
+  border: none !important;
+  border-top: none !important;
+}
+
+#home .hero-stat-card-anim,
+#home .hero__stat-item,
+#home [class*="hero-stat-card"] {
+  background: rgba(15, 23, 42, 0.45) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+#home .hero-stat-card-anim:hover,
+#home .hero__stat-item:hover,
+#home [class*="hero-stat-card"]:hover {
+  background: rgba(15, 23, 42, 0.70) !important;
+  border-color: rgba(56, 189, 248, 0.6) !important;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 32px rgba(14, 165, 233, 0.25) !important;
+}
+
+#home .hero__stat-number,
+#home .hero-stat-card-anim .hero__stat-number {
+  color: #38BDF8 !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 800 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+#home .hero__stat-label,
+#home .hero-stat-card-anim .hero__stat-label,
+#home .hero__stat-label span {
+  color: #F8FAFC !important;
+  font-family: var(--font-body) !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6) !important;
+  font-weight: 600 !important;
+  opacity: 0.95 !important;
+}
+
+#home .hero-stat-card-anim:hover .hero__stat-number {
+  color: #7DD3FC !important;
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.6) !important;
+}
+
+#home .hero-stat-card-anim:hover .hero__stat-label,
+#home .hero-stat-card-anim:hover .hero__stat-label span {
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   MASTER LAPTOP VIEW OPTIMIZATION SUITE (ALL PAGES)
+   Scales down oversized cards, boxes, grids, images, paddings, and typography
+   for all laptop screen lengths (widths 992px to 1600px, and heights <= 850px)
+   across the complete application.
+   ========================================================================== */
+
+/* ── TIER 1: GLOBAL LAPTOP VIEW (992px to 1600px) ───────────────────────── */
+@media (min-width: 992px) and (max-width: 1600px) {
+
+  /* 0. Global Root & Layout Tokens */
+  :root {
+    --section-py: 3.5rem !important;
+    --max-w: 1240px !important;
+  }
+
+  .container {
+    max-width: 1240px !important;
+    padding: 0 24px !important;
+  }
+
+  .container--narrow {
+    max-width: 960px !important;
+  }
+
+  .section,
+  section {
+    padding: 50px 0 !important;
+  }
+
+  .section--alt,
+  .content-section--alt,
+  .about-section--alt {
+    padding: 50px 0 !important;
+  }
+
+  .section-header,
+  .section-header--center {
+    margin-bottom: 2rem !important;
+  }
+
+  .section-header p,
+  .section-header--center p {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+    margin-top: 8px !important;
+  }
+
+  .section-label,
+  .section-header__tag,
+  .section-tag,
+  span.section-tag {
+    font-size: 0.7rem !important;
+    padding: 4px 12px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .section__heading::after {
+    margin-top: 10px !important;
+    width: 50px !important;
+    height: 2.5px !important;
+  }
+
+  /* Global Headings */
+  h1 { font-size: clamp(2rem, 3.2vw, 2.85rem) !important; }
+  h2 { font-size: clamp(1.6rem, 2.4vw, 2.15rem) !important; }
+  h3 { font-size: clamp(1.2rem, 1.8vw, 1.45rem) !important; }
+  h4 { font-size: clamp(1.02rem, 1.4vw, 1.2rem) !important; }
+
+  /* Global Card System Base */
+  .card,
+  .card--glass,
+  .service-pro-card,
+  .feature-card,
+  .stat-card,
+  [class*="stat-card"],
+  [class*="feature-card"],
+  [class*="timeline__item"],
+  [class*="facility-card"],
+  [class*="campus-card"],
+  [class*="leader-card"],
+  [class*="leader-profile-card"],
+  [class*="roadmap-card"],
+  [class*="unit-card"],
+  [class*="gallery-item"],
+  [class*="oem-card"],
+  .case-study-card {
+    padding: 20px 18px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 18px rgba(10, 37, 64, 0.05) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+  }
+
+  .card:hover,
+  .case-study-card:hover,
+  .service-pro-card:hover,
+  .feature-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 28px rgba(2, 132, 199, 0.10) !important;
+  }
+
+  /* Global Buttons & Badges */
+  .btn,
+  .btn--primary,
+  .btn--outline,
+  .btn-action-primary,
+  .btn-action-secondary {
+    padding: 10px 22px !important;
+    font-size: 0.88rem !important;
+  }
+
+  .btn--lg {
+    padding: 11px 26px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .btn--sm {
+    padding: 6px 14px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .badge,
+  .badge--primary,
+  .badge--gold,
+  .badge--success {
+    font-size: 0.74rem !important;
+    padding: 4px 10px !important;
+  }
+
+  /* Global Navbar for Laptops */
+  .navbar__inner {
+    padding: 0 20px !important;
+  }
+  .navbar__link {
+    padding: 6px 10px !important;
+    font-size: 13.5px !important;
+  }
+  .navbar__cta {
+    padding: 8px 18px !important;
+    font-size: 13.5px !important;
+  }
+  .navbar__logo-tagline {
+    font-size: 0.65rem !important;
+  }
+  .navbar__logo-name {
+    font-size: 0.98rem !important;
+  }
+
+  /* Page Hero (Standardized across pages on laptop) */
+  .page-hero {
+    padding: calc(var(--nav-h, 72px) + 1.75rem) 0 2rem !important;
+  }
+  .page-hero h1 {
+    font-size: clamp(2rem, 3.2vw, 2.75rem) !important;
+    margin-bottom: 8px !important;
+  }
+  .page-hero p {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* ── 1. INDEX.HTML (Home) ── */
+  #home.hero--video-bg .hero__content-container {
+    padding: calc(var(--nav-h, 72px) + 1.25rem) 24px 1.25rem !important;
+  }
+  #home.hero--video-bg .hero__left-content {
+    max-width: 640px !important;
+  }
+  #home.hero--video-bg .hero__headline {
+    font-size: clamp(2rem, 3.2vw, 2.75rem) !important;
+    margin: 0 0 0.75rem 0 !important;
+    line-height: 1.15 !important;
+  }
+  #home.hero--video-bg .hero__subhead {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+    max-width: 540px !important;
+    margin: 0 0 1.25rem 0 !important;
+  }
+  #home.hero--video-bg .hero__actions {
+    margin: 0 0 1.25rem 0 !important;
+    gap: 12px !important;
+  }
+  #home.hero--video-bg .hero__trust-badges {
+    gap: 8px !important;
+  }
+  #home.hero--video-bg .hero__trust-item {
+    font-size: 0.75rem !important;
+    padding: 4px 12px !important;
+  }
+  .hero__stats-strip {
+    padding: 12px 0 !important;
+  }
+  .hero__stats-grid {
+    gap: 14px !important;
+  }
+  .hero__stat-item {
+    padding: 8px 12px !important;
+  }
+  .hero__stat-number {
+    font-size: 1.75rem !important;
+    line-height: 1.1 !important;
+  }
+  .hero__stat-label {
+    font-size: 0.72rem !important;
+  }
+
+  /* Ways Section (Partnership Models) */
+  .ways-section {
+    padding: 48px 0 !important;
+  }
+  .ways-header {
+    margin-bottom: 2rem !important;
+  }
+  .ways-heading {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem) !important;
+    margin: 0 0 0.75rem 0 !important;
+  }
+  .ways-subheading {
+    font-size: 0.94rem !important;
+    line-height: 1.55 !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
+  }
+  .ways-grid {
+    gap: 18px !important;
+    max-width: 960px !important;
+  }
+  .ways-card {
+    padding: 22px 20px !important;
+    border-radius: 14px !important;
+  }
+  .ways-card__tag {
+    font-size: 0.72rem !important;
+    padding: 3px 10px !important;
+  }
+  .ways-card__icon-wrap {
+    width: 42px !important;
+    height: 42px !important;
+    margin-bottom: 12px !important;
+  }
+  .ways-card__icon-wrap svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .ways-card__title {
+    font-size: 1.3rem !important;
+    margin-bottom: 6px !important;
+  }
+  .ways-card__text {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 12px !important;
+  }
+  .ways-card__list {
+    gap: 7px !important;
+    margin-bottom: 16px !important;
+  }
+  .ways-card__list-item {
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+  }
+  .ways-card__action {
+    padding: 9px 18px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Lifecycle Stages Section */
+  .stages-section {
+    padding: 48px 0 !important;
+  }
+  .stages-grid {
+    gap: 14px !important;
+  }
+  .stage-card {
+    padding: 18px 16px !important;
+    border-radius: 12px !important;
+  }
+  .stage-card__top {
+    margin-bottom: 10px !important;
+  }
+  .stage-card__number {
+    font-size: 1.35rem !important;
+  }
+  .stage-card__title {
+    font-size: 1.05rem !important;
+    margin-bottom: 8px !important;
+  }
+  .stage-card__list {
+    gap: 6px !important;
+  }
+  .stage-card__item {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Compliance & Licences Section */
+  .compliance-section {
+    padding: 48px 0 !important;
+  }
+  .shipping-cards-grid {
+    gap: 16px !important;
+  }
+  .license-certificate-card {
+    padding: 22px 20px !important;
+    border-radius: 14px !important;
+  }
+  .shipping-card {
+    padding: 20px 18px !important;
+    border-radius: 12px !important;
+  }
+  .shipping-card__destination {
+    font-size: 1.2rem !important;
+  }
+  .shipping-card__desc {
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+  }
+  .shipping-advisory-box {
+    padding: 14px 18px !important;
+    font-size: 0.86rem !important;
+  }
+
+  /* Walk the Line Section */
+  .walk-the-line-section {
+    padding: 48px 0 !important;
+  }
+  .rooms-track {
+    gap: 10px !important;
+  }
+  .room-card {
+    padding: 16px 12px !important;
+    border-radius: 10px !important;
+  }
+  .room-card__title {
+    font-size: 0.95rem !important;
+    margin-bottom: 4px !important;
+  }
+  .room-card__desc {
+    font-size: 0.8rem !important;
+    line-height: 1.45 !important;
+  }
+  .room-card__doc {
+    font-size: 0.72rem !important;
+    padding: 3px 8px !important;
+  }
+  .audit-facility-box,
+  #audit [style*="border-radius:var(--radius-2xl)"] {
+    padding: 28px 24px !important;
+    border-radius: 16px !important;
+  }
+
+  .clean-hero__sidebar {
+    padding: 20px 18px !important;
+    border-radius: 12px !important;
+  }
+  .clean-hero__sidebar-title {
+    margin-bottom: 12px !important;
+    padding-bottom: 8px !important;
+  }
+  .clean-hero__stat-row {
+    padding: 6px 0 !important;
+  }
+  .clean-hero__stat-label {
+    font-size: 0.8rem !important;
+  }
+  .clean-hero__stat-value {
+    font-size: 0.95rem !important;
+  }
+
+  .facility-metrics-dashboard {
+    gap: 14px !important;
+    margin-bottom: 28px !important;
+  }
+  .metric-card {
+    padding: 16px 16px !important;
+    border-radius: 12px !important;
+  }
+  .metric-card__header {
+    margin-bottom: 8px !important;
+  }
+  .metric-card__val {
+    font-size: 1.65rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 4px !important;
+  }
+  .metric-card__sub {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .facility-grid {
+    gap: 16px !important;
+  }
+  .facility-item {
+    border-radius: 12px !important;
+  }
+  .facility-item__img-wrap {
+    height: 175px !important;
+  }
+  .facility-item__content {
+    padding: 12px 16px !important;
+  }
+  .facility-item__title {
+    font-size: 0.92rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .brochure-bar {
+    padding: 24px 26px !important;
+    border-radius: 14px !important;
+    gap: 18px !important;
+  }
+  .brochure-bar__title {
+    font-size: 1.35rem !important;
+    margin-bottom: 6px !important;
+  }
+  .brochure-bar__text {
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+  .brochure-bar__meta {
+    padding: 5px 12px !important;
+    font-size: 0.78rem !important;
+  }
+  .btn-brochure {
+    padding: 10px 22px !important;
+    font-size: 0.88rem !important;
+  }
+
+  .future-intro-note {
+    padding: 12px 18px !important;
+    font-size: 0.88rem !important;
+    margin-bottom: 22px !important;
+  }
+  .roadmap-list {
+    gap: 16px !important;
+  }
+  .roadmap-entry {
+    padding: 18px 16px !important;
+    border-radius: 12px !important;
+  }
+  .roadmap-entry__name {
+    font-size: 1.1rem !important;
+    margin-bottom: 6px !important;
+  }
+  .roadmap-entry__text {
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .campuses-row {
+    gap: 18px !important;
+  }
+  .campus-box {
+    padding: 22px 22px !important;
+    border-radius: 14px !important;
+  }
+  .campus-box__name {
+    font-size: 1.28rem !important;
+    margin-bottom: 8px !important;
+  }
+  .campus-box__address {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+  .campus-box__pill-grid {
+    padding-top: 12px !important;
+    gap: 6px !important;
+  }
+  .campus-badge-pill {
+    font-size: 0.74rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .leadership-row {
+    gap: 18px !important;
+  }
+  .leader-item {
+    padding: 22px 20px !important;
+    gap: 16px !important;
+    border-radius: 14px !important;
+  }
+  .leader-item__avatar {
+    width: 54px !important;
+    height: 54px !important;
+    font-size: 1.15rem !important;
+    border-radius: 12px !important;
+  }
+  .leader-item__name {
+    font-size: 1.18rem !important;
+    margin-bottom: 3px !important;
+  }
+  .leader-item__title {
+    font-size: 0.72rem !important;
+    margin-bottom: 8px !important;
+    padding: 3px 10px !important;
+  }
+  .leader-item__bio {
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 10px !important;
+  }
+  .leader-badge-pill {
+    font-size: 0.72rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .audit-action-card {
+    padding: 32px 26px !important;
+    border-radius: 16px !important;
+  }
+  .audit-action-card__tag {
+    font-size: 0.72rem !important;
+    padding: 4px 12px !important;
+    margin-bottom: 12px !important;
+  }
+  .audit-action-card__title {
+    font-size: 1.6rem !important;
+    margin-bottom: 10px !important;
+  }
+  .audit-action-card__desc {
+    font-size: 0.94rem !important;
+    line-height: 1.55 !important;
+    max-width: 620px !important;
+    margin-bottom: 20px !important;
+  }
+  .audit-action-card .btn-audit-primary,
+  .audit-action-card .btn-audit-secondary {
+    padding: 11px 24px !important;
+    font-size: 0.88rem !important;
+  }
+
+  /* ── 3. CONTACT.HTML ── */
+  .contact-page-grid {
+    gap: 24px !important;
+  }
+  #consultation .contact-page-grid > div {
+    padding: 24px 22px !important;
+    border-radius: 14px !important;
+  }
+  #consultation [style*="border-radius:var(--radius-lg)"] {
+    padding: 18px 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .facility-map-card {
+    border-radius: 14px !important;
+  }
+  .facility-map-card__header {
+    padding: 1.1rem 1.25rem 0.85rem !important;
+  }
+  .facility-map-card__title {
+    font-size: 1.15rem !important;
+    margin: 0.15rem 0 0.35rem !important;
+  }
+  .facility-map-card__address {
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .facility-map-card__frame-wrap {
+    height: 210px !important;
+  }
+  .facility-map-card__footer {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.84rem !important;
+  }
+  .facility-map-card__footer .btn {
+    padding: 7px 16px !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* ── 4. CONTRACT-MANUFACTURING.HTML ── */
+  .cm-models-section,
+  .cm-engagement-section {
+    padding: 48px 0 !important;
+  }
+  .cm-metrics-grid {
+    gap: 14px !important;
+  }
+  .cm-metric-card {
+    padding: 16px 14px !important;
+  }
+  .cm-metric-value {
+    font-size: 1.35rem !important;
+  }
+  .cm-cards-grid {
+    gap: 16px !important;
+  }
+  .cm-card {
+    padding: 22px 20px !important;
+    border-radius: 14px !important;
+  }
+  .cm-card__num {
+    font-size: 1.4rem !important;
+  }
+  .cm-card__title {
+    font-size: 1.2rem !important;
+    margin-bottom: 6px !important;
+  }
+  .cm-card__text {
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 12px !important;
+  }
+  .cm-engagement-grid {
+    gap: 22px !important;
+  }
+  .cm-form-panel,
+  .cm-docpack-panel {
+    padding: 24px 22px !important;
+    border-radius: 14px !important;
+  }
+  .cm-form-panel h3,
+  .cm-docpack-panel h3 {
+    font-size: 1.25rem !important;
+    margin-bottom: 8px !important;
+  }
+  .cm-form-panel p,
+  .cm-docpack-panel p {
+    font-size: 0.86rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 14px !important;
+  }
+  .cm-checkbox-options {
+    gap: 6px !important;
+    margin-bottom: 16px !important;
+  }
+  .cm-checkbox-label {
+    padding: 8px 12px !important;
+    font-size: 0.84rem !important;
+  }
+  .cm-input {
+    padding: 10px 12px !important;
+    font-size: 0.9rem !important;
+  }
+  .cm-btn-submit,
+  .cm-btn-brochure {
+    padding: 11px 22px !important;
+    font-size: 0.9rem !important;
+  }
+  .cm-checklist-item {
+    padding: 8px 12px !important;
+    font-size: 0.84rem !important;
+  }
+
+  /* ── 5. END-TO-END.HTML ── */
+  .ten-stages-section {
+    padding: 46px 0 !important;
+  }
+  .phase-cards-grid {
+    gap: 14px !important;
+  }
+  .ten-stage-card {
+    padding: 18px 16px !important;
+    border-radius: 12px !important;
+  }
+  .ten-stage-card__number {
+    font-size: 1.3rem !important;
+  }
+  .ten-stage-card__badge {
+    font-size: 0.68rem !important;
+    padding: 2px 7px !important;
+  }
+  .ten-stage-card__title {
+    font-size: 1.05rem !important;
+    margin-bottom: 6px !important;
+  }
+  .ten-stage-card__desc {
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+  .stage-deliverable {
+    padding: 8px 10px !important;
+    font-size: 0.78rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* ── 6. MARKETS.HTML ── */
+  #sectors .section {
+    padding: 46px 0 !important;
+  }
+  .industry-sector-card {
+    gap: 22px !important;
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+  .industry-card-imgwrap {
+    height: 220px !important;
+    border-radius: 12px !important;
+  }
+  .industry-card-content h3 {
+    font-size: 1.28rem !important;
+    margin-bottom: 8px !important;
+  }
+  .industry-card-content p {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 12px !important;
+  }
+  .industry-card-btn .btn {
+    padding: 8px 18px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* ── 7. MEDICAL.HTML ── */
+  .medical-intro-grid {
+    gap: 22px !important;
+  }
+  .medical-intro-grid .infra-gallery {
+    height: 260px !important;
+  }
+  .catalog-grid {
+    gap: 16px !important;
+  }
+  .pharma-pack-card,
+  #pharma-packaging .card {
+    padding: 18px 16px !important;
+    border-radius: 12px !important;
+  }
+  .product-card__variants {
+    padding: 6px 10px !important;
+    font-size: 0.76rem !important;
+    margin-bottom: 10px !important;
+  }
+  .product-card__specs {
+    gap: 5px !important;
+    margin-bottom: 12px !important;
+  }
+  .spec-tag {
+    font-size: 0.68rem !important;
+    padding: 2px 7px !important;
+  }
+
+  /* ── 8. PRIVACY.HTML ── */
+  .policy-container,
+  .privacy-content {
+    padding: 44px 0 !important;
+  }
+
+  /* ── 9. PRODUCT.HTML ── */
+  .product-clean-card {
+    padding: 24px 26px !important;
+    border-radius: 14px !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .product-header-section {
+    margin-bottom: 20px !important;
+    padding-bottom: 16px !important;
+  }
+  .product-title-heading {
+    font-size: 1.65rem !important;
+    margin-bottom: 8px !important;
+  }
+  .product-lead-description {
+    font-size: 0.9rem !important;
+    line-height: 1.58 !important;
+  }
+  .product-clean-grid {
+    gap: 20px !important;
+  }
+  .clean-spec-item {
+    padding: 8px 0 !important;
+    font-size: 0.84rem !important;
+  }
+  .product-oem-card,
+  .related-grid {
+    padding: 16px 14px !important;
+    gap: 14px !important;
+  }
+  .inquiry-card {
+    padding: 24px 22px !important;
+    border-radius: 14px !important;
+    margin-top: 2rem !important;
+  }
+  .inquiry-grid {
+    gap: 22px !important;
+  }
+  .inquiry-input {
+    padding: 9px 12px !important;
+    font-size: 0.86rem !important;
+  }
+
+  /* ── 10. QUALITY.HTML ── */
+  .q-hero {
+    padding: 56px 0 42px 0 !important;
+  }
+  .q-hero__title {
+    font-size: clamp(2rem, 3.2vw, 2.5rem) !important;
+    margin-bottom: 12px !important;
+  }
+  .q-hero__subtitle {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+  }
+  .q-content {
+    padding: 36px 0 54px 0 !important;
+  }
+  .q-card {
+    padding: 24px 24px !important;
+    margin-bottom: 22px !important;
+    border-radius: 14px !important;
+  }
+  .q-lic-header {
+    margin-bottom: 16px !important;
+    padding-bottom: 12px !important;
+  }
+  .q-lic-number {
+    font-size: 1.7rem !important;
+  }
+  .q-details-grid {
+    gap: 12px 18px !important;
+    margin-bottom: 18px !important;
+  }
+  .q-detail-label {
+    font-size: 0.72rem !important;
+    margin-bottom: 3px !important;
+  }
+  .q-detail-val {
+    font-size: 0.92rem !important;
+  }
+  .q-verify-btn {
+    padding: 9px 18px !important;
+    font-size: 0.86rem !important;
+  }
+  .q-sbu-note {
+    margin-top: 16px !important;
+    padding: 12px 16px !important;
+    font-size: 0.86rem !important;
+  }
+  .q-intl-box {
+    padding: 14px 16px !important;
+    font-size: 0.86rem !important;
+    border-radius: 10px !important;
+  }
+  .q-systems-grid,
+  .q-roadmap-grid {
+    gap: 16px !important;
+  }
+  .q-system-card,
+  .q-roadmap-card {
+    padding: 20px 18px !important;
+    border-radius: 12px !important;
+  }
+  .q-roadmap-heading {
+    font-size: 1.15rem !important;
+    margin-bottom: 8px !important;
+  }
+  .q-roadmap-item {
+    font-size: 0.84rem !important;
+  }
+
+  /* ── 11. VIREXA.HTML ── */
+  .virexa-hero {
+    padding: 60px 0 45px 0 !important;
+  }
+  .virexa-hero__title {
+    font-size: clamp(2rem, 3.6vw, 2.75rem) !important;
+    margin-bottom: 10px !important;
+  }
+  .virexa-hero__lead {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 20px !important;
+  }
+  .virexa-btn-primary,
+  .virexa-btn-secondary {
+    padding: 10px 22px !important;
+    font-size: 0.88rem !important;
+  }
+  .virexa-metrics-bar {
+    padding: 14px 0 !important;
+  }
+  .virexa-metrics-grid {
+    gap: 14px !important;
+  }
+  .virexa-metric-value {
+    font-size: 1.45rem !important;
+  }
+  .virexa-metric-label {
+    font-size: 0.72rem !important;
+  }
+  .virexa-story-section,
+  .virexa-fields-section,
+  .virexa-oem-section {
+    padding: 48px 0 !important;
+  }
+  .virexa-story-grid {
+    gap: 28px !important;
+  }
+  .virexa-story-content h2 {
+    font-size: 1.65rem !important;
+    margin-bottom: 14px !important;
+  }
+  .virexa-story-content p {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important;
+  }
+  .virexa-image-frame {
+    border-radius: 14px !important;
+  }
+  .virexa-image-frame img {
+    height: 275px !important;
+  }
+  .virexa-fields-header,
+  .virexa-oem-header {
+    margin-bottom: 2rem !important;
+  }
+  .virexa-fields-header h2,
+  .virexa-oem-header h2 {
+    font-size: 1.65rem !important;
+    margin-bottom: 8px !important;
+  }
+  .virexa-fields-grid {
+    gap: 14px !important;
+  }
+  .virexa-field-card {
+    padding: 20px 18px !important;
+    border-radius: 12px !important;
+  }
+  .virexa-field-count {
+    font-size: 1.7rem !important;
+    margin-bottom: 6px !important;
+  }
+  .virexa-field-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 6px !important;
+  }
+  .virexa-field-desc {
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+  }
+  .virexa-oem-grid {
+    gap: 16px !important;
+  }
+  .virexa-oem-card {
+    padding: 22px 20px !important;
+    border-radius: 12px !important;
+  }
+  .virexa-oem-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 6px !important;
+  }
+  .virexa-oem-card p {
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+  }
+  .virexa-dist-specs-box {
+    padding: 20px 18px !important;
+    border-radius: 12px !important;
+  }
+  .virexa-dist-banner {
+    padding: 24px 26px !important;
+    gap: 24px !important;
+    border-radius: 14px !important;
+  }
+  .virexa-dist-content h2 {
+    font-size: 1.55rem !important;
+    margin-bottom: 8px !important;
+  }
+  .virexa-dist-content p {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* ── 12. WALK-THE-LINE.HTML ── */
+  .wtl-hero {
+    padding: 60px 0 45px 0 !important;
+  }
+  .wtl-hero__title {
+    font-size: clamp(2rem, 3.4vw, 2.6rem) !important;
+  }
+  .wtl-hero__lead {
+    font-size: 1rem !important;
+  }
+  .rooms-stepper {
+    padding: 9px 0 !important;
+  }
+  .rooms-stepper__item {
+    padding: 5px 9px !important;
+    font-size: 0.82rem !important;
+  }
+  .rooms-stepper__num {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 0.7rem !important;
+  }
+  .checkpoint-section {
+    padding: 40px 0 !important;
+  }
+  .checkpoint-card {
+    padding: 22px 22px !important;
+    border-radius: 14px !important;
+  }
+  .checkpoint-header {
+    margin-bottom: 14px !important;
+  }
+  .checkpoint-title {
+    font-size: 1.35rem !important;
+    margin: 4px 0 6px 0 !important;
+  }
+  .checkpoint-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.52 !important;
+    margin-bottom: 14px !important;
+  }
+  .checkpoint-doc {
+    padding: 7px 12px !important;
+    font-size: 0.82rem !important;
+    margin-bottom: 16px !important;
+  }
+  .checkpoint-gallery {
+    gap: 14px !important;
+  }
+  .gallery-card {
+    border-radius: 10px !important;
+  }
+  .gallery-img-wrap {
+    height: 180px !important;
+  }
+  .gallery-caption {
+    padding: 9px 12px !important;
+    font-size: 0.8rem !important;
+  }
+  .checkpoint-metrics {
+    gap: 12px !important;
+    margin: 8px 0 16px 0 !important;
+  }
+  .metric-box {
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+  }
+  .metric-box__num {
+    font-size: 1.5rem !important;
+    margin-bottom: 4px !important;
+  }
+  .metric-box__label {
+    font-size: 0.8rem !important;
+  }
+  .doc-pack-card {
+    padding: 22px 20px !important;
+    border-radius: 12px !important;
+  }
+  .doc-grid {
+    gap: 12px !important;
+  }
+  .doc-item {
+    padding: 10px 12px !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+/* ── TIER 1B: COMPACT LAPTOPS & HIGH-SCALING VIEWPORTS (992px to 1200px) ───── */
+@media (min-width: 992px) and (max-width: 1200px) {
+  :root {
+    --max-w: 1140px !important;
+    --section-py: 3rem !important;
+  }
+  .container {
+    max-width: 1140px !important;
+    padding: 0 18px !important;
+  }
+  .ways-grid {
+    gap: 16px !important;
+  }
+  .ways-card {
+    padding: 18px 16px !important;
+  }
+  .facility-metrics-dashboard {
+    gap: 10px !important;
+  }
+  .metric-card {
+    padding: 14px 12px !important;
+  }
+  .metric-card__val {
+    font-size: 1.45rem !important;
+  }
+  .facility-grid {
+    gap: 12px !important;
+  }
+  .facility-item__img-wrap {
+    height: 155px !important;
+  }
+  .campuses-row,
+  .leadership-row {
+    gap: 14px !important;
+  }
+  .campus-box {
+    padding: 18px 18px !important;
+  }
+  .campus-box__name {
+    font-size: 1.18rem !important;
+  }
+  .leader-item {
+    padding: 18px 16px !important;
+    gap: 12px !important;
+  }
+  .leader-item__avatar {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1rem !important;
+  }
+  .leader-item__name {
+    font-size: 1.08rem !important;
+  }
+  .facility-map-card__frame-wrap {
+    height: 185px !important;
+  }
+  .industry-card-imgwrap {
+    height: 190px !important;
+  }
+  .virexa-image-frame img {
+    height: 235px !important;
+  }
+  .medical-intro-grid .infra-gallery {
+    height: 230px !important;
+  }
+  .gallery-img-wrap {
+    height: 160px !important;
+  }
+  .cm-cards-grid {
+    gap: 12px !important;
+  }
+  .cm-card {
+    padding: 18px 16px !important;
+  }
+  .cm-engagement-grid {
+    gap: 16px !important;
+  }
+  .cm-form-panel,
+  .cm-docpack-panel {
+    padding: 20px 18px !important;
+  }
+  .q-card {
+    padding: 20px 18px !important;
+  }
+}
+
+/* ── TIER 1C: LAPTOP SCREEN LENGTH / SHORT VIEWPORT (HEIGHT <= 850px) ───────── */
+@media (min-width: 992px) and (max-height: 850px) {
+  :root {
+    --section-py: 2.5rem !important;
+  }
+  .section,
+  section,
+  .section--alt,
+  .ways-section,
+  .stages-section,
+  .compliance-section,
+  .walk-the-line-section,
+  .cm-models-section,
+  .cm-engagement-section,
+  .ten-stages-section,
+  .virexa-story-section,
+  .virexa-fields-section,
+  .virexa-oem-section,
+  .checkpoint-section,
+  .q-content {
+    padding: 38px 0 !important;
+  }
+
+  .section-header,
+  .section-header--center,
+  .ways-header,
+  .virexa-fields-header,
+  .virexa-oem-header {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .page-hero,
+  .q-hero,
+  .virexa-hero,
+  .wtl-hero {
+    padding: calc(var(--nav-h, 72px) + 1.25rem) 0 1.5rem !important;
+  }
+
+  #home.hero--video-bg .hero__content-container {
+    padding: calc(var(--nav-h, 72px) + 1rem) 24px 1rem !important;
+  }
+
+  .hero__stats-strip {
+    padding: 10px 0 !important;
+  }
+
+  .facility-item__img-wrap {
+    height: 160px !important;
+  }
+
+  .facility-map-card__frame-wrap {
+    height: 180px !important;
+  }
+
+  .industry-card-imgwrap {
+    height: 190px !important;
+  }
+
+  .virexa-image-frame img {
+    height: 240px !important;
+  }
+
+  .medical-intro-grid .infra-gallery {
+    height: 230px !important;
+  }
+
+  .gallery-img-wrap {
+    height: 160px !important;
+  }
+
+  .audit-action-card {
+    padding: 26px 22px !important;
+  }
+
+  .brochure-bar {
+    padding: 20px 22px !important;
+  }
+
+  .checkpoint-card {
+    padding: 18px 20px !important;
+  }
+}
+
