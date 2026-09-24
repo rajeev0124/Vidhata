@@ -11,7 +11,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-01",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/infusion-intravenous-set-non-vented.jpg",
+    "image": "images/Infusion Therapy/Infusion (Intravenous) Set Non-Vented.png",
     "description": "Administration of fluids from a container into the patient's vascular system through a vascular access device.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -29,7 +29,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-02",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/infusion-intravenous-set-vented.jpg",
+    "image": "images/Infusion Therapy/Infusion (Intravenous) Set Vented.png",
     "description": "Administration of fluids from a container into the patient's vascular system through a vascular access device.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -43,11 +43,11 @@ const MEDICAL_PRODUCTS = [
   },
   {
     "id": "premium-infusion-set",
-    "title": "Premium Infusion Set",
+    "title": "Premium Based Infusion Set",
     "productCode": "VP-INF-03",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/premium-infusion-set.jpg",
+    "image": "images/Infusion Therapy/Premium Based Infusion Set.png",
     "description": "Intravenous administration of IV fluids into the vascular system through a vascular access device.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -65,7 +65,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-04",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/infusion-set-with-three-way-stopcock.jpg",
+    "image": "images/Infusion Therapy/Infusion Set with Three Way Stopcock.png",
     "description": "Infusion of fluids and medications, with directional flow control at the access port.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -83,7 +83,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-05",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/micro-infusion-set-with-air-vented.jpg",
+    "image": "images/Infusion Therapy/Micro Infusion Set with Air Vented.png",
     "description": "Fine-rate infusion of fluids and medications as part of an infusion system.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -101,7 +101,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-06",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/0-2-micron-filter-non-dehp-infusion-set.jpg",
+    "image": "images/Infusion Therapy/0.2 Micron Filter (Non-DEHP) Infusion Set.png",
     "description": "Filtered intravenous infusion where a DEHP-free fluid path is required.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -119,7 +119,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-07",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/auto-stop-iv-infusion-set.jpg",
+    "image": "images/Infusion Therapy/Auto Stop IV Infusion Set.png",
     "description": "Intravenous administration with an auto-stop drip chamber that closes when the container empties.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -137,7 +137,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-08",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/measured-volume-infusion-set.jpg",
+    "image": "images/Infusion Therapy/Measured Volume Infusion Set.png",
     "description": "Volume-controlled administration of fluids through a graduated burette.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -156,7 +156,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-09",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/elastomeric-infusion-pump.jpg",
+    "image": "images/Infusion Therapy/Elastomeric Infusion Pump.png",
     "description": "General infusion, antibiotic delivery, chemotherapy or pain management, in a healthcare facility or at home. Single use.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -175,7 +175,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-10",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/infusion-intravenous-set-with-flow-regulator.jpg",
+    "image": "images/Infusion Therapy/Infusion Intravenous Set with Flow Regulator.png",
     "description": "Intravenous administration with precision flow control for consistent delivery.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -193,7 +193,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-INF-11",
     "category": "infusion",
     "categoryDisplay": "Infusion therapy · Class B sterile device",
-    "image": "/img/products/priming-set-intravenous-infusion.jpg",
+    "image": "images/Infusion Therapy/Priming Set Intravenous Infusion.png",
     "description": "Priming of an intravenous infusion line before administration.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -211,7 +211,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-NEP-01",
     "category": "nephrology",
     "categoryDisplay": "Nephrology and dialysis · Class B sterile device",
-    "image": "/img/products/haemodialysis-blood-tubing-set.jpg",
+    "image": "images/Nephrology & Dialysis/Haemodialysis Blood Tubing Set.png",
     "description": "Acute and chronic haemodialysis therapy in kidney dialysis or renal failure.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -230,7 +230,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-NEP-02",
     "category": "nephrology",
     "categoryDisplay": "Nephrology and dialysis · Class B sterile device",
-    "image": "/img/products/av-arteriovenous-fistula-needle-set.jpg",
+    "image": "images/Nephrology & Dialysis/AV (Arteriovenous) Fistula Needle Set.png",
     "description": "Connects blood lines to the blood vessel through a needle when dialysis is carried out via an internal fistula. Flexible butterfly wings identify the needle size.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -249,7 +249,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-NEP-03",
     "category": "nephrology",
     "categoryDisplay": "Nephrology and dialysis · Class B sterile device",
-    "image": "/img/products/transducer-protector.jpg",
+    "image": "images/Nephrology & Dialysis/Transducer Protector.png",
     "description": "Keeps the blood side of the haemodialysis circuit separated from the machine side and prevents contamination of the machine.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -267,7 +267,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-NEP-04",
     "category": "nephrology",
     "categoryDisplay": "Nephrology and dialysis · Class B sterile device",
-    "image": "/img/products/peritoneal-dialysis-transfusion-set.png",
+    "image": "images/Nephrology & Dialysis/Peritoneal Dialysis Transfusion Set.png",
     "description": "Administration of dialysis solutions during peritoneal dialysis, allowing solution to flow into and out of the peritoneal cavity.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -285,7 +285,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-NEP-05",
     "category": "nephrology",
     "categoryDisplay": "Nephrology and dialysis · Class B sterile device",
-    "image": "/img/products/haemodialysis-catheter-set.jpg",
+    "image": "images/Nephrology & Dialysis/Haemodialysis Catheter Set.png",
     "description": "Exchanges blood to and from the haemodialysis machine.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -304,7 +304,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-ACC-01",
     "category": "lines",
     "categoryDisplay": "Lines and accessories · Class B sterile device",
-    "image": "/img/products/extension-line.jpg",
+    "image": "images/Lines & Accessories/Extension Line.png",
     "description": "Single-use extension used as part of an infusion or perfusion system.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -322,7 +322,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-ACC-02",
     "category": "lines",
     "categoryDisplay": "Lines and accessories · Class B sterile device",
-    "image": "/img/products/extension-lines-with-flow-regulator.jpg",
+    "image": "images/Lines & Accessories/Extension Lines with Flow Regulator.png",
     "description": "Extension line offering precision care and consistent delivery as part of an infusion system.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -340,7 +340,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-ACC-03",
     "category": "lines",
     "categoryDisplay": "Lines and accessories · Class B sterile device",
-    "image": "/img/products/extension-line-with-three-way-stopcock.jpg",
+    "image": "images/Lines & Accessories/Extension Line with Three Way Stopcock.png",
     "description": "Fluid flow directional control, providing an access port for administration of solution, withdrawal of fluid and pressure monitoring.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -358,7 +358,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-ACC-04",
     "category": "lines",
     "categoryDisplay": "Lines and accessories · Class B sterile device",
-    "image": "/img/products/pvc-free-extension-line.png",
+    "image": "images/Lines & Accessories/PVC Free Extension Line.png",
     "description": "Single-use extension for infusion and perfusion systems where a PVC-free fluid path is required.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -376,7 +376,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-ONC-01",
     "category": "oncology",
     "categoryDisplay": "Oncology · Class B sterile device",
-    "image": "/img/products/chemotherapy-infusion-sets.jpg",
+    "image": "images/Oncology/Chemotherapy Infusion Sets.png",
     "description": "Administration of fluids from a container into the patient's vascular system, offering precision care and consistent delivery.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -394,7 +394,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-ONC-02",
     "category": "oncology",
     "categoryDisplay": "Oncology · Class B sterile device",
-    "image": "/img/products/chemotherapy-extension-line-with-flow-regulator.jpg",
+    "image": "images/Oncology/Chemotherapy Extension Line with Flow Regulator.png",
     "description": "Extension line offering precision care and consistent delivery in chemotherapy administration.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -412,7 +412,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-ONC-03",
     "category": "oncology",
     "categoryDisplay": "Oncology · Class B sterile device",
-    "image": "/img/products/chemotherapy-extension-line-set.jpg",
+    "image": "images/Oncology/Chemotherapy Extension Line Set.png",
     "description": "Single-use extension used as part of an infusion or perfusion system for chemotherapy.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -430,7 +430,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-CCM-01",
     "category": "critical",
     "categoryDisplay": "Critical care and monitoring · Class B sterile device",
-    "image": "/img/products/pressure-monitoring-line.jpg",
+    "image": "images/Critical Care/Pressure Monitoring Line.png",
     "description": "High-pressure monitoring and connection between syringe and infusion pump, and channelling fluid for intravenous infusion.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -449,7 +449,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-CCM-02",
     "category": "critical",
     "categoryDisplay": "Critical care and monitoring · Class B sterile device",
-    "image": "/img/products/disposable-pressure-transducer-kit.jpg",
+    "image": "images/Critical Care/Disposable Pressure Transducer Kit.png",
     "description": "Invasive pressure monitoring as part of a patient monitoring system.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -468,7 +468,7 @@ const MEDICAL_PRODUCTS = [
     "productCode": "VP-CAR-01",
     "category": "cardiac",
     "categoryDisplay": "Cardiac surgery · Class B sterile device",
-    "image": "/img/products/cardioplegia-adapters.jpg",
+    "image": "images/Cardiac Surgery/Cardioplegia Adapters.png",
     "description": "Connect to the ARC or vessel cannulae for delivery of cardioplegia solution or venting of the heart during cardiopulmonary bypass.",
     "specs": {
       "Risk class": "Class B (India MDR 2017)",
@@ -577,7 +577,7 @@ class ProductShowcase {
         card.innerHTML = `
           <span class="product-card__badge">${catName}</span>
           <div class="product-card__img-wrap">
-            <img src="${imgPath}" alt="${p.title}" class="product-card__img" loading="lazy" onerror="this.onerror=null;this.src='images/medical-products.png'">
+            <img src="${encodeURI(imgPath)}" alt="${p.title}" class="product-card__img" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns=\'http://www.w3.org/2000/svg\'%20width=\'300\'%20height=\'200\'%20viewBox=\'0%200%20300%20200\'%3E%3Crect%20fill=\'%23F8FAFC\'%20width=\'300\'%20height=\'200\'/%3E%3Ctext%20fill=\'%2394A3B8\'%20font-family=\'sans-serif\'%20font-size=\'14\'%20font-weight=\'bold\'%20x=\'50%25\'%20y=\'50%25\'%20text-anchor=\'middle\'%3EVidhata%20Medical%3C/text%3E%3C/svg%3E'">
           </div>
           <h3 class="product-card__title">${p.title}</h3>
           <p class="product-card__desc">${p.description}</p>

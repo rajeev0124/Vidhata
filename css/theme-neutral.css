@@ -4673,3 +4673,159 @@ img, svg, video, iframe {
   color: #334155 !important;
   border: 1px solid #E2E8F0 !important;
 }
+
+/* =========================================================
+   HERO FULL-WIDTH VIDEO OVERRIDES (LEFT-ALIGNED TEXT ON VIDEO)
+   ========================================================= */
+#home.hero--video-bg {
+  background: #0b1120 !important;
+  justify-content: space-between !important;
+  align-items: stretch !important;
+  text-align: left !important;
+}
+
+#home.hero--video-bg .hero__content-container {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  text-align: left !important;
+  max-width: var(--max-w, 1280px) !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: calc(var(--nav-h, 72px) + 2rem) var(--sp-8) var(--sp-8) !important;
+}
+
+#home.hero--video-bg .hero__left-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  max-width: 720px !important;
+  width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#home.hero--video-bg .hero__eyebrow {
+  margin: 0 0 1rem 0 !important;
+  text-align: left !important;
+  align-self: flex-start !important;
+  background: rgba(14, 165, 233, 0.2) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.5) !important;
+  color: #7DD3FC !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+#home.hero--video-bg .hero__headline {
+  color: #FFFFFF !important;
+  text-align: left !important;
+  font-size: clamp(2.3rem, 4.8vw, 3.8rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.025em !important;
+  margin: 0 0 1rem 0 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75), 0 6px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+#home.hero--video-bg .hero__subhead {
+  color: #E2E8F0 !important;
+  text-align: left !important;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem) !important;
+  line-height: 1.68 !important;
+  font-weight: 400 !important;
+  max-width: 620px !important;
+  margin: 0 0 2rem 0 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75) !important;
+}
+
+#home.hero--video-bg .hero__actions {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin: 0 0 2rem 0 !important;
+  width: auto !important;
+  max-width: 100% !important;
+}
+
+#home.hero--video-bg .hero__actions .btn--primary {
+  background: #10B981 !important;
+  border-color: #10B981 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.45) !important;
+}
+
+#home.hero--video-bg .hero__actions .btn--primary:hover {
+  background: #059669 !important;
+  border-color: #059669 !important;
+  transform: translateY(-2px) !important;
+}
+
+#home.hero--video-bg .hero__actions .btn--outline {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  color: #FFFFFF !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+#home.hero--video-bg .hero__actions .btn--outline:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+}
+
+#home.hero--video-bg .hero__trust-badges {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  width: auto !important;
+}
+
+#home.hero--video-bg .hero__trust-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #F8FAFC !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  padding: 6px 14px !important;
+  border-radius: 9999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+}
+
+#home.hero--video-bg .hero__trust-item svg {
+  stroke: #38BDF8 !important;
+}
+
+@media (max-width: 768px) {
+  #home.hero--video-bg .hero__content-container {
+    padding: calc(var(--nav-h, 72px) + 1.5rem) 16px 1.5rem !important;
+  }
+  #home.hero--video-bg .hero__actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+  #home.hero--video-bg .hero__actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}

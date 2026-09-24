@@ -66,6 +66,7 @@
   object-fit: contain;
   flex-shrink: 0;
   display: block;
+  border-radius: 6px;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -7862,6 +7863,301 @@ img[data-reveal].revealed,
   }
   .phase-nav-strip {
     display: none;
+  }
+}
+
+/* =========================================================
+   HERO FULL-WIDTH VIDEO BACKGROUND (LEFT-ALIGNED TEXT ON VIDEO)
+   ========================================================= */
+.hero--video-bg {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: hidden;
+  background-color: #0b1120;
+}
+
+.hero__video-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none;
+  filter: contrast(1.05) brightness(0.96);
+}
+
+/* Cinematic Left-to-Right Scrim: Rich dark gradient on left for text contrast, open on right for video */
+.hero--video-bg .hero__video-scrim {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(90deg, 
+      rgba(11, 17, 32, 0.90) 0%, 
+      rgba(11, 17, 32, 0.84) 34%, 
+      rgba(11, 17, 32, 0.58) 58%, 
+      rgba(11, 17, 32, 0.22) 80%, 
+      rgba(11, 17, 32, 0.12) 100%
+    ),
+    linear-gradient(180deg, 
+      rgba(11, 17, 32, 0.55) 0%, 
+      transparent 28%, 
+      rgba(11, 17, 32, 0.70) 100%
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Left-aligned Content Container */
+.hero--video-bg .hero__content-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-w, 1280px);
+  margin: 0 auto;
+  padding: calc(var(--nav-h, 72px) + 3rem) var(--sp-8) var(--sp-8);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* LEFT ALIGNED */
+}
+
+/* Content wrapper — NO CARD BACKGROUND, pure text on video */
+.hero--video-bg .hero__left-content {
+  width: 100%;
+  max-width: 720px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+/* Eyebrow badge on video */
+.hero--video-bg .hero__eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: rgba(14, 165, 233, 0.18) !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.45) !important;
+  color: #7DD3FC !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  padding: 7px 18px !important;
+  border-radius: 9999px !important;
+  margin: 0 0 var(--sp-4) 0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25) !important;
+}
+
+.hero--video-bg .hero__eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  background: #10B981;
+  box-shadow: 0 0 10px #10B981, 0 0 18px #10B981;
+  border-radius: 50%;
+}
+
+/* Headline directly on video */
+.hero--video-bg .hero__headline {
+  color: #FFFFFF !important;
+  text-align: left !important;
+  font-size: clamp(2.3rem, 4.8vw, 3.75rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.025em !important;
+  margin: 0 0 var(--sp-4) 0 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.75), 0 6px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Subheadline directly on video */
+.hero--video-bg .hero__subhead {
+  color: #E2E8F0 !important;
+  text-align: left !important;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem) !important;
+  line-height: 1.68 !important;
+  font-weight: 400 !important;
+  max-width: 620px !important;
+  margin: 0 0 var(--sp-8) 0 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75);
+}
+
+/* Actions CTA buttons left aligned */
+.hero--video-bg .hero__actions {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: var(--sp-8) !important;
+  width: auto !important;
+}
+
+.hero--video-bg .hero__actions .btn--primary {
+  background: #10B981 !important;
+  border-color: #10B981 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.45) !important;
+}
+
+.hero--video-bg .hero__actions .btn--primary:hover {
+  background: #059669 !important;
+  border-color: #059669 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(16, 185, 129, 0.55) !important;
+}
+
+.hero--video-bg .hero__actions .btn--outline {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  color: #FFFFFF !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.hero--video-bg .hero__actions .btn--outline:hover {
+  background: rgba(255, 255, 255, 0.24) !important;
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* Trust Badges left-aligned directly on video */
+.hero--video-bg .hero__trust-badges {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  width: auto !important;
+}
+
+.hero--video-bg .hero__trust-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #F8FAFC !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  padding: 6px 14px !important;
+  border-radius: 9999px !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.2s ease !important;
+}
+
+.hero--video-bg .hero__trust-item:hover {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border-color: rgba(56, 189, 248, 0.6) !important;
+  transform: translateY(-1px) !important;
+}
+
+.hero--video-bg .hero__trust-item svg {
+  stroke: #38BDF8 !important;
+}
+
+/* Video Play/Pause Control on dark hero */
+.hero--video-bg .hero__video-ctrls {
+  position: absolute;
+  top: calc(var(--nav-h, 72px) + 20px);
+  right: var(--sp-8);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(11, 17, 32, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+}
+
+.hero--video-bg .hero__video-ctrls:hover {
+  background: rgba(11, 17, 32, 0.94);
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: scale(1.08);
+}
+
+.hero--video-bg .hero__video-btn--single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: #E2E8F0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.hero--video-bg .hero__video-btn--single:hover {
+  color: #38BDF8;
+}
+
+/* Stats Bar at bottom matching cinematic hero */
+.hero--video-bg .hero__stats-strip {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 1.25rem 0;
+  background: rgba(11, 17, 32, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.hero--video-bg .hero__stat-number {
+  color: #38BDF8 !important;
+}
+
+.hero--video-bg .hero__stat-label {
+  color: #94A3B8 !important;
+}
+
+@media (max-width: 768px) {
+  .hero--video-bg .hero__video-ctrls {
+    top: calc(var(--nav-h, 72px) + 10px);
+    right: 12px;
+    width: 32px;
+    height: 32px;
   }
 }
 

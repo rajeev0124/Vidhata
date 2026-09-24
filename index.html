@@ -13,7 +13,7 @@
     content="End-to-end plastics manufacturing partner for medical, pharma, electronics, and industrial sectors.">
   <meta property="og:type" content="website">
   <title>Vidhata Life &mdash; An SBU of Vidhata Plastics | Precision Medical Manufacturing</title>
-  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="icon" href="images/vidhata-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="css/style.css?v=serene-light-2026">
   <link rel="stylesheet" href="css/components.css?v=serene-light-2026">
   <link rel="stylesheet" href="css/animations.css?v=contrast">
@@ -28,8 +28,8 @@
 
   <!-- Loading Screen -->
   <div id="loading-screen" class="loading-screen">
-    <img src="images/logo.png" alt="Vidhata"
-      style="width:72px;height:72px;margin-bottom:12px;filter:drop-shadow(0 0 16px rgba(14,165,233,0.4));" />
+    <img src="images/vidhata-logo.jpg" alt="Vidhata"
+      style="width:72px;height:72px;border-radius:12px;margin-bottom:12px;filter:drop-shadow(0 0 16px rgba(14,165,233,0.4));" />
     <div class="loading-logo">VIDHATA</div>
     <div
       style="font-size:var(--fs-xs);color:var(--clr-text-dim);letter-spacing:0.2em;text-transform:uppercase;margin-top:-8px">
@@ -49,7 +49,7 @@
   <nav id="navbar" class="navbar">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__logo">
-        <img src="images/logo.png" alt="Vidhata Life Logo" class="navbar__logo-img" />
+        <img src="images/vidhata-logo.jpg" alt="Vidhata Life Logo" class="navbar__logo-img" />
         <div class="navbar__logo-text">
           <span class="navbar__logo-name">Vidhata Life</span>
           <span class="navbar__logo-tagline">An SBU of Vidhata Plastics</span>
@@ -88,50 +88,60 @@
 </div>
 
   <!-- ======================================================= -->
-  <!-- HERO SECTION — Full-Screen Video Background Hero       -->
+  <!-- HERO SECTION — Full-Width Video Background Hero        -->
   <!-- ======================================================= -->
-  <section class="hero hero--split" id="home"
-    style="position:relative;background:linear-gradient(160deg, #FFFFFF 0%, #E0F2FE 40%, #BAE6FD 75%, #ECFDF5 100%);color:#1E293B;display:flex;flex-direction:column;min-height:100vh;justify-content:center;align-items:center;">
+  <section class="hero hero--video-bg" id="home">
 
-    <!-- Hero main content -->
-    <div class="container"
-      style="position:relative;z-index:2;width:100%;max-width:860px;margin:0 auto;padding:var(--sp-16) var(--sp-6) var(--sp-8);flex:1;display:flex;align-items:center;justify-content:center;">
-      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;width:100%">
+    <!-- Full-Width Background Video Container -->
+    <div class="hero__video-wrap" aria-hidden="true">
+      <video
+        id="hero-bg-video"
+        class="hero__bg-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        poster="images/vidhata-hero-poster.jpg"
+      >
+        <source src="videos/vidhata-hero.mp4" type="video/mp4" media="(min-width: 768px)">
+        <source src="videos/vidhata-hero-mobile.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="hero__video-scrim"></div>
+    </div>
+
+
+    <!-- Hero main content — Left aligned directly on video (No card background) -->
+    <div class="container hero__content-container">
+      <div class="hero__left-content">
 
         <!-- Eyebrow Badge -->
-        <div class="hero__eyebrow hero-anim-1 hero-pill-anim"
-          style="background:#E0F2FE;border:1.5px solid #38BDF8;color:#0284C7;font-weight:600;margin:0 0 var(--sp-4) 0;cursor:pointer">
-          <span class="hero__eyebrow-dot" style="background:#10B981;box-shadow:0 0 10px #10B981"></span>
+        <div class="hero__eyebrow hero-anim-1 hero-pill-anim" style="cursor:pointer">
+          <span class="hero__eyebrow-dot"></span>
           Medical device development and manufacturing
         </div>
 
         <!-- Headline -->
-        <h1 class="hero__headline hero-anim-2"
-          style="color:#1E293B;text-align:center;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.18;margin-bottom:var(--sp-4);font-weight:800;letter-spacing:-0.02em">
+        <h1 class="hero__headline hero-anim-2">
           From an idea to a sterile device on the ward.
         </h1>
 
         <!-- Subheadline -->
-        <p class="hero__subhead hero-anim-3"
-          style="color:#64748B;margin-bottom:var(--sp-8);text-align:center;font-size:1.1rem;line-height:1.65;font-weight:500;max-width:680px">
-          We research, design, tool, mould, assemble, sterilise and release single-use medical devices — under our own
+        <p class="hero__subhead hero-anim-3">
+          We research, design, tool, mould, assemble, sterilise and release single-use medical devices &mdash; under our own
           VIREXA brand, and under yours.
         </p>
 
         <!-- CTA Buttons -->
-        <div class="hero__actions hero-anim-4"
-          style="display:flex;flex-direction:row;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:var(--sp-8)">
-          <a href="virexa.html" class="btn btn--primary btn--xl"
-            style="justify-content:center;padding:14px 28px;font-size:1rem;white-space:nowrap;background:#10B981;border-color:#10B981;color:#ffffff;box-shadow:0 6px 20px rgba(16,185,129,0.35)"
-            data-magnetic="0.2" data-ripple>
+        <div class="hero__actions hero-anim-4">
+          <a href="virexa.html" class="btn btn--primary btn--xl" data-magnetic="0.2" data-ripple>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
             </svg>
             VIREXA products
           </a>
-          <a href="contract-manufacturing.html" class="btn btn--outline btn--xl"
-            style="justify-content:center;padding:14px 28px;font-size:1rem;white-space:nowrap;background:#FFFFFF;color:#0284C7;border:1.5px solid #0284C7;font-weight:600"
-            data-magnetic="0.2">
+          <a href="contract-manufacturing.html" class="btn btn--outline btn--xl" data-magnetic="0.2">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
@@ -140,22 +150,27 @@
         </div>
 
         <!-- Trust Badges -->
-        <div class="hero__trust-badges hero-anim-5" style="justify-content:center;display:flex;flex-wrap:wrap;gap:8px;">
-          <div class="hero__trust-item hero-pill-anim"
-            style="color:#1E293B;border:1.5px solid #DFE6EE;background:rgba(255,255,255,0.95);font-weight:600">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5">
+        <div class="hero__trust-badges hero-anim-5">
+          <div class="hero__trust-item hero-pill-anim">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5">
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
               <polyline points="22 4 12 14.01 9 11.01" />
             </svg>
             ISO 9001:2015
           </div>
-          <div class="hero__trust-item hero-pill-anim"
-            style="color:#1E293B;border:1.5px solid #DFE6EE;background:rgba(255,255,255,0.95);font-weight:600">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2.5">
+          <div class="hero__trust-item hero-pill-anim">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5">
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
               <polyline points="22 4 12 14.01 9 11.01" />
             </svg>
             ISO 13485
+          </div>
+          <div class="hero__trust-item hero-pill-anim">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            20+ Years Excellence
           </div>
         </div>
 
@@ -163,7 +178,7 @@
     </div>
 
     <!-- Stats Bar -->
-    <div style="width:100%;border-top:1.5px solid #DFE6EE;padding:1.25rem 0;background:#F0F9FF">
+    <div class="hero__stats-strip">
       <div style="max-width:1280px;margin:0 auto;padding:0 var(--sp-6);">
         <div class="hero__stats-grid">
 
@@ -216,6 +231,7 @@
     </div>
 
   </section>
+
 
 
   <!-- ======================================================= -->
@@ -953,8 +969,9 @@
     <div class="footer__grid footer__grid--compact">
       <!-- Col 1: Brand -->
       <div class="footer__col-brand">
-        <div class="footer__brand-title" style="font-size:1.35rem;font-weight:700;color:var(--clr-text,#1E293B);margin-bottom:10px">
-          Vidhata Life
+        <div class="footer__brand-title" style="display:flex;align-items:center;gap:12px;font-size:1.35rem;font-weight:700;color:var(--clr-text,#1E293B);margin-bottom:10px">
+          <img src="images/vidhata-logo.jpg" alt="Vidhata Life Logo" style="width:36px;height:36px;object-fit:contain;border-radius:6px;flex-shrink:0" />
+          <span>Vidhata Life</span>
         </div>
         <p class="footer__brand-desc" style="color:var(--clr-text-muted,#475569);font-size:0.9rem;line-height:1.6;margin:0;max-width:320px">
           An SBU of Vidhata Plastics India Private Limited. Medical device and pharma packaging development and contract manufacturing, Hyderabad.

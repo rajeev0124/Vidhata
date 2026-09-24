@@ -627,7 +627,7 @@ function initInteractiveGrid() {
   });
 }
 
-// ── Hero Video Continuous Play ──────────────────────────────
+// ── Hero Video Continuous Play & Controls ──────────────────────────────
 function initHeroVideo() {
   const video = $('#hero-bg-video');
   if (!video) return;
