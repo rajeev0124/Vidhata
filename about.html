@@ -355,7 +355,7 @@
     }
     .facility-item__img-wrap {
       width: 100%;
-      height: 230px;
+      height: 280px;
       background: #F1F5F9;
       overflow: hidden;
       position: relative;
@@ -868,7 +868,7 @@
       transform: translateY(-2px);
     }
   </style>
-  <link rel="stylesheet" href="css/theme-neutral.css?v=laptop-optimized-2026">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=facility-slider-2026">
 </head>
 <body>
 
@@ -1075,108 +1075,95 @@
       <!-- 1 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">01 &middot; Campus</span>
-          <img src="img/plant.jpg" alt="Unit 2, Maheshwaram" loading="lazy" onerror="this.onerror=null;this.src='images/about.jpg'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Campus Architecture</span>
-          <h3 class="facility-item__title">Unit 2, Maheshwaram</h3>
+          <img src="images/vidhata-campus-maheshwaram.png" alt="Vidhata Life — Unit 2, Maheshwaram Campus" loading="lazy">
         </div>
       </div>
 
       <!-- 2 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">02 &middot; Production</span>
-          <img src="img/moulding-floor.jpg" alt="Injection moulding floor" loading="lazy" onerror="this.onerror=null;this.src='images/cleanroom-moulding.jpg'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Production Floor</span>
-          <h3 class="facility-item__title">Injection moulding floor</h3>
+          <div class="facility-slider" data-facility-slider data-interval="3500">
+            <div class="facility-slider__track">
+              <!-- Slide 1: Class 8 Injection Moulding -->
+              <div class="facility-slider__slide">
+                <img src="images/class-8-injection-moulding.png" alt="Class 8 Cleanroom Injection Moulding" loading="lazy">
+              </div>
+              <!-- Slide 2: Internal Production Area -->
+              <div class="facility-slider__slide">
+                <img src="images/internal-area.png" alt="Internal Production Area &amp; Machine Shopfloor" loading="lazy">
+              </div>
+            </div>
+            <!-- Slider Dots Indicator -->
+            <div class="facility-slider__dots" aria-label="Slide indicators">
+              <button type="button" class="facility-slider__dot active" aria-label="Slide 1" data-slide="0"></button>
+              <button type="button" class="facility-slider__dot" aria-label="Slide 2" data-slide="1"></button>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- 3 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">03 &middot; Toolroom</span>
-          <img src="img/toolroom.jpg" alt="CNC toolroom — EDM and machining" loading="lazy" onerror="this.onerror=null;this.src='images/toolroom.png'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Toolroom</span>
-          <h3 class="facility-item__title">CNC toolroom &mdash; EDM and machining</h3>
+          <img src="images/cnc-toolroom-machinery.png" alt="CNC toolroom — EDM and machining machinery" loading="lazy">
         </div>
       </div>
 
       <!-- 4 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">04 &middot; Cleanrooms</span>
-          <img src="img/cleanroom.jpg" alt="Controlled cleanroom production environment" loading="lazy" onerror="this.onerror=null;this.src='images/cleanroom.png'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Cleanrooms</span>
-          <h3 class="facility-item__title">Controlled cleanroom production environment</h3>
+          <div class="facility-slider" data-facility-slider data-interval="4000">
+            <div class="facility-slider__track">
+              <!-- Slide 1: Controlled Cleanroom Production Lines -->
+              <div class="facility-slider__slide">
+                <img src="images/cleanroom-environment-1.png" alt="Controlled Cleanroom Production Environment" loading="lazy">
+              </div>
+              <!-- Slide 2: Cleanroom Assembly Suites -->
+              <div class="facility-slider__slide">
+                <img src="images/cleanroom-environment-2.png" alt="Controlled Cleanroom Assembly &amp; Packaging Suite" loading="lazy">
+              </div>
+            </div>
+            <!-- Slider Dots Indicator -->
+            <div class="facility-slider__dots" aria-label="Slide indicators">
+              <button type="button" class="facility-slider__dot active" aria-label="Slide 1" data-slide="0"></button>
+              <button type="button" class="facility-slider__dot" aria-label="Slide 2" data-slide="1"></button>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- 5 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">05 &middot; Quality Control</span>
-          <img src="img/qc-lab.jpg" alt="QC and analytical laboratory" loading="lazy" onerror="this.onerror=null;this.src='images/qc-lab.jpg'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Quality Control</span>
-          <h3 class="facility-item__title">QC and analytical laboratory</h3>
+          <img src="images/quality-analytical-lab.png" alt="QC and analytical laboratory" loading="lazy">
         </div>
       </div>
 
       <!-- 6 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">06 &middot; Assembly</span>
-          <img src="img/assembly-hall.jpg" alt="Cleanroom assembly hall" loading="lazy" onerror="this.onerror=null;this.src='images/assembly-hall.jpg'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Assembly</span>
-          <h3 class="facility-item__title">Cleanroom assembly hall</h3>
+          <img src="images/cleanroom-assembly-hall.jpg" alt="Cleanroom assembly hall" loading="lazy" onerror="this.onerror=null;this.src='images/cleanroom-environment-2.png'">
         </div>
       </div>
 
       <!-- 7 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">07 &middot; Tooling</span>
-          <img src="img/tooling.jpg" alt="Multi-cavity hot-runner tool" loading="lazy" onerror="this.onerror=null;this.src='images/Precision/Precision1.jpg'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Mould Fabrication</span>
-          <h3 class="facility-item__title">Multi-cavity hot-runner tool</h3>
+          <img src="images/injection-moulding-process.png" alt="Multi-cavity hot-runner tool" loading="lazy">
         </div>
       </div>
 
       <!-- 8 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">08 &middot; Sterilisation</span>
-          <img src="img/sterilisation.jpg" alt="Autoclave and sterilisation" loading="lazy" onerror="this.onerror=null;this.src='images/Sterilization.jpg'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Sterilisation</span>
-          <h3 class="facility-item__title">Autoclave and sterilisation</h3>
+          <img src="images/sterilization-machine.png" alt="Autoclave and sterilisation" loading="lazy">
         </div>
       </div>
 
       <!-- 9 -->
       <div class="facility-item">
         <div class="facility-item__img-wrap">
-          <span class="facility-item__badge">09 &middot; Finishing</span>
-          <img src="img/stability.jpg" alt="Stability chamber and finishing line" loading="lazy" onerror="this.onerror=null;this.src='images/qc-lab.jpg'">
-        </div>
-        <div class="facility-item__content">
-          <span class="facility-item__number">Stability &amp; Finishing</span>
-          <h3 class="facility-item__title">Stability chamber and finishing line</h3>
+          <img src="images/stability-chamber-finishing.jpg" alt="Stability chamber and finishing line" loading="lazy" style="object-position: center 30%;">
         </div>
       </div>
     </div>
@@ -1481,7 +1468,7 @@
 </a>
 <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=facility-slider-2026"></script>
 <script src="js/animations.js"></script>
 <script src="js/chatbot.js"></script>
 </body>

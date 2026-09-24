@@ -661,6 +661,85 @@ function initHeroVideo() {
   }
 }
 
+// ── Facility Card Auto-Slider ──────────────────────────────
+function initFacilitySliders() {
+  const sliders = document.querySelectorAll('[data-facility-slider]');
+  if (!sliders.length) return;
+
+  sliders.forEach(slider => {
+    const track = slider.querySelector('.facility-slider__track');
+    const slides = slider.querySelectorAll('.facility-slider__slide');
+    const dots = slider.querySelectorAll('.facility-slider__dot');
+    if (!track || slides.length < 2) return;
+
+    let currentIndex = 0;
+    const total = slides.length;
+    const intervalMs = parseInt(slider.dataset.interval, 10) || 3500;
+    let timer = null;
+
+    function goToSlide(index) {
+      currentIndex = (index + total) % total;
+      const offset = -(currentIndex * 100 / total);
+      track.style.transform = `translateX(${offset}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    function startTimer() {
+      stopTimer();
+      timer = setInterval(nextSlide, intervalMs);
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    // Dot click listeners
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        goToSlide(i);
+        startTimer();
+      });
+    });
+
+    // Pause on hover
+    const parentCard = slider.closest('.facility-item') || slider;
+    parentCard.addEventListener('mouseenter', stopTimer);
+    parentCard.addEventListener('mouseleave', startTimer);
+
+    // Touch swipe support
+    let touchStartX = 0;
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopTimer();
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) nextSlide();
+        else goToSlide(currentIndex - 1);
+      }
+      startTimer();
+    }, { passive: true });
+
+    // Initialize
+    goToSlide(0);
+    startTimer();
+  });
+}
+
 // ── Init Everything ────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   const initSafe = (name, fn) => {
@@ -686,5 +765,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSafe('Tilt', initTilt);
   initSafe('LazyImages', initLazyImages);
   initSafe('InteractiveGrid', initInteractiveGrid);
+  initSafe('FacilitySliders', initFacilitySliders);
 });
 
