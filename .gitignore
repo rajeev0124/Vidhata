@@ -5,3 +5,4 @@ node_modules/
 *.log
 .chrome-profile/
 .vercel
+videos/*original*
