@@ -78,10 +78,24 @@
       <div data-reveal="scale" class="industry-card-media" data-3d="12" data-glow-color="rgba(14, 165, 233, 0.25)">
         <div class="card-glow"></div>
         <div class="med-gallery-outer">
-          <div class="industry-card-imgwrap med-gallery">
-            <!-- Slides -->
-            <img src="img/assembly-components.jpg" alt="Cleanroom assembly &mdash; medical disposables" onerror="this.onerror=null;this.src='images/clean-room/class - 7.jpg'" class="industry-card-img med-slide med-slide--1 active">
-            <img src="img/production-line.jpg"    alt="Cleanroom production line"      onerror="this.onerror=null;this.src='images/clean-room/class8.jpg'" class="industry-card-img med-slide med-slide--2">
+          <div class="industry-card-imgwrap med-gallery" id="medtech-gallery">
+            <!-- Sliding Track for seamless auto-scroll -->
+            <div class="med-gallery__track" id="med-track">
+              <div class="med-gallery__slide">
+                <img src="images/medtech-1.png" alt="MedTech cleanroom facility" class="industry-card-img">
+              </div>
+              <div class="med-gallery__slide">
+                <img src="images/medtech-2.png" alt="MedTech cleanroom manufacturing" class="industry-card-img">
+              </div>
+              <div class="med-gallery__slide">
+                <img src="images/medtech-3.png" alt="Class 7 assembly process" class="industry-card-img">
+              </div>
+              <!-- Seamless clone for infinite auto-scroll -->
+              <div class="med-gallery__slide clone" aria-hidden="true">
+                <img src="images/medtech-1.png" alt="" class="industry-card-img">
+              </div>
+            </div>
+
             <!-- Overlays -->
             <div class="med-gallery__overlay"></div>
             <!-- Corner accents -->
@@ -90,12 +104,15 @@
             <div class="med-gallery__corner med-gallery__corner--bl"></div>
             <div class="med-gallery__corner med-gallery__corner--br"></div>
 
-            <!-- Caption -->
-            <div class="med-gallery__caption">
-              <span class="med-gallery__caption-text" id="med-cap-text">Cleanroom assembly &mdash; medical disposables</span>
-            </div>
             <!-- Progress bar -->
             <div class="med-gallery__progress"><div class="med-gallery__progress-bar" id="med-progress"></div></div>
+
+            <!-- Slide Dots Indicator (No Names/Captions) -->
+            <div class="med-gallery__dots" id="med-dots" aria-label="Slide indicators">
+              <button type="button" class="med-dot active" data-idx="0" aria-label="Slide 1"></button>
+              <button type="button" class="med-dot" data-idx="1" aria-label="Slide 2"></button>
+              <button type="button" class="med-dot" data-idx="2" aria-label="Slide 3"></button>
+            </div>
           </div>
         </div>
       </div>
@@ -107,7 +124,7 @@
     <div class="industry-sector-card" id="pharma">
       <div data-reveal="left" class="industry-card-media">
         <div class="industry-card-imgwrap">
-          <img src="images/medical-products.png" alt="Pharma packaging items" class="industry-card-img">
+          <img src="images/pharma-packaging.png" alt="Pharma packaging items" class="industry-card-img">
         </div>
       </div>
       <div data-reveal="right" class="industry-card-content">
@@ -130,10 +147,7 @@
       </div>
       <div data-reveal="left" class="industry-card-media">
         <div class="industry-card-imgwrap">
-          <img src="img/cleanroom-moulding.jpg" alt="Moulding cell in the controlled environment" onerror="this.onerror=null;this.src='images/cleanroom-moulding.jpg'" class="industry-card-img">
-          <div class="med-gallery__caption">
-            <span class="med-gallery__caption-text">Moulding cell in the controlled environment</span>
-          </div>
+          <img src="images/drug-delivery-devices.png" alt="Drug delivery devices" class="industry-card-img">
         </div>
       </div>
     </div>
@@ -144,10 +158,7 @@
     <div class="industry-sector-card" id="ivd">
       <div data-reveal="left" class="industry-card-media">
         <div class="industry-card-imgwrap">
-          <img src="img/qc-lab.jpg" alt="QC and analytical laboratory" onerror="this.onerror=null;this.src='images/qc-lab.jpg'" class="industry-card-img">
-          <div class="med-gallery__caption">
-            <span class="med-gallery__caption-text">QC and analytical laboratory</span>
-          </div>
+          <img src="images/ivd.png" alt="In-vitro diagnostics (IVD)" class="industry-card-img">
         </div>
       </div>
       <div data-reveal="right" class="industry-card-content">
@@ -173,10 +184,7 @@
       <div class="industry-sector-card" id="cell-gene-therapy">
         <div data-reveal="left" class="industry-card-media">
           <div class="industry-card-imgwrap">
-            <img src="images/finished_goods_cleanroom.png" alt="Single-use connectors, fittings and clamps" class="industry-card-img">
-            <div class="med-gallery__caption">
-              <span class="med-gallery__caption-text">Single-Use Rigid Componentry</span>
-            </div>
+            <img src="images/cell-and-gene-therapy-consumables.png" alt="Cell and gene therapy consumables" class="industry-card-img">
           </div>
         </div>
         <div data-reveal="right" class="industry-card-content">
@@ -199,10 +207,7 @@
         </div>
         <div data-reveal="left" class="industry-card-media">
           <div class="industry-card-imgwrap">
-            <img src="images/bioprocess_cgt.png" alt="Bio-Process cleanroom components" class="industry-card-img">
-            <div class="med-gallery__caption">
-              <span class="med-gallery__caption-text">Bioprocess Fluid-Path Solutions</span>
-            </div>
+            <img src="images/bioprocess-consumables.png" alt="Bioprocess consumables" class="industry-card-img">
           </div>
         </div>
       </div>
@@ -278,78 +283,164 @@
 <button id="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
 <script>
 (function () {
-  var INTERVAL   = 1000;
-  var slides     = document.querySelectorAll('.med-slide');
-  var dots       = document.querySelectorAll('.med-dot');
-  var capText    = document.getElementById('med-cap-text');
-  var counter    = document.getElementById('med-counter');
-  var progressBar= document.getElementById('med-progress');
-  var captions   = ['Cleanroom assembly \u2014 medical disposables', 'Cleanroom production line'];
-  var total      = slides.length;
-  var current    = 0;
-  var timer      = null;
-  var rafId      = null;
-  var paused     = false;
-  var startTime  = null;
+  var track = document.getElementById('med-track');
+  if (!track) return;
 
-  if (!total) return;
+  var realSlides = track.querySelectorAll('.med-gallery__slide:not(.clone)');
+  var dots = document.querySelectorAll('.med-dot');
+  var progressBar = document.getElementById('med-progress');
+  var total = realSlides.length; // 3
+  if (total < 2) return;
 
-  function updateUI() {
-    if (capText) capText.textContent = captions[current] || '';
-    if (counter) counter.textContent = (current + 1) + ' / ' + total;
+  var currentIndex = 0;
+  var INTERVAL = 3500; // 3.5 seconds
+  var timer = null;
+  var rafId = null;
+  var startTime = null;
+  var isPaused = false;
+  var isTransitioning = false;
+
+  function updateDots(idx) {
     dots.forEach(function (d, i) {
-      d.classList.toggle('active', i === current);
+      d.classList.toggle('active', i === (idx % total));
     });
+  }
+
+  function setSlide(idx, animate) {
+    if (animate === false) {
+      track.style.transition = 'none';
+    } else {
+      track.style.transition = 'transform 0.65s cubic-bezier(0.22, 1, 0.36, 1)';
+    }
+    track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+    updateDots(idx);
+  }
+
+  function nextSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    currentIndex++;
+    setSlide(currentIndex, true);
+
+    if (currentIndex === total) {
+      // Reached clone of first slide: smoothly reset to 0 after transition
+      setTimeout(function () {
+        currentIndex = 0;
+        setSlide(0, false);
+        void track.offsetHeight; // Force reflow
+        isTransitioning = false;
+      }, 650);
+    } else {
+      setTimeout(function () {
+        isTransitioning = false;
+      }, 650);
+    }
+  }
+
+  function prevSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    if (currentIndex === 0) {
+      currentIndex = total - 1;
+      setSlide(currentIndex, true);
+    } else {
+      currentIndex--;
+      setSlide(currentIndex, true);
+    }
+    setTimeout(function () {
+      isTransitioning = false;
+    }, 650);
   }
 
   function goTo(idx) {
-    slides[current].classList.remove('active');
-    current = (idx + total) % total;
-    slides[current].classList.add('active');
-    updateUI();
+    if (isTransitioning) return;
+    currentIndex = idx % total;
+    setSlide(currentIndex, true);
     restartTimer();
   }
 
-  dots.forEach(function (d) {
-    d.addEventListener('click', function () {
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
       var idx = parseInt(this.getAttribute('data-idx'), 10);
-      if (idx !== current) goTo(idx);
+      goTo(idx);
     });
   });
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowRight') goTo(current + 1);
-    if (e.key === 'ArrowLeft')  goTo(current - 1);
-  });
-
-  var gallery = document.querySelector('.med-gallery');
+  var gallery = document.getElementById('medtech-gallery');
   if (gallery) {
-    gallery.addEventListener('mouseenter', function () { paused = true; cancelAnimationFrame(rafId); });
-    gallery.addEventListener('mouseleave', function () { paused = false; restartTimer(); });
+    gallery.addEventListener('mouseenter', function () {
+      isPaused = true;
+      cancelAnimationFrame(rafId);
+    });
+    gallery.addEventListener('mouseleave', function () {
+      isPaused = false;
+      restartTimer();
+    });
+
+    // Touch swipe support
+    var startX = 0;
+    gallery.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+      isPaused = true;
+      cancelAnimationFrame(rafId);
+    }, { passive: true });
+
+    gallery.addEventListener('touchend', function (e) {
+      var endX = e.changedTouches[0].clientX;
+      var diff = startX - endX;
+      if (diff > 40) {
+        nextSlide();
+      } else if (diff < -40) {
+        prevSlide();
+      }
+      isPaused = false;
+      restartTimer();
+    }, { passive: true });
   }
+
+  document.addEventListener('keydown', function (e) {
+    var rect = gallery ? gallery.getBoundingClientRect() : null;
+    var inView = rect && rect.top < window.innerHeight && rect.bottom > 0;
+    if (!inView) return;
+    if (e.key === 'ArrowRight') { nextSlide(); restartTimer(); }
+    if (e.key === 'ArrowLeft')  { prevSlide(); restartTimer(); }
+  });
 
   function animateProgress(ts) {
     if (!startTime) startTime = ts;
-    var pct = Math.min(((ts - startTime) / INTERVAL) * 100, 100);
+    var elapsed = ts - startTime;
+    var pct = Math.min((elapsed / INTERVAL) * 100, 100);
     if (progressBar) progressBar.style.width = pct + '%';
-    if (ts - startTime < INTERVAL) rafId = requestAnimationFrame(animateProgress);
+
+    if (elapsed < INTERVAL) {
+      rafId = requestAnimationFrame(animateProgress);
+    }
   }
 
   function restartTimer() {
     clearTimeout(timer);
     cancelAnimationFrame(rafId);
     startTime = null;
-    if (progressBar) { progressBar.style.transition = 'none'; progressBar.style.width = '0%'; }
+    if (progressBar) {
+      progressBar.style.transition = 'none';
+      progressBar.style.width = '0%';
+    }
     requestAnimationFrame(function () {
       requestAnimationFrame(function () {
         startTime = null;
         rafId = requestAnimationFrame(animateProgress);
-        timer = setTimeout(function () { if (!paused) goTo(current + 1); }, INTERVAL);
+        timer = setTimeout(function () {
+          if (!isPaused) {
+            nextSlide();
+            restartTimer();
+          }
+        }, INTERVAL);
       });
     });
   }
 
-  updateUI();
+  // Initialize
+  setSlide(0, false);
   restartTimer();
 })();
 </script>

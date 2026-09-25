@@ -677,8 +677,17 @@
     document.body.appendChild(panel);
 
     /* ── Wire Up Events ── */
-    toggle.addEventListener('click', function () { isOpen ? closeChatPanel() : openChatPanel(); });
-    qs('vp-chat-close').addEventListener('click', closeChatPanel);
+    toggle.addEventListener('click', function (e) {
+      if (e) e.stopPropagation();
+      isOpen ? closeChatPanel() : openChatPanel();
+    });
+    panel.addEventListener('click', function (e) {
+      if (e) e.stopPropagation();
+    });
+    qs('vp-chat-close').addEventListener('click', function (e) {
+      if (e) e.stopPropagation();
+      closeChatPanel();
+    });
 
     qs('vp-qd-call').addEventListener('click', function () {
       track('chatbot_quickdial', { type: 'phone', page: currentPage() });
@@ -704,7 +713,7 @@
 
     // Dismiss on outside click
     document.addEventListener('click', function (e) {
-      if (isOpen && document.body.contains(e.target) && !panel.contains(e.target) && !toggle.contains(e.target)) closeChatPanel();
+      if (isOpen && !panel.contains(e.target) && !toggle.contains(e.target)) closeChatPanel();
     });
 
     // Attention badge after 3 s

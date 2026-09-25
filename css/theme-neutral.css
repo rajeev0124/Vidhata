@@ -5590,9 +5590,36 @@ img, svg, video, iframe {
     padding: 16px !important;
     border-radius: 14px !important;
   }
+  .industry-card-media {
+    max-width: 500px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
   .industry-card-imgwrap {
-    height: 220px !important;
-    border-radius: 12px !important;
+    height: 280px !important;
+    max-width: 500px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    border-radius: 14px !important;
+    padding: 6px !important;
+    background: #f4f8fe !important;
+    box-sizing: border-box !important;
+  }
+  .industry-card-img {
+    object-fit: contain !important;
+  }
+  .med-gallery-outer {
+    max-width: 500px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .med-gallery {
+    height: 280px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+  }
+  .med-gallery__slide img {
+    object-fit: contain !important;
   }
   .industry-card-content h3 {
     font-size: 1.28rem !important;
@@ -6016,7 +6043,22 @@ img, svg, video, iframe {
     height: 185px !important;
   }
   .industry-card-imgwrap {
-    height: 190px !important;
+    height: 270px !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+  }
+  .industry-card-img {
+    object-fit: contain !important;
+  }
+  .med-gallery {
+    height: 270px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+  }
+  .med-gallery__slide img {
+    object-fit: contain !important;
   }
   .virexa-image-frame img {
     height: 235px !important;
@@ -6100,7 +6142,22 @@ img, svg, video, iframe {
   }
 
   .industry-card-imgwrap {
-    height: 190px !important;
+    height: 270px !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+  }
+  .industry-card-img {
+    object-fit: contain !important;
+  }
+  .med-gallery {
+    height: 270px !important;
+    padding: 6px !important;
+    box-sizing: border-box !important;
+  }
+  .med-gallery__slide img {
+    object-fit: contain !important;
   }
 
   .virexa-image-frame img {
