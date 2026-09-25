@@ -1,0 +1,8 @@
+# Robots.txt for Vidhata Life (An SBU of Vidhata Plastics India Pvt Ltd)
+# Official domain: https://vidhata.co.in
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vidhata.co.in/sitemap.xml

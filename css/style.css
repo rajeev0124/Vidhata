@@ -3,8 +3,8 @@
    style.css
    ========================================================= */
 
-/* ── Google Fonts ─────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+/* ── Google Fonts (Loaded asynchronously via direct <link> in HTML <head> for zero-blocking performance) ── */
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap'); */
 
 /* ── CSS Custom Properties (Design Tokens) ────────────── */
 :root {
