@@ -32,17 +32,18 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Hero Section - Cleanroom Facility Background Clearly Visible */
+    /* Hero Section - Solid Background, No Image */
     .cm-hero {
       position: relative;
-      background:
-        linear-gradient(90deg, rgba(6, 17, 34, 0.85) 0%, rgba(6, 17, 34, 0.7) 45%, rgba(6, 17, 34, 0.32) 80%, rgba(6, 17, 34, 0.2) 100%),
-        linear-gradient(180deg, rgba(6, 17, 34, 0.3) 0%, transparent 40%, rgba(6, 17, 34, 0.75) 100%),
-        url('images/cleanroom-hero.jpg') no-repeat center right / cover;
+      background: linear-gradient(135deg, #0A2540 0%, #1E3A5F 100%);
       color: #FFFFFF;
       padding: 130px 0 105px 0;
       overflow: hidden;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .cm-hero__bg-image,
+    .cm-hero__overlay {
+      display: none;
     }
     .cm-hero::before,
     .cm-hero::after,
@@ -54,6 +55,41 @@
       z-index: 2;
       max-width: 960px;
     }
+        /* ── Breadcrumb — Crisp Serene Light Medical Pill ── */
+    .cm-hero .page-hero__breadcrumb {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      background: #FFFFFF !important;
+      border: 1.5px solid #DFE6EE !important;
+      border-radius: 9999px !important;
+      padding: 6px 18px !important;
+      font-size: 0.85rem !important;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+      margin-bottom: 22px !important;
+      width: fit-content !important;
+    }
+    .cm-hero .page-hero__breadcrumb a {
+      color: #0284C7 !important; /* Deep Sky Blue */
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      transition: color 0.2s ease !important;
+    }
+    .cm-hero .page-hero__breadcrumb a:hover {
+      color: #0369A1 !important;
+      text-decoration: underline !important;
+    }
+    .cm-hero .page-hero__breadcrumb .breadcrumb-sep {
+      color: #64748B !important;
+      font-weight: 600 !important;
+      user-select: none !important;
+    }
+    .cm-hero .page-hero__breadcrumb .breadcrumb-current {
+      color: #0F172A !important; /* Deep Navy */
+      font-weight: 800 !important;
+      letter-spacing: -0.01em !important;
+    }
+
     .cm-badge {
       display: inline-flex;
       align-items: center;
@@ -713,7 +749,7 @@
       cursor: pointer;
     }
   </style>
-  <link rel="stylesheet" href="css/theme-neutral.css?v=laptop-optimized-2026">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=cm-responsive-2026">
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://vidhata.co.in/contract-manufacturing.html">
@@ -797,7 +833,6 @@
 
 <!-- Hero Section -->
 <header class="cm-hero">
-  <div class="cm-hero__bg-grid"></div>
   <div class="container cm-hero__inner">
     <div class="page-hero__breadcrumb">
       <a href="index.html">Home</a>

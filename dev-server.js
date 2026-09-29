@@ -4,7 +4,7 @@ const params = {
   port: 3000,
   host: "0.0.0.0",
   root: "./",
-  open: true,
+  open: false,
   wait: 500,
   middleware: [
     function(req, res, next) {

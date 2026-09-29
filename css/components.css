@@ -2817,7 +2817,7 @@ a.card--interactive:active {
 
 /* ── PAGE HERO (inner pages) ──────────────────────────── */
 .page-hero {
-  padding: calc(var(--nav-h) + var(--sp-20)) 0 var(--sp-20);
+  padding: calc(var(--nav-h) + var(--sp-6)) 0 var(--sp-16);
   background: var(--clr-surface);
   position: relative;
   overflow: hidden;

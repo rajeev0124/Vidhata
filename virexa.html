@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/components.css?v=serene-light-2026">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/chatbot.css?v=serene-light-2026">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=virexa-responsive-2026">
   <style>
     :root {
       --vx-navy: #1E293B;
@@ -31,112 +32,312 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Hero Styling */
+    /* =========================================================
+       VIREXA HERO — Serene Light Medical Smooth Colours Background
+       Aligned with Vidhata Life application design system
+       ========================================================= */
+
     .virexa-hero {
-      position: relative;
-      background: linear-gradient(135deg, #071C30 0%, #0A2540 45%, #0F3B68 80%, #0A4E9B 100%);
-      color: #FFFFFF;
-      padding: 110px 0 85px 0;
-      overflow: hidden;
-      box-shadow: none;
+      position: relative !important;
+      min-height: 72vh !important;
+      display: flex !important;
+      align-items: center !important;
+      color: #0F172A !important;
+      padding: calc(var(--nav-h, 72px) + 48px) 0 64px 0 !important;
+      overflow: hidden !important;
+      background:
+        radial-gradient(1100px circle at 85% 18%, rgba(2, 132, 199, 0.09) 0%, transparent 60%),
+        radial-gradient(900px circle at 12% 82%, rgba(16, 185, 129, 0.08) 0%, transparent 55%),
+        radial-gradient(650px circle at 50% 0%, rgba(255, 255, 255, 0.95) 0%, transparent 70%),
+        linear-gradient(160deg, #FFFFFF 0%, #F0F9FF 32%, #E0F2FE 68%, #ECFDF5 100%) !important;
+      border-bottom: 1.5px solid #DFE6EE !important;
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.9), 0 4px 24px rgba(15, 23, 42, 0.03) !important;
     }
+
+    /* Subtle cleanroom reticle / lens graphic on right side */
+    .virexa-hero::after {
+      content: '' !important;
+      position: absolute !important;
+      top: 50% !important;
+      right: 4% !important;
+      transform: translateY(-50%) !important;
+      width: 480px !important;
+      height: 480px !important;
+      border-radius: 50% !important;
+      background:
+        radial-gradient(circle, rgba(2, 132, 199, 0.04) 0%, transparent 65%),
+        radial-gradient(circle, transparent 34%, rgba(2, 132, 199, 0.16) 35%, rgba(2, 132, 199, 0.16) 35.5%, transparent 36%),
+        radial-gradient(circle, transparent 54%, rgba(16, 185, 129, 0.12) 55%, rgba(16, 185, 129, 0.12) 55.5%, transparent 56%),
+        radial-gradient(circle, transparent 74%, rgba(2, 132, 199, 0.08) 75%, rgba(2, 132, 199, 0.08) 75.5%, transparent 76%) !important;
+      border: 1px dashed rgba(2, 132, 199, 0.22) !important;
+      pointer-events: none !important;
+      z-index: 1 !important;
+    }
+
+    @media (max-width: 991px) {
+      .virexa-hero::after {
+        display: none !important;
+      }
+    }
+
+    /* Subtle cleanroom microgrid overlay */
     .virexa-hero__bg-grid {
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px);
-      background-size: 36px 36px;
-      pointer-events: none;
-      opacity: 0.4;
+      display: block !important;
+      position: absolute !important;
+      inset: 0 !important;
+      background-image:
+        radial-gradient(rgba(2, 132, 199, 0.10) 1px, transparent 1px),
+        linear-gradient(rgba(223, 230, 238, 0.45) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(223, 230, 238, 0.45) 1px, transparent 1px) !important;
+      background-size: 24px 24px, 72px 72px, 72px 72px !important;
+      pointer-events: none !important;
+      -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 45%, #000 20%, transparent 80%) !important;
+      mask-image: radial-gradient(ellipse 75% 70% at 50% 45%, #000 20%, transparent 80%) !important;
+      opacity: 0.85 !important;
+      z-index: 1 !important;
     }
+
     .virexa-hero__inner {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
+      position: relative !important;
+      z-index: 2 !important;
+      max-width: 1280px !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      padding: 0 var(--sp-6, 24px) !important;
     }
+
+    .virexa-hero__content {
+      max-width: 860px !important;
+    }
+
+    /* Breadcrumbs Pill — Serene Medical Style */
+    .virexa-hero .page-hero__breadcrumb {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      font-size: 0.82rem !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      border: 1px solid #DFE6EE !important;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04) !important;
+      padding: 5px 14px !important;
+      border-radius: 999px !important;
+      margin-bottom: 20px !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+    }
+    .virexa-hero .page-hero__breadcrumb a {
+      color: #0284C7 !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      transition: color 0.2s ease !important;
+    }
+    .virexa-hero .page-hero__breadcrumb a:hover {
+      color: #0369A1 !important;
+      text-decoration: underline !important;
+    }
+    .virexa-hero .page-hero__breadcrumb .breadcrumb-sep {
+      color: #94A3B8 !important;
+      font-weight: 400 !important;
+    }
+    .virexa-hero .page-hero__breadcrumb .breadcrumb-current {
+      color: #0F172A !important;
+      font-weight: 700 !important;
+      letter-spacing: -0.01em !important;
+    }
+
+    /* Eyebrow Badge — Medical Brand Badge */
     .virexa-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(223, 42, 41, 0.25);
-      border: 1.5px solid rgba(223, 42, 41, 0.6);
-      color: #FFB3B3;
-      padding: 6px 16px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-      box-shadow: none;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      background: #F0FDF4 !important;
+      border: 1.5px solid #A7F3D0 !important;
+      color: #065F46 !important;
+      padding: 6px 16px !important;
+      border-radius: 999px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      margin-bottom: 18px !important;
+      box-shadow: 0 1px 4px rgba(16, 185, 129, 0.10) !important;
     }
+    .virexa-badge-dot {
+      width: 8px !important;
+      height: 8px !important;
+      border-radius: 50% !important;
+      background: #10B981 !important;
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.6) !important;
+      animation: vxPulseDot 2s infinite !important;
+    }
+    @keyframes vxPulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.7; }
+    }
+
+    /* Hero Typography — Crisp High-Contrast Cleanroom Look */
     .virexa-hero__title {
-      font-size: clamp(2.8rem, 6vw, 4.2rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      color: #FFFFFF;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      text-shadow: none;
+      font-size: clamp(2.8rem, 6vw, 4.4rem) !important;
+      font-weight: 900 !important;
+      letter-spacing: -0.025em !important;
+      color: #0F172A !important;
+      line-height: 1.08 !important;
+      margin: 0 0 18px 0 !important;
+      text-shadow: none !important;
+      font-family: var(--font-heading, "Inter", sans-serif) !important;
     }
+
     .virexa-hero__lead {
-      font-size: 1.25rem;
-      line-height: 1.65;
-      color: #F1F5F9;
-      margin-bottom: 36px;
-      max-width: 780px;
-      font-weight: 400;
-      opacity: 0.95;
-      text-shadow: none;
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem) !important;
+      line-height: 1.68 !important;
+      color: #334155 !important;
+      margin-bottom: 34px !important;
+      max-width: 780px !important;
+      font-weight: 400 !important;
+      text-shadow: none !important;
+      opacity: 1 !important;
     }
+
+    /* Hero Action Buttons */
     .virexa-hero__actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
+      display: flex !important;
+      gap: 16px !important;
+      flex-wrap: wrap !important;
+      margin-bottom: 28px !important;
     }
+
     .virexa-btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #DF2A29;
-      color: #FFFFFF;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 16px rgba(223, 42, 41, 0.45);
-      border: none;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: #10B981 !important;
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+      font-size: 0.95rem !important;
+      padding: 13px 26px !important;
+      border-radius: 10px !important;
+      text-decoration: none !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
+      border: none !important;
     }
     .virexa-btn-primary:hover {
-      background: #B91C1C;
-      color: #FFF;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(223, 42, 41, 0.55);
+      background: #059669 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45) !important;
+      color: #FFFFFF !important;
     }
+
     .virexa-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      color: #FFFFFF;
-      border: 1.5px solid rgba(255, 255, 255, 0.35);
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-      box-shadow: none;
-      transition: all 0.25s ease;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: #FFFFFF !important;
+      color: #0284C7 !important;
+      border: 1.5px solid #BAE6FD !important;
+      font-weight: 600 !important;
+      font-size: 0.95rem !important;
+      padding: 13px 26px !important;
+      border-radius: 10px !important;
+      text-decoration: none !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08) !important;
     }
     .virexa-btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.6);
-      color: #FFF;
-      transform: translateY(-2px);
+      background: #F0F9FF !important;
+      border-color: #38BDF8 !important;
+      color: #0369A1 !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.15) !important;
+    }
+
+    /* Regulatory Meta Badges */
+    .virexa-hero__regulatory-meta {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      gap: 12px !important;
+      padding-top: 20px !important;
+      border-top: 1.5px solid #DFE6EE !important;
+      font-size: 0.84rem !important;
+      color: #475569 !important;
+    }
+    .virexa-hero__regulatory-meta span {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      background: #FFFFFF !important;
+      padding: 7px 16px !important;
+      border-radius: 8px !important;
+      border: 1px solid #DFE6EE !important;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04) !important;
+      color: #334155 !important;
+      font-weight: 500 !important;
+    }
+
+    @media (max-width: 768px) {
+      .virexa-hero {
+        min-height: auto !important;
+        padding: calc(var(--nav-h, 72px) + 24px) 0 44px 0 !important;
+      }
+      .virexa-hero .page-hero__breadcrumb {
+        font-size: 0.76rem !important;
+        padding: 4px 12px !important;
+        margin-bottom: 14px !important;
+      }
+      .virexa-hero__title {
+        font-size: clamp(2.1rem, 8vw, 2.6rem) !important;
+      }
+      .virexa-hero__lead {
+        font-size: 1.02rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 24px !important;
+      }
+      .virexa-badge {
+        font-size: 0.72rem !important;
+        padding: 6px 12px !important;
+        border-radius: 16px !important;
+        white-space: normal !important;
+        max-width: 100% !important;
+        line-height: 1.35 !important;
+      }
+      .virexa-hero__actions {
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        gap: 12px !important;
+      }
+      .virexa-btn-primary,
+      .virexa-btn-secondary {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        min-height: 48px !important;
+      }
+      .virexa-hero__regulatory-meta {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+      }
+      .virexa-hero__regulatory-meta span {
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .virexa-image-frame img {
+        height: 240px !important;
+      }
+      .virexa-field-card {
+        padding: 22px 18px !important;
+        border-radius: 14px !important;
+      }
+      .virexa-oem-card {
+        padding: 24px 20px !important;
+        border-radius: 14px !important;
+      }
+      .virexa-dist-banner {
+        padding: 24px 18px !important;
+        border-radius: 16px !important;
+      }
     }
 
     /* Key Metrics Ribbon */
@@ -495,7 +696,6 @@
     }
 
   </style>
-  <link rel="stylesheet" href="css/theme-neutral.css?v=laptop-optimized-2026">
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://vidhata.co.in/virexa.html">
@@ -579,27 +779,44 @@
 
 <!-- Hero Section -->
 <header class="virexa-hero">
-  <div class="virexa-hero__bg-grid"></div>
+  <!-- Subtle technical grid & ambient smooth background accent -->
+  <div class="virexa-hero__bg-grid" aria-hidden="true"></div>
+
   <div class="container virexa-hero__inner">
-    <div class="page-hero__breadcrumb">
-      <a href="index.html">Home</a>
-      <span class="breadcrumb-sep">&rsaquo;</span>
-      <span class="breadcrumb-current">VIREXA</span>
-    </div>
-    <div class="virexa-badge">Our own brand of sterile single-use medical devices</div>
-    <h1 class="virexa-hero__title">VIREXA</h1>
-    <p class="virexa-hero__lead">
-      Twenty-six sterile single-use devices across infusion, dialysis, oncology, critical care and cardiac surgery &mdash; designed, tooled, moulded, assembled, sterilised and released by us, under our own licence.
-    </p>
-    <div class="virexa-hero__actions">
-      <a href="#fields" class="virexa-btn-primary">
-        <span>See all 26 devices</span>
-        <span>&darr;</span>
-      </a>
-      <a href="#distribution-enquiries" class="virexa-btn-secondary">
-        <span>Distribution enquiries</span>
-        <span>&darr;</span>
-      </a>
+    <div class="virexa-hero__content">
+      <div class="page-hero__breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span class="breadcrumb-current">VIREXA</span>
+      </div>
+      <div class="virexa-badge">
+        <span class="virexa-badge-dot"></span>
+        <span>Our own brand of sterile single-use medical devices</span>
+      </div>
+      <h1 class="virexa-hero__title">VIREXA</h1>
+      <p class="virexa-hero__lead">
+        Twenty-six sterile single-use devices across infusion, dialysis, oncology, critical care and cardiac surgery &mdash; designed, tooled, moulded, assembled, sterilised and released by us, under our own licence.
+      </p>
+      <div class="virexa-hero__actions">
+        <a href="#fields" class="virexa-btn-primary">
+          <span>See all 26 devices</span>
+          <span>&darr;</span>
+        </a>
+        <a href="#distribution-enquiries" class="virexa-btn-secondary">
+          <span>Distribution enquiries</span>
+          <span>&darr;</span>
+        </a>
+      </div>
+      <div class="virexa-hero__regulatory-meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          CDSCO MD-5: MFG/MD/2026/000078
+        </span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Sterile EO &middot; ISO 15223-1:2021
+        </span>
+      </div>
     </div>
   </div>
 </header>

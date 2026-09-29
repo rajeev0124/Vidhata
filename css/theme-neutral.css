@@ -627,20 +627,21 @@ span.section-tag {
   color: #475569 !important;
 }
 
-/* ── 11B. VIREXA PROPRIETARY BRAND HERO (Rich Medical Deep Navy) ── */
+/* ── 11B. VIREXA PROPRIETARY BRAND HERO (Serene Light Medical Smooth Colours) ── */
 .virexa-hero {
-  background: linear-gradient(135deg, #071C30 0%, #0A2540 45%, #0F3B68 80%, #0A4E9B 100%) !important;
-  color: #FFFFFF !important;
-  box-shadow: none !important;
-}
-
-.virexa-hero * {
-  border-color: rgba(255, 255, 255, 0.15) !important;
+  background:
+    radial-gradient(1100px circle at 85% 18%, rgba(2, 132, 199, 0.09) 0%, transparent 60%),
+    radial-gradient(900px circle at 12% 82%, rgba(16, 185, 129, 0.08) 0%, transparent 55%),
+    radial-gradient(650px circle at 50% 0%, rgba(255, 255, 255, 0.95) 0%, transparent 70%),
+    linear-gradient(160deg, #FFFFFF 0%, #F0F9FF 32%, #E0F2FE 68%, #ECFDF5 100%) !important;
+  color: #0F172A !important;
+  border-bottom: 1.5px solid #DFE6EE !important;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.9), 0 4px 24px rgba(15, 23, 42, 0.03) !important;
 }
 
 .virexa-hero h1,
 .virexa-hero__title {
-  color: #FFFFFF !important;
+  color: #0F172A !important;
   font-family: var(--font-heading) !important;
   font-weight: 800 !important;
   letter-spacing: -0.02em !important;
@@ -648,62 +649,66 @@ span.section-tag {
 }
 
 .virexa-hero__lead {
-  color: #F1F5F9 !important;
+  color: #334155 !important;
   font-family: var(--font-body) !important;
   font-size: 1.25rem !important;
   line-height: 1.65 !important;
   font-weight: 400 !important;
-  opacity: 0.95 !important;
+  opacity: 1 !important;
   text-shadow: none !important;
 }
 
 .virexa-badge {
-  background: rgba(223, 42, 41, 0.25) !important;
-  border: 1.5px solid rgba(223, 42, 41, 0.6) !important;
-  color: #FFB3B3 !important;
+  background: #F0FDF4 !important;
+  border: 1.5px solid #A7F3D0 !important;
+  color: #065F46 !important;
   font-weight: 700 !important;
-  letter-spacing: 0.5px !important;
-  box-shadow: none !important;
+  letter-spacing: 0.05em !important;
+  box-shadow: 0 1px 4px rgba(16, 185, 129, 0.10) !important;
   text-shadow: none !important;
 }
 
 .virexa-btn-primary {
-  background: #DF2A29 !important;
+  background: #10B981 !important;
   color: #FFFFFF !important;
   border: none !important;
-  box-shadow: 0 4px 16px rgba(223, 42, 41, 0.45) !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
   font-weight: 700 !important;
 }
 
 .virexa-btn-primary:hover {
-  background: #B91C1C !important;
+  background: #059669 !important;
   color: #FFFFFF !important;
-  box-shadow: 0 6px 20px rgba(223, 42, 41, 0.55) !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45) !important;
   transform: translateY(-2px) !important;
 }
 
 .virexa-btn-secondary {
-  background: rgba(255, 255, 255, 0.1) !important;
-  color: #FFFFFF !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  background: #FFFFFF !important;
+  color: #0284C7 !important;
+  border: 1.5px solid #BAE6FD !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08) !important;
   text-shadow: none !important;
   font-weight: 600 !important;
 }
 
 .virexa-btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border-color: rgba(255, 255, 255, 0.6) !important;
-  color: #FFFFFF !important;
+  background: #F0F9FF !important;
+  border-color: #38BDF8 !important;
+  color: #0369A1 !important;
   transform: translateY(-2px) !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.15) !important;
 }
 
 .virexa-hero__bg-grid {
-  opacity: 0.4 !important;
-  background-image: linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
-                    linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px) !important;
+  opacity: 0.85 !important;
+  background-image:
+    radial-gradient(rgba(2, 132, 199, 0.10) 1px, transparent 1px),
+    linear-gradient(rgba(223, 230, 238, 0.45) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(223, 230, 238, 0.45) 1px, transparent 1px) !important;
+  background-size: 24px 24px, 72px 72px, 72px 72px !important;
   box-shadow: none !important;
 }
 
@@ -1217,79 +1222,85 @@ section[id="audit"] {
   font-family: var(--font-heading) !important;
 }
 
-/* ── About Page: Executive Technical Audit CTA Card ── */
+/* ── About Page: Executive Technical Audit CTA Card (Serene Light Clinical) ── */
 .audit-action-card {
-  background: linear-gradient(135deg, #071C30 0%, #0A2540 50%, #08335E 100%) !important;
-  color: #FFFFFF !important;
-  border: 1px solid rgba(255, 255, 255, 0.16) !important;
-  border-radius: 22px !important;
-  padding: 56px 44px !important;
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1.5px solid #DFE6EE !important;
+  border-top: 3.5px solid #0284C7 !important;
+  border-radius: 20px !important;
+  padding: 44px 38px !important;
+  max-width: 820px !important;
+  margin: 0 auto !important;
   text-align: center !important;
   position: relative !important;
-  box-shadow: 0 16px 40px rgba(10, 37, 64, 0.22) !important;
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03) !important;
 }
 .audit-action-card__tag {
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
-  background: rgba(56, 189, 248, 0.15) !important;
-  border: 1px solid rgba(56, 189, 248, 0.45) !important;
-  color: #38BDF8 !important;
-  font-size: 0.76rem !important;
+  background: #F0FDF4 !important;
+  border: 1px solid #A7F3D0 !important;
+  color: #065F46 !important;
+  font-size: 0.78rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
-  padding: 6px 16px !important;
-  border-radius: 20px !important;
-  margin-bottom: 20px !important;
+  padding: 5px 14px !important;
+  border-radius: 999px !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.08) !important;
 }
 .audit-action-card__title {
-  color: #FFFFFF !important;
+  color: #0F172A !important;
   font-family: var(--font-heading) !important;
-  font-size: clamp(1.85rem, 2.8vw, 2.35rem) !important;
+  font-size: clamp(1.5rem, 2.3vw, 2rem) !important;
   font-weight: 800 !important;
   line-height: 1.25 !important;
-  margin-bottom: 16px !important;
+  margin-bottom: 12px !important;
   letter-spacing: -0.02em !important;
 }
 .audit-action-card__desc {
-  color: #E2E8F0 !important;
-  font-size: 1.05rem !important;
-  line-height: 1.65 !important;
-  max-width: 680px !important;
-  margin: 0 auto 32px auto !important;
+  color: #334155 !important;
+  font-size: 1rem !important;
+  line-height: 1.62 !important;
+  max-width: 640px !important;
+  margin: 0 auto 26px auto !important;
 }
 .audit-action-card .btn-audit-primary {
   background: #10B981 !important;
   border: none !important;
   color: #FFFFFF !important;
-  padding: 15px 32px !important;
-  border-radius: 10px !important;
+  padding: 12px 26px !important;
+  border-radius: 8px !important;
   font-weight: 700 !important;
-  font-size: 0.98rem !important;
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35) !important;
+  font-size: 0.94rem !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
   transition: all 0.25s ease !important;
 }
 .audit-action-card .btn-audit-primary:hover {
   background: #059669 !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 10px 26px rgba(16, 185, 129, 0.5) !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45) !important;
 }
 .audit-action-card .btn-audit-secondary {
-  background: rgba(255, 255, 255, 0.10) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
-  color: #FFFFFF !important;
-  padding: 15px 30px !important;
-  border-radius: 10px !important;
+  background: #FFFFFF !important;
+  border: 1.5px solid #BAE6FD !important;
+  color: #0284C7 !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
   font-weight: 600 !important;
-  font-size: 0.98rem !important;
+  font-size: 0.94rem !important;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.06) !important;
   transition: all 0.25s ease !important;
 }
 .audit-action-card .btn-audit-secondary:hover {
-  background: rgba(255, 255, 255, 0.22) !important;
-  border-color: #FFFFFF !important;
-  color: #FFFFFF !important;
+  background: #F0F9FF !important;
+  border-color: #38BDF8 !important;
+  color: #0369A1 !important;
   transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12) !important;
 }
 
 .btn-audit-primary,
@@ -1501,39 +1512,25 @@ section[id="audit"] {
   letter-spacing: -0.01em !important;
 }
 
-/* Dark hero variation (VIREXA hero) */
-.virexa-hero .page-hero__breadcrumb,
-.virexa-hero .clean-hero__breadcrumbs,
+/* Dark hero variation */
 .page-hero--dark .page-hero__breadcrumb {
   background: rgba(255, 255, 255, 0.12) !important;
   border-color: rgba(255, 255, 255, 0.22) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
-.virexa-hero .page-hero__breadcrumb a,
-.virexa-hero .clean-hero__breadcrumbs a,
 .page-hero--dark .page-hero__breadcrumb a {
   color: #38BDF8 !important;
 }
 
-.virexa-hero .page-hero__breadcrumb a:hover,
-.virexa-hero .clean-hero__breadcrumbs a:hover,
 .page-hero--dark .page-hero__breadcrumb a:hover {
   color: #7DD3FC !important;
 }
 
-.virexa-hero .page-hero__breadcrumb .breadcrumb-sep,
-.virexa-hero .clean-hero__breadcrumbs .breadcrumb-sep,
-.virexa-hero .page-hero__breadcrumb span:not(.breadcrumb-current):not(:last-child),
-.virexa-hero .clean-hero__breadcrumbs span:not(.breadcrumb-current):not(:last-child),
 .page-hero--dark .page-hero__breadcrumb .breadcrumb-sep {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.virexa-hero .page-hero__breadcrumb .breadcrumb-current,
-.virexa-hero .clean-hero__breadcrumbs .breadcrumb-current,
-.virexa-hero .page-hero__breadcrumb span.breadcrumb-current,
-.virexa-hero .page-hero__breadcrumb > span:last-child,
 .page-hero--dark .page-hero__breadcrumb .breadcrumb-current {
   color: #FFFFFF !important;
 }
@@ -1756,6 +1753,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
 /* Section 4: Licensed Medical Devices Showcase (#product-showcase) */
 #product-showcase {
   background: #FFFFFF !important;
+  scroll-margin-top: calc(var(--nav-h, 72px) + 20px) !important;
 }
 
 .catalog-tabs-container {
@@ -3101,6 +3099,17 @@ img, svg, video, iframe {
     border-radius: 18px !important;
     gap: 18px !important;
   }
+
+  /* End to End Page Tablet Responsive */
+  .e2e-hero {
+    padding: calc(var(--nav-h, 72px) + 24px) 0 38px !important;
+  }
+  .e2e-hero__title {
+    font-size: clamp(2.1rem, 4.5vw, 2.9rem) !important;
+  }
+  .phase-cards-grid--3 > :last-child:nth-child(odd) {
+    grid-column: span 2 !important;
+  }
 }
 
 /* ============================================================
@@ -3545,11 +3554,17 @@ img, svg, video, iframe {
   #pharma-packaging .card:hover {
     transform: none !important;
   }
+  #pharma-packaging .card [style*="height:190px"],
   #pharma-packaging .card [style*="height:180px"] {
     height: 160px !important;
   }
 
-  /* Healthcare Clients Mobile (2 Columns) */
+  /* Healthcare Clients Mobile */
+  .client-pill {
+    padding: 10px 18px !important;
+    font-size: 0.88rem !important;
+    border-radius: 10px !important;
+  }
   .medical-clients-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px !important;
@@ -3563,6 +3578,10 @@ img, svg, video, iframe {
     max-width: 260px !important;
     margin: 0 auto !important;
     width: 100% !important;
+  }
+
+  #product-showcase {
+    scroll-margin-top: calc(var(--nav-h, 64px) + 14px) !important;
   }
 
   /* Contract Manufacturing Mobile Responsive */
@@ -3951,6 +3970,531 @@ img, svg, video, iframe {
     min-height: 48px !important;
     font-size: 0.94rem !important;
     border-radius: 9999px !important;
+  }
+
+  /* End to End Page Mobile Refinements */
+  .e2e-hero {
+    padding: calc(var(--nav-h, 64px) + 18px) 0 28px !important;
+  }
+  .e2e-hero__eyebrow {
+    font-size: 0.72rem !important;
+    padding: 6px 12px !important;
+    border-radius: 16px !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+  }
+  .e2e-hero__title {
+    font-size: clamp(1.85rem, 7vw, 2.35rem) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 12px !important;
+  }
+  .e2e-hero .e2e-hero__lead {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+  }
+  .e2e-hero .e2e-hero__desc {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    margin-top: 12px !important;
+  }
+  .phase-cards-grid--3 > :last-child:nth-child(odd) {
+    grid-column: auto !important;
+  }
+  .phase-header__info {
+    gap: 6px 10px !important;
+  }
+  .phase-header__title {
+    font-size: 1.25rem !important;
+  }
+  .phase-header__stages {
+    font-size: 0.8rem !important;
+  }
+  .ten-stage-card {
+    padding: 18px 16px !important;
+    border-radius: 14px !important;
+  }
+  .e2e-cta-actions {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .e2e-cta-actions .btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    justify-content: center !important;
+  }
+
+  /* VIREXA Mobile Refinements */
+  .virexa-badge {
+    font-size: 0.72rem !important;
+    padding: 6px 12px !important;
+    border-radius: 16px !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+    line-height: 1.35 !important;
+  }
+  .virexa-hero__actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    gap: 12px !important;
+  }
+  .virexa-btn-primary,
+  .virexa-btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 48px !important;
+  }
+  .virexa-image-frame img {
+    height: 240px !important;
+  }
+  .virexa-field-card {
+    padding: 22px 18px !important;
+    border-radius: 14px !important;
+  }
+  .virexa-oem-card {
+    padding: 24px 20px !important;
+    border-radius: 14px !important;
+  }
+  .virexa-dist-banner {
+    padding: 24px 18px !important;
+    border-radius: 16px !important;
+  }
+
+  /* QUALITY.HTML Mobile Refinements */
+  .q-hero {
+    padding: calc(var(--nav-h, 64px) + 16px) 0 32px 0 !important;
+  }
+  .q-eyebrow {
+    font-size: 0.72rem !important;
+    padding: 6px 12px !important;
+    border-radius: 16px !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+    line-height: 1.35 !important;
+  }
+  .q-hero__title {
+    font-size: clamp(1.85rem, 6.5vw, 2.4rem) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 12px !important;
+  }
+  .q-hero__subtitle {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+  }
+  .q-content {
+    padding: 24px 0 48px 0 !important;
+  }
+  .q-card {
+    padding: 22px 18px !important;
+    border-radius: 16px !important;
+    margin-bottom: 24px !important;
+  }
+  .q-lic-header {
+    margin-bottom: 20px !important;
+    padding-bottom: 16px !important;
+  }
+  .q-lic-badge {
+    font-size: 0.78rem !important;
+    line-height: 1.4 !important;
+  }
+  .q-lic-number {
+    font-size: clamp(1.35rem, 5.5vw, 1.9rem) !important;
+    word-break: break-word !important;
+  }
+  .q-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 22px !important;
+  }
+  .q-verify-btn,
+  .q-cta-btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+  }
+  .q-sbu-note {
+    font-size: 0.84rem !important;
+    padding: 12px 14px !important;
+    line-height: 1.45 !important;
+  }
+  .q-intl-box {
+    padding: 18px 16px !important;
+    margin-top: 24px !important;
+  }
+  .q-intl-title {
+    font-size: 1.1rem !important;
+  }
+  .q-intl-text {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+  }
+  .q-second-lic-badge {
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+  }
+  .q-section-title {
+    font-size: clamp(1.4rem, 5vw, 1.8rem) !important;
+    margin-bottom: 20px !important;
+  }
+  .q-systems-grid,
+  .q-roadmap-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .q-system-card,
+  .q-roadmap-card {
+    padding: 20px 18px !important;
+    border-radius: 14px !important;
+  }
+  .q-system-heading,
+  .q-roadmap-heading {
+    font-size: 1.2rem !important;
+  }
+  .q-roadmap-intro {
+    font-size: 0.94rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 24px !important;
+  }
+  .q-roadmap-callout {
+    padding: 16px 18px !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* ── ABOUT.HTML Mobile Refinements ── */
+  .clean-hero {
+    padding: calc(var(--nav-h, 64px) + 16px) 0 36px 0 !important;
+  }
+  .clean-hero__breadcrumbs {
+    margin-bottom: 16px !important;
+    font-size: 0.78rem !important;
+    flex-wrap: wrap !important;
+  }
+  .clean-hero__title {
+    font-size: clamp(1.8rem, 6.2vw, 2.35rem) !important;
+    line-height: 1.16 !important;
+    margin-bottom: 24px !important;
+  }
+  .clean-hero__narrative p {
+    font-size: 1.02rem !important;
+    line-height: 1.62 !important;
+    margin-bottom: 18px !important;
+  }
+  .clean-hero__candor-quote {
+    padding: 18px 16px !important;
+    margin: 20px 0 !important;
+    border-radius: 0 8px 8px 0 !important;
+  }
+  .clean-hero__candor-quote p {
+    font-size: 0.96rem !important;
+    line-height: 1.55 !important;
+  }
+  .clean-hero__sidebar {
+    padding: 20px 18px !important;
+    border-radius: 14px !important;
+  }
+  .content-section {
+    padding: 48px 0 !important;
+  }
+  .section-header {
+    margin-bottom: 28px !important;
+  }
+  .section-header__title {
+    font-size: clamp(1.5rem, 5.5vw, 2rem) !important;
+  }
+  .section-header__desc {
+    font-size: 0.96rem !important;
+    line-height: 1.55 !important;
+  }
+  .facility-metrics-dashboard {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 36px !important;
+  }
+  .metric-card--accent {
+    grid-column: span 1 !important;
+  }
+  .metric-card {
+    padding: 20px 18px !important;
+    border-radius: 14px !important;
+  }
+  .metric-card__val {
+    font-size: 1.75rem !important;
+  }
+  .facility-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .facility-item__img-wrap {
+    height: 220px !important;
+  }
+  .brochure-bar {
+    padding: 26px 20px !important;
+    border-radius: 16px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 20px !important;
+  }
+  .brochure-bar__title {
+    font-size: clamp(1.4rem, 5vw, 1.7rem) !important;
+  }
+  .brochure-bar__text {
+    font-size: 0.94rem !important;
+    line-height: 1.55 !important;
+  }
+  .brochure-bar__meta {
+    font-size: 0.76rem !important;
+    padding: 6px 12px !important;
+    line-height: 1.4 !important;
+    flex-wrap: wrap !important;
+  }
+  .btn-brochure {
+    width: 100% !important;
+    max-width: 320px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+    padding: 13px 24px !important;
+  }
+  .future-intro-note {
+    font-size: 0.88rem !important;
+    padding: 14px 16px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 24px !important;
+  }
+  .roadmap-list {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .roadmap-entry {
+    padding: 20px 18px !important;
+    border-radius: 14px !important;
+  }
+  .roadmap-entry__name {
+    font-size: 1.15rem !important;
+  }
+  .roadmap-entry__text {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+  }
+  .campuses-row {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .campus-box {
+    padding: 24px 20px !important;
+    border-radius: 16px !important;
+  }
+  .campus-box__name {
+    font-size: 1.35rem !important;
+  }
+  .campus-box__address {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+  }
+  .campus-badge-pill {
+    font-size: 0.74rem !important;
+    padding: 4px 10px !important;
+  }
+  .leadership-row {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .leader-item {
+    flex-direction: column !important;
+    padding: 24px 20px !important;
+    border-radius: 16px !important;
+    gap: 16px !important;
+  }
+  .audit-action-card {
+    padding: 28px 20px !important;
+    border-radius: 16px !important;
+  }
+  .audit-action-card__title {
+    font-size: clamp(1.4rem, 5vw, 1.8rem) !important;
+  }
+  .audit-action-card__desc {
+    font-size: 0.94rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 22px !important;
+  }
+  .audit-action-card__buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .btn-audit-primary,
+  .btn-audit-secondary {
+    width: 100% !important;
+    max-width: 320px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ── CONTACT.HTML Mobile Refinements ── */
+  .contact-page-grid {
+    gap: 20px !important;
+  }
+  #consultation .contact-page-grid > div {
+    padding: 22px 18px !important;
+    border-radius: 16px !important;
+  }
+  #consultation [style*="border-radius:var(--radius-lg)"] {
+    padding: 18px 16px !important;
+    border-radius: 14px !important;
+  }
+  #quote-form button[type="submit"] {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 48px !important;
+  }
+  .facility-map-card {
+    border-radius: 16px !important;
+    margin-bottom: 8px !important;
+  }
+  .facility-map-card__header {
+    padding: 18px 16px 14px !important;
+  }
+  .facility-map-card__title {
+    font-size: 1.25rem !important;
+  }
+  .facility-map-card__address {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+  .facility-map-card__frame-wrap {
+    height: 240px !important;
+  }
+  .facility-map-card__footer {
+    padding: 12px 16px !important;
+    justify-content: center !important;
+  }
+  .facility-map-card__footer .btn {
+    width: 100% !important;
+    max-width: 280px !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+  }
+
+  /* ── WALK-THE-LINE.HTML Mobile Refinements ── */
+  .wtl-hero .wtl-badge {
+    font-size: 0.72rem !important;
+    padding: 5px 12px !important;
+    white-space: normal !important;
+    max-width: 100% !important;
+    line-height: 1.35 !important;
+  }
+  .wtl-hero .wtl-hero__title {
+    font-size: clamp(2rem, 6.5vw, 2.5rem) !important;
+  }
+  .wtl-hero .wtl-hero__lead {
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+  }
+  .rooms-stepper {
+    top: var(--nav-h, 64px) !important;
+    padding: 8px 0 !important;
+  }
+  .rooms-stepper__item {
+    padding: 5px 9px !important;
+    font-size: 0.8rem !important;
+    gap: 6px !important;
+  }
+  .rooms-stepper__num {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 0.7rem !important;
+  }
+  .checkpoint-section {
+    padding: 36px 0 !important;
+  }
+  .checkpoint-card {
+    padding: 22px 18px !important;
+    border-radius: 16px !important;
+  }
+  .checkpoint-title {
+    font-size: clamp(1.4rem, 5.2vw, 1.8rem) !important;
+  }
+  .checkpoint-desc {
+    font-size: 0.94rem !important;
+    line-height: 1.55 !important;
+  }
+  .checkpoint-doc {
+    padding: 8px 14px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 20px !important;
+    line-height: 1.4 !important;
+  }
+  .checkpoint-metrics {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .metric-box {
+    padding: 14px 16px !important;
+    border-radius: 10px !important;
+  }
+  .metric-box__num {
+    font-size: 1.7rem !important;
+  }
+  .gallery-card {
+    border-radius: 14px !important;
+  }
+  .checkpoint-section .gallery-img-wrap,
+  .gallery-img-wrap {
+    height: 220px !important;
+    min-height: 180px !important;
+  }
+  .gallery-caption {
+    padding: 10px 14px !important;
+    font-size: 0.84rem !important;
+  }
+  .doc-pack-card {
+    padding: 24px 18px !important;
+    border-radius: 16px !important;
+  }
+  .doc-pack-title {
+    font-size: clamp(1.35rem, 5vw, 1.65rem) !important;
+  }
+  .doc-pack-desc {
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 18px !important;
+  }
+  .doc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-bottom: 22px !important;
+  }
+  .doc-item {
+    padding: 10px 12px !important;
+    font-size: 0.84rem !important;
+  }
+  .doc-pack-cta {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .doc-pack-cta .btn--primary,
+  .doc-pack-cta .btn--outline {
+    width: 100% !important;
+    max-width: 320px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
   }
 }
 
@@ -5717,7 +6261,7 @@ img, svg, video, iframe {
 
   /* ── 10. QUALITY.HTML ── */
   .q-hero {
-    padding: 56px 0 42px 0 !important;
+    padding: calc(var(--nav-h, 72px) + 20px) 0 38px 0 !important;
   }
   .q-hero__title {
     font-size: clamp(2rem, 3.2vw, 2.5rem) !important;
@@ -5786,7 +6330,7 @@ img, svg, video, iframe {
 
   /* ── 11. VIREXA.HTML ── */
   .virexa-hero {
-    padding: 60px 0 45px 0 !important;
+    padding: calc(var(--nav-h, 72px) + 20px) 0 36px 0 !important;
   }
   .virexa-hero__title {
     font-size: clamp(2rem, 3.6vw, 2.75rem) !important;
@@ -5902,7 +6446,7 @@ img, svg, video, iframe {
 
   /* ── 12. WALK-THE-LINE.HTML ── */
   .wtl-hero {
-    padding: 60px 0 45px 0 !important;
+    padding: calc(var(--nav-h, 72px) + 20px) 0 38px 0 !important;
   }
   .wtl-hero__title {
     font-size: clamp(2rem, 3.4vw, 2.6rem) !important;
@@ -5950,10 +6494,10 @@ img, svg, video, iframe {
     gap: 14px !important;
   }
   .gallery-card {
-    border-radius: 10px !important;
+    border-radius: 14px !important;
   }
   .gallery-img-wrap {
-    height: 180px !important;
+    height: auto !important;
   }
   .gallery-caption {
     padding: 9px 12px !important;
@@ -6068,7 +6612,7 @@ img, svg, video, iframe {
     height: 230px !important;
   }
   .gallery-img-wrap {
-    height: 160px !important;
+    height: auto !important;
   }
   .cm-cards-grid {
     gap: 12px !important;
@@ -6121,9 +6665,11 @@ img, svg, video, iframe {
 
   .page-hero,
   .q-hero,
-  .virexa-hero,
   .wtl-hero {
     padding: calc(var(--nav-h, 72px) + 1.25rem) 0 1.5rem !important;
+  }
+  .virexa-hero {
+    padding: calc(var(--nav-h, 72px) + 16px) 0 30px 0 !important;
   }
 
   #home.hero--video-bg .hero__content-container {
@@ -6170,7 +6716,7 @@ img, svg, video, iframe {
   }
 
   .gallery-img-wrap {
-    height: 160px !important;
+    height: auto !important;
   }
 
   .audit-action-card {
@@ -6186,3 +6732,132 @@ img, svg, video, iframe {
   }
 }
 
+
+/* ── Explicit Hero Breadcrumb High-Contrast Overrides ── */
+.wtl-hero .page-hero__breadcrumb {
+  background: rgba(4, 12, 24, 0.85) !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+.wtl-hero .page-hero__breadcrumb a {
+  color: #38BDF8 !important;
+  font-weight: 700 !important;
+}
+.wtl-hero .page-hero__breadcrumb a:hover {
+  color: #7DD3FC !important;
+  text-decoration: underline !important;
+}
+.wtl-hero .page-hero__breadcrumb .breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-weight: 600 !important;
+}
+.wtl-hero .page-hero__breadcrumb .breadcrumb-current {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+.cm-hero .page-hero__breadcrumb {
+  background: #FFFFFF !important;
+  border: 1.5px solid #DFE6EE !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+}
+.cm-hero .page-hero__breadcrumb a {
+  color: #0284C7 !important;
+  font-weight: 700 !important;
+}
+.cm-hero .page-hero__breadcrumb a:hover {
+  color: #0369A1 !important;
+  text-decoration: underline !important;
+}
+.cm-hero .page-hero__breadcrumb .breadcrumb-sep {
+  color: #64748B !important;
+  font-weight: 600 !important;
+}
+.cm-hero .page-hero__breadcrumb .breadcrumb-current {
+  color: #0F172A !important;
+  font-weight: 800 !important;
+}
+
+/* ── PRODUCT.HTML & PRIVACY.HTML HIGH-PRECISION RESPONSIVENESS ── */
+@media (max-width: 991px) {
+  .product-clean-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .product-visual-pane {
+    position: static !important;
+  }
+  .inquiry-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .regulatory-ribbon {
+    padding: 6px 0 !important;
+  }
+  .regulatory-ribbon__inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+  .regulatory-ribbon__items {
+    flex-direction: column !important;
+    gap: 3px !important;
+  }
+  .med-breadcrumbs__flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  .med-back-catalog-btn {
+    align-self: flex-start !important;
+  }
+  .product-clean-card {
+    padding: 20px 16px !important;
+    border-radius: 14px !important;
+    margin-top: 16px !important;
+    margin-bottom: 24px !important;
+  }
+  .product-title-heading {
+    font-size: clamp(1.4rem, 5.5vw, 1.9rem) !important;
+  }
+  .product-main-viewport {
+    height: 260px !important;
+    border-radius: 12px !important;
+  }
+  .product-actions-row {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .btn-action-primary,
+  .btn-action-secondary {
+    width: 100% !important;
+    min-height: 48px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .inquiry-card {
+    padding: 20px 16px !important;
+    border-radius: 14px !important;
+    margin-top: 24px !important;
+  }
+  .inquiry-form-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  #inquiry-form {
+    padding: 18px 14px !important;
+    border-radius: 12px !important;
+  }
+  .related-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}
