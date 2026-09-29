@@ -34,12 +34,12 @@
 
     /* Hero Section - Solid Background, No Image */
     .cm-hero {
-      position: relative;
-      background: linear-gradient(135deg, #0A2540 0%, #1E3A5F 100%);
-      color: #FFFFFF;
-      padding: 130px 0 105px 0;
-      overflow: hidden;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      position: relative !important;
+      background: linear-gradient(135deg, #0A2540 0%, #1E3A5F 100%) !important;
+      color: #FFFFFF !important;
+      padding: calc(var(--nav-h, 72px) + 6px) 0 24px 0 !important;
+      overflow: hidden !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
     }
     .cm-hero__bg-image,
     .cm-hero__overlay {
@@ -55,7 +55,18 @@
       z-index: 2;
       max-width: 960px;
     }
-        /* ── Breadcrumb — Crisp Serene Light Medical Pill ── */
+
+    /* Meta top row container */
+    .cm-hero__meta-top {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+      margin-top: 0 !important;
+      margin-bottom: 12px !important;
+    }
+
+    /* ── Breadcrumb — Crisp Serene Light Medical Pill ── */
     .cm-hero .page-hero__breadcrumb {
       display: inline-flex !important;
       align-items: center !important;
@@ -63,10 +74,10 @@
       background: #FFFFFF !important;
       border: 1.5px solid #DFE6EE !important;
       border-radius: 9999px !important;
-      padding: 6px 18px !important;
-      font-size: 0.85rem !important;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
-      margin-bottom: 22px !important;
+      padding: 5px 16px !important;
+      font-size: 0.82rem !important;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04) !important;
+      margin-bottom: 0 !important;
       width: fit-content !important;
     }
     .cm-hero .page-hero__breadcrumb a {
@@ -91,22 +102,22 @@
     }
 
     .cm-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(14, 165, 233, 0.18);
-      border: 1px solid rgba(56, 189, 248, 0.45);
-      color: #BAE6FD;
-      padding: 8px 20px;
-      border-radius: 9999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      background: rgba(14, 165, 233, 0.18) !important;
+      border: 1px solid rgba(56, 189, 248, 0.45) !important;
+      color: #BAE6FD !important;
+      padding: 5px 16px !important;
+      border-radius: 9999px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.8px !important;
+      text-transform: uppercase !important;
+      margin-bottom: 0 !important;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+      backdrop-filter: blur(10px) !important;
+      -webkit-backdrop-filter: blur(10px) !important;
     }
     .cm-badge__pulse {
       width: 8px;
@@ -122,22 +133,23 @@
       50% { opacity: 1; transform: scale(1.3); }
     }
     .cm-hero__title {
-      font-size: clamp(3rem, 6.2vw, 4.6rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      color: #FFFFFF;
-      line-height: 1.08;
-      margin-bottom: 22px;
-      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7);
+      font-size: clamp(2.4rem, 5vw, 3.8rem) !important;
+      font-weight: 900 !important;
+      letter-spacing: -0.03em !important;
+      color: #FFFFFF !important;
+      line-height: 1.08 !important;
+      margin-top: 0 !important;
+      margin-bottom: 12px !important;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7) !important;
     }
     .cm-hero__lead {
-      font-size: clamp(1.15rem, 2vw, 1.35rem);
-      line-height: 1.65;
-      color: #F1F5F9;
-      margin-bottom: 38px;
-      max-width: 800px;
-      font-weight: 400;
-      text-shadow: 0 1px 14px rgba(0, 0, 0, 0.6);
+      font-size: clamp(1rem, 1.6vw, 1.2rem) !important;
+      line-height: 1.6 !important;
+      color: #F1F5F9 !important;
+      margin-bottom: 22px !important;
+      max-width: 800px !important;
+      font-weight: 400 !important;
+      text-shadow: 0 1px 14px rgba(0, 0, 0, 0.6) !important;
     }
     .cm-hero__actions {
       display: flex;
@@ -749,7 +761,7 @@
       cursor: pointer;
     }
   </style>
-  <link rel="stylesheet" href="css/theme-neutral.css?v=cm-responsive-2026">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=cm-tight-hero-2026">
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://vidhata.co.in/contract-manufacturing.html">
@@ -777,20 +789,6 @@
 
 <!-- Reading Progress Bar -->
 <div id="reading-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--cm-blue);z-index:1001;width:0%"></div>
-
-<!-- Top Regulatory Certification Ribbon -->
-<div class="regulatory-ribbon" style="background:#0A2540;color:#94A3B8;font-size:0.76rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-    <div style="display:flex;gap:18px;flex-wrap:wrap">
-      <span style="color:#CBD5E1">&#128737; <strong>CDSCO Licence:</strong> MFG/MD/2026/000078</span>
-      <span style="color:#CBD5E1">&#10004; <strong>Quality System:</strong> ISO 13485:2016 Certified</span>
-      <span style="color:#CBD5E1">&#127970; <strong>Cleanroom Suites:</strong> ISO Class 7 &amp; Class 8</span>
-    </div>
-    <div>
-      <span style="color:#38BDF8;font-weight:600">&#9889; Dual Licensing &amp; OEM Contract Manufacturing Line</span>
-    </div>
-  </div>
-</div>
 
 <!-- Navigation Bar -->
 <nav id="navbar" class="navbar">
@@ -834,14 +832,16 @@
 <!-- Hero Section -->
 <header class="cm-hero">
   <div class="container cm-hero__inner">
-    <div class="page-hero__breadcrumb">
-      <a href="index.html">Home</a>
-      <span class="breadcrumb-sep">&rsaquo;</span>
-      <span class="breadcrumb-current">Contract manufacturing</span>
-    </div>
-    <div class="cm-badge">
-      <span class="cm-badge__pulse"></span>
-      <span>OEM &middot; Loan licence &middot; Technology transfer &middot; Turnkey &middot; Tooling</span>
+    <div class="cm-hero__meta-top">
+      <div class="page-hero__breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span class="breadcrumb-current">Contract manufacturing</span>
+      </div>
+      <div class="cm-badge">
+        <span class="cm-badge__pulse"></span>
+        <span>OEM &middot; Loan licence &middot; Technology transfer &middot; Turnkey &middot; Tooling</span>
+      </div>
     </div>
     <h1 class="cm-hero__title">Bring what you have.</h1>
     <p class="cm-hero__lead">

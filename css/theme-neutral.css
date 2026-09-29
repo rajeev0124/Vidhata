@@ -629,6 +629,9 @@ span.section-tag {
 
 /* ── 11B. VIREXA PROPRIETARY BRAND HERO (Serene Light Medical Smooth Colours) ── */
 .virexa-hero {
+  min-height: auto !important;
+  display: block !important;
+  padding: calc(var(--nav-h, 72px) + 6px) 0 24px 0 !important;
   background:
     radial-gradient(1100px circle at 85% 18%, rgba(2, 132, 199, 0.09) 0%, transparent 60%),
     radial-gradient(900px circle at 12% 82%, rgba(16, 185, 129, 0.08) 0%, transparent 55%),
@@ -2056,7 +2059,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
     radial-gradient(800px circle at 15% 85%, rgba(16, 185, 129, 0.05) 0%, transparent 55%),
     linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 45%, #ECFDF5 85%, #FFFFFF 100%) !important;
   color: #1E293B !important;
-  padding: calc(var(--nav-h, 72px) + 52px) 0 72px 0 !important;
+  padding: calc(var(--nav-h, 72px) + 6px) 0 24px 0 !important;
   overflow: hidden !important;
   border-top: none !important;
   border-bottom: 1.5px solid #DFE6EE !important;
@@ -2099,6 +2102,15 @@ section .grid-3 .card:hover span[style*="Explore"] {
   opacity: 0.75 !important;
 }
 
+.cm-hero__meta-top {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
 .cm-hero .cm-badge {
   display: inline-flex !important;
   align-items: center !important;
@@ -2113,7 +2125,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   font-weight: 700 !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
-  margin-bottom: 24px !important;
+  margin-bottom: 0 !important;
   box-shadow: 0 2px 10px rgba(26, 143, 216, 0.08) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
@@ -2135,7 +2147,7 @@ section .grid-3 .card:hover span[style*="Explore"] {
   letter-spacing: -0.025em !important;
   color: #1E293B !important;
   line-height: 1.1 !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 12px !important;
   text-shadow: none !important;
 }
 
@@ -3010,7 +3022,7 @@ img, svg, video, iframe {
 
   /* Contract Manufacturing Tablet Responsive */
   .cm-hero {
-    padding: calc(var(--nav-h, 72px) + 36px) 0 48px 0 !important;
+    padding: calc(var(--nav-h, 72px) + 6px) 0 24px 0 !important;
   }
   .cm-hero__title {
     font-size: clamp(2.3rem, 5vw, 3.2rem) !important;
@@ -3600,12 +3612,12 @@ img, svg, video, iframe {
   }
 
   .cm-hero {
-    padding: calc(var(--nav-h, 64px) + 20px) 0 32px 0 !important;
+    padding: calc(var(--nav-h, 64px) + 6px) 0 20px 0 !important;
   }
   .cm-badge {
     font-size: 0.75rem !important;
     padding: 6px 14px !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 0 !important;
     white-space: normal !important;
     line-height: 1.4 !important;
   }
@@ -4066,7 +4078,7 @@ img, svg, video, iframe {
 
   /* QUALITY.HTML Mobile Refinements */
   .q-hero {
-    padding: calc(var(--nav-h, 64px) + 16px) 0 32px 0 !important;
+    padding: calc(var(--nav-h, 64px) + 6px) 0 20px 0 !important;
   }
   .q-eyebrow {
     font-size: 0.72rem !important;
@@ -4075,6 +4087,7 @@ img, svg, video, iframe {
     white-space: normal !important;
     max-width: 100% !important;
     line-height: 1.35 !important;
+    margin-bottom: 0 !important;
   }
   .q-hero__title {
     font-size: clamp(1.85rem, 6.5vw, 2.4rem) !important;
@@ -4171,12 +4184,15 @@ img, svg, video, iframe {
 
   /* ── ABOUT.HTML Mobile Refinements ── */
   .clean-hero {
-    padding: calc(var(--nav-h, 64px) + 16px) 0 36px 0 !important;
+    padding: calc(var(--nav-h, 64px) + 6px) 0 20px 0 !important;
   }
   .clean-hero__breadcrumbs {
-    margin-bottom: 16px !important;
+    margin-bottom: 0 !important;
     font-size: 0.78rem !important;
     flex-wrap: wrap !important;
+  }
+  .clean-hero .clean-hero__eyebrow {
+    margin-bottom: 0 !important;
   }
   .clean-hero__title {
     font-size: clamp(1.8rem, 6.2vw, 2.35rem) !important;
@@ -6261,7 +6277,7 @@ img, svg, video, iframe {
 
   /* ── 10. QUALITY.HTML ── */
   .q-hero {
-    padding: calc(var(--nav-h, 72px) + 20px) 0 38px 0 !important;
+    padding: calc(var(--nav-h, 72px) + 6px) 0 24px 0 !important;
   }
   .q-hero__title {
     font-size: clamp(2rem, 3.2vw, 2.5rem) !important;
@@ -6664,9 +6680,11 @@ img, svg, video, iframe {
   }
 
   .page-hero,
-  .q-hero,
   .wtl-hero {
     padding: calc(var(--nav-h, 72px) + 1.25rem) 0 1.5rem !important;
+  }
+  .q-hero {
+    padding: calc(var(--nav-h, 72px) + 6px) 0 24px 0 !important;
   }
   .virexa-hero {
     padding: calc(var(--nav-h, 72px) + 16px) 0 30px 0 !important;
@@ -6762,6 +6780,7 @@ img, svg, video, iframe {
   background: #FFFFFF !important;
   border: 1.5px solid #DFE6EE !important;
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+  margin-bottom: 0 !important;
 }
 .cm-hero .page-hero__breadcrumb a {
   color: #0284C7 !important;
@@ -6778,6 +6797,57 @@ img, svg, video, iframe {
 .cm-hero .page-hero__breadcrumb .breadcrumb-current {
   color: #0F172A !important;
   font-weight: 800 !important;
+}
+
+.q-hero__meta-top {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+.q-hero .page-hero__breadcrumb {
+  margin-bottom: 0 !important;
+}
+
+.q-hero .q-eyebrow {
+  margin-bottom: 0 !important;
+}
+
+.clean-hero {
+  padding: calc(var(--nav-h, 72px) + 6px) 0 28px 0 !important;
+}
+
+.clean-hero__meta-top {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+}
+
+.clean-hero .clean-hero__breadcrumbs {
+  margin-bottom: 0 !important;
+}
+
+.clean-hero .clean-hero__eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #E0F2FE !important;
+  border: 1px solid #BAE6FD !important;
+  color: #0369A1 !important;
+  padding: 5px 14px !important;
+  border-radius: 9999px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0 !important;
+  box-shadow: 0 1px 4px rgba(14, 165, 233, 0.08) !important;
 }
 
 /* ── PRODUCT.HTML & PRIVACY.HTML HIGH-PRECISION RESPONSIVENESS ── */

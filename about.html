@@ -77,31 +77,38 @@
 
     /* Clean Hero Section */
     .clean-hero {
-      background: #FFFFFF;
-      border-bottom: 1px solid var(--brand-border);
-      padding: calc(var(--nav-h, 72px) + 20px) 0 56px 0;
+      position: relative !important;
+      background: linear-gradient(160deg, #F0F9FF 0%, #FFFFFF 60%, #ECFDF5 100%) !important;
+      border-bottom: 1px solid var(--brand-border) !important;
+      padding: calc(var(--nav-h, 72px) + 6px) 0 28px 0 !important;
+      overflow: hidden !important;
     }
-    .clean-hero__breadcrumbs {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      color: var(--brand-text-muted);
-      margin-bottom: 24px;
+    .clean-hero__meta-top {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+      margin-top: 0 !important;
+      margin-bottom: 14px !important;
     }
-    .clean-hero__breadcrumbs a {
-      color: var(--brand-blue);
-      text-decoration: none;
-      font-weight: 500;
+    .clean-hero .clean-hero__breadcrumbs {
+      margin-bottom: 0 !important;
     }
-    .clean-hero__eyebrow {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--brand-cyan);
-      margin-bottom: 16px;
+    .clean-hero .clean-hero__eyebrow {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      background: #E0F2FE !important;
+      border: 1px solid #BAE6FD !important;
+      color: #0369A1 !important;
+      padding: 5px 14px !important;
+      border-radius: 9999px !important;
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      margin-bottom: 0 !important;
+      box-shadow: 0 1px 4px rgba(14, 165, 233, 0.08) !important;
     }
     .clean-hero__title {
       font-size: clamp(2.4rem, 4.8vw, 3.8rem);
@@ -110,7 +117,7 @@
       line-height: 1.15;
       letter-spacing: -0.025em;
       max-width: 950px;
-      margin-bottom: 36px;
+      margin-bottom: 24px;
     }
     .clean-hero__body-grid {
       display: grid;
@@ -877,7 +884,7 @@
       box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12) !important;
     }
   </style>
-  <link rel="stylesheet" href="css/theme-neutral.css?v=about-responsive-2026">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=about-tight-hero-2026">
 
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://vidhata.co.in/about.html">
@@ -905,20 +912,6 @@
 
 <!-- Reading Progress Bar -->
 <div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:#0099CC;z-index:1001;width:0%"></div>
-
-<!-- Top Regulatory Certification Ribbon -->
-<div class="regulatory-ribbon">
-  <div class="content-container regulatory-ribbon__inner">
-    <div class="regulatory-ribbon__items">
-      <span class="regulatory-ribbon__item">&#128737; <strong>CDSCO Licence:</strong> MFG/MD/2026/000078</span>
-      <span class="regulatory-ribbon__item">&#10004; <strong>Quality System:</strong> ISO 13485:2016 Certified</span>
-      <span class="regulatory-ribbon__item">&#127970; <strong>Cleanroom Suites:</strong> ISO Class 7 &amp; Class 8</span>
-    </div>
-    <div>
-      <span style="color:#38BDF8;font-weight:600">&#9889; OEM Private Label &amp; Direct Supply Lines</span>
-    </div>
-  </div>
-</div>
 
 <!-- Navigation Bar -->
 <nav id="navbar" class="navbar">
@@ -962,15 +955,16 @@
 <!-- Clean Executive Hero: About Vidhata Medical -->
 <header class="clean-hero">
   <div class="content-container">
-    <div class="clean-hero__breadcrumbs">
-      <a href="index.html">Home</a>
-      <span class="breadcrumb-sep">&rsaquo;</span>
-      <a href="about.html">Company</a>
-      <span class="breadcrumb-sep">&rsaquo;</span>
-      <span class="breadcrumb-current">About Vidhata Life</span>
+    <div class="clean-hero__meta-top">
+      <div class="clean-hero__breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <a href="about.html">Company</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span class="breadcrumb-current">About Vidhata Life</span>
+      </div>
+      <span class="clean-hero__eyebrow">About Vidhata Life</span>
     </div>
-
-    <span class="clean-hero__eyebrow">About Vidhata Life</span>
     <h1 class="clean-hero__title">A plastics company that went and learned the regulations.</h1>
 
     <div class="clean-hero__body-grid">

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/components.css?v=serene-light-2026">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/chatbot.css?v=serene-light-2026">
-  <link rel="stylesheet" href="css/theme-neutral.css?v=virexa-responsive-2026">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=virexa-tight-hero-2026">
   <style>
     :root {
       --vx-navy: #1E293B;
@@ -39,11 +39,10 @@
 
     .virexa-hero {
       position: relative !important;
-      min-height: 72vh !important;
-      display: flex !important;
-      align-items: center !important;
+      min-height: auto !important;
+      display: block !important;
       color: #0F172A !important;
-      padding: calc(var(--nav-h, 72px) + 48px) 0 64px 0 !important;
+      padding: calc(var(--nav-h, 72px) + 6px) 0 24px 0 !important;
       overflow: hidden !important;
       background:
         radial-gradient(1100px circle at 85% 18%, rgba(2, 132, 199, 0.09) 0%, transparent 60%),
@@ -61,8 +60,8 @@
       top: 50% !important;
       right: 4% !important;
       transform: translateY(-50%) !important;
-      width: 480px !important;
-      height: 480px !important;
+      width: 360px !important;
+      height: 360px !important;
       border-radius: 50% !important;
       background:
         radial-gradient(circle, rgba(2, 132, 199, 0.04) 0%, transparent 65%),
@@ -110,6 +109,15 @@
       max-width: 860px !important;
     }
 
+    /* Header Meta Top Row */
+    .virexa-hero__meta-top {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 10px !important;
+      margin-bottom: 14px !important;
+    }
+
     /* Breadcrumbs Pill — Serene Medical Style */
     .virexa-hero .page-hero__breadcrumb {
       display: inline-flex !important;
@@ -121,7 +129,7 @@
       box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04) !important;
       padding: 5px 14px !important;
       border-radius: 999px !important;
-      margin-bottom: 20px !important;
+      margin-bottom: 0 !important;
       backdrop-filter: blur(8px) !important;
       -webkit-backdrop-filter: blur(8px) !important;
     }
@@ -153,13 +161,13 @@
       background: #F0FDF4 !important;
       border: 1.5px solid #A7F3D0 !important;
       color: #065F46 !important;
-      padding: 6px 16px !important;
+      padding: 5px 14px !important;
       border-radius: 999px !important;
       font-size: 0.82rem !important;
       font-weight: 700 !important;
       letter-spacing: 0.05em !important;
       text-transform: uppercase !important;
-      margin-bottom: 18px !important;
+      margin-bottom: 0 !important;
       box-shadow: 0 1px 4px rgba(16, 185, 129, 0.10) !important;
     }
     .virexa-badge-dot {
@@ -177,21 +185,21 @@
 
     /* Hero Typography — Crisp High-Contrast Cleanroom Look */
     .virexa-hero__title {
-      font-size: clamp(2.8rem, 6vw, 4.4rem) !important;
+      font-size: clamp(2.4rem, 5vw, 3.8rem) !important;
       font-weight: 900 !important;
       letter-spacing: -0.025em !important;
       color: #0F172A !important;
       line-height: 1.08 !important;
-      margin: 0 0 18px 0 !important;
+      margin: 0 0 12px 0 !important;
       text-shadow: none !important;
       font-family: var(--font-heading, "Inter", sans-serif) !important;
     }
 
     .virexa-hero__lead {
-      font-size: clamp(1.05rem, 1.8vw, 1.25rem) !important;
-      line-height: 1.68 !important;
+      font-size: clamp(1.02rem, 1.6vw, 1.18rem) !important;
+      line-height: 1.62 !important;
       color: #334155 !important;
-      margin-bottom: 34px !important;
+      margin-bottom: 22px !important;
       max-width: 780px !important;
       font-weight: 400 !important;
       text-shadow: none !important;
@@ -201,9 +209,9 @@
     /* Hero Action Buttons */
     .virexa-hero__actions {
       display: flex !important;
-      gap: 16px !important;
+      gap: 14px !important;
       flex-wrap: wrap !important;
-      margin-bottom: 28px !important;
+      margin-bottom: 20px !important;
     }
 
     .virexa-btn-primary {
@@ -724,20 +732,6 @@
 <!-- Reading Progress Bar -->
 <div id="reading-progress" style="position:fixed;top:0;left:0;height:3px;background:var(--vx-blue);z-index:1001;width:0%"></div>
 
-<!-- Top Regulatory Certification Ribbon -->
-<div class="regulatory-ribbon" style="background:#0A2540;color:#94A3B8;font-size:0.76rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.08);">
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
-    <div style="display:flex;gap:18px;flex-wrap:wrap">
-      <span style="color:#CBD5E1">&#128737; <strong>CDSCO Licence:</strong> MFG/MD/2026/000078</span>
-      <span style="color:#CBD5E1">&#10004; <strong>Quality System:</strong> ISO 13485:2016 Certified</span>
-      <span style="color:#CBD5E1">&#127970; <strong>Cleanroom Suites:</strong> ISO Class 7 &amp; Class 8</span>
-    </div>
-    <div>
-      <span style="color:#38BDF8;font-weight:600">&#9889; Official Single-Use Medical Brand of Vidhata Life</span>
-    </div>
-  </div>
-</div>
-
 <!-- Navigation Bar -->
 <nav id="navbar" class="navbar">
   <div class="navbar__inner">
@@ -784,14 +778,16 @@
 
   <div class="container virexa-hero__inner">
     <div class="virexa-hero__content">
-      <div class="page-hero__breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-sep">&rsaquo;</span>
-        <span class="breadcrumb-current">VIREXA</span>
-      </div>
-      <div class="virexa-badge">
-        <span class="virexa-badge-dot"></span>
-        <span>Our own brand of sterile single-use medical devices</span>
+      <div class="virexa-hero__meta-top">
+        <div class="page-hero__breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">&rsaquo;</span>
+          <span class="breadcrumb-current">VIREXA</span>
+        </div>
+        <div class="virexa-badge">
+          <span class="virexa-badge-dot"></span>
+          <span>Our own brand of sterile single-use medical devices</span>
+        </div>
       </div>
       <h1 class="virexa-hero__title">VIREXA</h1>
       <p class="virexa-hero__lead">

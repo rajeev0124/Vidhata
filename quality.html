@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/components.css?v=serene-light-2026">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/chatbot.css?v=serene-light-2026">
-  <link rel="stylesheet" href="css/theme-neutral.css?v=quality-responsive-2026">
+  <link rel="stylesheet" href="css/theme-neutral.css?v=quality-tight-hero-2026">
   <style>
     :root {
       --q-navy: #0A2540;
@@ -29,11 +29,11 @@
 
     /* Page Hero */
     .q-hero {
-      position: relative;
-      background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FD 50%, #EEF6FC 100%);
-      padding: calc(var(--nav-h, 72px) + 24px) 0 56px 0;
-      border-bottom: 1.5px solid #DFE6EE;
-      overflow: hidden;
+      position: relative !important;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FD 50%, #EEF6FC 100%) !important;
+      padding: calc(var(--nav-h, 72px) + 6px) 0 24px 0 !important;
+      border-bottom: 1.5px solid #DFE6EE !important;
+      overflow: hidden !important;
     }
     .q-hero__bg-grid {
       position: absolute;
@@ -54,21 +54,32 @@
       z-index: 2;
       max-width: 860px;
     }
+    .q-hero__meta-top {
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+      margin-top: 0 !important;
+      margin-bottom: 12px !important;
+    }
+    .q-hero .page-hero__breadcrumb {
+      margin-bottom: 0 !important;
+    }
     .q-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: #E0F2FE;
-      border: 1.5px solid #BAE6FD;
-      color: #0369A1;
-      padding: 7px 18px;
-      border-radius: 9999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-      box-shadow: 0 2px 8px rgba(14, 165, 233, 0.1);
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      background: #E0F2FE !important;
+      border: 1.5px solid #BAE6FD !important;
+      color: #0369A1 !important;
+      padding: 7px 18px !important;
+      border-radius: 9999px !important;
+      font-size: 0.85rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px !important;
+      text-transform: uppercase !important;
+      margin-bottom: 0 !important;
+      box-shadow: 0 2px 8px rgba(14, 165, 233, 0.1) !important;
     }
     .q-eyebrow__pulse {
       width: 8px;
@@ -89,7 +100,7 @@
       color: var(--q-navy);
       line-height: 1.12;
       letter-spacing: -0.025em;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
     .q-hero__subtitle {
       font-size: clamp(1.15rem, 2vw, 1.35rem);
@@ -526,19 +537,7 @@
 <body>
 
 <div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:var(--grad-primary);z-index:1001;width:0%"></div>
-<!-- Top Regulatory Ribbon -->
-<div class="regulatory-ribbon" style="background:#0A2540;color:#94A3B8;font-size:0.76rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.08);letter-spacing:0.3px;">
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-    <div style="display:flex;gap:18px;flex-wrap:wrap;">
-      <span style="display:inline-flex;align-items:center;gap:6px;color:#CBD5E1;">&#128737; <strong style="color:#38BDF8;font-weight:600">CDSCO Licence:</strong> MFG/MD/2026/000078</span>
-      <span style="display:inline-flex;align-items:center;gap:6px;color:#CBD5E1;">&#10004; <strong style="color:#38BDF8;font-weight:600">Quality System:</strong> ISO 13485:2016 &amp; ISO 9001:2015</span>
-      <span style="display:inline-flex;align-items:center;gap:6px;color:#CBD5E1;">&#127970; <strong style="color:#38BDF8;font-weight:600">Cleanrooms:</strong> ISO Class 7 &amp; Class 8</span>
-    </div>
-    <div>
-      <span style="color:#38BDF8;font-weight:600">&#9889; Public Register Verification Active</span>
-    </div>
-  </div>
-</div>
+
 <nav id="navbar" class="navbar">
   <div class="navbar__inner">
     <a href="index.html" class="navbar__logo"><img src="images/vidhata-logo.jpg" alt="Vidhata Life Logo" class="navbar__logo-img" /><div class="navbar__logo-text">
@@ -578,14 +577,16 @@
   <div class="q-hero__bg-grid"></div>
   <div class="container">
     <div class="q-hero__inner" data-reveal="up">
-      <div class="page-hero__breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb-sep">&rsaquo;</span>
-        <span class="breadcrumb-current">Quality &amp; Standards</span>
-      </div>
-      <div class="q-eyebrow">
-        <span class="q-eyebrow__pulse"></span>
-        <span>ISO 13485 &middot; ISO 9001 &middot; CDSCO manufacturing licence</span>
+      <div class="q-hero__meta-top">
+        <div class="page-hero__breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">&rsaquo;</span>
+          <span class="breadcrumb-current">Quality &amp; Standards</span>
+        </div>
+        <div class="q-eyebrow">
+          <span class="q-eyebrow__pulse"></span>
+          <span>ISO 13485 &middot; ISO 9001 &middot; CDSCO manufacturing licence</span>
+        </div>
       </div>
       <h1 class="q-hero__title">Everything here can be checked.</h1>
       <p class="q-hero__subtitle">
