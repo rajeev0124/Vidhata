@@ -532,6 +532,19 @@
   gap: 10px;
 }
 
+.footer__brand-logo,
+.footer__brand-title img,
+.footer__col-brand img {
+  width: 36px;
+  height: 36px;
+  max-width: 36px;
+  max-height: 36px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
 .footer__brand-desc {
   margin-top: 10px;
   font-size: 0.875rem;
@@ -3018,6 +3031,21 @@ body:has(.vp-chat-panel--open) .whatsapp-float {
     width: 72px !important;
     height: 72px !important;
     flex-shrink: 0 !important;
+  }
+
+  /* Prevent footer brand logo stretching on mobile */
+  .footer__brand-title img,
+  .footer__col-brand img,
+  .footer__brand-logo,
+  .footer-logo {
+    width: 34px !important;
+    height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+    border-radius: 6px !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
   }
 
   /* Fix inline fixed-height images so they still show on mobile */
@@ -8359,7 +8387,7 @@ img[data-reveal].revealed,
 
 .facility-map-card__frame-wrap {
   width: 100%;
-  height: 320px;
+  height: 420px;
   position: relative;
   background: #E2E8F0;
   border-top: 1px solid #E2E8F0;
@@ -8386,7 +8414,7 @@ img[data-reveal].revealed,
 
 @media (max-width: 768px) {
   .facility-map-card__frame-wrap {
-    height: 260px;
+    height: 340px;
   }
   .facility-map-card__header {
     padding: 1.25rem 1.25rem 1rem;

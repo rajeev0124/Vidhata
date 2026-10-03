@@ -1034,7 +1034,7 @@
     {
       type: 'email', alwaysTrigger: true,
       patterns: ['email', 'mail', 'email id', 'email address', 'send message', 'write to'],
-      answer: "📧 Email Us Directly:\n\n• arvind.kandi7@gmail.com (Arvind Kandi)\n• vikrant@vidhata.co.in (Vikrant Kandimalla, Director)\n• info@vidhata.co.in (General Enquiries)\n\nWe typically respond within one business day.",
+      answer: "📧 Email Us Directly:\n\n• arvind.kandi@vidhata.co.in (Arvind Kandi)\n• vikrant@vidhata.co.in (Vikrant Kandimalla, Director)\n• info@vidhata.co.in (General Enquiries)\n\nWe typically respond within one business day.",
       cardIds: ['contact'],
       chips: [{ label: '📬 Contact Page', query: 'contact' }]
     },

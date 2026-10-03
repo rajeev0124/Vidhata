@@ -33,6 +33,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&display=swap">
+  <style>
+    .facility-map-card__title {
+      margin-top: 0 !important;
+    }
+    .facility-map-card__frame-wrap {
+      height: 420px !important;
+    }
+    @media (max-width: 900px) {
+      .facility-map-card__frame-wrap {
+        height: 350px !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .facility-map-card__frame-wrap {
+        height: 290px !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -183,7 +201,7 @@
             <h4 style="margin-bottom:var(--sp-1)">Arvind Kandi</h4>
             <p style="font-size:var(--fs-xs);color:var(--clr-text-dim);margin-bottom:var(--sp-2)">Key Contact / Management</p>
             <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:2px">&#10003; Direct: <a href="tel:+918008801778" style="color:inherit;text-decoration:none">+91 80088 01778</a></p>
-            <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:2px">&#10003; Email: <a href="mailto:arvind.kandi7@gmail.com" style="color:inherit;text-decoration:none">arvind.kandi7@gmail.com</a></p>
+            <p style="font-size:var(--fs-sm);color:var(--clr-text-muted);margin-bottom:2px">&#10003; Email: <a href="mailto:arvind.kandi@vidhata.co.in" style="color:inherit;text-decoration:none">arvind.kandi@vidhata.co.in</a></p>
           </div>
 
           <div style="border-top:1px solid var(--clr-border);padding-top:var(--sp-3)">
@@ -214,10 +232,6 @@
       <!-- Facility 1: Unit 2 — Maheshwaram -->
       <div class="facility-map-card">
         <div class="facility-map-card__header">
-          <div class="facility-map-card__meta">
-            <span class="facility-map-card__badge facility-map-card__badge--blue">Corporate &amp; Cleanroom Campus</span>
-            <span style="font-size:0.75rem;font-weight:700;color:#0284C7;background:#F0F9FF;border:1px solid #BAE6FD;padding:3px 10px;border-radius:20px;">10 Min to RGIA Airport</span>
-          </div>
           <h3 class="facility-map-card__title">Unit 2 &mdash; Maheshwaram</h3>
           <p class="facility-map-card__address" style="margin-bottom:0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -252,10 +266,6 @@
       <!-- Facility 2: Unit 1 — Cherlapally -->
       <div class="facility-map-card">
         <div class="facility-map-card__header">
-          <div class="facility-map-card__meta">
-            <span class="facility-map-card__badge facility-map-card__badge--green">Polymer Processing &amp; Tooling HQ</span>
-            <span style="font-size:0.75rem;font-weight:700;color:#047857;background:#ECFDF5;border:1px solid #A7F3D0;padding:3px 10px;border-radius:20px;">Established 1991</span>
-          </div>
           <h3 class="facility-map-card__title">Unit 1 &mdash; Cherlapally</h3>
           <p class="facility-map-card__address" style="margin-bottom:0">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -297,7 +307,7 @@
       <!-- Col 1: Brand -->
       <div class="footer__col-brand">
         <div class="footer__brand-title" style="display:flex;align-items:center;gap:12px;font-size:1.35rem;font-weight:700;color:var(--clr-text,#1E293B);margin-bottom:10px">
-          <img src="images/vidhata-logo.jpg" alt="Vidhata Life Logo" style="width:36px;height:36px;object-fit:contain;border-radius:6px;flex-shrink:0" />
+          <img src="images/vidhata-logo.jpg" alt="Vidhata Life Logo" class="footer__brand-logo" style="width:36px;height:36px;max-width:36px;max-height:36px;object-fit:contain;border-radius:6px;flex-shrink:0" />
           <span>Vidhata Life</span>
         </div>
         <p class="footer__brand-desc" style="color:var(--clr-text-muted,#475569);font-size:0.9rem;line-height:1.6;margin:0;max-width:320px">

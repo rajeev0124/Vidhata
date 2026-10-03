@@ -287,6 +287,42 @@
       display: flex;
       flex-direction: column;
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .q-system-card > *:not(.q-card-watermark) {
+      position: relative;
+      z-index: 1;
+    }
+    .q-card-watermark {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 240px;
+      height: 240px;
+      max-width: 80%;
+      max-height: 80%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.11;
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .q-card-watermark--iso14644 {
+      background-image: url('images/iso-14644-watermark.png');
+    }
+    .q-card-watermark--iso13485 {
+      background-image: url('images/iso-13485-watermark.png');
+    }
+    .q-card-watermark--iso9001 {
+      background-image: url('images/iso-9001-watermark.png');
+    }
+    .q-system-card:hover .q-card-watermark {
+      opacity: 0.16;
+      transform: translate(-50%, -50%) scale(1.03);
     }
     .q-system-card:hover {
       transform: translateY(-4px);
@@ -676,7 +712,8 @@
     <div class="q-systems-grid">
 
       <!-- Card 1: Controlled manufacturing environment -->
-      <div class="q-system-card">
+      <div class="q-system-card q-system-card--iso14644">
+        <div class="q-card-watermark q-card-watermark--iso14644" aria-hidden="true"></div>
         <div class="q-system-eyebrow">Controlled manufacturing environment</div>
         <h3 class="q-system-heading">ISO Class 7 and 8 cleanrooms</h3>
         <table class="q-system-table">
@@ -702,7 +739,8 @@
       </div>
 
       <!-- Card 2: Medical devices quality management -->
-      <div class="q-system-card">
+      <div class="q-system-card q-system-card--iso13485">
+        <div class="q-card-watermark q-card-watermark--iso13485" aria-hidden="true"></div>
         <div class="q-system-eyebrow">Medical devices quality management</div>
         <h3 class="q-system-heading">ISO 13485:2016</h3>
         <table class="q-system-table">
@@ -728,7 +766,8 @@
       </div>
 
       <!-- Card 3: Quality management -->
-      <div class="q-system-card">
+      <div class="q-system-card q-system-card--iso9001">
+        <div class="q-card-watermark q-card-watermark--iso9001" aria-hidden="true"></div>
         <div class="q-system-eyebrow">Quality management</div>
         <h3 class="q-system-heading">ISO 9001:2015</h3>
         <table class="q-system-table">
@@ -853,7 +892,7 @@
       <!-- Col 1: Brand -->
       <div class="footer__col-brand">
         <div class="footer__brand-title" style="display:flex;align-items:center;gap:12px;font-size:1.35rem;font-weight:700;color:var(--clr-text,#1E293B);margin-bottom:10px">
-          <img src="images/vidhata-logo.jpg" alt="Vidhata Life Logo" style="width:36px;height:36px;object-fit:contain;border-radius:6px;flex-shrink:0" />
+          <img src="images/vidhata-logo.jpg" alt="Vidhata Life Logo" class="footer__brand-logo" style="width:36px;height:36px;max-width:36px;max-height:36px;object-fit:contain;border-radius:6px;flex-shrink:0" />
           <span>Vidhata Life</span>
         </div>
         <p class="footer__brand-desc" style="color:var(--clr-text-muted,#475569);font-size:0.9rem;line-height:1.6;margin:0;max-width:320px">

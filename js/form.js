@@ -154,7 +154,7 @@ function initQuoteForm() {
       await new Promise(r => setTimeout(r, 800));
 
       // Open mailto link
-      window.location.href = `mailto:arvind.kandi7@gmail.com?cc=vikrant@vidhata.co.in,info@vidhata.co.in&subject=${subjectEnc}&body=${bodyEnc}`;
+      window.location.href = `mailto:arvind.kandi@vidhata.co.in?cc=vikrant@vidhata.co.in,info@vidhata.co.in&subject=${subjectEnc}&body=${bodyEnc}`;
 
       // Populate fallback details
       const fallbackText = document.getElementById('fallback-text');
